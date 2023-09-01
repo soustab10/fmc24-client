@@ -1,5 +1,6 @@
 
 import React, { useState, useEffect, useRef } from 'react';
+import Image from 'next/image'
 import Classes from './LandingPage.module.css';
 import Fade from "react-awesome-reveal"
 import Marquee from "react-fast-marquee"
@@ -48,7 +49,7 @@ const IndexLanding = () => {
     <div id="header" ref_container={useRef}>
       <div className={Classes.div1}>
         <Fade bottom>
-          <img src="fmctextlogo.png" alt="logo" className={Classes.div1_logo} />
+          <Image src="/fmctextlogo.png" alt="logo" className={Classes.div1_logo}  width={100} height={50}/>
           <h1 className={Classes.div1_heading}>A Fest for </h1>
           <h1 className={Classes.div1_headanime}>
            
@@ -116,7 +117,7 @@ const IndexLanding = () => {
       <div className={Classes.eventBox}>
         <div className={Classes.div3}>
           <div className={Classes.banner1}>
-            <img src={winner1} alt="" />
+            <Image src={winner1} alt="" />
           </div>
           <Fade bottom>
             <h1 className={Classes.events}>COMPETITIONS</h1>
@@ -135,7 +136,7 @@ const IndexLanding = () => {
         </div>
         <div className={Classes.div4}>
           <div className={Classes.banner2}>
-            <img src={briefing} alt="" />
+            <Image src={briefing} alt="" width={100} height={50}/>
           </div>
           <Fade bottom>
             <h1 className={Classes.events}>WORKSHOPS</h1>
@@ -157,7 +158,7 @@ const IndexLanding = () => {
       <div className={Classes.eventBox}>
         <div className={Classes.div5}>
           <div className={Classes.banner3}>
-            <img src={redcarpet} alt="" />
+            <Image src={redcarpet} alt="" width={100} height={50}/>
           </div>
 
           <Fade bottom>
@@ -172,14 +173,14 @@ const IndexLanding = () => {
 
             <div className={Classes.modal} onClick={modalState} style={{ display: isShown ? 'block' : 'none' }}>
               <div className={Classes.modalContent} >
-                <img className={Classes.modalImage} src="comiceve.webp" />
+                <Image className={Classes.modalImage} src="/comiceve.webp" width={100} height={50}/>
               </div>
             </div>
           </Fade>
         </div>
         <div className={Classes.div6}>
           <div className={Classes.banner4}>
-            <img src={banner4} alt="" />
+            <Image src={banner4} alt="" />
           </div>
           <Fade bottom>
             <h1 className={Classes.events}>OPEN AIR THEATRES</h1>
