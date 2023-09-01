@@ -13,8 +13,6 @@ import ScrollTrigger from "react-scroll-trigger"
 import Header from "./Header"
 import Footer from "./Footer"
 
-
-
 const IndexLanding = () => {
     const [counterOn, setCounterOn] = useState(false);
   const [button, setButton] = useState(true);
