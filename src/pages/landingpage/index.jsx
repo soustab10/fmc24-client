@@ -13,6 +13,7 @@ import ScrollTrigger from "react-scroll-trigger"
 import Header from "./Header"
 import Footer from "./Footer"
 import AboutUs from "./AboutUs"
+import Hero from "./Hero"
 import OAT from "./OAT"
 import Testimonials from "./Testimonials"
 import Competitions from "./Competitions"
@@ -53,6 +54,7 @@ const IndexLanding = () => {
   return (
     <>
     <Header/>
+    <Hero/>
     <AboutUs/>
     <Competitions/>
     <OAT/>
