@@ -1,0 +1,21 @@
+.links-header{
+    color: #FFF;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    
+}
+
+.fmcw-logo-header{
+    text-align: left;
+    /* margin-top: 20px; */
+    margin-left: 58px;
+    background-image: url('./../../../../public/images/FMClogoonly-13\ 2.png');
+    background-repeat: no-repeat;
+    width: 85px;
+    height: 85px;
+    flex-shrink: 0;
+}
