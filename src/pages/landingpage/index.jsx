@@ -12,8 +12,11 @@ import banner4 from './static/banner4.svg';
 import ScrollTrigger from "react-scroll-trigger"
 import Header from "./Header"
 import Footer from "./Footer"
-
-
+import AboutUs from "./AboutUs"
+import OAT from "./OAT"
+import Testimonials from "./Testimonials"
+import Competitions from "./Competitions"
+import Sponsors from "./Sponsors"
 
 const IndexLanding = () => {
     const [counterOn, setCounterOn] = useState(false);
@@ -50,6 +53,11 @@ const IndexLanding = () => {
   return (
     <>
     <Header/>
+    <AboutUs/>
+    <Competitions/>
+    <OAT/>
+    <Testimonials/>
+    <Sponsors/>
     <div id="header" ref_container={useRef}>
       <div className={Classes.div1}>
         <Fade bottom>

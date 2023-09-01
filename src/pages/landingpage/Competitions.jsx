@@ -1,14 +1,14 @@
 import React from 'react'
 
-const Footer = () => {
+const Competitions = () => {
   return (
     <>
     <div>
-   Footer div
+    Competitions
     </div>
      
     </>
   )
 }
 
-export default Footer
+export default Competitions
