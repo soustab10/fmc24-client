@@ -1,6 +1,7 @@
 
 import React, { useState, useEffect, useRef } from 'react';
 import Image from 'next/image'
+import Link from 'next/link'
 import Classes from './LandingPage.module.css';
 import Fade from "react-awesome-reveal"
 import Marquee from "react-fast-marquee"
@@ -56,11 +57,11 @@ const IndexLanding = () => {
           </h1>
           {/* <Link to='/authentication'>  */}
           {/* <Link to="/authentication">  */}
-          <a href="/authentication">
+          <Link href="/authentication">
             <button className={Classes.register_button}>
               <p>Register</p>
             </button>
-          </a>
+          </Link>
          
         </Fade>
       </div>
@@ -79,38 +80,38 @@ const IndexLanding = () => {
           <h1>FOR CREATIVE ENTHUSIASTS</h1>
           <h2>FROM FIELDS OF</h2>
           <section className={Classes.button_1}>
-            <a href="/events/#vertical-tabpanel-4">
+            <Link href="/events/#vertical-tabpanel-4">
               <button className={Classes.design}>
                 <p>Design</p>
               </button>
-            </a>
-            <a href="/events/#photog">
+            </Link>
+            <Link href="/events/#photog">
               <button className={Classes.photography}>
                 <p>Photography</p>
               </button>
-            </a>
-            <a href="/events/#vertical-tab-3">
+            </Link>
+            <Link href="/events/#vertical-tab-3">
               <button className={Classes.media}>
                 <p>Media</p>
               </button>
-            </a>
+            </Link>
           </section>
           <section className={Classes.button_2}>
-            <a href="/events/#vertical-tab-1">
+            <Link href="/events/#vertical-tab-1">
               <button className={Classes.cine}>
                 <p>Cinematography</p>
               </button>
-            </a>
-            <a href="/events/#vertical-tab-5">
+            </Link>
+            <Link href="/events/#vertical-tab-5">
               <button className={Classes.animation}>
                 <p>Animation</p>
               </button>
-            </a>
-            <a href="/events/#vertical-tab-2">
+            </Link>
+            <Link href="/events/#vertical-tab-2">
               <button className={Classes.outreach}>
                 <p>Outreach</p>
               </button>
-            </a>
+            </Link>
           </section>
         </Fade>
       </div>
@@ -129,9 +130,9 @@ const IndexLanding = () => {
               an opportunity to compete in the largest digital arts festival in India and also get
               a chance to win exciting prizes!!{' '}
             </p>
-            <a href="/events">
+            <Link href="/events">
               <button place>Explore</button>
-            </a>
+            </Link>
           </Fade>
         </div>
         <div className={Classes.div4}>
@@ -147,9 +148,9 @@ const IndexLanding = () => {
               animation from the masters in the respective domain, and witness the transition from
               amateur to apprentice.{' '}
             </p>
-            <a href="/events">
+            <Link href="/events">
               <button place>Explore</button>
-            </a>
+            </Link>
           </Fade>
         </div>
       </div>
