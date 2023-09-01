@@ -2,9 +2,12 @@ import React from 'react'
 
 const AboutUs = () => {
   return (
-   <>
-   AboutUs
-   </>
+    <>
+    <div>
+    About Us div
+    </div>
+     
+    </>
   )
 }
 

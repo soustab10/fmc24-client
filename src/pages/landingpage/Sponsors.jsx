@@ -3,7 +3,10 @@ import React from 'react'
 const Sponsors = () => {
   return (
    <>
-    Its Sponsors
+   <div>
+   Its Sponsors
+   </div>
+    
    </>
   )
 }

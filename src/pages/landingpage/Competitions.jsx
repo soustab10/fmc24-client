@@ -2,9 +2,12 @@ import React from 'react'
 
 const Competitions = () => {
   return (
-   <>
-   Competitons
-   </>
+    <>
+    <div>
+    Competitions
+    </div>
+     
+    </>
   )
 }
 
