@@ -1,4 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;600&family=Montserrat:wght@600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Work Sans:wght@400;600&family=Montserrat:wght@600&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Work+Sans:wght@100;200;300;400;500;600;700;800&display=swap");
 
 .div1 {
   box-sizing: border-box;
@@ -16,7 +18,7 @@
   height: 76px;
   left: 130px;
   top: 230px;
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-style: normal;
   font-weight: 600;
   font-size: 3em;
@@ -42,7 +44,7 @@
   left: 330px;
   margin-left: 20px;
   top: 230px;
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-style: normal;
   font-weight: 600;
   font-size: 3em;
@@ -83,7 +85,7 @@
   width: 97px;
   height: 33px;
 
-  font-family: 'Manrope';
+  font-family: "Work Sans";
   font-style: normal;
   font-weight: 600;
   font-size: 24px;
@@ -332,7 +334,7 @@
   /* width: 173px; */
   /* height: 10vh; */
 
-  font-family: 'Manrope';
+  font-family: "Work Sans";
   font-style: normal;
   font-weight: 550;
   font-size: 3em;
@@ -418,7 +420,7 @@
   left: 108px;
   top: 36vh;
   /* margin: auto; */
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-style: normal;
   font-weight: 600;
   font-size: 3vw;
@@ -437,7 +439,7 @@
   left: 110px;
   top: 37vh;
 
-  font-family: 'Manrope';
+  font-family: "Work Sans";
   font-style: normal;
   font-weight: 400;
   font-size: 1.1vw;
@@ -457,7 +459,7 @@
   align-items: center;
   padding: 12px 36px;
   gap: 4px;
-  font-family: 'Manrope';
+  font-family: "Work Sans";
   font-style: bold;
   font-weight: 600;
   font-size: 1.4rem;
@@ -541,7 +543,7 @@
   top: 170%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-family: 'Manrope';
+  font-family: "Work Sans";
   font-style: bold;
   font-weight: 600;
   font-size: 24px;
@@ -566,7 +568,7 @@
   margin: auto;
   right: 0;
   top: 20vh;
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-style: normal;
   font-weight: 600;
   font-size: 13em;
@@ -582,7 +584,7 @@
   /* left: 236px; */
   top: 15vh;
   margin: auto;
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-style: normal;
   font-weight: 400;
   font-size: 2.5em;
@@ -597,7 +599,7 @@
   /* left: 236px; */
   top: 20vh;
   margin: auto;
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-style: normal;
   font-weight: 400;
   font-size: 2rem;
@@ -640,7 +642,7 @@
   left: 807px;
   top: 30%;
 
-  font-family: 'Manrope';
+  font-family: "Work Sans";
   font-style: normal;
   font-weight: 600;
   font-size: 56px;
@@ -656,7 +658,7 @@
   left: 807px;
   top: 40%;
 
-  font-family: 'Manrope';
+  font-family: "Work Sans";
   font-style: normal;
   font-weight: 500;
   font-size: 28px;
