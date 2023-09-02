@@ -2,7 +2,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import Image from 'next/image'
 import Link from 'next/link'
-import Classes from './styles/LandingPage.module.css';
+import Classes from '@/styles/LandingPage.module.css';
 import Fade from "react-awesome-reveal"
 import Marquee from "react-fast-marquee"
 import winner1 from './static/winner.svg';
