@@ -1,14 +1,14 @@
 import React from 'react'
 
-const Footer = () => {
+const OAT = () => {
   return (
     <>
     <div>
-   Footer div
+    OAT div
     </div>
      
     </>
   )
 }
 
-export default Footer
+export default OAT

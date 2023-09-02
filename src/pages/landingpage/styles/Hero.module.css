@@ -1,0 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Cherry+Swash:wght@400;700&family=Work+Sans:wght@100;200;300;400;500;600;700;800&display=swap");
+
+.hero_text {
+  color: #fff;
+  text-align: center;
+  font-family: 'Cherry Swash', cursive;
+  font-size: 10rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin: 75px 0;
+  margin-top:0px;
+  padding-top:75px;
+}
+

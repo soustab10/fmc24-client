@@ -5,13 +5,20 @@ import Link from 'next/link'
 import Classes from '@/styles/LandingPage.module.css';
 import Fade from "react-awesome-reveal"
 import Marquee from "react-fast-marquee"
-import winner1 from './winner.svg';
-import briefing from './briefing.svg';
-import redcarpet from './red-carpet.svg';
-import banner4 from './banner4.svg';
+import winner1 from './static/winner.svg';
+import briefing from './static/briefing.svg';
+import redcarpet from './static/red-carpet.svg';
+import banner4 from './static/banner4.svg';
 import ScrollTrigger from "react-scroll-trigger"
 import Header from "./Header"
 import Footer from "./Footer"
+import AboutUs from "./AboutUs"
+import Hero from "./Hero"
+import OAT from "./OAT"
+import Testimonials from "./Testimonials"
+import Competitions from "./Competitions"
+import Sponsors from "./Sponsors"
+
 const IndexLanding = () => {
     const [counterOn, setCounterOn] = useState(false);
   const [button, setButton] = useState(true);
@@ -47,10 +54,16 @@ const IndexLanding = () => {
   return (
     <>
     <Header/>
+    <Hero/>
+    <AboutUs/>
+    <Competitions/>
+    <OAT/>
+    <Testimonials/>
+    <Sponsors/>
     <div id="header" ref_container={useRef}>
       <div className={Classes.div1}>
         <Fade bottom>
-          <Image src="/fmctextlogo.png" alt="logo" className={Classes.div1_logo}  width={100} height={50}/>
+          <Image src="/fmctextlogo.png" alt="logo" className={Classes.div1_logo} objectFit='cover' width={500} height={50}/>
           <h1 className={Classes.div1_heading}>A Fest for </h1>
           <h1 className={Classes.div1_headanime}>
            

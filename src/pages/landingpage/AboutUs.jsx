@@ -1,14 +1,14 @@
 import React from 'react'
 
-const Footer = () => {
+const AboutUs = () => {
   return (
     <>
     <div>
-   Footer div
+    About Us div
     </div>
      
     </>
   )
 }
 
-export default Footer
+export default AboutUs
