@@ -8,12 +8,11 @@ import Fade from "react-awesome-reveal"
 import Marquee from "react-fast-marquee"
 import ScrollTrigger from "react-scroll-trigger"
 import IndexLanding from "./landingpage/index"
-import Sponsors from "./sponsors/index"
+
 export default function Home() {
   return (
  <>
  <IndexLanding/>
- <Sponsors/>
  </>
   
   )
