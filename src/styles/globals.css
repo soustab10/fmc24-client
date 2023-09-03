@@ -18,4 +18,7 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
-
+.react-multiple-carousel__arrow
+  {
+    display: none;
+  }

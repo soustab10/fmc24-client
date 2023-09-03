@@ -2,24 +2,24 @@
 .sponsor
 {
     
-    padding: 0 0 50px 0;
+    padding: 0 0 3rem 0;
   position: relative;
 }
 .sponsor_bx
 {
     text-align: center;
     text-align: center;
-     padding: 60px 50px;
+     padding: 2.5rem 2rem;
 
 }
 .heading
 {
-    font-size: 48px;
+    font-size: 3rem;
     font-family: 'Work Sans', sans-serif;
     font-weight: 600;
     color: #FFFFFF;
-    height: 56px;
-    top: 61px;font-style: normal;
+    top: 61px;
+    font-style: normal;
     line-height: normal;
 
 }
@@ -28,15 +28,15 @@
     width: 80%;
     margin: 0 auto;
     position: relative;
-   gap:6.56rem ;
+    gap:6.56rem ;
     
 }
   
 .item img {
    
-    width: 9rem;
-    height: 9rem;
-  margin: 0 auto 15px auto;
+  width: 9rem;
+  height: 9rem;
+  margin: 0 auto 1.1rem auto;
   margin-top: 7%;
   border-radius: 14px;
   box-shadow: 0px 0px 6px 10px rgba(0, 0, 0, 0.15);
@@ -44,4 +44,4 @@
 
 
   }
-  
+ 
