@@ -45,7 +45,7 @@ const Competitions = () => {
   </div>
   <div className='frot'>
       <h1 className='flex flex-col justify-center font-thin text-7xl text-white text-center leading-snug'>
-        "In my head is like if I can conquer men,then I can conquer feminity"
+        In my head is like if I can conquer men then I can conquer feminity
       </h1>
   </div>
 </div>
