@@ -1,4 +1,3 @@
-import React from 'react'
 import React, { useState } from "react";
 
 const Footer = () => {
@@ -39,12 +38,6 @@ const Footer = () => {
 
   return (
     <>
-
-    <div>
-        <></>
-    </div>
-     
-
       <div
         className="flex flex-col justify-end h-[400px]"
         id="NewRootRoot"
@@ -115,11 +108,8 @@ const Footer = () => {
           9999988888
         </div>
       </div>
-
     </>
   );
 };
 
 export default Footer;
-
-
