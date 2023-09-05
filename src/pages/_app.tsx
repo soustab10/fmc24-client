@@ -10,7 +10,9 @@ export default function App({ Component, pageProps }: AppProps) {
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
         // backgroundPosition: "center center",
-        minHeight: "100vh",        
+        minHeight: "100vh",
+        overflow: "hidden", 
+              
       }}
     >
       <Component {...pageProps} />
