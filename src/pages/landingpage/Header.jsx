@@ -16,13 +16,13 @@ const Header = () => {
         <div className='container-header flex flex-row h-20 fixed left-0 right-0'>
       <div className='fmcw-logo-header basis-1/6 place-self-center'></div>
       <div className='links-container-header flex justify-end flex-row basis-5/6'>
-        <Link href="/" className='nav-menu links-header w-24 place-self-center'>events
+        <Link href="/" className='nav-menu links-header w-24 place-self-center hover:scale-125'>events
         </Link>
-        <Link href="" className='nav-menu links-header w-24 place-self-center'>sponsors
+        <Link href="" className='nav-menu links-header w-24 place-self-center hover:scale-125'>sponsors
         </Link>
-        <Link href="" className='nav-menu links-header w-24 place-self-center'>glimpses
+        <Link href="" className='nav-menu links-header w-24 place-self-center hover:scale-125'>glimpses
         </Link>
-        <Link href="" className='nav-menu links-header w-24 place-self-center'>team
+        <Link href="" className='nav-menu links-header w-24 place-self-center hover:scale-125'>team
         </Link>
         <Link href=""
          className=' links-header w-16 place-self-center'>
@@ -57,7 +57,8 @@ const Header = () => {
           <button onClick={handleMenu}>
             <Image 
           className="cross-cut"
-          src={require('./../../../public/error.png')}
+          alt="cross-cut"
+          src={require('./../../../public/crosscut.png')}
          >
           </Image>
           </button>

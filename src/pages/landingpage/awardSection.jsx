@@ -38,7 +38,7 @@ const awardSection = () => {
     <br/>
     <svg xmlns="http://www.w3.org/2000/svg" width="159" height="38" viewBox="0 0 159 38" fill="none">
   <rect x="0.95" y="0.95" width="157.1" height="35.2815" rx="17.6408" stroke="white" stroke-width="1.9"/>
-  <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="white" font-size="14" font-family="Arial">Explore More </text>
+  <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="white" font-size="14" fontFamily="Work Sans">Explore More </text>
 </svg>
     </center>
    
