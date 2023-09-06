@@ -18,7 +18,7 @@ import OAT from "./OAT"
 import Testimonials from "./Testimonials"
 import Competitions from "./Competitions"
 import Sponsors from "./Sponsors"
-
+import AwardSection from "./awardSection"
 const IndexLanding = () => {
     const [counterOn, setCounterOn] = useState(false);
   const [button, setButton] = useState(true);
@@ -56,6 +56,7 @@ const IndexLanding = () => {
     <Header/>
     <Hero/>
     <AboutUs/>
+    <AwardSection/>
     <Competitions/>
     <OAT/>
     <Testimonials/>
