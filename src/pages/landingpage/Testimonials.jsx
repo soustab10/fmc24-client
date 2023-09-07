@@ -2,7 +2,32 @@ import React from "react";
 import Image from "next/image";
 import Marquee from "react-fast-marquee";
 import {} from "@next/font/google";
+import styles from './styles/Testimonial.module.css';
+import { useState, useEffect, useRef } from 'react';
+const images = [
+    
+   'https://images.pexels.com/photos/1563356/pexels-photo-1563356.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+  'https://images.pexels.com/photos/18126082/pexels-photo-18126082/free-photo-of-close-up-of-chipmunk.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+    'https://images.pexels.com/photos/1563356/pexels-photo-1563356.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+    'https://images.pexels.com/photos/18126082/pexels-photo-18126082/free-photo-of-close-up-of-chipmunk.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+    'https://images.pexels.com/photos/1563356/pexels-photo-1563356.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+    'https://images.pexels.com/photos/18126082/pexels-photo-18126082/free-photo-of-close-up-of-chipmunk.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
 
+    'https://images.pexels.com/photos/1563356/pexels-photo-1563356.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+    'https://images.pexels.com/photos/18126082/pexels-photo-18126082/free-photo-of-close-up-of-chipmunk.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+    'https://images.pexels.com/photos/1563356/pexels-photo-1563356.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+    'https://images.pexels.com/photos/18126082/pexels-photo-18126082/free-photo-of-close-up-of-chipmunk.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+
+    'https://images.pexels.com/photos/1563356/pexels-photo-1563356.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+    'https://images.pexels.com/photos/18126082/pexels-photo-18126082/free-photo-of-close-up-of-chipmunk.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+   
+    'https://images.pexels.com/photos/1563356/pexels-photo-1563356.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+    'https://images.pexels.com/photos/18126082/pexels-photo-18126082/free-photo-of-close-up-of-chipmunk.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+    'https://images.pexels.com/photos/1563356/pexels-photo-1563356.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+    'https://images.pexels.com/photos/18126082/pexels-photo-18126082/free-photo-of-close-up-of-chipmunk.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+    
+  ];
+  
 const textStyleBold = {
   textAlign: "center",
   color: "#FFF",
@@ -51,6 +76,42 @@ const bottomPadding = {
 };
 
 const Testimonials = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [touchStartX, setTouchStartX] = useState(null);
+  const carouselRef = useRef(null);
+
+  const handleSwipeStart = (e) => {
+    setTouchStartX(e.touches[0].clientX);
+  };
+
+  const handleSwipeEnd = (e) => {
+    const touchEndX = e.changedTouches[0].clientX;
+    const deltaX = touchEndX - touchStartX;
+
+    if (deltaX > 50) {
+      // Swipe right
+      setCurrentIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
+    } else if (deltaX < -50) {
+      // Swipe left
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+    }
+  };
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+    }, 2000); // Change images every 2 seconds (adjust as needed)
+
+    return () => clearInterval(interval);
+  }, []);
+
+  const getVisibleIndices = (currentIndex) => {
+    const centerIndex = currentIndex % images.length;
+    const leftIndex = (centerIndex - 1 + images.length) % images.length;
+    const rightIndex = (centerIndex + 1) % images.length;
+    return [leftIndex, centerIndex, rightIndex];
+  };
+
   return (
     <div style={topSectionPadding}>
       <center>
@@ -68,6 +129,23 @@ const Testimonials = () => {
             <div style={strokeTextStyle}>TESTIMONIALS</div>
           </Marquee>
         </div>
+        <div
+        className={styles.carousel}
+        onTouchStart={handleSwipeStart}
+        onTouchEnd={handleSwipeEnd}
+        ref={carouselRef}
+      >
+        <div className={styles['carousel-inner']}>
+          {getVisibleIndices(currentIndex).map((index) => (
+            <img
+              key={index}
+              src={images[index]}
+              alt={`Animal ${index + 1}`}
+              className={`${styles.slide} ${index === currentIndex % images.length ? styles.active : ''}`}
+            />
+          ))}
+        </div>
+      </div>
       </center>
     </div>
   );
