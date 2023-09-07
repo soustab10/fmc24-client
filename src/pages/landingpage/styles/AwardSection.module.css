@@ -1,0 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Cherry+Swash:wght@400;700&family=Work+Sans:wght@100;200;300;400;500;600;700;800&display=swap");
+
+/* styles.css or in your Tailwind CSS customizations */
+.text_stroke {
+    color: black;
+    -webkit-text-fill-color: white; /* Will override color (regardless of order) */
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+}

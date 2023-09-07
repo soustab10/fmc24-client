@@ -1,0 +1,79 @@
+.css1 {
+    /* margin-top: 100px; */
+    /* margin-left: 100px; */
+    color: rgb(255, 255, 255);
+    font-family: 'Work Sans', sans-serif;
+    font: 900 35vmin/35vh;
+    font-size: 250px;
+    text-align: left;
+    -webkit-text-stroke: 5px rgb(255, 255, 255);
+  
+  }
+  
+  .css2{
+    color: rgb(255, 255, 255);
+    /* margin-right: 200px; */
+    font-family: 'Work Sans', sans-serif;
+    font: 900 35vmin/35vh;
+    font-size: 250px;
+    text-align: right;
+    -webkit-text-stroke: 5px rgb(255, 255, 255);
+  }
+  .cssi{
+    /* position: absolute; */
+    top: 1350px;
+    left: 550px;
+    display: flex;
+    justify-content: center;
+    height:750px;
+    width: 500px;
+  }
+  
+  .css3 {
+    /* position: absolute; */
+    /* top: 1310px; */
+    /* margin-top: 150px; */
+    /* margin-left: 100px; */
+    color: rgb(255, 255, 255);
+    font-family: 'Work Sans', sans-serif;
+    font: 900 35vmin/35vh;
+    font-size: 250px;
+    text-align: left;
+    -webkit-text-stroke: 5px rgb(255, 255, 255);
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .css4{
+    /* position: absolute; */
+    /* top:1749px; */
+    /* color: rgb(255, 255, 255); */
+    /* margin-right: 200px; */
+    /* left: 325px; */
+    font-family: 'Work Sans', sans-serif;
+    font: 900 35vmin/35vh;
+    font-size: 250px;
+    text-align: right;
+    -webkit-text-stroke: 5px rgb(255, 255, 255);
+    -webkit-text-fill-color: transparent;
+  
+  }
+
+  .container_row{
+    display: grid;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+  
+  .layer1, .layer2{
+    grid-column: 1;
+    grid-row: 1;
+  }
+  
+  .layer1 span{
+    color: #fff;
+    /* background: #000cf6; */
+  }
+  
+  .layer2{
+    /* background: rgba(255, 0, 0, 0.4); */
+  }

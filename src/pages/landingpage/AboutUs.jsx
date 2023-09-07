@@ -16,7 +16,7 @@ const AboutUs = () => {
       <p className="ml-24 text-white text-xl text-justify">To know more click below</p>
       <Link href="#">
         
-      <button className="border-solid border-2 ml-24 mt-6 text-white rounded-3xl h-10 w-36 text-xl  hover:bg-purple-600 transition duration-300 transform  hover:shadow-xl">About us</button>
+      <button className="border-solid border-2 ml-24 mt-6 text-white rounded-3xl h-10 w-36 text-xl transition duration-300 transform  hover:shadow-xl ">About us</button>
       </Link>
       </div>
     </div>

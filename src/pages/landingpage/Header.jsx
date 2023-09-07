@@ -29,10 +29,10 @@ const Header = () => {
         
         <button onClick={handleMenu}>
 
-        {menuState? null: <div class="menu-link space-y-1">
-            <div class="w-8 h-0.5 bg-white"></div>
-            <div class="w-8 h-0.5 bg-white"></div>
-            <div class="w-8 h-0.5 bg-white"></div>
+        {menuState? null: <div className="menu-link space-y-1">
+            <div className="w-8 h-0.5 bg-white"></div>
+            <div className="w-8 h-0.5 bg-white"></div>
+            <div className="w-8 h-0.5 bg-white"></div>
         </div>}
        
         </button>
