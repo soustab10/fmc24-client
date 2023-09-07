@@ -14,6 +14,7 @@ const Competitions = () => {
           <Image
             src={require('./../../../public/images/Rectangle51.png')}
             alt= "Rectangle51"
+            className='rounded-3xl'
           />
         </div>
         <div className='flex pt-4 pl-14 flex-col place-content-start w-auto text-white h-fit justify-center'>
@@ -38,6 +39,7 @@ const Competitions = () => {
           <Image
             src={require('./../../../public/images/Rectangle52.png')}
             alt= "Rectangle52"
+            className='rounded-3xl'
           />
         </div>
       </div>
