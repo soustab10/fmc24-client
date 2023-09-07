@@ -8,17 +8,20 @@ const OAT = () => {
         <div className={Classes.layer1}>
           <h2 className={Classes.css1}>OPEN AIR</h2>
           <h2 className={Classes.css2}>THEATRE</h2>
-          <Image
+          
+        </div>
+        <div className={Classes.layer2}>
+          <h2 className={Classes.css3}>OPEN AIR</h2>
+          <h2 className={Classes.css4}>THEATRE</h2>
+        </div>
+        <div className={Classes.layer3}>
+        <Image
         src="/images/oatbkg.png"
         width={1000}
         height={5000}
         className={Classes.cssi}
         alt="OAT"
       />
-        </div>
-        <div className={Classes.layer2}>
-          <h2 className={Classes.css3}>OPEN AIR</h2>
-          <h2 className={Classes.css4}>THEATRE</h2>
         </div>
       </div>
       {/* <div className={Classes.container_row}>
