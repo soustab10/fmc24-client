@@ -2,9 +2,39 @@ import React from "react";
 import { Container } from "react-bootstrap";
 import Carousel from "react-multi-carousel";
 import Classes from "@/styles/Sponsor.module.css";
+import Marquee from "react-fast-marquee";
 import Image from "next/image";
 import "react-multi-carousel/lib/styles.css";
 const Sponsors = () => {
+  const strokeTextStyle = {
+    fontFamily: "'Work Sans', sans-serif",
+    fontSize: "36px",
+    fontStyle: "normal",
+    fontWeight: "600",
+    lineHeight: "normal",
+    WebkitTextFillColor: "transparent",
+    WebkitTextStrokeWidth: "2px",
+    WebkitTextStrokeColor: "white",
+    paddingRight: "36px",
+  };
+  const filledTextStyle = {
+    fontFamily: "'Work Sans', sans-serif",
+    fontSize: "36px",
+    fontStyle: "normal",
+    fontWeight: "600",
+    lineHeight: "normal",
+    color: "white",
+    paddingRight: "36px",
+  };
+
+  const topSectionPadding = {
+    paddingTop: "200px",
+    paddingBottom: "100px",
+  };
+
+  const bottomPadding = {
+    paddingBottom: "20px",
+  };
   const responsive = {
     superLargeDesktop: {
       // the naming can be any, depends on you.
@@ -27,9 +57,23 @@ const Sponsors = () => {
   return (
     <>
       <section className={Classes.sponsor} id="sponsors">
+      <div style={bottomPadding}>
+              <Marquee gradient={false} speed={50} direction="right">
+                <div style={filledTextStyle}>SPONSORS</div>
+                <div style={strokeTextStyle}>SPONSORS</div>
+                <div style={filledTextStyle}>SPONSORS</div>
+                <div style={strokeTextStyle}>SPONSORS</div>
+                <div style={filledTextStyle}>SPONSORS</div>
+                <div style={strokeTextStyle}>SPONSORS</div>
+                <div style={filledTextStyle}>SPONSORS</div>
+                <div style={strokeTextStyle}>SPONSORS</div>
+                <div style={filledTextStyle}>SPONSORS</div>
+                <div style={strokeTextStyle}>SPONSORS</div>
+              </Marquee>
+            </div>
         <Container>
           <div className={Classes.sponsor_bx}>
-            <h2 className={Classes.heading}>SPONSORS</h2>
+            
             <Carousel
               responsive={responsive}
               infinite={true}
