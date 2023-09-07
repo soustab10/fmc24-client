@@ -1,7 +1,7 @@
 import React from "react";
 import { Container } from "react-bootstrap";
 import Carousel from "react-multi-carousel";
-import Classes from "@/styles/Sponsor.module.css";
+import Classes from "./styles/Guests.module.css";
 import Image from "next/image";
 const textStyleBold = {
     textAlign: "center",
@@ -76,8 +76,8 @@ const Guests = () => {
                                     height={100}
                                 />
                                 <div className={Classes.overlayText}>
-                                  <h1>JULES</h1>
-                                  <br/>
+                                  <h1 style={{alignContent:"start"}}>JULES</h1>
+                                  {/* <br/> */}
                                  <p>{"She is portrayed by Hunter Schafer, while her 11-year-old counterpart is portrayed by Clark Furlong. Eclectic, free-spirited, chaotic and kind, Jules is a new girl in town, who quickly catches attention."} </p> 
                                 </div>
                             </div>
@@ -91,7 +91,7 @@ const Guests = () => {
                                 />
                                 <div className={Classes.overlayText}>
                                   <h1>JULES</h1>
-                                  <br/>
+                                  {/* <br/> */}
                                  <p>{"She is portrayed by Hunter Schafer, while her 11-year-old counterpart is portrayed by Clark Furlong. Eclectic, free-spirited, chaotic and kind, Jules is a new girl in town, who quickly catches attention."} </p> 
                                 </div>
                             </div>
@@ -104,7 +104,7 @@ const Guests = () => {
                                 />
                                 <div className={Classes.overlayText}>
                                   <h1>JULES</h1>
-                                  <br/>
+                                  {/* <br/> */}
                                  <p>{"She is portrayed by Hunter Schafer, while her 11-year-old counterpart is portrayed by Clark Furlong. Eclectic, free-spirited, chaotic and kind, Jules is a new girl in town, who quickly catches attention."} </p> 
                                 </div>
                             </div>
@@ -117,7 +117,7 @@ const Guests = () => {
                                 />
                                 <div className={Classes.overlayText}>
                                   <h1>JULES</h1>
-                                  <br/>
+                                  {/* <br/> */}
                                  <p>{"She is portrayed by Hunter Schafer, while her 11-year-old counterpart is portrayed by Clark Furlong. Eclectic, free-spirited, chaotic and kind, Jules is a new girl in town, who quickly catches attention."} </p> 
                                 </div>
                             </div>
@@ -130,7 +130,7 @@ const Guests = () => {
                                 />
                                 <div className={Classes.overlayText}>
                                   <h1>JULES</h1>
-                                  <br/>
+                                  {/* <br/> */}
                                  <p>{"She is portrayed by Hunter Schafer, while her 11-year-old counterpart is portrayed by Clark Furlong. Eclectic, free-spirited, chaotic and kind, Jules is a new girl in town, who quickly catches attention."} </p> 
                                 </div>
                             </div>
