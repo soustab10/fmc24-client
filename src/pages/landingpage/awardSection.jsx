@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import Classes from "./styles/awardSection.module.css";
+// import Classes from "./styles/awardSection.module.css";
 import Marquee from "react-fast-marquee";
 import {} from "@next/font/google";
 const textStyleBold = {
