@@ -3,32 +3,30 @@ import Image from "next/image";
 import Marquee from "react-fast-marquee";
 import Classes from "./styles/Testimonials.module.css";
 import {} from "@next/font/google";
-import styles from './styles/Testimonial.module.css';
-import { useState, useEffect, useRef } from 'react';
+import styles from "./styles/Testimonial.module.css";
+import { useState, useEffect, useRef } from "react";
 const images = [
-    
-   'https://images.pexels.com/photos/1563356/pexels-photo-1563356.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-  'https://images.pexels.com/photos/18126082/pexels-photo-18126082/free-photo-of-close-up-of-chipmunk.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-    'https://images.pexels.com/photos/1563356/pexels-photo-1563356.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-    'https://images.pexels.com/photos/18126082/pexels-photo-18126082/free-photo-of-close-up-of-chipmunk.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-    'https://images.pexels.com/photos/1563356/pexels-photo-1563356.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-    'https://images.pexels.com/photos/18126082/pexels-photo-18126082/free-photo-of-close-up-of-chipmunk.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+  "https://images.pexels.com/photos/1563356/pexels-photo-1563356.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+  "https://images.pexels.com/photos/18126082/pexels-photo-18126082/free-photo-of-close-up-of-chipmunk.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+  "https://images.pexels.com/photos/1563356/pexels-photo-1563356.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+  "https://images.pexels.com/photos/18126082/pexels-photo-18126082/free-photo-of-close-up-of-chipmunk.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+  "https://images.pexels.com/photos/1563356/pexels-photo-1563356.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+  "https://images.pexels.com/photos/18126082/pexels-photo-18126082/free-photo-of-close-up-of-chipmunk.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
 
-    'https://images.pexels.com/photos/1563356/pexels-photo-1563356.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-    'https://images.pexels.com/photos/18126082/pexels-photo-18126082/free-photo-of-close-up-of-chipmunk.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-    'https://images.pexels.com/photos/1563356/pexels-photo-1563356.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-    'https://images.pexels.com/photos/18126082/pexels-photo-18126082/free-photo-of-close-up-of-chipmunk.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+  "https://images.pexels.com/photos/1563356/pexels-photo-1563356.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+  "https://images.pexels.com/photos/18126082/pexels-photo-18126082/free-photo-of-close-up-of-chipmunk.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+  "https://images.pexels.com/photos/1563356/pexels-photo-1563356.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+  "https://images.pexels.com/photos/18126082/pexels-photo-18126082/free-photo-of-close-up-of-chipmunk.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
 
-    'https://images.pexels.com/photos/1563356/pexels-photo-1563356.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-    'https://images.pexels.com/photos/18126082/pexels-photo-18126082/free-photo-of-close-up-of-chipmunk.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-   
-    'https://images.pexels.com/photos/1563356/pexels-photo-1563356.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-    'https://images.pexels.com/photos/18126082/pexels-photo-18126082/free-photo-of-close-up-of-chipmunk.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-    'https://images.pexels.com/photos/1563356/pexels-photo-1563356.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-    'https://images.pexels.com/photos/18126082/pexels-photo-18126082/free-photo-of-close-up-of-chipmunk.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-    
-  ];
-  
+  "https://images.pexels.com/photos/1563356/pexels-photo-1563356.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+  "https://images.pexels.com/photos/18126082/pexels-photo-18126082/free-photo-of-close-up-of-chipmunk.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+
+  "https://images.pexels.com/photos/1563356/pexels-photo-1563356.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+  "https://images.pexels.com/photos/18126082/pexels-photo-18126082/free-photo-of-close-up-of-chipmunk.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+  "https://images.pexels.com/photos/1563356/pexels-photo-1563356.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+  "https://images.pexels.com/photos/18126082/pexels-photo-18126082/free-photo-of-close-up-of-chipmunk.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+];
+
 const textStyleBold = {
   textAlign: "center",
   color: "#FFF",
@@ -91,7 +89,9 @@ const Testimonials = () => {
 
     if (deltaX > 50) {
       // Swipe right
-      setCurrentIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
+      setCurrentIndex(
+        (prevIndex) => (prevIndex - 1 + images.length) % images.length
+      );
     } else if (deltaX < -50) {
       // Swipe left
       setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
@@ -131,22 +131,26 @@ const Testimonials = () => {
           </Marquee>
         </div>
         <div
-        className={styles.carousel}
-        onTouchStart={handleSwipeStart}
-        onTouchEnd={handleSwipeEnd}
-        ref={carouselRef}
-      >
-        <div className={styles['carousel-inner']}>
-          {getVisibleIndices(currentIndex).map((index) => (
-            <img
-              key={index}
-              src={images[index]}
-              alt={`Animal ${index + 1}`}
-              className={`${styles.slide} ${index === currentIndex % images.length ? styles.active : ''}`}
-            />
-          ))}
+          className={styles.carousel}
+          onTouchStart={handleSwipeStart}
+          onTouchEnd={handleSwipeEnd}
+          ref={carouselRef}
+        >
+          <div className={styles["carousel-inner"]}>
+            {getVisibleIndices(currentIndex).map((index) => (
+              <>
+                <img
+                  key={index}
+                  src={images[index]}
+                  alt={`Animal ${index + 1}`}
+                  className={`${styles.slide} ${
+                    index === currentIndex % images.length ? styles.active : ""
+                  }`}
+                />
+              </>
+            ))}
+          </div>
         </div>
-      </div>
       </center>
     </div>
   );
