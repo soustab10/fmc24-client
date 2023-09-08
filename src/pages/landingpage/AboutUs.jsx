@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 const AboutUs = () => {
   const text1 =
-    "  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
+    " FMC Weekend stands as India's grandest digital arts extravaganza, where artists from diverse backgrounds unite to celebrate their boundless creativity. Immerse yourself in a tapestry of enlightening workshops hosted by industry luminaries, and relish evenings filled with beloved entertainers. Our unrivalled, joy-infused atmosphere sets the stage for exhilarating competitions spanning a wide spectrum of creative domains, with the added allure of enticing awards. Join us for an unforgettable celebration of boundless creativity!";
   const text2 = "To know more click below";
   const text3 = "About Us";
   const [isMobile, setIsMobile] = useState(false);
@@ -57,7 +57,7 @@ const AboutUs = () => {
               <p className="ml-24 text-white text-xl text-justify">{text2}</p>
               <Link href="#">
 
-                <button className="border-solid border-2 ml-24 mt-6 text-white rounded-3xl h-10 w-36 text-xl transition duration-300 transform  hover:shadow-xl ">{text3}</button>
+                <button className="border-solid border-2 ml-24 mt-6 text-white rounded-3xl h-10 w-36 text-xl transition duration-300 transform  hover:shadow-xl hover:text-blue-950 bg-transparent hover:bg-white">{text3}</button>
               </Link>
             </div>
           </div>
