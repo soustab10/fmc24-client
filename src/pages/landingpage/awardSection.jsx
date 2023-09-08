@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
+
 // import Classes from "./styles/awardSection.module.css";
 import Marquee from "react-fast-marquee";
 import {} from "@next/font/google";
@@ -11,11 +12,29 @@ const textStyleBold = {
   fontStyle: "normal",
   fontWeight: "700",
 };
+const textStyleBoldMobile = {
+  textAlign: "center",
+  color: "#FFF",
+  fontFamily: "'Work Sans', sans-serif",
+  fontSize: "28px",
+  padding: "0px 20px",
+  fontStyle: "normal",
+  fontWeight: "700",
+};
 const textStyle = {
   textAlign: "center",
   color: "#FFF",
   fontFamily: "'Work Sans', sans-serif",
   fontSize: "24px",
+  fontStyle: "normal",
+  fontWeight: "400",
+};
+const textStyleMobile = {
+  textAlign: "center",
+  color: "#FFF",
+  fontFamily: "'Work Sans', sans-serif",
+  padding: "20px 15px",
+  fontSize: "16px",
   fontStyle: "normal",
   fontWeight: "400",
 };
@@ -49,59 +68,127 @@ const topSectionPadding = {
 const bottomPadding = {
   paddingBottom: "75px",
 };
+
 const awardSection = () => {
-  const text1 = "Unleash Your Potential Through";
+  const text1 = "Unleash Your Potential Through ";
   const text2 = "Thrilling Competitive Events!";
   const text3 =
     "Showcase Your Skills and Win Big in Our Prestigious and Thrilling";
   const text4 = "Competitive Challenges and Contests!";
   const text5 = "Explore More!";
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkIsMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    window.addEventListener("resize", checkIsMobile);
+    checkIsMobile();
+    return () => {
+      window.removeEventListener("resize", checkIsMobile);
+    };
+  }, []);
+
   return (
-    <div style={topSectionPadding}>
-      <center>
-        <div style={bottomPadding}>
-          <Marquee gradient={false} speed={50}>
-            <div style={filledTextStyle}>EVENTS</div>
-            <div style={strokeTextStyle}>EVENTS</div>
-            <div style={filledTextStyle}>EVENTS</div>
-            <div style={strokeTextStyle}>EVENTS</div>
-            <div style={filledTextStyle}>EVENTS</div>
-            <div style={strokeTextStyle}>EVENTS</div>
-            <div style={filledTextStyle}>EVENTS</div>
-            <div style={strokeTextStyle}>EVENTS</div>
-            <div style={filledTextStyle}>EVENTS</div>
-            <div style={strokeTextStyle}>EVENTS</div>
-          </Marquee>
-        </div>
+    <>
+      {isMobile ? (
+        <>
+          <div className="pt-16">
+            <center>
+              <div style={bottomPadding}>
+                <Marquee gradient={false} speed={50}>
+                  <div style={filledTextStyle}>EVENTS</div>
+                  <div style={strokeTextStyle}>EVENTS</div>
+                  <div style={filledTextStyle}>EVENTS</div>
+                  <div style={strokeTextStyle}>EVENTS</div>
+                  <div style={filledTextStyle}>EVENTS</div>
+                  <div style={strokeTextStyle}>EVENTS</div>
+                  <div style={filledTextStyle}>EVENTS</div>
+                  <div style={strokeTextStyle}>EVENTS</div>
+                  <div style={filledTextStyle}>EVENTS</div>
+                  <div style={strokeTextStyle}>EVENTS</div>
+                </Marquee>
+              </div>
 
-        <div style={textStyleBold}>
-          {text1}
-          <br />
-          {text2}
-        </div>
-        <div style={textStyle}>
-          {text3}
-          <br />
-          {text4}
+              <div style={textStyleBoldMobile}>
+                {text1}
+                
+                {text2}
+              </div>
+              <div style={textStyleMobile}>
+                {text3}
+                <br />
+                {text4}
 
-          <center>
-            <br />
+                <center>
+                  <br />
 
-            <button className="border-solid border-2 mt-6 text-white rounded-3xl h-10 w-48 text-lg transition duration-300 transform  hover:shadow-xl hover:text-blue-950 bg-transparent hover:bg-white">
-              {text5}
-            </button>
-          </center>
-        </div>
-        <br />
-        <Image
-          src="/Frame29.svg"
-          alt="frame29"
-          width={100}
-          height={100}
-          style={{}}
-        />
-      </center>
-    </div>
+                  <button className="border-solid border-2 mt-6 text-white rounded-3xl h-10 w-48 text-lg transition duration-300 transform  hover:shadow-xl hover:text-blue-950 bg-transparent hover:bg-white">
+                    {text5}
+                  </button>
+                </center>
+              </div>
+              <br />
+              <Image
+                src="/Frame29.svg"
+                alt="frame29"
+                width={100}
+                height={100}
+                style={{}}
+              />
+            </center>
+          </div>
+        </>
+      ) : (
+        <>
+          <div style={topSectionPadding}>
+            <center>
+              <div style={bottomPadding}>
+                <Marquee gradient={false} speed={50}>
+                  <div style={filledTextStyle}>EVENTS</div>
+                  <div style={strokeTextStyle}>EVENTS</div>
+                  <div style={filledTextStyle}>EVENTS</div>
+                  <div style={strokeTextStyle}>EVENTS</div>
+                  <div style={filledTextStyle}>EVENTS</div>
+                  <div style={strokeTextStyle}>EVENTS</div>
+                  <div style={filledTextStyle}>EVENTS</div>
+                  <div style={strokeTextStyle}>EVENTS</div>
+                  <div style={filledTextStyle}>EVENTS</div>
+                  <div style={strokeTextStyle}>EVENTS</div>
+                </Marquee>
+              </div>
+
+              <div style={textStyleBold}>
+                {text1}
+                <br />
+                {text2}
+              </div>
+              <div style={textStyle}>
+                {text3}
+                <br />
+                {text4}
+
+                <center>
+                  <br />
+
+                  <button className="border-solid border-2 mt-6 text-white rounded-3xl h-10 w-48 text-lg transition duration-300 transform  hover:shadow-xl hover:text-blue-950 bg-transparent hover:bg-white">
+                    {text5}
+                  </button>
+                </center>
+              </div>
+              <br />
+              <Image
+                src="/Frame29.svg"
+                alt="frame29"
+                width={100}
+                height={100}
+                style={{}}
+              />
+            </center>
+          </div>
+        </>
+      )}
+    </>
   );
 };
 
