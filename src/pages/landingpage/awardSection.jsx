@@ -69,7 +69,7 @@ const bottomPadding = {
   paddingBottom: "75px",
 };
 
-const awardSection = () => {
+const AwardSection = () => {
   const text1 = "Unleash Your Potential Through ";
   const text2 = "Thrilling Competitive Events!";
   const text3 =
@@ -192,4 +192,4 @@ const awardSection = () => {
   );
 };
 
-export default awardSection;
+export default AwardSection;
