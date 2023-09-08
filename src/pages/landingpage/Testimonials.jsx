@@ -113,8 +113,26 @@ const Testimonials = () => {
     return [leftIndex, centerIndex, rightIndex];
   };
 
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkIsMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    window.addEventListener('resize', checkIsMobile);
+    checkIsMobile();
+    return () => {
+      window.removeEventListener('resize', checkIsMobile);
+    };
+  }, []);
+
+
+
   return (
-    <div style={topSectionPadding}>
+    <>
+      {isMobile ? (
+        <>
+          <div style={topSectionPadding}>
       <center>
         <div style={bottomPadding}>
           <Marquee gradient={false} speed={50}>
@@ -153,6 +171,53 @@ const Testimonials = () => {
         </div>
       </center>
     </div>
+        </>
+      ) : (
+        <>
+          <div style={topSectionPadding}>
+      <center>
+        <div style={bottomPadding}>
+          <Marquee gradient={false} speed={50}>
+            <div style={filledTextStyle}>TESTIMONIALS</div>
+            <div style={strokeTextStyle}>TESTIMONIALS</div>
+            <div style={filledTextStyle}>TESTIMONIALS</div>
+            <div style={strokeTextStyle}>TESTIMONIALS</div>
+            <div style={filledTextStyle}>TESTIMONIALS</div>
+            <div style={strokeTextStyle}>TESTIMONIALS</div>
+            <div style={filledTextStyle}>TESTIMONIALS</div>
+            <div style={strokeTextStyle}>TESTIMONIALS</div>
+            <div style={filledTextStyle}>TESTIMONIALS</div>
+            <div style={strokeTextStyle}>TESTIMONIALS</div>
+          </Marquee>
+        </div>
+        <div
+          className={styles.carousel}
+          onTouchStart={handleSwipeStart}
+          onTouchEnd={handleSwipeEnd}
+          ref={carouselRef}
+        >
+          <div className={styles["carousel-inner"]}>
+            {getVisibleIndices(currentIndex).map((index) => (
+              <>
+                <img
+                  key={index}
+                  src={images[index]}
+                  alt={`Animal ${index + 1}`}
+                  className={`${styles.slide} ${
+                    index === currentIndex % images.length ? styles.active : ""
+                  }`}
+                />
+              </>
+            ))}
+          </div>
+        </div>
+      </center>
+    </div>
+        </>
+      )}
+    </>
+
+    
   );
 };
 
