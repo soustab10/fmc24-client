@@ -1,0 +1,58 @@
+/* components/Carousel.module.css */
+.carousel {
+  width: 100%;
+  display: flex;
+  /* Hide overflow to prevent horizontal scrolling */
+  justify-content: center;
+}
+
+.carousel-inner {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  align-items: center; /* Center images vertically */
+  justify-content: center; 
+}
+
+.slide-container {
+  flex: 0 0 calc(100% / 3); /* Display 3 images at a time */
+  overflow: hidden; /* Hide overflow to cut the area from both left and right */
+  margin: 0 0.5rem; /* Add space between non-active and active images */
+
+}
+
+.slide {
+  max-width: 100%;
+  height: auto;
+  filter: grayscale(100%);
+  transition: filter 0.5s ease-in-out;
+  transform: scale(0.8); /* Reduce the size of non-active images more */
+  opacity: 0.7; /* Reduce opacity for non-active images */
+  margin-left: -0.5rem; /* Cut non-active images on the left */
+  margin-right: 0; /* Remove margin on the right for non-active images */
+  width: 55%;
+  height: 80%;
+}
+
+.active {
+  filter: grayscale(0%);
+  transform: scale(1); /* Enlarge the active image */
+  opacity: 1; /* Full opacity for the active image */
+  margin: 0; /* Remove margin for the active image */
+  box-shadow: 0px 0px 20px 20px rgba(0, 0, 0, 0.15);
+  width: 55%;
+  height: 95%;
+flex-shrink: 0;
+}
+
+/* Adjust dimensions for different screen sizes */
+@media screen and (max-width: 768px) {
+  .slide-container {
+    flex: 0 0 calc(100% / 2); /* Display 2 images at a time on smaller screens */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .slide-container {
+    flex: 0 0 100%; /* Display 1 image at a time on even smaller screens */
+  }
+}
