@@ -3,6 +3,11 @@ import Link from "next/link";
 import Image from 'next/image'
 //import './styles/Header.css'
 
+const navbarGlass = {
+  backdropFilter: 'blur(9px) saturate(100%)',
+    WebkitBackdropFilter: 'blur(9px) saturate(100%)',
+    backgroundColor: 'rgba(39, 39, 39, 0)',
+}
 const Header = () => {
    const [menuState,setMenuState] = useState(false); 
   const handleMenu= ()=>{
@@ -13,7 +18,7 @@ const Header = () => {
 
   return (
     <>
-        <div className='container-header flex flex-row h-20 fixed left-0 right-0 z-50'>
+        <div className='container-header flex flex-row h-20 fixed left-0 right-0 z-50' style={navbarGlass}>
       <div className='fmcw-logo-header basis-1/6 place-self-center'></div>
       <div className='links-container-header flex justify-end flex-row basis-5/6'>
         <Link href="/" className='nav-menu links-header w-24 place-self-center'>events
