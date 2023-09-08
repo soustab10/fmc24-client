@@ -73,8 +73,8 @@ const AwardSection = () => {
   const text1 = "Unleash Your Potential Through ";
   const text2 = "Thrilling Competitive Events!";
   const text3 =
-    "Showcase Your Skills and Win Big in Our Prestigious and Thrilling";
-  const text4 = "Competitive Challenges and Contests!";
+    "Showcase Your Skills and Win Big in Our Prestigious and Thrilling ";
+  const text4 = "Competitive Challenges and Contests! ";
   const text5 = "Explore More!";
   const [isMobile, setIsMobile] = useState(false);
 
@@ -160,12 +160,12 @@ const AwardSection = () => {
 
               <div style={textStyleBold}>
                 {text1}
-                <br />
+                
                 {text2}
               </div>
               <div style={textStyle}>
                 {text3}
-                <br />
+                
                 {text4}
 
                 <center>
