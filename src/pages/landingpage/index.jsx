@@ -59,7 +59,7 @@ const IndexLanding = () => {
     <AboutUs/>
     <AwardSection/>
     <Guests/>
-    <Competitions/>
+    {/* <Competitions/> */}
     <OAT/>
     <Testimonials/>
     <Sponsors/>

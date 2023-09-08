@@ -55,7 +55,7 @@ const Footer = () => {
             alt="Footer Logo"
           />
           <div
-            className="flex flex-row pl-12 gap-24 w-1/2 items-center justify-center"
+            className="flex flex-row pl-12 gap-24 w-2 items-center justify-center"
             style={{ margin: "0 auto" }}
           >
             <IconButton

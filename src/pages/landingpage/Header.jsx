@@ -13,16 +13,16 @@ const Header = () => {
 
   return (
     <>
-        <div className='container-header flex flex-row h-20 fixed left-0 right-0'>
+        <div className='container-header flex flex-row h-20 fixed left-0 right-0 z-50'>
       <div className='fmcw-logo-header basis-1/6 place-self-center'></div>
       <div className='links-container-header flex justify-end flex-row basis-5/6'>
-        <Link href="/" className='nav-menu links-header w-24 place-self-center hover:scale-125'>events
+        <Link href="/" className='nav-menu links-header w-24 place-self-center'>events
         </Link>
-        <Link href="" className='nav-menu links-header w-24 place-self-center hover:scale-125'>sponsors
+        <Link href="" className='nav-menu links-header w-24 place-self-center '>sponsors
         </Link>
-        <Link href="" className='nav-menu links-header w-24 place-self-center hover:scale-125'>glimpses
+        <Link href="" className='nav-menu links-header w-24 place-self-center '>glimpses
         </Link>
-        <Link href="" className='nav-menu links-header w-24 place-self-center hover:scale-125'>team
+        <Link href="" className='nav-menu links-header w-24 place-self-center'>team
         </Link>
         <Link href=""
          className=' links-header w-16 place-self-center'>

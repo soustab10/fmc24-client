@@ -55,77 +55,53 @@ const awardSection = () => {
   const text3 =
     "Showcase Your Skills and Win Big in Our Prestigious and Thrilling";
   const text4 = "Competitive Challenges and Contests!";
+  const text5 = "Explore More!";
   return (
     <div style={topSectionPadding}>
       <center>
-      <div style={bottomPadding}>
-        <Marquee gradient={false} speed={50}>
-          <div style={filledTextStyle}>EVENTS</div>
-          <div style={strokeTextStyle}>EVENTS</div>
-          <div style={filledTextStyle}>EVENTS</div>
-          <div style={strokeTextStyle}>EVENTS</div>
-          <div style={filledTextStyle}>EVENTS</div>
-          <div style={strokeTextStyle}>EVENTS</div>
-          <div style={filledTextStyle}>EVENTS</div>
-          <div style={strokeTextStyle}>EVENTS</div>
-          <div style={filledTextStyle}>EVENTS</div>
-          <div style={strokeTextStyle}>EVENTS</div>
-        </Marquee>
-      </div>
+        <div style={bottomPadding}>
+          <Marquee gradient={false} speed={50}>
+            <div style={filledTextStyle}>EVENTS</div>
+            <div style={strokeTextStyle}>EVENTS</div>
+            <div style={filledTextStyle}>EVENTS</div>
+            <div style={strokeTextStyle}>EVENTS</div>
+            <div style={filledTextStyle}>EVENTS</div>
+            <div style={strokeTextStyle}>EVENTS</div>
+            <div style={filledTextStyle}>EVENTS</div>
+            <div style={strokeTextStyle}>EVENTS</div>
+            <div style={filledTextStyle}>EVENTS</div>
+            <div style={strokeTextStyle}>EVENTS</div>
+          </Marquee>
+        </div>
 
-      <div style={textStyleBold}>
-        {text1}
-        <br />
-        {text2}
-      </div>
-      <div style={textStyle}>
-        {text3}
-        <br />
-        {text4}
-
-        <center>
+        <div style={textStyleBold}>
+          {text1}
           <br />
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="159"
-            height="38"
-            viewBox="0 0 159 38"
-            fill="none"
-          >
-            <rect
-              x="0.95"
-              y="0.95"
-              width="157.1"
-              height="35.2815"
-              rx="17.6408"
-              stroke="white"
-              stroke-width="1.9"
-            />
-            <text
-              x="50%"
-              y="50%"
-              dominantBaseline="middle"
-              textAnchor="middle"
-              fill="white"
-              fontSize="14"
-              fontFamily="Work Sans"
-            >
-              Explore More{" "}
-            </text>
-          </svg>
-        </center>
-      </div>
-      <br />
-      <Image
-        src="/Frame29.svg"
-        alt="frame29"
-        width={100}
-        height={100}
-        style={{}}
-      />
-    </center>
+          {text2}
+        </div>
+        <div style={textStyle}>
+          {text3}
+          <br />
+          {text4}
+
+          <center>
+            <br />
+
+            <button className="border-solid border-2 mt-6 text-white rounded-3xl h-10 w-48 text-lg transition duration-300 transform  hover:shadow-xl hover:text-blue-950 bg-transparent hover:bg-white">
+              {text5}
+            </button>
+          </center>
+        </div>
+        <br />
+        <Image
+          src="/Frame29.svg"
+          alt="frame29"
+          width={100}
+          height={100}
+          style={{}}
+        />
+      </center>
     </div>
-    
   );
 };
 
