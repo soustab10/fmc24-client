@@ -18,7 +18,7 @@ import OAT from "./OAT"
 import Testimonials from "./Testimonials"
 import Competitions from "./Competitions"
 import Sponsors from "./Sponsors"
-import AwardSection from "./awardSection"
+import AwardSection from "./AwardSection"
 import Guests from "./Guests"
 const IndexLanding = () => {
     const [counterOn, setCounterOn] = useState(false);

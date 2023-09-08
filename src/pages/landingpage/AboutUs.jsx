@@ -25,17 +25,14 @@ const AboutUs = () => {
       {isMobile ? (
         <>
           <center>
-            <Image className="float-right mr-24 ml-8 rounded-3xl" src="/image15.png" alt="logo" objectFit='cover' width={400} height={50} />
-            <br />
-            <br />
 
-            <p className="text-7xl place-content-center text-white font-semibold font-sans">{text3}</p>
+            <p className="text-5xl place-content-center text-white font-bold font-sans">{text3}</p>
             <br />
-            <p className="text-white text-xl text-justify">{text1}</p>
-            {/* <p className="text-white text-xl text-justify">{text2}</p> */}
+            <p className="text-white text-justify px-12">{text1}</p>
+            
             <center>
               <Link href="#">
-                <button className="border-solid border-2 mt-6 text-white rounded-3xl h-10 w-36 text-xl transition duration-300 transform hover:shadow-xl">
+                <button className="border-solid border-2 mt-6 text-white rounded-3xl h-10 w-36 text-xl transition duration-300 transform hover:shadow-xl  hover:text-blue-950 bg-transparent hover:bg-white">
                   {text3}
                 </button>
               </Link>
