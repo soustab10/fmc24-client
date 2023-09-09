@@ -32,7 +32,7 @@ const Competitions = () => {
             WORKSHOP
           </h>
           <h className='font-normal text-2xl h-16'>
-          Lorem ipsum dolor sit amet consectetur. Sed non placerat purus vitae in. Pellentesque et tempor tortor enim ac sit.
+          
           </h>
         </div>
         <div className='flex min-w-max min-h-max flex-col'>

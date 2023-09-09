@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Container } from "react-bootstrap";
 import Carousel from "react-multi-carousel";
 import Classes from "./styles/Guests.module.css";
+import Link from "next/link";
 import Image from "next/image";
 const textStyleBold = {
   textAlign: "center",
@@ -83,12 +84,12 @@ const Guests = () => {
           <center>
             <div style={textStyleBoldMobile}>
               {text1}
-              
+
               {text2}
             </div>
             <div style={textStyleMobile}>
               {text3}
-             
+
               {text4}
             </div>
             <br />
@@ -114,7 +115,9 @@ const Guests = () => {
                       height={150}
                     />
                     <div className={Classes.overlayText}>
-                      <span style={{ alignContent: "start" }}>PRIYANKA DEO JAIN</span>
+                      <span style={{ alignContent: "start" }}>
+                        PRIYANKA DEO JAIN
+                      </span>
                       {/* <br/> */}
                       <p>
                         {
@@ -141,7 +144,7 @@ const Guests = () => {
                       </p>
                     </div>
                   </div>
-                  
+
                   <div className={Classes.guest}>
                     <Image
                       src="https://lh6.googleusercontent.com/X1YPPXySU-zL50153rU63fqJMy1khtIEnuErUw_5PQf4Bpvuw40cjw4ZpUn2Ywably-S4ah_YugXwhE4rPw2Rv3JyXR-u0OJULj7qhOSpoJlrO2HPGf7fW1YfbqnXCLoQeIOCkvNbmWhOsbt-sCG2XI=s320"
@@ -278,11 +281,12 @@ const Guests = () => {
                       </p>
                     </div>
                   </div>
-                  
                 </Carousel>
-                <button className="border-solid border-2 mt-6 text-white rounded-3xl h-10 w-60 text-lg transition duration-300 transform  hover:shadow-xl hover:text-blue-950 bg-transparent hover:bg-white">
+                <Link href="/comingsoon">
+                  <button className="border-solid border-2 mt-6 text-white rounded-3xl h-10 w-60 text-lg transition duration-300 transform  hover:shadow-xl hover:text-blue-950 bg-transparent hover:bg-white">
                     {text5}
                   </button>
+                </Link>
               </div>
             </Container>
           </section>
@@ -323,7 +327,9 @@ const Guests = () => {
                       height={150}
                     />
                     <div className={Classes.overlayText}>
-                      <span style={{ alignContent: "start" }}>PRIYANKA DEO JAIN</span>
+                      <span style={{ alignContent: "start" }}>
+                        PRIYANKA DEO JAIN
+                      </span>
                       {/* <br/> */}
                       <p>
                         {
@@ -350,7 +356,7 @@ const Guests = () => {
                       </p>
                     </div>
                   </div>
-                  
+
                   <div className={Classes.guest}>
                     <Image
                       src="https://lh6.googleusercontent.com/X1YPPXySU-zL50153rU63fqJMy1khtIEnuErUw_5PQf4Bpvuw40cjw4ZpUn2Ywably-S4ah_YugXwhE4rPw2Rv3JyXR-u0OJULj7qhOSpoJlrO2HPGf7fW1YfbqnXCLoQeIOCkvNbmWhOsbt-sCG2XI=s320"
@@ -487,11 +493,12 @@ const Guests = () => {
                       </p>
                     </div>
                   </div>
-                  
                 </Carousel>
-                <button className="border-solid border-2 mt-6 text-white rounded-3xl h-10 w-60 text-lg transition duration-300 transform  hover:shadow-xl hover:text-blue-950 bg-transparent hover:bg-white">
+                <Link href="/comingsoon">
+                  <button className="border-solid border-2 mt-6 text-white rounded-3xl h-10 w-60 text-lg transition duration-300 transform  hover:shadow-xl hover:text-blue-950 bg-transparent hover:bg-white">
                     {text5}
                   </button>
+                </Link>
               </div>
             </Container>
           </section>
