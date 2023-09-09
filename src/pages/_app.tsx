@@ -3,12 +3,17 @@ import "./landingpage/styles/Header.css";
 import "./landingpage/styles/Competitions.css";
 import type { AppProps } from "next/app";
 import '@/styles/customfont.css';
-
+import Head from 'next/head'
 
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <div
+    <>
+    <Head>
+    <title>FMC Weekend</title>
+        <link rel='favicon' href='/favicon.ico' />
+      </Head>
+      <div
       style={{
         backgroundImage: `url("/gradientbg.png")`,
         backgroundSize: "cover",
@@ -21,5 +26,7 @@ export default function App({ Component, pageProps }: AppProps) {
     >
       <Component {...pageProps} />
     </div>
+    </>
+    
   );
 }
