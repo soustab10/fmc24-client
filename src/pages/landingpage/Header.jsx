@@ -68,7 +68,7 @@ const Header = () => {
                   <div className="fmcw-logo-header basis-1/6 place-self-center z-100"></div>
                 </Link>
                 <div className="list">
-                  <Link href="/" className="menu-list">
+                  <Link href="/comingsoon" className="menu-list">
                     events
                   </Link>
                   <Link href="/comingsoon" className="menu-list">
