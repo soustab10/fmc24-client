@@ -2,6 +2,13 @@ import "@/styles/globals.css";
 import "./landingpage/styles/Header.css";
 import "./landingpage/styles/Competitions.css";
 import type { AppProps } from "next/app";
+import localFont from '@next/font/local'
+
+const magicafont = localFont({
+  src: './fonts/Magica.otf',
+  variable: '--fontmagica',
+})
+
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <div
