@@ -51,7 +51,7 @@ const OAT = () => {
               </div>
               <div className={Classes.layer3}>
                 <Image
-                  src="/images/oatbkg.png"
+                  src="/oatart.png"
                   width={128}
                   height={190}
                   className={Classes.cssim}
@@ -118,7 +118,7 @@ const OAT = () => {
               </div>
               <div className={Classes.layer3}>
                 <Image
-                  src="/images/oatbkg.png"
+                  src="/oatart.png"
                   width={1000}
                   height={5000}
                   className={Classes.cssi}
@@ -126,6 +126,10 @@ const OAT = () => {
                 />
               </div>
             </div>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
             <div className="flex flex-row justify-center">
               <svg
                 xmlns="http://www.w3.org/2000/svg"

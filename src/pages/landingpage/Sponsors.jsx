@@ -35,6 +35,10 @@ const Sponsors = () => {
   const bottomPadding = {
     paddingBottom: "20px",
   };
+
+  const carouselItem = {
+    paddingRight: "10px",
+  }
   const responsive = {
     superLargeDesktop: {
       // the naming can be any, depends on you.
@@ -52,28 +56,32 @@ const Sponsors = () => {
     mobile: {
       breakpoint: { max: 680, min: 0 },
       items: 1,
+      
     },
   };
   return (
     <>
-      <section className={Classes.sponsor} id="sponsors">
-      <div style={bottomPadding}>
-              <Marquee gradient={false} speed={50} direction="right">
-                <div style={filledTextStyle}>SPONSORS</div>
-                <div style={strokeTextStyle}>SPONSORS</div>
-                <div style={filledTextStyle}>SPONSORS</div>
-                <div style={strokeTextStyle}>SPONSORS</div>
-                <div style={filledTextStyle}>SPONSORS</div>
-                <div style={strokeTextStyle}>SPONSORS</div>
-                <div style={filledTextStyle}>SPONSORS</div>
-                <div style={strokeTextStyle}>SPONSORS</div>
-                <div style={filledTextStyle}>SPONSORS</div>
-                <div style={strokeTextStyle}>SPONSORS</div>
-              </Marquee>
-            </div>
+      <section
+        className={Classes.sponsor}
+        style={topSectionPadding}
+        id="sponsors"
+      >
+        <div style={bottomPadding}>
+          <Marquee gradient={false} speed={50} direction="right">
+            <div style={filledTextStyle}>PREVIOUS SPONSORS</div>
+            <div style={strokeTextStyle}>PREVIOUS SPONSORS</div>
+            <div style={filledTextStyle}>PREVIOUS SPONSORS</div>
+            <div style={strokeTextStyle}>PREVIOUS SPONSORS</div>
+            <div style={filledTextStyle}>PREVIOUS SPONSORS</div>
+            <div style={strokeTextStyle}>PREVIOUS SPONSORS</div>
+            <div style={filledTextStyle}>PREVIOUS SPONSORS</div>
+            <div style={strokeTextStyle}>PREVIOUS SPONSORS</div>
+            <div style={filledTextStyle}>PREVIOUS SPONSORS</div>
+            <div style={strokeTextStyle}>PREVIOUS SPONSORS</div>
+          </Marquee>
+        </div>
         <Container>
           <div className={Classes.sponsor_bx}>
-            
             <Carousel
               responsive={responsive}
               infinite={true}
@@ -81,41 +89,57 @@ const Sponsors = () => {
               autoPlaySpeed={2000}
               className="slider"
             >
-              <div className={Classes.item}>
+              <div style = {carouselItem}>
                 <Image
-                  src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MXw3NjA4Mjc3NHx8ZW58MHx8fHx8&w=1000&q=80"
+                  src="/canon.png"
                   alt="Rectangle"
                   width={100}
                   height={100}
                 />
               </div>
-              <div className={Classes.item}>
+              <div style = {carouselItem}>
                 <Image
-                  src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MXw3NjA4Mjc3NHx8ZW58MHx8fHx8&w=1000&q=80"
+                  src="/fujisq.png"
                   alt="Rectangle"
                   width={100}
                   height={100}
                 />
               </div>
-              <div className={Classes.item}>
+              <div style = {carouselItem}>
                 <Image
-                  src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MXw3NjA4Mjc3NHx8ZW58MHx8fHx8&w=1000&q=80"
+                  src="/huion-01.png"
                   alt="Rectangle"
                   width={100}
                   height={100}
                 />
               </div>
-              <div className={Classes.item}>
+              <div style = {carouselItem}>
                 <Image
-                  src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MXw3NjA4Mjc3NHx8ZW58MHx8fHx8&w=1000&q=80"
+                  src="/kalkaari.jpg"
                   alt="Rectangle"
                   width={100}
                   height={100}
                 />
               </div>
-              <div className={Classes.item}>
+              <div style = {carouselItem}>
                 <Image
-                  src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MXw3NjA4Mjc3NHx8ZW58MHx8fHx8&w=1000&q=80"
+                  src="/ifp.jpg"
+                  alt="Rectangle"
+                  width={100}
+                  height={100}
+                />
+              </div>
+              <div style = {carouselItem}>
+                <Image
+                  src="/redfm.jpg"
+                  alt="Rectangle"
+                  width={100}
+                  height={100}
+                />
+              </div>
+              <div style = {carouselItem}>
+                <Image
+                  src="/redbull.png"
                   alt="Rectangle"
                   width={100}
                   height={100}
