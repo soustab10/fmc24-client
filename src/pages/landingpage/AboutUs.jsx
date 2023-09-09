@@ -31,7 +31,7 @@ const AboutUs = () => {
             <p className="text-white text-justify px-12">{text1}</p>
             
             <center>
-              <Link href="#">
+              <Link href="/comingsoon">
                 <button className="border-solid border-2 mt-6 text-white rounded-3xl h-10 w-36 text-xl transition duration-300 transform hover:shadow-xl  hover:text-blue-950 bg-transparent hover:bg-white">
                   {text3}
                 </button>
@@ -52,7 +52,7 @@ const AboutUs = () => {
               {text1}
               </p>
               <p className="ml-24 text-white text-xl text-justify">{text2}</p>
-              <Link href="#">
+              <Link href="/comingsoon">
 
                 <button className="border-solid border-2 ml-24 mt-6 text-white rounded-3xl h-10 w-36 text-xl transition duration-300 transform  hover:shadow-xl hover:text-blue-950 bg-transparent hover:bg-white">{text3}</button>
               </Link>

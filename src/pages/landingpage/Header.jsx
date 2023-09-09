@@ -18,18 +18,20 @@ const Header = () => {
 
   return (
     <>
-        <div className='container-header flex flex-row h-20 fixed left-0 right-0 z-50' style={navbarGlass}>
+        <div className='container-header flex flex-row h-20 fixed left-20 right-0 z-50' style={navbarGlass}>
+          <Link href="/">
       <div className='fmcw-logo-header basis-1/6 place-self-center'></div>
+      </Link>
       <div className='links-container-header flex justify-end flex-row basis-5/6'>
-        <Link href="/" className='nav-menu links-header w-24 place-self-center'>events
+        <Link href="/comingsoon" className='nav-menu links-header w-24 place-self-center'>events
         </Link>
-        <Link href="" className='nav-menu links-header w-24 place-self-center '>sponsors
+        <Link href="/comingsoon" className='nav-menu links-header w-24 place-self-center '>sponsors
         </Link>
-        <Link href="" className='nav-menu links-header w-24 place-self-center '>glimpses
+        <Link href="/comingsoon" className='nav-menu links-header w-24 place-self-center '>glimpses
         </Link>
-        <Link href="" className='nav-menu links-header w-24 place-self-center'>team
+        <Link href="/comingsoon" className='nav-menu links-header w-24 place-self-center'>team
         </Link>
-        <Link href=""
+        <Link href="/comingsoon"
          className=' links-header w-16 place-self-center'>
         
         <button onClick={handleMenu}>
@@ -46,9 +48,9 @@ const Header = () => {
         {menuState? <div className="menu-design">
              <div className="list">
              <Link href="/" className='menu-list'>events</Link>
-             <Link href="" className='menu-list'>sponsors</Link>
-             <Link href="" className='menu-list'>glimpses</Link>
-             <Link href="" className='menu-list'>team</Link>
+             <Link href="/comingsoon" className='menu-list'>sponsors</Link>
+             <Link href="/comingsoon" className='menu-list'>glimpses</Link>
+             <Link href="/comingsoon" className='menu-list'>team</Link>
              
              </div>
              
