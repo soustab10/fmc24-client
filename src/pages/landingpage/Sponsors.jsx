@@ -56,6 +56,7 @@ const Sponsors = () => {
     mobile: {
       breakpoint: { max: 680, min: 0 },
       items: 1,
+      
     },
   };
   return (
