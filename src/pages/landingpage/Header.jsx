@@ -18,7 +18,7 @@ const Header = () => {
 
   return (
     <>
-        <div className='container-header flex flex-row h-20 fixed left-20 right-0 z-50' style={navbarGlass}>
+        <div className='container-header flex flex-row h-20 fixed left-0 right-0  z-50' style={navbarGlass}>
           <Link href="/">
       <div className='fmcw-logo-header basis-1/6 place-self-center'></div>
       </Link>
