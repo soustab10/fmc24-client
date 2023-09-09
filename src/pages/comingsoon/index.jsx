@@ -32,7 +32,7 @@ const Index = () => {
           alignItems: "center",
         }}
       >
-        <div className="comingsoon__text">
+        <div className={Classes.text_container}>
           <div style={textStyleBold} className={Classes.magicafont}>Coming Soon</div>
         </div>
       </div>

@@ -12,3 +12,6 @@
   font-size: 72px;
   color: #FFE900;
 }
+.text_container {
+    max-width: 75%;
+}
