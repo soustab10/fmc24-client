@@ -275,3 +275,17 @@
       height: auto;
     }
   }
+
+
+  
+  .lft{
+   
+    width: 50%;
+  }
+
+  .rgt{
+    display:flex;
+    justify-content: center;
+    width:100%;
+  }
+

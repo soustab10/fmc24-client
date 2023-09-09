@@ -1,6 +1,25 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+
 
 const Footer = () => {
+   
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkIsMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    window.addEventListener('resize', checkIsMobile);
+    checkIsMobile();
+    return () => {
+      window.removeEventListener('resize', checkIsMobile);
+    };
+  }, []);
+
+
+
+
+
   function IconButton({ src, alt, iconClassName }) {
     const [isHovered, setIsHovered] = useState(false);
     const [isClicked, setIsClicked] = useState(false);
@@ -37,26 +56,37 @@ const Footer = () => {
   }
 
   return (
-    <>
-      <div
-        className="flex flex-col justify-end h-[400px]"
+    <>  
+
+
+{isMobile ? (
+        <>
+                 <div
+        className="flex flex-col    "
         id="NewRootRoot"
         style={{
           background:
             "url(https://file.rendit.io/n/5jCD3nM2jBEv4WYPmWC9.svg) no-repeat center center / cover",
         }}
       >
-        <div className="flex flex-col justify-between h-[377px] mb-0 mx-auto pt-12 pb-16">
+          
+
+          <div className="lft">  
+             <div className=" flex flex-col justify-between h-[377px] mb-0 mx-auto pt-12 pb-16">
+          
+          <div>
           <img
-            src="https://file.rendit.io/n/P5IGsXiN0h2qCAKmXvv6.png"
-            className="h-[69.5px] w-[506px] mb-20 "
+            src="/fmcfooter.png"
+            className="h-[70px] w-[300px] mb-20 "
             id="FMClogowhite"
-            style={{ display: "block", margin: "0 auto" }}
+            style={{ display: "block", margin: "50px" }}
             alt="Footer Logo"
           />
+          </div>
+         
           <div
-            className="flex flex-row pl-12 gap-24 w-2 items-center justify-center"
-            style={{ margin: "0 auto" }}
+            className="flex flex-row pl-12 gap-6 w-2 items-center "
+            style={{ margin: "50px" }}
           >
             <IconButton
               src="https://file.rendit.io/n/uKxRuGH1UWBIGR75AqNQ.svg"
@@ -80,36 +110,121 @@ const Footer = () => {
             />
           </div>
         </div>
-        
-        <div className="flex flex-col items-start text-2xl absolute pb-[108px] ml-[107px] left-[20px] text-black">
+             </div>
+
+             
+           <div className="flex flex-row  items-center  " >        
+           <div className="flex flex-col  text-black px-5 py-5">
           <a href="#">Terms & Conditions</a>
-          <a href="#">Privacy Policy</a>
           <a href="#">Refund & Cancellation</a>
+          <a href="#">Acceptance of Terms</a>
+          <a href="#">Website Use</a>
+          <a href="#">Privacy and Data</a>
+          <a href="#">Termination</a>
+        </div>
+        <div className="flex flex-col  text-black px-5 py-5 ">
+          <a href="#">Privacy Policy</a>
           <a href="#">Online Registration</a>
-          <a href="#">Contact Us</a>
+          <a href="#">Cookies and Tracking</a>
+          <a href="#">Data and Security</a>
+          <a href="#">User Rights</a>
+          <a href="#">Contact Information</a>
         </div>
         
-        <div className="text-center text-2xl absolute pb-[240px] right-[198px] pr-4 text-black">
-          PUBLI HEAD
+  </div>
+         
+            
+             
         </div>
-        <div className="text-center text-2xl absolute pb-[207px] right-[206px] text-black">
-          Lorem Ipsum
+        </>
+      ) : (
+        <>
+                   <div
+        className="flex flex-row h-[400px]  "
+        id="NewRootRoot"
+        style={{
+          background:
+            "url(https://file.rendit.io/n/5jCD3nM2jBEv4WYPmWC9.svg) no-repeat center center / cover",
+        }}
+      >
+     
+     <div className="lft">  
+             <div className=" flex flex-col justify-between h-[377px] mb-0 mx-auto pt-12 pb-16">
+          
+          <div>
+          <img
+            src="/fmcfooter.png"
+            className="h-[100px] w-[506px] mb-20 "
+            id="FMClogowhite"
+            style={{ display: "block", margin: "50px" }}
+            alt="Footer Logo"
+          />
+          </div>
+         
+          <div
+            className="flex flex-row pl-12 gap-24 w-2 items-center "
+            style={{ margin: "50px" }}
+          >
+            <IconButton
+              src="https://file.rendit.io/n/uKxRuGH1UWBIGR75AqNQ.svg"
+              alt="Icon 1"
+              iconClassName={"w-5 pt-0.5"}
+            />
+            <IconButton
+              src="https://file.rendit.io/n/MlPny4TVSCpliadYV6nz.svg"
+              alt="Icon 2"
+              iconClassName={"w-3 pt-1"}
+            />
+            <IconButton
+              src="https://file.rendit.io/n/2oeO2KjXduF5dsSEPQKa.svg"
+              alt="Icon 3"
+              iconClassName={"w-6 pt-0.5"}
+            />
+            <IconButton
+              src="https://file.rendit.io/n/dptVu7QoH0WOlCl9lM3e.svg"
+              alt="Icon 4"
+              iconClassName={"w-6 pt-0.5"}
+            />
+          </div>
         </div>
-        <div className="text-center text-2xl absolute pb-[174px] right-[212px] text-black">
-          9999988888
+             </div>
+
+             
+           <div className="flex flex-row  items-center  mx-100 " style={{marginLeft:200 + "px"}}>        
+           <div className="flex flex-col text-2xl text-black px-10 ">
+          <a href="#">Terms & Conditions</a>
+          <a href="#">Refund & Cancellation</a>
+          <a href="#">Acceptance of Terms</a>
+          <a href="#">Website Use</a>
+          <a href="#">Privacy and Data</a>
+          <a href="#">Termination</a>
         </div>
-        <div className="text-center text-2xl absolute pb-[132px] right-[146px] text-black">
-          MARKETING HEAD
+        <div className="flex flex-col text-2xl text-black px-10 ">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Online Registration</a>
+          <a href="#">Cookies and Tracking</a>
+          <a href="#">Data and Security</a>
+          <a href="#">User Rights</a>
+          <a href="#">Contact Information</a>
         </div>
-        <div className="text-center text-2xl absolute pb-[99px] right-[206px] text-black">
-          Lorem Ipsum
+        
+  </div>
+            
+             
         </div>
-        <div className="text-center text-2xl absolute pb-[66px] right-[212px] text-black">
-          9999988888
-        </div>
-      </div>
-    </>
-  );
+        </>
+      )}
+
+
+
+
+
+
+     
+
+      
+    
+    </>);
 };
 
 export default Footer;
