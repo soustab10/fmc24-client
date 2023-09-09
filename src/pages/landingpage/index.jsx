@@ -15,7 +15,7 @@ import Footer from "./Footer"
 import AboutUs from "./AboutUs"
 import Hero from "./Hero"
 import OAT from "./OAT"
-import Testimonials from "./Testimonials"
+// import Testimonials from "./Testimonials"
 import Competitions from "./Competitions"
 import Sponsors from "./Sponsors"
 import AwardSection from "./AwardSection"
@@ -61,7 +61,7 @@ const IndexLanding = () => {
     <Guests/>
     {/* <Competitions/> */}
     <OAT/>
-    <Testimonials/>
+    {/* <Testimonials/> */}
     <Sponsors/>
  
     <Footer/>
