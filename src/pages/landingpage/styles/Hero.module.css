@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Cedarville+Cursive&family=Cherry+Swash:wght@400;700&family=Poppins:wght@100&family=Work+Sans:wght@100;200;300;400;500;600;700;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Cedarville+Cursive&family=Cherry+Swash:wght@400;700&family=Poppins:wght@100&family=Work+Sans:wght@100;200;300;400;500;600;700;800&display=swap");
 
 /* @font-face {
   font-family: 'Magica'; 
@@ -8,17 +8,14 @@
 } */
 
 .magicafont {
-  font-family: 'Abril Fatface', cursive;
+  font-family: "Abril Fatface", cursive;
   font-size: 72px;
 }
-
-
-
 
 .hero_text {
   color: #fff;
   text-align: center;
-  font-family: 'Cherry Swash', cursive;
+  font-family: "Cherry Swash", cursive;
   font-size: 10rem;
   font-style: normal;
   font-weight: 700;
@@ -26,11 +23,9 @@
   margin: 75px 0;
   margin-top: 0px;
   padding-top: 250px;
-  padding-bottom: 250px;
 }
 
 @media (max-width: 768px) {
-
   /* .hero_text {
     color: #fff;
     text-align: center;
@@ -50,13 +45,10 @@
 
   .videoContainer {
     position: relative;
-    top:100px;
+    top: 100px;
     height: 100%;
     width: 100vh;
-   
-    
   }
-
 }
 
 .videoContainer {
@@ -76,11 +68,17 @@
   bottom: 0;
   overflow: hidden;
 }
+.mvideo {
+  height: 100vh;
+  top: 0;
+  bottom: 0;
+  overflow: hidden;
+}
 
 .textOverlay {
   font-size: xx-large;
   position: absolute;
-  top: 50%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: yellow;
