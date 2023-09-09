@@ -1,13 +1,13 @@
 import React from "react";
 import Header from "../landingpage/Header";
 import Footer from "../landingpage/Footer";
+import Classes from "./styles/mainpage.module.css";
 
 const textStyleBold = {
   backdropFilter: "blur(9px) saturate(100%)",
   WebkitBackdropFilter: "blur(9px) saturate(100%)",
   backgroundColor: "rgba(39, 39, 39, 0)",
-  color: "white",
-  fontSize: "4rem",
+    fontSize: "4rem",
   fontWeight: "bold",
   textAlign: "center",
   marginTop: "20rem",
@@ -33,7 +33,7 @@ const Index = () => {
         }}
       >
         <div className="comingsoon__text">
-          <h1 style={textStyleBold}>Coming Soon</h1>
+          <div style={textStyleBold} className={Classes.magicafont}>Coming Soon</div>
         </div>
       </div>
       <div>
