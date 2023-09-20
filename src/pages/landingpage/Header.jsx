@@ -1,12 +1,16 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
-//import './styles/Header.css'
+// import Classes from "./styles/Header.module.css";
 
 const navbarGlass = {
   backdropFilter: "blur(9px) saturate(100%)",
   WebkitBackdropFilter: "blur(9px) saturate(100%)",
   backgroundColor: "rgba(39, 39, 39, 0)",
+};
+
+const logoLeftPadding = {
+  paddingLeft: "15rem",
 };
 const Header = () => {
   const [menuState, setMenuState] = useState(false);
@@ -21,7 +25,7 @@ const Header = () => {
         style={navbarGlass}
       >
         <Link href="/">
-          <div className="fmcw-logo-header place-self-center z-100"></div>
+          <div className="fmcw-logo-header place-self-center z-100" style={logoLeftPadding}></div>
         </Link>
         <div className="links-container-header flex justify-end flex-row basis-5/6">
           <Link

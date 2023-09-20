@@ -27,20 +27,20 @@ const filledTextStyle = {
 };
 
 const aboutusdiv = {
-  marginTop: '-250px',
-  paddingBottom: '100px',
-}
+  marginTop: "-250px",
+  paddingBottom: "100px",
+};
 const aboutusdivm = {
-  marginTop: '-175px',
-  paddingBottom: '100px',
-  
-}
+  marginTop: "-175px",
+  paddingBottom: "100px",
+};
 const VideoWithText = () => {
-  const [isMobile, setIsMobile] = useState(false);
+  const [isMobile, setIsMobile] = useState("/herodesktop.mp4");
 
   useEffect(() => {
     const checkIsMobile = () => {
-      setIsMobile(window.innerWidth < 768);
+      if (window.innerWidth <= 768) setIsMobile("/heromobile.mp4");
+      else if (window.innerWidth > 768) setIsMobile("/herodesktop.mp4");
     };
     window.addEventListener("resize", checkIsMobile);
     checkIsMobile();
@@ -50,59 +50,51 @@ const VideoWithText = () => {
   }, []);
   return (
     <>
-      {isMobile ? (
+      {/* {isMobile ? ( */}
         <>
           <div className={Classes.videoContainer}>
-            <video autoPlay loop muted className={Classes.video}>
-              <source src="/mobilevid.mp4" type="video/mp4" />
+            <video autoPlay loop muted className={Classes.video} key={isMobile}>
+              <source src={isMobile} type="video/mp4" />
             </video>
-            <div className={Classes.textOverlay}>
-              <h1 className={Classes.magicafont}>EUPHORIA OF EXPRESSION</h1>
-            </div>
           </div>
           <div style={aboutusdivm}>
-        <Marquee gradient={false} speed={50} direction="right">
-          <div style={filledTextStyle}>ABOUT US</div>
-          <div style={strokeTextStyle}>ABOUT US</div>
-          <div style={filledTextStyle}>ABOUT US</div>
-          <div style={strokeTextStyle}>ABOUT US</div>
-          <div style={filledTextStyle}>ABOUT US</div>
-          <div style={strokeTextStyle}>ABOUT US</div>
-          <div style={filledTextStyle}>ABOUT US</div>
-          <div style={strokeTextStyle}>ABOUT US</div>
-          <div style={filledTextStyle}>ABOUT US</div>
-          <div style={strokeTextStyle}>ABOUT US</div>
-        </Marquee>
-      </div>
+            <Marquee gradient={false} speed={50} direction="right">
+              <div style={filledTextStyle}>ABOUT US</div>
+              <div style={strokeTextStyle}>ABOUT US</div>
+              <div style={filledTextStyle}>ABOUT US</div>
+              <div style={strokeTextStyle}>ABOUT US</div>
+              <div style={filledTextStyle}>ABOUT US</div>
+              <div style={strokeTextStyle}>ABOUT US</div>
+              <div style={filledTextStyle}>ABOUT US</div>
+              <div style={strokeTextStyle}>ABOUT US</div>
+              <div style={filledTextStyle}>ABOUT US</div>
+              <div style={strokeTextStyle}>ABOUT US</div>
+            </Marquee>
+          </div>
         </>
-      ) : (
-        <>
+      {/* ) : ( */}
+        {/* <>
           <div className={Classes.videoContainer}>
             <video autoPlay loop muted className={Classes.video}>
-              <source src="/desktopvid.mp4" type="video/mp4" />
+              <source src={isMobile} type="video/mp4" />
             </video>
-            <div className={Classes.textOverlay}>
-              <h1 className={Classes.magicafont}>EUPHORIA OF EXPRESSION</h1>
-            </div>
           </div>
           <div style={aboutusdiv}>
-        <Marquee gradient={false} speed={50} direction="right">
-          <div style={filledTextStyle}>ABOUT US</div>
-          <div style={strokeTextStyle}>ABOUT US</div>
-          <div style={filledTextStyle}>ABOUT US</div>
-          <div style={strokeTextStyle}>ABOUT US</div>
-          <div style={filledTextStyle}>ABOUT US</div>
-          <div style={strokeTextStyle}>ABOUT US</div>
-          <div style={filledTextStyle}>ABOUT US</div>
-          <div style={strokeTextStyle}>ABOUT US</div>
-          <div style={filledTextStyle}>ABOUT US</div>
-          <div style={strokeTextStyle}>ABOUT US</div>
-        </Marquee>
-      </div>
+            <Marquee gradient={false} speed={50} direction="right">
+              <div style={filledTextStyle}>ABOUT US</div>
+              <div style={strokeTextStyle}>ABOUT US</div>
+              <div style={filledTextStyle}>ABOUT US</div>
+              <div style={strokeTextStyle}>ABOUT US</div>
+              <div style={filledTextStyle}>ABOUT US</div>
+              <div style={strokeTextStyle}>ABOUT US</div>
+              <div style={filledTextStyle}>ABOUT US</div>
+              <div style={strokeTextStyle}>ABOUT US</div>
+              <div style={filledTextStyle}>ABOUT US</div>
+              <div style={strokeTextStyle}>ABOUT US</div>
+            </Marquee>
+          </div>
         </>
-      )}
-
-      
+      )} */}
     </>
   );
 };
