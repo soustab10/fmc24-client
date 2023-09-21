@@ -53,7 +53,7 @@ const VideoWithText = () => {
       {/* {isMobile ? ( */}
         <>
           <div className={Classes.videoContainer}>
-            <video autoPlay loop muted className={Classes.video} key={isMobile}>
+            <video autoPlay={true} loop={true} controls={false} muted className={Classes.video} key={isMobile}>
               <source src={isMobile} type="video/mp4" />
             </video>
           </div>
