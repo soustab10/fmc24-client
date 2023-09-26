@@ -29,7 +29,7 @@ const Header = () => {
         </Link>
         <div className="links-container-header flex justify-end flex-row basis-5/6">
           <Link
-            href="/comingsoon"
+            href="/events"
             className="nav-menu links-header w-24 place-self-center"
           >
             events
