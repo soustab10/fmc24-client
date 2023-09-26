@@ -26,7 +26,7 @@ const Index = () => {
       <div style={divStyle}><h1 hidden>Hello</h1></div>
       
         <div className="flex flex-row justify-center items-center text-[18px] m-[20px] ">
-           <div className=" bg-gradient-to-t from-white/10 to-white/30 text-white flex flex-row h-[80px]   justify-center items-center rounded-[25px] bg-opacity-10 backdrop-blur-lg  shadow-xl drop-shadow-xl bg-blend-normal z-10 ">
+           <div className="border border-white bg-gradient-to-t from-white/10 to-white/30 text-white flex flex-row h-[80px]   justify-center items-center rounded-[25px] bg-opacity-10 backdrop-blur-lg  shadow-xl drop-shadow-xl bg-blend-normal z-10 ">
              <div className="w-[170px] flex justify-center items-center glow-effect-blue"> 
              <Link href="" className="hover:text-[24px] hover:font-semibold transition-all duration-5000 ease-in-out">Photography</Link>
              </div>
