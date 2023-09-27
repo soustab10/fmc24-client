@@ -47,7 +47,7 @@ const LogIn = () => {
                 <div className={Classes.authenticateButton}>
                     <GoogleOAuthProvider
                         auto_select
-                        clientId="138547576187-sel98eo969cd1d2fles4i1j90dj6gdj3.apps.googleusercontent.com"
+                        clientId=""
                         className={Classes.gButton}
 
 
