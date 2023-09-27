@@ -3,7 +3,7 @@ import { Container } from "react-bootstrap";
 import Carousel from "react-multi-carousel";
 import Classes from "./styles/Guests.module.css";
 import Link from "next/link";
-import Image from "next/legacy/image";
+import Image from "next/image";
 const textStyleBold = {
   textAlign: "center",
   color: "#FFF",

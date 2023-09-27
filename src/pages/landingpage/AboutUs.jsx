@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Image from "next/legacy/image";
+import Image from 'next/image';
 import Link from 'next/link';
 
 const AboutUs = () => {
@@ -45,7 +45,7 @@ const AboutUs = () => {
           <div className="h-426">
 
 
-            <Image className="float-right mr-24 ml-8" src="/aboutuspic.png" alt="logo" objectFit='contain' width={400} height={50} />
+            <Image className="float-right mr-24 ml-8" src="/aboutuspic.png" alt="logo" objectFit='cover' width={400} height={50} />
             <div>
               <p className="text-7xl text-white font-semibold ml-24 mb-9 font-sans">{text3}</p>
               <p className="ml-24 text-white text-xl text-justify">

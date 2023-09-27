@@ -1,5 +1,5 @@
 import React from "react";
-import Image from "next/legacy/image";
+import Image from "next/image";
 import Marquee from "react-fast-marquee";
 import Classes from "./styles/Testimonials.module.css";
 import {} from "@next/font/google";

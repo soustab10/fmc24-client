@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import Image from "next/legacy/image";
+import Image from "next/image";
 import Classes from "./styles/OAT.module.css";
 const text1 = "Live Entertainment Beneath";
 const text2 = "the Sparkling Night Sky!";

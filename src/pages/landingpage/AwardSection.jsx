@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import Image from "next/legacy/image";
+import Image from "next/image";
 import Link from "next/link";
 // import Classes from "./styles/awardSection.module.css";
 import Marquee from "react-fast-marquee";
