@@ -19,8 +19,8 @@ const LogIn = () => {
                     console.log('user Name', userName)
                     const userEmail = data.email;
                     console.log('User Email:', userEmail);
-                    sessionStorage.setItem('Name',userName);
-                    sessionStorage.setItem('Email',userEmail);
+                    sessionStorage.setItem('Name', userName);
+                    sessionStorage.setItem('Email', userEmail);
                     Router.push("/");
 
                 }
