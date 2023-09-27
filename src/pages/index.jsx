@@ -1,4 +1,4 @@
-import Image from 'next/image'
+import Image from "next/legacy/image"
 import { Inter } from 'next/font/google'
 import { Header } from 'next/dist/lib/load-custom-routes'
 const inter = Inter({ subsets: ['latin'] })

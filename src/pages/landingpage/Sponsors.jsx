@@ -3,7 +3,7 @@ import { Container } from "react-bootstrap";
 import Carousel from "react-multi-carousel";
 import Classes from "@/styles/Sponsor.module.css";
 import Marquee from "react-fast-marquee";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import "react-multi-carousel/lib/styles.css";
 const Sponsors = () => {
   const strokeTextStyle = {
