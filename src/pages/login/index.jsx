@@ -32,6 +32,7 @@ const clientId = publicRuntimeConfig.GOOGLE_CLIENT_ID;
                     console.log('User Email:', userEmail);
                     sessionStorage.setItem('Name', userName);
                     sessionStorage.setItem('Email', userEmail);
+                    sessionStorage.setItem('idToken',idToken);
                     Router.push("/");
 
                 }
