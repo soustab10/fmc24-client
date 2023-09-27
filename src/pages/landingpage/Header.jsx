@@ -4,9 +4,11 @@ import Image from "next/image";
 // import Classes from "./styles/Header.module.css";
 
 const navbarGlass = {
-  backdropFilter: "blur(9px) saturate(100%)",
-  WebkitBackdropFilter: "blur(9px) saturate(100%)",
-  backgroundColor: "rgba(39, 39, 39, 0)",
+  background: 'rgba(0, 0, 25, 0.3)',
+  boxShadow: '0 8px 32px 0 rgba(31, 38, 135, 0.37)',
+  backdropFilter: 'blur(16.5px)',
+  WebkitBackdropFilter: 'blur(16.5px)',
+  
 };
 
 const logoLeftPadding = {
