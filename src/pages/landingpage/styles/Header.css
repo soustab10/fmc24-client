@@ -2,10 +2,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Cedarville+Cursive&family=Cherry+Swash:wght@400;700&family=Poppins:wght@100;300;400;500;600;700&family=Work+Sans:wght@100;200;300;400;500;600;700;800&display=swap');
 .links-header{
     color: #FFF;
-    text-align: center;
-    font-family: 'Poppins', sans-serif;
+    text-align: center;    
     font-size: 16px;
-    font-weight: 400;
+    font-weight: 600;
     line-height: normal;
     
 }
