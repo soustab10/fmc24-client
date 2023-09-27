@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
-import Image from "next/image";
+import Image from "next/legacy/image";
 // import Classes from "./styles/Header.module.css";
 
 const navbarGlass = {
