@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect, useRef } from 'react';
-import Image from "next/legacy/image"
+import Image from 'next/image'
 import Link from 'next/link'
 import Classes from '@/styles/LandingPage.module.css';
 import Fade from "react-awesome-reveal"

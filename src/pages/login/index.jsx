@@ -6,17 +6,22 @@ import Header from "../landingpage/Header"
 import Footer from "../landingpage/Footer"
 import Router from 'next/router'
 import getConfig from 'next/config';
+
+
 const LogIn = () => {
-const { publicRuntimeConfig } = getConfig();
+    const { publicRuntimeConfig } = getConfig();
+
 const clientId = publicRuntimeConfig.GOOGLE_CLIENT_ID;
-console.log(clientId)
+
+    // const clientId = process.env.GOOGLE_CLIENT_ID;
+    console.log(clientId)
 
     const handleLogin = async (x) => {
         {
             console.log(x)
             const idToken = x.credential;
             try {
-
+               
                 const response = await fetch("https://www.googleapis.com/oauth2/v3/tokeninfo?id_token=" + idToken)
                 if (response.ok) {
                     const data = await response.json();
