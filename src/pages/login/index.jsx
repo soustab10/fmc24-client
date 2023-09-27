@@ -19,8 +19,8 @@ const LogIn = () => {
                     console.log('user Name', userName)
                     const userEmail = data.email;
                     console.log('User Email:', userEmail);
-                    sessionStorage.setItem('Name',userName);
-                    sessionStorage.setItem('Email',userEmail);
+                    sessionStorage.setItem('Name', userName);
+                    sessionStorage.setItem('Email', userEmail);
                     Router.push("/");
 
                 }
@@ -47,7 +47,7 @@ const LogIn = () => {
                 <div className={Classes.authenticateButton}>
                     <GoogleOAuthProvider
                         auto_select
-                        clientId=""
+                        clientId="138547576187-sel98eo969cd1d2fles4i1j90dj6gdj3.apps.googleusercontent.com"
                         className={Classes.gButton}
 
 
