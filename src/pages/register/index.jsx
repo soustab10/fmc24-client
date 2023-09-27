@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import PhoneInput from 'react-phone-input-2';
 import Classes from './register.module.css';
-
 const Register = () => {
   const [email, setEmail] = useState('');
   const [value, setValue] = useState('');
@@ -88,14 +87,16 @@ const Register = () => {
           <b>Wanna be a?</b>
         </label>
         <select name="position">
-          {email.endsWith('@iitbhu.ac.in') || email.endsWith('@itbhu.ac.in') ? (
-            <option value="0">Participant</option>
-          ) : (
-            <>
-              <option value="1">Participant</option>
-              <option value="2">Campus Ambassador</option>
-            </>
-          )}
+          {
+            email.endsWith('@iitbhu.ac.in') || email.endsWith('@itbhu.ac.in') ?
+              (
+                <option value="0">Participant</option>
+              ) : (
+                <>
+                  <option value="1">Participant</option>
+                  <option value="2">Campus Ambassador</option>
+                </>
+              )}
         </select>
         <div className={Classes.button_div}>
           <button className={Classes.submit} type="submit">
