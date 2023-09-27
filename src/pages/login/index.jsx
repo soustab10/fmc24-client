@@ -21,7 +21,7 @@ const clientId = publicRuntimeConfig.GOOGLE_CLIENT_ID;
             console.log(x)
             const idToken = x.credential;
             try {
-                register
+               
                 const response = await fetch("https://www.googleapis.com/oauth2/v3/tokeninfo?id_token=" + idToken)
                 if (response.ok) {
                     const data = await response.json();
