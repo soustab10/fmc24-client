@@ -14,7 +14,12 @@ const LogIn = () => {
 
 
     const clientId = publicRuntimeConfig.GOOGLE_CLIENT_ID;
+
     const backendURL = publicRuntimeConfig.NEXT_PUBLIC_REACT_APP_BACKEND_URI;
+
+    
+    console.log(backendURL);
+
 
     const handleFailure = (error) => {
       console.log("Authentication failed",error);
@@ -58,6 +63,7 @@ const LogIn = () => {
 
                 const isNewUser = credentialResponse.select_by === "btn";
                 sessionStorage.setItem('isNewUser', isNewUser);
+
 
                 if (isNewUser) {
                   Router.push('/register'); 
