@@ -1,25 +1,72 @@
+"use client"
 import React, { useEffect, useState } from 'react';
 import PhoneInput from 'react-phone-input-2';
 import Classes from './register.module.css';
+import jwt_decode from 'jwt-decode';
+import Router from 'next/router';
+
 const Register = () => {
+
   const [email, setEmail] = useState('');
   const [value, setValue] = useState('');
+  const [name, setName] = useState('');
 
   useEffect(() => {
-    const storedEmail = sessionStorage.getItem('email');
+    const token = sessionStorage.getItem('token');
+    const decodedToken = jwt_decode(token);
+    const storedEmail = decodedToken.email;
     if (storedEmail) {
       setEmail(storedEmail);
+    }
+    const storedName = decodedToken.name;
+    if (storedName) {
+      setName(storedName);
     }
   }, []);
 
   const text = `Let's get to know you a bit. We are a step closer to the world of FMC Weekend.`;
+  
+  const handleSubmit = async(e)=>{
+    e.preventDefault();
+    let obj = {
+      name: e.target[0].value,
+      email: e.target[1].value,
+      college: e.target[2].value,
+      number: value,
+      // year: e.target[3].value,
+      redeem: e.target[4].value,
+      instaHandle: e.target[5].value,
+      userType: e.target[6].value //insti user usertype 0
+    };
+
+    const res = await fetch(process.env.NEXT_PUBLIC_REACT_APP_BACKEND_URI + '/api/user', {
+      method: 'PATCH',
+      body: JSON.stringify(obj),
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    });
+    console.log({ obj });
+    const data = await res.json();
+    console.log(data);
+
+    if (data.message === 'success') {
+      Router.push('/dashboard');
+    } else {
+      // alert('login failed, please try later');
+      alert(data.message);
+      // window.location.href = "/register";
+    }
+
+    // window.location.reload();
+  }
 
   return (
-    <form className={`${Classes.section} ${Classes.form_class}`}>
+    <form className={`${Classes.section} ${Classes.form_class}`} onSubmit={(e) => handleSubmit(e)}>
       <div className={Classes.container}>
         <p className={Classes.main_title}>Register</p>
         <p className={Classes.top}>{text}</p>
-        <input type="text" name="name" required readOnly hidden />
+        <input type="text" name="name" value={name} required readOnly hidden />
         <input type="email" name="email" value={email} required readOnly hidden />
         <label htmlFor="college" className={Classes.title}>
           <b>University / College Name</b>
