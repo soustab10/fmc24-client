@@ -54,9 +54,9 @@ const LogIn = () => {
                 const data = await response.json();
                 console.log(data);
 
-                sessionStorage.setItem('tokenID', credentialResponse.tokenId);
+                sessionStorage.setItem('token', credentialResponse.credential);
 
-                const isNewUser = credentialResponse.newUser;
+                const isNewUser = credentialResponse.select_by === "btn";
                 sessionStorage.setItem('isNewUser', isNewUser);
 
                 if (isNewUser) {
