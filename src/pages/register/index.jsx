@@ -39,6 +39,8 @@ const Register = () => {
       userType: e.target[6].value //insti user usertype 0
     };
 
+    try {
+
     const res = await fetch(process.env.NEXT_PUBLIC_REACT_APP_BACKEND_URI + '/api/user', {
       method: 'PATCH',
       body: JSON.stringify(obj),
@@ -56,6 +58,10 @@ const Register = () => {
       // alert('login failed, please try later');
       alert(data.message);
       // window.location.href = "/register";
+    }
+      
+    } catch (error) {
+      console.log(error);
     }
 
     // window.location.reload();
@@ -80,7 +86,6 @@ const Register = () => {
               : ''
           }
           required
-          readOnly
         />
         <label htmlFor="phone" className={Classes.title}>
           <b>Phone Number</b>
