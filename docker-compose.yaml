@@ -1,0 +1,14 @@
+version: '3.3'
+
+services:
+  fmcweekend:
+    container_name: fmc24-client
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - '.:/fmc24-client'
+      - '/fmc24-client/node_modules'
+    restart: 'always'
+    environment:
+      - NODE_ENV=production

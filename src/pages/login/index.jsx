@@ -12,9 +12,9 @@ const LogIn = () => {
    
     const { publicRuntimeConfig } = getConfig();
 
+
     const clientId = publicRuntimeConfig.GOOGLE_CLIENT_ID;
     const backendURL = process.env.NEXT_PUBLIC_REACT_APP_BACKEND_URI;
-
 
     const handleFailure = (error) => {
       console.log("Authentication failed",error);
