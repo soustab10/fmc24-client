@@ -19,7 +19,6 @@ const LogIn = () => {
     
     console.log(backendURL);
 
-
     const handleFailure = (error) => {
       console.log("Authentication failed",error);
     };
