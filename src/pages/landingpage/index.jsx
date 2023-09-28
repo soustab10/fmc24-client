@@ -10,6 +10,7 @@ import briefing from './static/briefing.svg';
 import redcarpet from './static/red-carpet.svg';
 import banner4 from './static/banner4.svg';
 import ScrollTrigger from "react-scroll-trigger"
+import Demo from "./demo"
 import Header from "./Header"
 import Footer from "./Footer"
 import AboutUs from "./AboutUs"
@@ -59,6 +60,7 @@ const IndexLanding = () => {
     <AboutUs/>
     <AwardSection/>
     <Guests/>
+    <Demo/>
     {/* <Competitions/> */}
     <OAT/>
     {/* <Testimonials/> */}
