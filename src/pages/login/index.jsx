@@ -6,7 +6,6 @@ import Header from "../landingpage/Header"
 import Footer from "../landingpage/Footer"
 import Router from 'next/router'
 import getConfig from 'next/config';
-import jwt_decode from 'jwt-decode';
 
 const LogIn = () => {
    
@@ -25,29 +24,16 @@ const LogIn = () => {
         try {
             console.log("handleLogin invoked",credentialResponse);
 
-            const jwtToken = credentialResponse.credential;
-            const decodedToken = jwt_decode(jwtToken);
-
-            const userEmail = decodedToken.email;
-            const userName = decodedToken.name;
-            const userId = decodedToken.sub;
-
-            const userData = {
-                idToken: jwtToken,
-                email: userEmail,
-                name: userName,
-                userId: userId,
-            };
-
-            console.log(userData);
-
             const response = await fetch(backendURL+"/api/google-login", {
                 method: 'POST',
                 headers: {
-                    Authorization: `Bearer ${jwtToken}`,
+                    Authorization: `Bearer ${credentialResponse.credential}`,
                     'Content-Type': 'application/json',
                 },
-                body: JSON.stringify(userData),
+                body: JSON.stringify({  
+                    token: credentialResponse.credential,
+                    audience: clientId,
+                }),
             });
 
             if (response.ok) {
