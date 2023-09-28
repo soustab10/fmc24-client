@@ -15,7 +15,7 @@ const LogIn = () => {
 
     const clientId = publicRuntimeConfig.GOOGLE_CLIENT_ID;
     const backendURL =publicRuntimeConfig.NEXT_PUBLIC_REACT_APP_BACKEND_URI;
-    console.log(backendURL);
+    // console.log(backendURL);
 
     const handleFailure = (error) => {
       console.log("Authentication failed",error);
@@ -24,7 +24,7 @@ const LogIn = () => {
     const handleLogin = async (credentialResponse) => {
 
         try {
-            console.log("handleLogin invoked",credentialResponse);
+            // console.log("handleLogin invoked",credentialResponse);
 
             const jwtToken = credentialResponse.credential;
             const decodedToken = jwt_decode(jwtToken);
@@ -32,15 +32,16 @@ const LogIn = () => {
             const userEmail = decodedToken.email;
             const userName = decodedToken.name;
             const userId = decodedToken.sub;
-
+            sessionStorage.setItem('Name',userName)
+            sessionStorage.setItem('Email',userEmail)
             const userData = {
                 idToken: jwtToken,
                 email: userEmail,
                 name: userName,
                 userId: userId,
             };
-
-            console.log(userData);
+          
+            // console.log(userData);
 
             const response = await fetch(backendURL+"/api/google-login", {
                 method: 'POST',
@@ -53,7 +54,7 @@ const LogIn = () => {
 
             if (response.ok) {
                 const data = await response.json();
-                console.log(data);
+                // console.log(data);
 
                 sessionStorage.setItem('token', credentialResponse.credential);
 
