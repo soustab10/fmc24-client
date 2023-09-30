@@ -60,7 +60,7 @@ const IndexLanding = () => {
     <AboutUs/>
     <AwardSection/>
     <Guests/>
-    <Demo/>
+    {/* <Demo/> */}
     {/* <Competitions/> */}
     <OAT/>
     {/* <Testimonials/> */}
