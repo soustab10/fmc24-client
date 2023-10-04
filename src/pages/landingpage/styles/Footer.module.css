@@ -183,6 +183,10 @@
   line-height: normal;
 }
 
+.svg:hover{
+  scale: 1.25;
+}
+
 @media (max-width: 900px) {
   .index .group_12 {
     height: 25px;

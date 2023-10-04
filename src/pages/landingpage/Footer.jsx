@@ -94,13 +94,14 @@ const Footer = () => {
               </div>
 
               <div className={Classes.footer_flex_col}>
-                <div>
+              <a href="https://www.youtube.com/@FilmMediaCouncilIITBHUVaranasi" target="_blank" rel="noopener noreferrer">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="44"
                     height="44"
                     viewBox="0 0 44 44"
                     fill="none"
+                    className={Classes.svg}
                   >
                     <circle
                       cx="21.9203"
@@ -113,15 +114,16 @@ const Footer = () => {
                       fill="#6454E6"
                     />
                   </svg>
-                </div>
+                </a>
 
-                <div>
+                <a href="https://twitter.com/fmc_weekend" target="_blank" rel="noopener noreferrer">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="45"
                     height="44"
                     viewBox="0 0 45 44"
                     fill="none"
+                    className={Classes.svg}
                   >
                     <circle
                       cx="22.7601"
@@ -134,14 +136,17 @@ const Footer = () => {
                       fill="#6454E6"
                     />
                   </svg>
-                </div>
+                </a>
 
+
+                <a href="#" target="_blank" rel="noopener noreferrer">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="45"
                   height="44"
                   viewBox="0 0 45 44"
                   fill="none"
+                  className={Classes.svg}
                 >
                   <circle cx="22.6" cy="21.9203" r="21.9203" fill="#1A1938" />
                   <path
@@ -149,13 +154,16 @@ const Footer = () => {
                     fill="#6454E6"
                   />
                 </svg>
-
+                </a>
+                
+                <a href="https://www.instagram.com/fmc_weekend/" target="_blank" rel="noopener noreferrer">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="45"
                   height="44"
                   viewBox="0 0 45 44"
                   fill="none"
+                  className={Classes.svg}
                 >
                   <circle
                     cx="22.4437"
@@ -168,6 +176,7 @@ const Footer = () => {
                     fill="#6454E6"
                   />
                 </svg>
+                </a>
               </div>
             </div>
             <div className={Classes.footer_right}>
@@ -188,6 +197,7 @@ const Footer = () => {
                     height="34"
                     viewBox="0 0 33 34"
                     fill="none"
+                    
                   >
                     <path
                       d="M1.79297 31.5817L30.2794 3.09534"
