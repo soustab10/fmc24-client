@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Classes from "./styles/Footer.module.css";
 import { ClassNames } from "@emotion/react";
-
+import Image from "next/image";
 const Footer = () => {
   const [isMobile, setIsMobile] = useState(false);
 
@@ -51,31 +51,41 @@ const Footer = () => {
           <div className={Classes.overlap_2}>
             <div className={Classes.footer_left}>
               <div className={Classes.group_12}>
-                <img
+                <Image
                   className={Classes.group_13}
                   alt="Group"
                   src="https://cdn.animaapp.com/projects/651db41e9d5ee0411eebfadc/releases/651db45865a8ebc228c37369/img/group-7198@2x.png"
+                  width={100}
+                  height={100}
                 />
-                <img
+                <Image
                   className={Classes.line}
                   alt="Line"
                   src="https://cdn.animaapp.com/projects/651db41e9d5ee0411eebfadc/releases/651db45865a8ebc228c37369/img/line-58.png"
-                />
-                <img
+                  width={100}
+                  height={100}></Image>
+
+                <Image
                   className={Classes.FMC_WEEKEND}
                   alt="Fmc WEEKEND"
                   src="https://cdn.animaapp.com/projects/651db41e9d5ee0411eebfadc/releases/651db45865a8ebc228c37369/img/fmc-weekend.png"
-                />
-                <img
+                  width={100}
+                  height={100}></Image>
+                
+                <Image
                   className={Classes.the_euphoria_of}
                   alt="The euphoria of"
                   src="https://cdn.animaapp.com/projects/651db41e9d5ee0411eebfadc/releases/651db45865a8ebc228c37369/img/the-euphoria-of-expression.png"
-                />
-                <img
+                  width={100}
+                  height={100}
+                ></Image>
+                <Image
                   className={Classes.element_november}
                   alt="Element november"
                   src="https://cdn.animaapp.com/projects/651db41e9d5ee0411eebfadc/releases/651db45865a8ebc228c37369/img/3-5-november-2023.png"
-                />
+                  width={100}
+                  height={100}
+                ></Image>
               </div>
 
               <div className={Classes.footer_flex_row}>
