@@ -80,11 +80,8 @@ const Register = () => {
         <input
           type="text"
           name="college"
-          value={
-            email.endsWith('@iitbhu.ac.in') || email.endsWith('@itbhu.ac.in')
-              ? 'Indian Institute of Technology (BHU) Varanasi'
-              : ''
-          }
+          value={email.endsWith('@iitbhu.ac.in') || email.endsWith('@itbhu.ac.in')
+          ? 'Indian Institute of Technology (BHU) Varanasi' : null}
           required
         />
         <label htmlFor="phone" className={Classes.title}>
