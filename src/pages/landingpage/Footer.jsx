@@ -227,15 +227,15 @@ const Footer = () => {
               <div className={Classes.contact_info}>
                 <div className={Classes.contact_pr}>
                   <div className={Classes.text_wrapper_head}>
-                    Publicity Head 1
+                    Ritesh Soni
                   </div>
-                  <div className={Classes.text_wrapper_phn}>1234567891</div>
+                  <div className={Classes.text_wrapper_phn}>+91 8905322603</div>
                 </div>
                 <div className={Classes.contact_pr}>
                   <div className={Classes.text_wrapper_head}>
-                    Publicity Head 1
+                    Sundeep
                   </div>
-                  <div className={Classes.text_wrapper_phn}>1234567891</div>
+                  <div className={Classes.text_wrapper_phn}>+91 6281536456</div>
                 </div>
               </div>
             </div>
