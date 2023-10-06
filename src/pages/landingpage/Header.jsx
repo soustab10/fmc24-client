@@ -55,6 +55,12 @@ const Header = () => {
             team
           </Link>
           <Link
+            href="/login"
+            className="nav-menu links-header w-24 place-self-center"
+          >
+            login
+          </Link>
+          <Link
             href="/"
             className=" links-header w-auto pr-4 place-self-center"
           >
@@ -85,6 +91,9 @@ const Header = () => {
                   </Link>
                   <Link href="/comingsoon" className="menu-list">
                     team
+                  </Link>
+                  <Link href="/login" className="menu-list">
+                    login
                   </Link>
                 </div>
               </div>
