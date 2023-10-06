@@ -49,7 +49,7 @@ const Photography = () => {
     <p class="text-justify my-3.5 h-[180px]">
     Experience the boundless realm of 3D artistry! Create a captivating and immersive scene with no limitations on theme or subject matter. However, remember that in the end, a single image will be your masterpiece, the culmination of your creative process.
     </p>
-    <a href="https://docs.google.com/document/d/1JJ8oH5yWRkSVhM7XflBZvBjl-iiiyJLz/edit" className="text-white-800 my-3.5 italic hover:underline">VIEW PROBLEM STATEMENT</a>
+    <a href="https://drive.google.com/file/d/1FYlKT4s0syayaT8ES99ZzV5C2BXAbG5_/view?usp=drive_link" className="text-white-800 my-3.5 italic hover:underline">VIEW PROBLEM STATEMENT</a>
     <div className="my-3.5 align-middle justify-evenly">
         <button className="border p-2 border-white rounded-[15px] hover:text-[15px] hover:font-semibold transition-all duration-5000 ease-in-out ">REGISTRATION WILL BE LIVE SOON</button>
     </div>
@@ -62,7 +62,7 @@ const Photography = () => {
     <p class="text-justify my-3.5 h-[180px]">
     Create an innovative 2D logo animation within specified duration, showcasing seamless motion, creative transitions, and a harmonious blend of visual elements. 
     </p>
-    <a href="https://docs.google.com/document/d/1DsleK6oNGsqYIe1MoyPk50L8QHIDZ-2A/edit" className="text-white-800 my-3.5 italic hover:underline">VIEW PROBLEM STATEMENT</a>
+    <a href="https://drive.google.com/file/d/1fUyknpFgaFkaaVSGFOJVIVoFf3ukg_fQ/view?usp=drive_link" className="text-white-800 my-3.5 italic hover:underline">VIEW PROBLEM STATEMENT</a>
     <div className="my-3.5 align-middle justify-evenly">
         <button className="border p-2 border-white rounded-[15px] hover:text-[15px] hover:font-semibold transition-all duration-5000 ease-in-out ">REGISTRATION WILL BE LIVE SOON</button>
     </div>
@@ -75,7 +75,7 @@ const Photography = () => {
     <p class="text-justify my-3.5 h-[180px]">
     Participants have to make the looping animation. The theme and elements of the animation will be anything of your choice. Also we will provide you raw/base animation.
     </p>
-    <a href="https://docs.google.com/document/d/103OMjJI1eIqRvpRo6qdjiN5RLEa1h0AY/edit" className="text-white-800 my-3.5 italic hover:underline">VIEW PROBLEM STATEMENT</a>
+    <a href="https://drive.google.com/file/d/13Uu9pN_UHPtQt8Nz203ji3gmg3hMYzo4/view?usp=drive_link" className="text-white-800 my-3.5 italic hover:underline">VIEW PROBLEM STATEMENT</a>
     <div className="my-3.5 align-middle justify-evenly">
         <button className="border p-2 border-white rounded-[12.5px] hover:text-[15px] hover:font-semibold transition-all duration-5000 ease-in-out ">REGISTRATION WILL BE LIVE SOON</button>
     </div>
@@ -88,7 +88,7 @@ const Photography = () => {
     <p class="text-justify my-3.5 h-[180px]">
     Participants have to create a VFX based video. The scene must be set in Varanasi with all elements having links to Varanasi.
     </p>
-    <a href="https://docs.google.com/document/d/1ameBkhRHltEwDVzqx_-vgFHQeRUYVtox/edit" className="text-white-800 my-3.5 italic hover:underline">VIEW PROBLEM STATEMENT</a>
+    <a href="https://drive.google.com/file/d/1XUqCm_JVBWU00pt_yby1VWD9Cp2T5GUM/view?usp=drive_link" className="text-white-800 my-3.5 italic hover:underline">VIEW PROBLEM STATEMENT</a>
     <div className="my-3.5 align-middle justify-evenly">
         <button className="border p-2 border-white rounded-[15px] hover:text-[15px] hover:font-semibold transition-all duration-5000 ease-in-out ">REGISTRATION WILL BE LIVE SOON</button>
     </div>
