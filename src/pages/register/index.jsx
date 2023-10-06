@@ -94,7 +94,7 @@ const Register = () => {
                   className=" md:h-full sm:h-96 w-screen "
                   alt="signup"
                 />
-                <h1 class="absolute text-6xl w-2 text-white font-semibold top-20 mt-40 px-14 tracking-wide">
+                <h1 class="absolute text-6xl w-2 text-white font-semibold top-20 mt-40 md:mt-72 px-14 tracking-wide">
                     Create Your Account</h1>  
             
              
