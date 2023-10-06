@@ -1,0 +1,854 @@
+.index {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .index .overlap-wrapper {
+    background-color: #ffffff;
+    height: 3070px;
+    overflow: hidden;
+    width: 1512px;
+  }
+  
+  .index .overlap {
+    height: 3070px;
+    position: relative;
+    width: 1522px;
+  }
+  
+  .index .image {
+    height: 3070px;
+    left: 0;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    width: 1512px;
+  }
+  
+  .index .navbar {
+    align-items: center;
+    display: inline-flex;
+    gap: 49.82px;
+    left: 624px;
+    position: absolute;
+    top: 93px;
+  }
+  
+  .index .text-wrapper {
+    color: #ffffff;
+    font-family: "Work Sans", Helvetica;
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: -0.67px;
+    position: relative;
+    text-align: center;
+    white-space: nowrap;
+    width: fit-content;
+  }
+  
+  .index .div {
+    color: #ffffff;
+    font-family: "Work Sans", Helvetica;
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: -0.67px;
+    position: relative;
+    white-space: nowrap;
+    width: fit-content;
+  }
+  
+  .index .group {
+    height: 72px;
+    left: 128px;
+    position: absolute;
+    top: 71px;
+    width: 156px;
+  }
+  
+  .index .group-2 {
+    -webkit-backdrop-filter: blur(40px) brightness(100%);
+    backdrop-filter: blur(40px) brightness(100%);
+    background: linear-gradient(
+      180deg,
+      rgba(255, 253.94, 253.94, 0.4) 0%,
+      rgba(255, 253.94, 253.94, 0.4) 0%,
+      rgba(255, 253.94, 253.94, 0.4) 0.01%,
+      rgba(255, 255, 255, 0.1) 100%
+    );
+    background-image: url(https://cdn.animaapp.com/projects/651db41e9d5ee0411eebfadc/releases/651db45865a8ebc228c37369/img/rectangle.png);
+    background-size: 100% 100%;
+    border-radius: 41px;
+    box-shadow: 0px 4px 24px -1px #00000033;
+    height: 568px;
+    left: 153px;
+    position: absolute;
+    top: 263px;
+    width: 1206px;
+  }
+  
+  .index .group-3 {
+    -webkit-backdrop-filter: blur(40px) brightness(100%);
+    backdrop-filter: blur(40px) brightness(100%);
+    background: linear-gradient(
+      180deg,
+      rgba(255, 253.94, 253.94, 0.4) 0%,
+      rgba(255, 253.94, 253.94, 0.4) 0%,
+      rgba(255, 253.94, 253.94, 0.4) 0.01%,
+      rgba(255, 255, 255, 0.1) 100%
+    );
+    background-image: url(https://cdn.animaapp.com/projects/651db41e9d5ee0411eebfadc/releases/651db45865a8ebc228c37369/img/rectangle-1.png);
+    background-size: 100% 100%;
+    box-shadow: 0px 4px 24px -1px #00000033;
+    height: 568px;
+    left: 153px;
+    position: absolute;
+    top: 263px;
+    width: 465px;
+  }
+  
+  .index .overlap-group-wrapper {
+    height: 254px;
+    left: 259px;
+    position: absolute;
+    top: 303px;
+    width: 254px;
+  }
+  
+  .index .overlap-group {
+    background-image: url(https://cdn.animaapp.com/projects/651db41e9d5ee0411eebfadc/releases/651db45865a8ebc228c37369/img/rectangle-64@2x.png);
+    background-size: 100% 100%;
+    height: 300px;
+    left: -23px;
+    position: relative;
+    top: -19px;
+    width: 300px;
+  }
+  
+  .index .rectangle {
+    height: 254px;
+    left: 23px;
+    mix-blend-mode: overlay;
+    position: absolute;
+    top: 19px;
+    width: 254px;
+  }
+  
+  .index .text-wrapper-2 {
+    color: #ffffff;
+    font-family: "Work Sans", Helvetica;
+    font-size: 48px;
+    font-weight: 700;
+    left: 237px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    text-align: center;
+    top: 576px;
+    white-space: nowrap;
+  }
+  
+  .index .text-wrapper-3 {
+    color: #ffffff;
+    font-family: "Work Sans", Helvetica;
+    font-size: 72px;
+    font-weight: 700;
+    left: 128px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    text-align: center;
+    top: 981px;
+    white-space: nowrap;
+  }
+  
+  .index .frame {
+    align-items: flex-start;
+    display: inline-flex;
+    flex-direction: column;
+    gap: 24px;
+    left: 723px;
+    position: absolute;
+    top: 303px;
+  }
+  
+  .index .frame-2 {
+    align-items: flex-start;
+    display: inline-flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    position: relative;
+  }
+  
+  .index .text-wrapper-4 {
+    color: #ffffff;
+    font-family: "Work Sans", Helvetica;
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: -1px;
+    position: relative;
+    text-align: center;
+    white-space: nowrap;
+    width: fit-content;
+  }
+  
+  .index .text-wrapper-5 {
+    color: #ffffff;
+    font-family: "Work Sans", Helvetica;
+    font-size: 24px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: normal;
+    position: relative;
+    text-align: center;
+    white-space: nowrap;
+    width: fit-content;
+  }
+  
+  .index .text-wrapper-6 {
+    color: #ffffff;
+    font-family: "Work Sans", Helvetica;
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: 0;
+    line-height: normal;
+    position: relative;
+    text-align: center;
+    white-space: nowrap;
+    width: fit-content;
+  }
+  
+  .index .text-wrapper-7 {
+    color: #ffffff;
+    font-family: "Work Sans", Helvetica;
+    font-size: 48px;
+    font-weight: 700;
+    left: 261px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    text-align: center;
+    top: 632px;
+    white-space: nowrap;
+  }
+  
+  .index .group-4 {
+    height: 267px;
+    left: 128px;
+    position: absolute;
+    top: 1162px;
+    width: 392px;
+  }
+  
+  .index .group-wrapper {
+    background-image: url(https://cdn.animaapp.com/projects/651db41e9d5ee0411eebfadc/releases/651db45865a8ebc228c37369/img/rectangle-3@2x.png);
+    background-size: 100% 100%;
+    border-radius: 32px;
+    height: 267px;
+  }
+  
+  .index .group-5 {
+    height: 222px;
+    left: 23px;
+    position: relative;
+    top: 23px;
+    width: 348px;
+  }
+  
+  .index .text-wrapper-8 {
+    color: #000000;
+    font-family: "Work Sans", Helvetica;
+    font-size: 32px;
+    font-weight: 400;
+    left: 0;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    text-align: justify;
+    top: 15px;
+    white-space: nowrap;
+  }
+  
+  .index .image-wrapper {
+    border: 2px solid;
+    border-color: #ffffff;
+    border-radius: 34px;
+    height: 68px;
+    left: 272px;
+    position: absolute;
+    top: 0;
+    width: 68px;
+  }
+  
+  .index .img {
+    height: 42px;
+    left: 9px;
+    object-fit: cover;
+    position: absolute;
+    top: 10px;
+    width: 42px;
+  }
+  
+  .index .text-wrapper-9 {
+    color: #000000;
+    font-family: "Work Sans", Helvetica;
+    font-size: 32px;
+    font-weight: 600;
+    left: 0;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    text-align: justify;
+    top: 139px;
+    white-space: nowrap;
+  }
+  
+  .index .text-wrapper-10 {
+    color: #ffffff;
+    font-family: "Work Sans", Helvetica;
+    font-size: 24px;
+    font-weight: 400;
+    left: 0;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    text-align: justify;
+    top: 194px;
+    white-space: nowrap;
+  }
+  
+  .index .text-wrapper-11 {
+    color: #ffffff;
+    font-family: "Work Sans", Helvetica;
+    font-size: 40px;
+    font-weight: 600;
+    left: 0;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    text-align: justify;
+    top: 84px;
+    white-space: nowrap;
+  }
+  
+  .index .group-6 {
+    height: 267px;
+    left: 560px;
+    position: absolute;
+    top: 1162px;
+    width: 392px;
+  }
+  
+  .index .group-7 {
+    height: 223px;
+    left: 23px;
+    position: relative;
+    top: 22px;
+    width: 355px;
+  }
+  
+  .index .video-camera-wrapper {
+    border: 2px solid;
+    border-color: #ffffff;
+    border-radius: 34px;
+    height: 68px;
+    left: 279px;
+    position: absolute;
+    top: 0;
+    width: 68px;
+  }
+  
+  .index .video-camera {
+    height: 41px;
+    left: 13px;
+    object-fit: cover;
+    position: absolute;
+    top: 10px;
+    width: 41px;
+  }
+  
+  .index .text-wrapper-12 {
+    color: #000000;
+    font-family: "Work Sans", Helvetica;
+    font-size: 32px;
+    font-weight: 600;
+    left: 0;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    text-align: justify;
+    top: 140px;
+    white-space: nowrap;
+  }
+  
+  .index .text-wrapper-13 {
+    color: #ffffff;
+    font-family: "Work Sans", Helvetica;
+    font-size: 24px;
+    font-weight: 400;
+    left: 0;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    text-align: justify;
+    top: 195px;
+    white-space: nowrap;
+  }
+  
+  .index .text-wrapper-14 {
+    color: #ffffff;
+    font-family: "Work Sans", Helvetica;
+    font-size: 40px;
+    font-weight: 600;
+    left: 0;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    text-align: justify;
+    top: 85px;
+    white-space: nowrap;
+  }
+  
+  .index .group-8 {
+    height: 267px;
+    left: 992px;
+    position: absolute;
+    top: 1162px;
+    width: 392px;
+  }
+  
+  .index .group-9 {
+    -webkit-backdrop-filter: blur(40px) brightness(100%);
+    backdrop-filter: blur(40px) brightness(100%);
+    background: linear-gradient(
+      180deg,
+      rgba(255, 253.94, 253.94, 0.4) 0%,
+      rgba(255, 253.94, 253.94, 0.4) 0%,
+      rgba(255, 253.94, 253.94, 0.4) 0.01%,
+      rgba(255, 255, 255, 0.1) 100%
+    );
+    background-image: url(https://cdn.animaapp.com/projects/651db41e9d5ee0411eebfadc/releases/651db45865a8ebc228c37369/img/rectangle-3@2x.png);
+    background-size: 100% 100%;
+    border-radius: 32px;
+    box-shadow: 0px 4px 24px -1px #00000033;
+    height: 267px;
+  }
+  
+  .index .group-10 {
+    height: 165px;
+    left: 121px;
+    position: relative;
+    top: 51px;
+    width: 152px;
+  }
+  
+  .index .add-more-contest {
+    color: #000000;
+    font-family: "Work Sans", Helvetica;
+    font-size: 32px;
+    font-weight: 400;
+    left: 0;
+    letter-spacing: 0;
+    line-height: 33px;
+    position: absolute;
+    text-align: center;
+    top: 99px;
+  }
+  
+  .index .add {
+    height: 96px;
+    left: 27px;
+    position: absolute;
+    top: 0;
+    width: 96px;
+  }
+  
+  .index .rectangle-2 {
+    background-color: #d9d9d9;
+    height: 523px;
+    left: 0;
+    position: absolute;
+    top: 2547px;
+    width: 1512px;
+  }
+  
+  .index .group-11 {
+    -webkit-backdrop-filter: blur(40px) brightness(100%);
+    backdrop-filter: blur(40px) brightness(100%);
+    background: linear-gradient(
+      180deg,
+      rgba(255, 253.94, 253.94, 0.4) 0%,
+      rgba(255, 253.94, 253.94, 0.4) 0%,
+      rgba(255, 253.94, 253.94, 0.4) 0.01%,
+      rgba(255, 255, 255, 0.1) 100%
+    );
+    background-image: url(https://cdn.animaapp.com/projects/651db41e9d5ee0411eebfadc/releases/651db45865a8ebc228c37369/img/rectangle-4@2x.png);
+    background-size: 100% 100%;
+    border-radius: 8px;
+    box-shadow: 0px 4px 24px -1px #00000033;
+    height: 50px;
+    left: 323px;
+    position: absolute;
+    top: 729px;
+    width: 125px;
+  }
+  
+  .index .text-wrapper-15 {
+    color: #ffffff;
+    font-family: "Work Sans", Helvetica;
+    font-size: 24px;
+    font-weight: 700;
+    left: 345px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    text-align: center;
+    top: 738px;
+    white-space: nowrap;
+  }
+  
+  .index .footer {
+    background-color: transparent;
+    height: 523px;
+    left: 0;
+    position: absolute;
+    top: 2547px;
+    width: 1522px;
+  }
+  
+  .index .overlap-2 {
+    background: linear-gradient(
+      180deg,
+      rgb(5, 5, 5) 0%,
+      rgb(24.21, 24.21, 31.01) 33.12%,
+      rgb(11.06, 11.06, 19.32) 62.81%,
+      rgb(16.87, 16.87, 62.89) 100%
+    );
+    height: 523px;
+    position: relative;
+    width: 1512px;
+  }
+  
+  .index .group-12 {
+    height: 83px;
+    left: 130px;
+    position: absolute;
+    top: 53px;
+    width: 418px;
+  }
+  
+  .index .group-13 {
+    height: 65px;
+    left: 0;
+    position: absolute;
+    top: 14px;
+    width: 140px;
+  }
+  
+  .index .line {
+    height: 65px;
+    left: 149px;
+    position: absolute;
+    top: 14px;
+    width: 2px;
+  }
+  
+  .index .FMC-WEEKEND {
+    height: 25px;
+    left: 160px;
+    position: absolute;
+    top: 13px;
+    width: 250px;
+  }
+  
+  .index .the-euphoria-of {
+    height: 16px;
+    left: 158px;
+    position: absolute;
+    top: 47px;
+    width: 227px;
+  }
+  
+  .index .element-november {
+    height: 13px;
+    left: 159px;
+    position: absolute;
+    top: 66px;
+    width: 168px;
+  }
+  
+  .index .frame-3 {
+    align-items: flex-start;
+    display: inline-flex;
+    gap: 80px;
+    left: 130px;
+    position: absolute;
+    top: 404px;
+  }
+  
+  .index .div-wrapper {
+    height: 43.84px;
+    position: relative;
+    width: 43.84px;
+  }
+  
+  .index .img-wrapper {
+    background-color: #1a1938;
+    border-radius: 21.92px;
+    height: 44px;
+    position: relative;
+    width: 44px;
+  }
+  
+  .index .group-14 {
+    height: 19px;
+    left: 10px;
+    position: absolute;
+    top: 13px;
+    width: 23px;
+  }
+  
+  .index .group-15 {
+    background-color: #1a1938;
+    border-radius: 21.92px;
+    height: 43.84px;
+    position: relative;
+    width: 43.84px;
+  }
+  
+  .index .group-16 {
+    height: 19px;
+    left: 11px;
+    position: absolute;
+    top: 13px;
+    width: 23px;
+  }
+  
+  .index .group-17 {
+    height: 19px;
+    left: 13px;
+    position: absolute;
+    top: 13px;
+    width: 19px;
+  }
+  
+  .index .icon-instagram {
+    height: 19px;
+    left: 12px;
+    position: absolute;
+    top: 12px;
+    width: 19px;
+  }
+  
+  .index .group-18 {
+    height: 147px;
+    left: 130px;
+    position: absolute;
+    top: 188px;
+    width: 87px;
+  }
+  
+  .index .text-wrapper-16 {
+    color: #ffffff;
+    font-family: "Poppins", Helvetica;
+    font-size: 24px;
+    font-weight: 400;
+    left: 0;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    text-align: center;
+    top: 0;
+  }
+  
+  .index .text-wrapper-17 {
+    color: #ababab;
+    font-family: "Poppins", Helvetica;
+    font-size: 16px;
+    font-weight: 300;
+    left: 0;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    text-align: center;
+    top: 53px;
+  }
+  
+  .index .text-wrapper-18 {
+    color: #ababab;
+    font-family: "Poppins", Helvetica;
+    font-size: 16px;
+    font-weight: 300;
+    left: 0;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    text-align: center;
+    top: 88px;
+  }
+  
+  .index .text-wrapper-19 {
+    color: #ababab;
+    font-family: "Poppins", Helvetica;
+    font-size: 16px;
+    font-weight: 300;
+    left: 0;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    text-align: center;
+    top: 123px;
+  }
+  
+  .index .group-19 {
+    height: 147px;
+    left: 399px;
+    position: absolute;
+    top: 188px;
+    width: 151px;
+  }
+  
+  .index .contact-us {
+    color: #ffffff;
+    font-family: "Work Sans", Helvetica;
+    font-size: 32px;
+    font-weight: 600;
+    left: 685px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 64px;
+    white-space: nowrap;
+  }
+  
+  .index .text-wrapper-20 {
+    color: #ffffff;
+    font-family: "Work Sans", Helvetica;
+    font-size: 24px;
+    font-weight: 400;
+    left: 685px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 385px;
+    white-space: nowrap;
+  }
+  
+  .index .text-wrapper-21 {
+    color: #ffffff;
+    font-family: "Work Sans", Helvetica;
+    font-size: 24px;
+    font-weight: 400;
+    left: 1115px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 385px;
+    white-space: nowrap;
+  }
+  
+  .index .text-wrapper-22 {
+    color: #ffffff;
+    font-family: "Work Sans", Helvetica;
+    font-size: 16px;
+    font-weight: 300;
+    left: 685px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 429px;
+    white-space: nowrap;
+  }
+  
+  .index .text-wrapper-23 {
+    color: #ffffff;
+    font-family: "Work Sans", Helvetica;
+    font-size: 16px;
+    font-weight: 300;
+    left: 1115px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 429px;
+    white-space: nowrap;
+  }
+  
+  .index .group-20 {
+    height: 66px;
+    left: 1317px;
+    position: absolute;
+    top: 151px;
+    width: 67px;
+  }
+  
+  .index .overlap-group-2 {
+    background-image: url(https://cdn.animaapp.com/projects/651db41e9d5ee0411eebfadc/releases/651db45865a8ebc228c37369/img/rectangle-5@2x.png);
+    background-size: 100% 100%;
+    border: 2px solid;
+    border-color: #4f44a7;
+    border-radius: 8px;
+    height: 66px;
+    left: -2px;
+    position: relative;
+    top: -2px;
+  }
+  
+  .index .group-21 {
+    height: 32px;
+    left: 17px;
+    position: absolute;
+    top: 17px;
+    width: 32px;
+  }
+  
+  .index .group-22 {
+    height: 189px;
+    left: 681px;
+    position: absolute;
+    top: 151px;
+    width: 621px;
+  }
+  
+  .index .overlap-3 {
+    -webkit-backdrop-filter: blur(40px) brightness(100%);
+    backdrop-filter: blur(40px) brightness(100%);
+    background: linear-gradient(
+      180deg,
+      rgb(10, 10, 17) 0%,
+      rgba(255, 253.94, 253.94, 0.4) 0%,
+      rgb(10, 10, 16) 0.01%,
+      rgb(15, 15, 30) 100%
+    );
+    background-image: url(https://cdn.animaapp.com/projects/651db41e9d5ee0411eebfadc/releases/651db45865a8ebc228c37369/img/rectangle-6.png);
+    background-size: 100% 100%;
+    border: 2px solid;
+    border-color: #4f44a7;
+    border-radius: 8px;
+    box-shadow: 0px 4px 24px -1px #00000033;
+    height: 189px;
+    left: -2px;
+    position: relative;
+    top: -2px;
+    width: 619px;
+  }
+  
+  .index .p {
+    color: #ababab;
+    font-family: "Poppins", Helvetica;
+    font-size: 16px;
+    font-weight: 300;
+    left: 30px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    text-align: center;
+    top: 141px;
+  }
