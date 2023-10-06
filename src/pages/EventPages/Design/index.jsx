@@ -1,14 +1,16 @@
 import React from "react";
-import Header from "../landingpage/Header";
-import Footer from "../landingpage/Footer";
+import Header from "../../landingpage/Header";
+import Footer from "../../landingpage/Footer";
+import Index from "../../events";
 import Link from "next/link";
-
+import EventCard from "../EventCard";
+import Image from "next/image";
 
 const divStyle = {
     minHeight: "100px",
   };
 
-const events = () => {
+const Photography = () => {
     return (
         <div className="flex flex-col">
             <Header/>
@@ -43,11 +45,11 @@ const events = () => {
 <div class="w-[380px] h-[440px] justify-center my-6 border border-white bg-gradient-to-t from-white/10 to-white/30 text-white rounded-[25px] bg-opacity-10 backdrop-blur-lg  shadow-xl drop-shadow-xl bg-blend-normal z-10 ">
 
   <div class="flex flex-col text-center justify-center align-middle px-6 py-4">
-    <div class="font-bold text-2xl mb-2 my-3.5">Snapchase</div>
+  <div class=" flex flex-rows justify-center font-bold text-3xl mb-2 my-3.5"><div><Image className="icon" src={"/icon_design.png"} width={40} height={10} alt="cameras"/></div><div className="ml-4">ReInevent</div></div>
     <p class="text-justify my-3.5 h-[180px]">
-    Snapchase is a treasure hunt where you have to take pictures of a special place by solving clues and riddles and submit them before time runs out.
+    Logos have always been an integral part of a brand's identity. The perfect blend of a minimal versatile and memorable design creates a great logo. The FMC Weckend brings you the opportunity to redesign a logo and create a fresh impression for a brand. The most original and creative design amongst all will be rewarded!
     </p>
-    <a href="https://docs.google.com/document/d/1WmopoLxbYfVfRCsq_g1_oHEh_UV_ZAwh/edit" className="text-white-800 my-3.5 italic hover:underline">VIEW PROBLEM STATEMENT</a>
+    <a href="https://docs.google.com/document/d/10yVwlvCNAlB3yvuT1aSKZeE5ZhIvh5CP/edit" className="text-white-800 my-3.5 italic hover:underline">VIEW PROBLEM STATEMENT</a>
     <div className="my-3.5 align-middle justify-evenly">
         <button className="border p-2 border-white rounded-[15px] hover:text-[15px] hover:font-semibold transition-all duration-5000 ease-in-out ">REGISTRATION WILL BE LIVE SOON</button>
     </div>
@@ -56,11 +58,11 @@ const events = () => {
 
 <div class="w-[380px] h-[440px] justify-center my-6 border border-white bg-gradient-to-t from-white/10 to-white/30 text-white rounded-[25px] bg-opacity-10 backdrop-blur-lg  shadow-xl drop-shadow-xl bg-blend-normal z-10 ">
   <div class="flex flex-col text-center justify-center align-middle px-6 py-4">
-    <div class="font-bold text-2xl mb-2 my-3.5">Portfolio</div>
+  <div class=" flex flex-rows justify-center font-bold text-3xl mb-2 my-3.5"><div><Image className="icon" src={"/icon_design.png"} width={40} height={10} alt="cameras"/></div><div className="ml-4">Design-a-thon</div></div>
     <p class="text-justify my-3.5 h-[180px]">
-    We click a number of pictures and put them in the gallery, but Portfolio in 24 hrs of FMC Weekend brings you a chance to show your skills on India’s largest digital art festival. 
+    This is a rebranding challenge, you'll have to rebrand an intriguing company using a different product line than the one it now uses. It will be a 24-hour offline event. It will be a Team event with 1-4 people in each team.
     </p>
-    <a href="https://docs.google.com/document/d/14D5ttxIzebBpTaHRSNJiZIkWUoDHhOh4/edit" className="text-white-800 my-3.5 italic hover:underline">VIEW PROBLEM STATEMENT</a>
+    <a href="https://docs.google.com/document/d/1ItYviZS1oCYNqIT79xAaAfBod7LXjgdK/edit" className="text-white-800 my-3.5 italic hover:underline">VIEW PROBLEM STATEMENT</a>
     <div className="my-3.5 align-middle justify-evenly">
         <button className="border p-2 border-white rounded-[15px] hover:text-[15px] hover:font-semibold transition-all duration-5000 ease-in-out ">REGISTRATION WILL BE LIVE SOON</button>
     </div>
@@ -69,46 +71,22 @@ const events = () => {
 
 <div class="w-[380px] h-[440px] justify-center my-6 border border-white bg-gradient-to-t from-white/10 to-white/30 text-white rounded-[25px] bg-opacity-10 backdrop-blur-lg  shadow-xl drop-shadow-xl bg-blend-normal z-10 ">
   <div class="flex flex-col text-center justify-center align-middle px-6 py-4">
-    <div class="font-bold text-2xl mb-2 my-3.5">PhotoArt</div>
+  <div class=" flex flex-rows justify-center font-bold text-3xl mb-2 my-3.5"><div><Image className="icon" src={"/icon_design.png"} width={40} height={10} alt="cameras"/></div><div className="ml-4">Design the Tunes</div></div>
     <p class="text-justify my-3.5 h-[180px]">
-    This is what Manipulation means,so let’s dive into this imaginary world and paint the canvas with our imagination.Themes on which the event will take place are given below: Post Apocalypse, Wildlife, Retro Futurism, Surrealism
+    Its an Online design challenge to design the cover page of an English song or an English album.You can also use the elements of the songs or album for the cover. And the prior entries are also allowed. But also submit the 3 screenshot showing stages of your work in process with submission
     </p>
-    <a href="https://docs.google.com/document/d/1b3e0yqzJpDQryrPOvTgc9klZ2W0hYHuF/edit" className="text-white-800 my-3.5 italic hover:underline">VIEW PROBLEM STATEMENT</a>
+    <a href="https://docs.google.com/document/d/1BkCbkR9TZbyjDzrlItjLJuesXqu2usfk/edit" className="text-white-800 my-3.5 italic hover:underline">VIEW PROBLEM STATEMENT</a>
     <div className="my-3.5 align-middle justify-evenly">
         <button className="border p-2 border-white rounded-[12.5px] hover:text-[15px] hover:font-semibold transition-all duration-5000 ease-in-out ">REGISTRATION WILL BE LIVE SOON</button>
     </div>
   </div>
 </div>
 
-<div class="w-[380px] h-[440px] justify-center my-6 border border-white bg-gradient-to-t from-white/10 to-white/30 text-white rounded-[25px] bg-opacity-10 backdrop-blur-lg  shadow-xl drop-shadow-xl bg-blend-normal z-10 ">
-  <div class="flex flex-col text-center justify-center align-middle px-6 py-4">
-    <div class="font-bold text-2xl mb-2 my-3.5">Instameet</div>
-    <p class="text-justify my-3.5 h-[180px]">
-    This is an offline theme based photography event.This event bears the challenge to capture the beauty of Varanasi, its lifestyle, communities, cultures, rituals, and religion. A photowalk will be organized during which you will have to click the pictures for the event submission.
-    </p>
-    <a href="https://docs.google.com/document/d/1HeSmxdH4E1t62GQN7YvujyaU92_s_fWd/edit" className="text-white-800 my-3.5 italic hover:underline">VIEW PROBLEM STATEMENT</a>
-    <div className="my-3.5 align-middle justify-evenly">
-        <button className="border p-2 border-white rounded-[15px] hover:text-[15px] hover:font-semibold transition-all duration-5000 ease-in-out ">REGISTRATION WILL BE LIVE SOON</button>
-    </div>
-  </div>
-</div>
 
-<div class="w-[380px] h-[440px] justify-center my-6 border border-white bg-gradient-to-t from-white/10 to-white/30 text-white rounded-[25px] bg-opacity-10 backdrop-blur-lg  shadow-xl drop-shadow-xl bg-blend-normal z-10 ">
-  <div class="flex flex-col text-center justify-center align-middle px-6 py-4">
-    <div class="font-bold text-2xl mb-2 my-3.5">Infocus</div>
-    <p class="text-justify my-3.5 h-[180px]">
-    Embrace the essence of creativity and composition as the pivotal criteria for your submissions. Your artwork should resonate with one of the following themes, and winners will be recognized separately for each theme: 1.Long Exposure 2.Minimal 3.Culture of India  4.Monochrome
-    </p>
-    <a href="https://docs.google.com/document/d/1vcr5S8LJ93sz6CXU0mPXNJD7Kz43opuy/edit" className="text-white-800 my-3.5 italic hover:underline">VIEW PROBLEM STATEMENT</a>
-    <div className="my-3.5 align-middle justify-evenly">
-        <button className="border p-2 border-white rounded-[15px] hover:text-[15px] hover:font-semibold transition-all duration-5000 ease-in-out ">REGISTRATION WILL BE LIVE SOON</button>
-    </div>
-  </div>
-</div>
         </div>
         <Footer/>
     </div>
     );
 };
 
-export default events
+export default Photography
