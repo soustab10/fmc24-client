@@ -7,7 +7,7 @@ import Footer from "../landingpage/Footer"
 import Router from 'next/router'
 import axios from 'axios';
 import getConfig from 'next/config';
-
+import { BeatLoader } from 'react-spinners';
 const LogIn = () => {
    
     const { publicRuntimeConfig } = getConfig();
@@ -85,6 +85,7 @@ const LogIn = () => {
                         {
                             console.log(clientId)
                         }
+                        {/* <BeatLoader size={15} color={'#123abc'} loading={true} /> */}
                         <GoogleLogin
                             onSuccess={handleLogin}
                             onFailure={handleFailure}
