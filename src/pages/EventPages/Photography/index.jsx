@@ -3,7 +3,7 @@ import Header from "../../landingpage/Header";
 import Footer from "../../landingpage/Footer";
 import Index from "../../events";
 import Link from "next/link";
-import EventCard from "../EventCard";
+
 import Image from "next/image";
 import "./styles.module.css";
 const divStyle = {
