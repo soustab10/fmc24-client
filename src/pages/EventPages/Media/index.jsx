@@ -1,14 +1,16 @@
 import React from "react";
-import Header from "../landingpage/Header";
-import Footer from "../landingpage/Footer";
+import Header from "../../landingpage/Header";
+import Footer from "../../landingpage/Footer";
+import Index from "../../events";
 import Link from "next/link";
 
+import Image from "next/image";
 
 const divStyle = {
     minHeight: "100px",
   };
 
-const events = () => {
+const Photography = () => {
     return (
         <div className="flex flex-col">
             <Header/>
@@ -43,11 +45,11 @@ const events = () => {
 <div class="w-[380px] h-[440px] justify-center my-6 border border-white bg-gradient-to-t from-white/10 to-white/30 text-white rounded-[25px] bg-opacity-10 backdrop-blur-lg  shadow-xl drop-shadow-xl bg-blend-normal z-10 ">
 
   <div class="flex flex-col text-center justify-center align-middle px-6 py-4">
-    <div class="font-bold text-2xl mb-2 my-3.5">Snapchase</div>
+  <div class=" flex flex-rows justify-center font-bold text-3xl mb-2 my-3.5"><div><Image className="icon" src={"/icon_media.png"} width={40} height={10} alt="cameras"/></div><div className="ml-4">Infinite Tales</div></div>
     <p class="text-justify my-3.5 h-[180px]">
-    Snapchase is a treasure hunt where you have to take pictures of a special place by solving clues and riddles and submit them before time runs out.
+    Participants have to come in pairs at the allotted location.They will be provided with the topics randomly These topics can range from an idea or words to an opening phrase.You will get a partner with whom you have to make the story on the basis of chit system.You and your partner have to complete the story by adding sentences alternatively.A twist in the middle of the story will be given by the judges to spice things up a bit.
     </p>
-    <a href="https://docs.google.com/document/d/1WmopoLxbYfVfRCsq_g1_oHEh_UV_ZAwh/edit" className="text-white-800 my-3.5 italic hover:underline">VIEW PROBLEM STATEMENT</a>
+    <a href="https://docs.google.com/document/d/1eQ0PQbnnHJlSJOVrpL2Gq0_08cMQ2hmn/edit" className="text-white-800 my-3.5 italic hover:underline">VIEW PROBLEM STATEMENT</a>
     <div className="my-3.5 align-middle justify-evenly">
         <button className="border p-2 border-white rounded-[15px] hover:text-[15px] hover:font-semibold transition-all duration-5000 ease-in-out ">REGISTRATION WILL BE LIVE SOON</button>
     </div>
@@ -56,11 +58,11 @@ const events = () => {
 
 <div class="w-[380px] h-[440px] justify-center my-6 border border-white bg-gradient-to-t from-white/10 to-white/30 text-white rounded-[25px] bg-opacity-10 backdrop-blur-lg  shadow-xl drop-shadow-xl bg-blend-normal z-10 ">
   <div class="flex flex-col text-center justify-center align-middle px-6 py-4">
-    <div class="font-bold text-2xl mb-2 my-3.5">Portfolio</div>
+  <div class=" flex flex-rows justify-center font-bold text-3xl mb-2 my-3.5"><div><Image className="icon" src={"/icon_media.png"} width={40} height={10} alt="cameras"/></div><div className="ml-4">Straight From Site</div></div>
     <p class="text-justify my-3.5 h-[180px]">
-    We click a number of pictures and put them in the gallery, but Portfolio in 24 hrs of FMC Weekend brings you a chance to show your skills on India’s largest digital art festival. 
+    Whatever the news may be, wherever it may be, regardless of how harsh the circumstances might be, you can always count on a reporter to deliver the news to you in the comfort of your home. In this event, you will put yourself in the shoes of such on-site reporters. Analyse the scene, collect your thoughts and speak!
     </p>
-    <a href="https://docs.google.com/document/d/14D5ttxIzebBpTaHRSNJiZIkWUoDHhOh4/edit" className="text-white-800 my-3.5 italic hover:underline">VIEW PROBLEM STATEMENT</a>
+    <a href="https://docs.google.com/document/d/1QUJTU327wbVccSlwneJAxAYEkNpfby40/edit" className="text-white-800 my-3.5 italic hover:underline">VIEW PROBLEM STATEMENT</a>
     <div className="my-3.5 align-middle justify-evenly">
         <button className="border p-2 border-white rounded-[15px] hover:text-[15px] hover:font-semibold transition-all duration-5000 ease-in-out ">REGISTRATION WILL BE LIVE SOON</button>
     </div>
@@ -69,46 +71,21 @@ const events = () => {
 
 <div class="w-[380px] h-[440px] justify-center my-6 border border-white bg-gradient-to-t from-white/10 to-white/30 text-white rounded-[25px] bg-opacity-10 backdrop-blur-lg  shadow-xl drop-shadow-xl bg-blend-normal z-10 ">
   <div class="flex flex-col text-center justify-center align-middle px-6 py-4">
-    <div class="font-bold text-2xl mb-2 my-3.5">PhotoArt</div>
+  <div class=" flex flex-rows justify-center font-bold text-3xl mb-2 my-3.5"><div><Image className="icon" src={"/icon_media.png"} width={40} height={10} alt="cameras"/></div><div className="ml-4">Writer&apos;s Block</div></div>
     <p class="text-justify my-3.5 h-[180px]">
-    This is what Manipulation means,so let’s dive into this imaginary world and paint the canvas with our imagination.Themes on which the event will take place are given below: Post Apocalypse, Wildlife, Retro Futurism, Surrealism
+    Embark on a thrilling journey of creativity in our script writing competition! Ignite your imagination and weave mesmerizing tales. Showcase your storytelling finesse and make your script come alive in this exhilarating challenge.
     </p>
-    <a href="https://docs.google.com/document/d/1b3e0yqzJpDQryrPOvTgc9klZ2W0hYHuF/edit" className="text-white-800 my-3.5 italic hover:underline">VIEW PROBLEM STATEMENT</a>
+    <a href="https://docs.google.com/document/d/1FtkT0f_oZWWcve_BvN-Nd_XTynmXG9bY/edit" className="text-white-800 my-3.5 italic hover:underline">VIEW PROBLEM STATEMENT</a>
     <div className="my-3.5 align-middle justify-evenly">
         <button className="border p-2 border-white rounded-[12.5px] hover:text-[15px] hover:font-semibold transition-all duration-5000 ease-in-out ">REGISTRATION WILL BE LIVE SOON</button>
     </div>
   </div>
 </div>
 
-<div class="w-[380px] h-[440px] justify-center my-6 border border-white bg-gradient-to-t from-white/10 to-white/30 text-white rounded-[25px] bg-opacity-10 backdrop-blur-lg  shadow-xl drop-shadow-xl bg-blend-normal z-10 ">
-  <div class="flex flex-col text-center justify-center align-middle px-6 py-4">
-    <div class="font-bold text-2xl mb-2 my-3.5">Instameet</div>
-    <p class="text-justify my-3.5 h-[180px]">
-    This is an offline theme based photography event.This event bears the challenge to capture the beauty of Varanasi, its lifestyle, communities, cultures, rituals, and religion. A photowalk will be organized during which you will have to click the pictures for the event submission.
-    </p>
-    <a href="https://docs.google.com/document/d/1HeSmxdH4E1t62GQN7YvujyaU92_s_fWd/edit" className="text-white-800 my-3.5 italic hover:underline">VIEW PROBLEM STATEMENT</a>
-    <div className="my-3.5 align-middle justify-evenly">
-        <button className="border p-2 border-white rounded-[15px] hover:text-[15px] hover:font-semibold transition-all duration-5000 ease-in-out ">REGISTRATION WILL BE LIVE SOON</button>
-    </div>
-  </div>
-</div>
-
-<div class="w-[380px] h-[440px] justify-center my-6 border border-white bg-gradient-to-t from-white/10 to-white/30 text-white rounded-[25px] bg-opacity-10 backdrop-blur-lg  shadow-xl drop-shadow-xl bg-blend-normal z-10 ">
-  <div class="flex flex-col text-center justify-center align-middle px-6 py-4">
-    <div class="font-bold text-2xl mb-2 my-3.5">Infocus</div>
-    <p class="text-justify my-3.5 h-[180px]">
-    Embrace the essence of creativity and composition as the pivotal criteria for your submissions. Your artwork should resonate with one of the following themes, and winners will be recognized separately for each theme: 1.Long Exposure 2.Minimal 3.Culture of India  4.Monochrome
-    </p>
-    <a href="https://docs.google.com/document/d/1vcr5S8LJ93sz6CXU0mPXNJD7Kz43opuy/edit" className="text-white-800 my-3.5 italic hover:underline">VIEW PROBLEM STATEMENT</a>
-    <div className="my-3.5 align-middle justify-evenly">
-        <button className="border p-2 border-white rounded-[15px] hover:text-[15px] hover:font-semibold transition-all duration-5000 ease-in-out ">REGISTRATION WILL BE LIVE SOON</button>
-    </div>
-  </div>
-</div>
         </div>
         <Footer/>
     </div>
     );
 };
 
-export default events
+export default Photography

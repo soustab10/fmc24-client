@@ -5,6 +5,7 @@ import Classes from "./styles/Testimonials.module.css";
 import {} from "@next/font/google";
 import styles from "./styles/Testimonial.module.css";
 import { useState, useEffect, useRef } from "react";
+
 const images = [
   "https://images.pexels.com/photos/1563356/pexels-photo-1563356.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
   "https://images.pexels.com/photos/18126082/pexels-photo-18126082/free-photo-of-close-up-of-chipmunk.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
@@ -157,7 +158,9 @@ const Testimonials = () => {
           <div className={styles["carousel-inner"]}>
             {getVisibleIndices(currentIndex).map((index) => (
               <>
-                <img
+                <Image
+                  height={100}
+                  width={100}
                   key={index}
                   src={images[index]}
                   alt={`Animal ${index + 1}`}
@@ -199,7 +202,9 @@ const Testimonials = () => {
           <div className={styles["carousel-inner"]}>
             {getVisibleIndices(currentIndex).map((index) => (
               <>
-                <img
+                <Image 
+                  height={100}
+                  width={100}
                   key={index}
                   src={images[index]}
                   alt={`Animal ${index + 1}`}

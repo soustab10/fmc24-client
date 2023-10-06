@@ -9,7 +9,7 @@ import jwt_decode from 'jwt-decode';
 
 const DashBoard = () => {
     const { publicRuntimeConfig } = getConfig();
-    const REACT_APP_BACKEND_URI = publicRuntimeConfig.NEXT_PUBLIC_REACT_APP_BACKEND_URI;
+    const NEXT_PUBLIC_REACT_APP_BACKEND_URI = publicRuntimeConfig.NEXT_PUBLIC_REACT_APP_BACKEND_URI;
     const [isLoading, setIsLoading] = useState(false);
     const [userData, setUserData] = useState({
         name: 'John Doe',
@@ -33,7 +33,7 @@ const DashBoard = () => {
 
         const fetchUserData = async () => {
             try {
-                const res = await fetch(REACT_APP_BACKEND_URI + '/api/user', {
+                const res = await fetch(NEXT_PUBLIC_REACT_APP_BACKEND_URI + '/api/user', {
                     method: 'GET',
                     headers: {
                         'Content-Type': 'application/json',

@@ -1,14 +1,16 @@
 import React from "react";
-import Header from "../landingpage/Header";
-import Footer from "../landingpage/Footer";
+import Header from "../../landingpage/Header";
+import Footer from "../../landingpage/Footer";
+import Index from "../../events";
 import Link from "next/link";
 
+import Image from "next/image";
 
 const divStyle = {
     minHeight: "100px",
   };
 
-const events = () => {
+const Photography = () => {
     return (
         <div className="flex flex-col">
             <Header/>
@@ -43,11 +45,11 @@ const events = () => {
 <div class="w-[380px] h-[440px] justify-center my-6 border border-white bg-gradient-to-t from-white/10 to-white/30 text-white rounded-[25px] bg-opacity-10 backdrop-blur-lg  shadow-xl drop-shadow-xl bg-blend-normal z-10 ">
 
   <div class="flex flex-col text-center justify-center align-middle px-6 py-4">
-    <div class="font-bold text-2xl mb-2 my-3.5">Snapchase</div>
+  <div class=" flex flex-rows justify-center font-bold text-[23px] mb-2 my-3.5"><div><Image className="icon" src={"/icon_anim.png"} width={40} height={10} alt="cameras"/></div><div className="ml-4">Capture The Imagination</div></div>
     <p class="text-justify my-3.5 h-[180px]">
-    Snapchase is a treasure hunt where you have to take pictures of a special place by solving clues and riddles and submit them before time runs out.
+    Experience the boundless realm of 3D artistry! Create a captivating and immersive scene with no limitations on theme or subject matter. However, remember that in the end, a single image will be your masterpiece, the culmination of your creative process.
     </p>
-    <a href="https://docs.google.com/document/d/1WmopoLxbYfVfRCsq_g1_oHEh_UV_ZAwh/edit" className="text-white-800 my-3.5 italic hover:underline">VIEW PROBLEM STATEMENT</a>
+    <a href="https://docs.google.com/document/d/1JJ8oH5yWRkSVhM7XflBZvBjl-iiiyJLz/edit" className="text-white-800 my-3.5 italic hover:underline">VIEW PROBLEM STATEMENT</a>
     <div className="my-3.5 align-middle justify-evenly">
         <button className="border p-2 border-white rounded-[15px] hover:text-[15px] hover:font-semibold transition-all duration-5000 ease-in-out ">REGISTRATION WILL BE LIVE SOON</button>
     </div>
@@ -56,11 +58,11 @@ const events = () => {
 
 <div class="w-[380px] h-[440px] justify-center my-6 border border-white bg-gradient-to-t from-white/10 to-white/30 text-white rounded-[25px] bg-opacity-10 backdrop-blur-lg  shadow-xl drop-shadow-xl bg-blend-normal z-10 ">
   <div class="flex flex-col text-center justify-center align-middle px-6 py-4">
-    <div class="font-bold text-2xl mb-2 my-3.5">Portfolio</div>
+  <div class=" flex flex-rows justify-center font-bold text-3xl mb-2 my-3.5"><div><Image className="icon" src={"/icon_anim.png"} width={40} height={10} alt="cameras"/></div><div className="ml-4">Logomotion</div></div>
     <p class="text-justify my-3.5 h-[180px]">
-    We click a number of pictures and put them in the gallery, but Portfolio in 24 hrs of FMC Weekend brings you a chance to show your skills on India’s largest digital art festival. 
+    Create an innovative 2D logo animation within specified duration, showcasing seamless motion, creative transitions, and a harmonious blend of visual elements. 
     </p>
-    <a href="https://docs.google.com/document/d/14D5ttxIzebBpTaHRSNJiZIkWUoDHhOh4/edit" className="text-white-800 my-3.5 italic hover:underline">VIEW PROBLEM STATEMENT</a>
+    <a href="https://docs.google.com/document/d/1DsleK6oNGsqYIe1MoyPk50L8QHIDZ-2A/edit" className="text-white-800 my-3.5 italic hover:underline">VIEW PROBLEM STATEMENT</a>
     <div className="my-3.5 align-middle justify-evenly">
         <button className="border p-2 border-white rounded-[15px] hover:text-[15px] hover:font-semibold transition-all duration-5000 ease-in-out ">REGISTRATION WILL BE LIVE SOON</button>
     </div>
@@ -69,11 +71,11 @@ const events = () => {
 
 <div class="w-[380px] h-[440px] justify-center my-6 border border-white bg-gradient-to-t from-white/10 to-white/30 text-white rounded-[25px] bg-opacity-10 backdrop-blur-lg  shadow-xl drop-shadow-xl bg-blend-normal z-10 ">
   <div class="flex flex-col text-center justify-center align-middle px-6 py-4">
-    <div class="font-bold text-2xl mb-2 my-3.5">PhotoArt</div>
+  <div class=" flex flex-rows justify-center font-bold text-3xl mb-2 my-3.5"><div><Image className="icon" src={"/icon_anim.png"} width={40} height={10} alt="cameras"/></div><div className="ml-4">Realm of Wonders</div></div>
     <p class="text-justify my-3.5 h-[180px]">
-    This is what Manipulation means,so let’s dive into this imaginary world and paint the canvas with our imagination.Themes on which the event will take place are given below: Post Apocalypse, Wildlife, Retro Futurism, Surrealism
+    Participants have to make the looping animation. The theme and elements of the animation will be anything of your choice. Also we will provide you raw/base animation.
     </p>
-    <a href="https://docs.google.com/document/d/1b3e0yqzJpDQryrPOvTgc9klZ2W0hYHuF/edit" className="text-white-800 my-3.5 italic hover:underline">VIEW PROBLEM STATEMENT</a>
+    <a href="https://docs.google.com/document/d/103OMjJI1eIqRvpRo6qdjiN5RLEa1h0AY/edit" className="text-white-800 my-3.5 italic hover:underline">VIEW PROBLEM STATEMENT</a>
     <div className="my-3.5 align-middle justify-evenly">
         <button className="border p-2 border-white rounded-[12.5px] hover:text-[15px] hover:font-semibold transition-all duration-5000 ease-in-out ">REGISTRATION WILL BE LIVE SOON</button>
     </div>
@@ -82,33 +84,21 @@ const events = () => {
 
 <div class="w-[380px] h-[440px] justify-center my-6 border border-white bg-gradient-to-t from-white/10 to-white/30 text-white rounded-[25px] bg-opacity-10 backdrop-blur-lg  shadow-xl drop-shadow-xl bg-blend-normal z-10 ">
   <div class="flex flex-col text-center justify-center align-middle px-6 py-4">
-    <div class="font-bold text-2xl mb-2 my-3.5">Instameet</div>
+  <div class=" flex flex-rows justify-center font-bold text-3xl mb-2 my-3.5"><div><Image className="icon" src={"/icon_anim.png"} width={40} height={10} alt="cameras"/></div><div className="ml-4">VFXorama</div></div>
     <p class="text-justify my-3.5 h-[180px]">
-    This is an offline theme based photography event.This event bears the challenge to capture the beauty of Varanasi, its lifestyle, communities, cultures, rituals, and religion. A photowalk will be organized during which you will have to click the pictures for the event submission.
+    Participants have to create a VFX based video. The scene must be set in Varanasi with all elements having links to Varanasi.
     </p>
-    <a href="https://docs.google.com/document/d/1HeSmxdH4E1t62GQN7YvujyaU92_s_fWd/edit" className="text-white-800 my-3.5 italic hover:underline">VIEW PROBLEM STATEMENT</a>
+    <a href="https://docs.google.com/document/d/1ameBkhRHltEwDVzqx_-vgFHQeRUYVtox/edit" className="text-white-800 my-3.5 italic hover:underline">VIEW PROBLEM STATEMENT</a>
     <div className="my-3.5 align-middle justify-evenly">
         <button className="border p-2 border-white rounded-[15px] hover:text-[15px] hover:font-semibold transition-all duration-5000 ease-in-out ">REGISTRATION WILL BE LIVE SOON</button>
     </div>
   </div>
 </div>
 
-<div class="w-[380px] h-[440px] justify-center my-6 border border-white bg-gradient-to-t from-white/10 to-white/30 text-white rounded-[25px] bg-opacity-10 backdrop-blur-lg  shadow-xl drop-shadow-xl bg-blend-normal z-10 ">
-  <div class="flex flex-col text-center justify-center align-middle px-6 py-4">
-    <div class="font-bold text-2xl mb-2 my-3.5">Infocus</div>
-    <p class="text-justify my-3.5 h-[180px]">
-    Embrace the essence of creativity and composition as the pivotal criteria for your submissions. Your artwork should resonate with one of the following themes, and winners will be recognized separately for each theme: 1.Long Exposure 2.Minimal 3.Culture of India  4.Monochrome
-    </p>
-    <a href="https://docs.google.com/document/d/1vcr5S8LJ93sz6CXU0mPXNJD7Kz43opuy/edit" className="text-white-800 my-3.5 italic hover:underline">VIEW PROBLEM STATEMENT</a>
-    <div className="my-3.5 align-middle justify-evenly">
-        <button className="border p-2 border-white rounded-[15px] hover:text-[15px] hover:font-semibold transition-all duration-5000 ease-in-out ">REGISTRATION WILL BE LIVE SOON</button>
-    </div>
-  </div>
-</div>
         </div>
         <Footer/>
     </div>
     );
 };
 
-export default events
+export default Photography
