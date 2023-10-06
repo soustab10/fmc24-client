@@ -5,6 +5,7 @@ import Classes from "./login.module.css"
 import Header from "../landingpage/Header"
 import Footer from "../landingpage/Footer"
 import Router from 'next/router'
+import axios from 'axios';
 import getConfig from 'next/config';
 
 const LogIn = () => {
@@ -27,22 +28,27 @@ const LogIn = () => {
 
         try {
             console.log("handleLogin invoked",credentialResponse);
-
-            const response = await fetch(backendURL+"/api/google-login", {
-                method: 'POST',
-                headers: {
-                    Authorization: `Bearer ${credentialResponse.credential}`,
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({  
-                    token: credentialResponse.credential,
-                    audience: clientId,
-                }),
+            const response=await axios.post(backendURL+"/api/google-login", {
+                token: credentialResponse.credential,
+                audience: clientId,
             });
+            console.log("axios data",response);
 
-            if (response.ok) {
-                const data = await response.json();
-                console.log(data);
+            // const response1 = await fetch(backendURL+"/api/google-login", {
+            //     method: 'POST',
+            //     headers: {
+            //         Authorization: `Bearer ${credentialResponse.credential}`,
+            //         'Content-Type': 'application/json',
+            //     },
+            //     body: JSON.stringify({  
+            //         token: credentialResponse.credential,
+            //         audience: clientId,
+            //     }),
+            // });
+        //    console.log("fetch",response1)
+            if (response.status === 200) {
+                // const data = await response.data.json();
+                // console.log(data);
 
                 sessionStorage.setItem('token', credentialResponse.credential);
 
