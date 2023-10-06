@@ -1,6 +1,6 @@
 import React from "react";
 
-const Dashboardd = () => {
+const Dashboard = () => {
     return (
         <>
         HELLO WELCOME TO DASHBOARD
