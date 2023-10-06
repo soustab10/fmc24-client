@@ -73,13 +73,13 @@ const Register = () => {
     <div class="flex items-center min-h-screen bg-gray-50 p-10">
       <div class="flex-1 h-auto max-w-4xl mx-auto bg-white rounded-3xl shadow-xl">
         <div class="flex flex-col md:flex-row">
-          <div >
+          <div  className=''>
           
               <Image
                   src={require("./static/clip.png")}
                   width={100}
                   height={100}
-                  className=" md:h-full sm:h-1/2 "
+                  className=" md:h-full sm:h-1/2 w-96"
                   alt="signup"
                 />
                 <h1 class="absolute text-6xl w-2 text-white  top-20 md:mt-40 px-14 tracking-wide">

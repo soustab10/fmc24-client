@@ -5,9 +5,11 @@ import Button from './Button/Button';
 import Router from 'next/router';
 import getConfig from 'next/config';
 import Loader from "../loading"
+import jwt_decode from 'jwt-decode';
+
 const DashBoard = () => {
     const { publicRuntimeConfig } = getConfig();
-    const REACT_APP_BACKEND_URI = publicRuntimeConfig.REACT_APP_BACKEND_URI;
+    const NEXT_PUBLIC_REACT_APP_BACKEND_URI = publicRuntimeConfig.NEXT_PUBLIC_REACT_APP_BACKEND_URI;
     const [isLoading, setIsLoading] = useState(false);
     const [userData, setUserData] = useState({
         name: 'John Doe',
@@ -20,21 +22,22 @@ const DashBoard = () => {
     });
 
     useEffect(() => {
-        const token = sessionStorage.getItem('idToken');
+        const token = sessionStorage.getItem('token');
         if (!token) {
             Router.push('/');
             return;
         }
-
+        const decodedToken = jwt_decode(token);
+        const storedEmail = decodedToken.email;
         setIsLoading(true);
 
         const fetchUserData = async () => {
             try {
-                const res = await fetch(REACT_APP_BACKEND_URI + 'api/user', {
+                const res = await fetch(NEXT_PUBLIC_REACT_APP_BACKEND_URI + '/api/user', {
                     method: 'GET',
                     headers: {
                         'Content-Type': 'application/json',
-                        token: token,
+                        email: storedEmail,
                     },
                 });
 
