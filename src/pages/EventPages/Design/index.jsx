@@ -49,7 +49,7 @@ const Photography = () => {
     <p class="text-justify my-3.5 h-[180px]">
     Logos have always been an integral part of a brand&apos;s identity. The perfect blend of a minimal versatile and memorable design creates a great logo. The FMC Weckend brings you the opportunity to redesign a logo and create a fresh impression for a brand. The most original and creative design amongst all will be rewarded!
     </p>
-    <a href="https://docs.google.com/document/d/10yVwlvCNAlB3yvuT1aSKZeE5ZhIvh5CP/edit" className="text-white-800 my-3.5 italic hover:underline">VIEW PROBLEM STATEMENT</a>
+    <a href="https://drive.google.com/file/d/1W3By7kVROQn54LgVeubcEUk7q8Xub4r2/view?usp=drive_link" className="text-white-800 my-3.5 italic hover:underline">VIEW PROBLEM STATEMENT</a>
     <div className="my-3.5 align-middle justify-evenly">
         <button className="border p-2 border-white rounded-[15px] hover:text-[15px] hover:font-semibold transition-all duration-5000 ease-in-out ">REGISTRATION WILL BE LIVE SOON</button>
     </div>
@@ -62,7 +62,7 @@ const Photography = () => {
     <p class="text-justify my-3.5 h-[180px]">
     This is a rebranding challenge, you&apos;ll have to rebrand an intriguing company using a different product line than the one it now uses. It will be a 24-hour offline event. It will be a Team event with 1-4 people in each team.
     </p>
-    <a href="https://docs.google.com/document/d/1ItYviZS1oCYNqIT79xAaAfBod7LXjgdK/edit" className="text-white-800 my-3.5 italic hover:underline">VIEW PROBLEM STATEMENT</a>
+    <a href="https://drive.google.com/file/d/1l3lonQjxsKCUFfhKQk3TcVpEJ1YQndOo/view?usp=drive_link" className="text-white-800 my-3.5 italic hover:underline">VIEW PROBLEM STATEMENT</a>
     <div className="my-3.5 align-middle justify-evenly">
         <button className="border p-2 border-white rounded-[15px] hover:text-[15px] hover:font-semibold transition-all duration-5000 ease-in-out ">REGISTRATION WILL BE LIVE SOON</button>
     </div>
@@ -75,7 +75,7 @@ const Photography = () => {
     <p class="text-justify my-3.5 h-[180px]">
     Its an Online design challenge to design the cover page of an English song or an English album.You can also use the elements of the songs or album for the cover. And the prior entries are also allowed. But also submit the 3 screenshot showing stages of your work in process with submission
     </p>
-    <a href="https://docs.google.com/document/d/1BkCbkR9TZbyjDzrlItjLJuesXqu2usfk/edit" className="text-white-800 my-3.5 italic hover:underline">VIEW PROBLEM STATEMENT</a>
+    <a href="https://drive.google.com/file/d/1nM_s0yW-ohc4RovJC11QlsqYUAZL4EmZ/view?usp=drive_link" className="text-white-800 my-3.5 italic hover:underline">VIEW PROBLEM STATEMENT</a>
     <div className="my-3.5 align-middle justify-evenly">
         <button className="border p-2 border-white rounded-[12.5px] hover:text-[15px] hover:font-semibold transition-all duration-5000 ease-in-out ">REGISTRATION WILL BE LIVE SOON</button>
     </div>
