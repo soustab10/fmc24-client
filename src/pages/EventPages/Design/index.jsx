@@ -47,7 +47,7 @@ const Photography = () => {
   <div class="flex flex-col text-center justify-center align-middle px-6 py-4">
   <div class=" flex flex-rows justify-center font-bold text-3xl mb-2 my-3.5"><div><Image className="icon" src={"/icon_design.png"} width={40} height={10} alt="cameras"/></div><div className="ml-4">ReInevent</div></div>
     <p class="text-justify my-3.5 h-[180px]">
-    Logos have always been an integral part of a brand's identity. The perfect blend of a minimal versatile and memorable design creates a great logo. The FMC Weckend brings you the opportunity to redesign a logo and create a fresh impression for a brand. The most original and creative design amongst all will be rewarded!
+    Logos have always been an integral part of a brand&apos;s identity. The perfect blend of a minimal versatile and memorable design creates a great logo. The FMC Weckend brings you the opportunity to redesign a logo and create a fresh impression for a brand. The most original and creative design amongst all will be rewarded!
     </p>
     <a href="https://docs.google.com/document/d/10yVwlvCNAlB3yvuT1aSKZeE5ZhIvh5CP/edit" className="text-white-800 my-3.5 italic hover:underline">VIEW PROBLEM STATEMENT</a>
     <div className="my-3.5 align-middle justify-evenly">
@@ -60,7 +60,7 @@ const Photography = () => {
   <div class="flex flex-col text-center justify-center align-middle px-6 py-4">
   <div class=" flex flex-rows justify-center font-bold text-3xl mb-2 my-3.5"><div><Image className="icon" src={"/icon_design.png"} width={40} height={10} alt="cameras"/></div><div className="ml-4">Design-a-thon</div></div>
     <p class="text-justify my-3.5 h-[180px]">
-    This is a rebranding challenge, you'll have to rebrand an intriguing company using a different product line than the one it now uses. It will be a 24-hour offline event. It will be a Team event with 1-4 people in each team.
+    This is a rebranding challenge, you&apos;ll have to rebrand an intriguing company using a different product line than the one it now uses. It will be a 24-hour offline event. It will be a Team event with 1-4 people in each team.
     </p>
     <a href="https://docs.google.com/document/d/1ItYviZS1oCYNqIT79xAaAfBod7LXjgdK/edit" className="text-white-800 my-3.5 italic hover:underline">VIEW PROBLEM STATEMENT</a>
     <div className="my-3.5 align-middle justify-evenly">

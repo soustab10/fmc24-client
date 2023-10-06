@@ -71,7 +71,7 @@ const Photography = () => {
 
 <div class="w-[380px] h-[440px] justify-center my-6 border border-white bg-gradient-to-t from-white/10 to-white/30 text-white rounded-[25px] bg-opacity-10 backdrop-blur-lg  shadow-xl drop-shadow-xl bg-blend-normal z-10 ">
   <div class="flex flex-col text-center justify-center align-middle px-6 py-4">
-  <div class=" flex flex-rows justify-center font-bold text-3xl mb-2 my-3.5"><div><Image className="icon" src={"/icon_media.png"} width={40} height={10} alt="cameras"/></div><div className="ml-4">Writer's Block</div></div>
+  <div class=" flex flex-rows justify-center font-bold text-3xl mb-2 my-3.5"><div><Image className="icon" src={"/icon_media.png"} width={40} height={10} alt="cameras"/></div><div className="ml-4">Writer&apos;s Block</div></div>
     <p class="text-justify my-3.5 h-[180px]">
     Embark on a thrilling journey of creativity in our script writing competition! Ignite your imagination and weave mesmerizing tales. Showcase your storytelling finesse and make your script come alive in this exhilarating challenge.
     </p>

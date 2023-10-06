@@ -45,7 +45,7 @@ const Photography = () => {
 <div class="w-[380px] h-[440px] justify-center my-6 border border-white bg-gradient-to-t from-white/10 to-white/30 text-white rounded-[25px] bg-opacity-10 backdrop-blur-lg  shadow-xl drop-shadow-xl bg-blend-normal z-10 ">
 
   <div class="flex flex-col text-center justify-center align-middle px-6 py-4">
-  <div class=" flex flex-rows justify-center font-bold text-3xl mb-2 my-3.5"><div><Image className="icon" src={"/icon_cine.png"} width={40} height={10} alt="cameras"/></div><div className="ml-4">Director's Cut</div></div>
+  <div class=" flex flex-rows justify-center font-bold text-3xl mb-2 my-3.5"><div><Image className="icon" src={"/icon_cine.png"} width={40} height={10} alt="cameras"/></div><div className="ml-4">Director&apos;s Cut</div></div>
     <p class="text-justify my-3.5 h-[180px]">
     Participants of the event will be tasked with producing a short film within a tight deadline of 50 hours. The theme for their film will be unveiled at the start of the event, and all filming and production will be conducted on the campus.
     </p>
@@ -84,9 +84,9 @@ const Photography = () => {
 
 <div class="w-[380px] h-[440px] justify-center my-6 border border-white bg-gradient-to-t from-white/10 to-white/30 text-white rounded-[25px] bg-opacity-10 backdrop-blur-lg  shadow-xl drop-shadow-xl bg-blend-normal z-10 ">
   <div class="flex flex-col text-center justify-center align-middle px-6 py-4">
-  <div class=" flex flex-rows justify-center font-bold text-3xl mb-2 my-3.5"><div><Image className="icon" src={"/icon_cine.png"} width={40} height={10} alt="cameras"/></div><div className="ml-4">That's How B-roll</div></div>
+  <div class=" flex flex-rows justify-center font-bold text-3xl mb-2 my-3.5"><div><Image className="icon" src={"/icon_cine.png"} width={40} height={10} alt="cameras"/></div><div className="ml-4">That&apos;s How B-roll</div></div>
     <p class="text-justify my-3.5 h-[180px]">
-    For this event, you've got to aim the lenses inwards and indulge in the mesmerizing beauty of life's precious moments; hence the theme - “Joy in Motion: Cinematic Vignettes of Life's Beauty”. Let each frame ignite your senses and remind you of the remarkable beauty that surrounds us all and make everyone and their friends turn their heads
+    For this event, you&apos;ve got to aim the lenses inwards and indulge in the mesmerizing beauty of life&apos;s precious moments; hence the theme - “Joy in Motion: Cinematic Vignettes of Life&apos;s Beauty”. Let each frame ignite your senses and remind you of the remarkable beauty that surrounds us all and make everyone and their friends turn their heads
     </p>
     <a href="https://docs.google.com/document/d/1fMeOUIcfBTNM4seOTyEnFiyx452ItjYJ/edit" className="text-white-800 my-3.5 italic hover:underline">VIEW PROBLEM STATEMENT</a>
     <div className="my-3.5 align-middle justify-evenly">

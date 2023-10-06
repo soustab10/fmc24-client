@@ -81,12 +81,12 @@ const Photography = () => {
     </div>
   </div>
 </div>
-
+ 
 <div class="w-[380px] h-[440px] justify-center my-6 border border-white bg-gradient-to-t from-white/10 to-white/30 text-white rounded-[25px] bg-opacity-10 backdrop-blur-lg  shadow-xl drop-shadow-xl bg-blend-normal z-10 ">
   <div class="flex flex-col text-center justify-center align-middle px-6 py-4">
   <div class=" flex flex-rows justify-center font-bold text-3xl mb-2 my-3.5"><div><Image className="icon" src={"/icon_outreach.png"} width={40} height={10} alt="cameras"/></div><div className="ml-4">Documentary</div></div>
     <p class="text-justify my-3.5 h-[180px]">
-    Step into the world of storytelling through lenses and frames, where truth meets creativity, and reality is transformed into compelling narratives. Join us for 'Capturing Reality: The Art of Documentary Filmmaking,' a captivating and enlightening documentary-making event that dives deep into the fascinating realm of non-fiction storytelling. Participants are required to prepare a documentary film on any topic about any genre.
+    Step into the world of storytelling through lenses and frames, where truth meets creativity, and reality is transformed into compelling narratives. Join us for &apos;Capturing Reality: The Art of Documentary Filmmaking,&apos; a captivating and enlightening documentary-making event that dives deep into the fascinating realm of non-fiction storytelling. Participants are required to prepare a documentary film on any topic about any genre.
     </p>
     <a href="https://docs.google.com/document/d/1-JTd2yaNu0E32Cb8AUZnXsWsghbltlCY/edit" className="text-white-800 my-3.5 italic hover:underline">VIEW PROBLEM STATEMENT</a>
     <div className="my-3.5 align-middle justify-evenly">
