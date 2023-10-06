@@ -3,9 +3,9 @@ import React from 'react'
 import { GoogleOAuthProvider, useGoogleOneTapLogin, GoogleLogin } from '@react-oauth/google';
 import Classes from "./login.module.css"
 import Header from "../landingpage/Header"
-import Footer from "../landingpage/Footer"
 import Router from 'next/router'
 import axios from 'axios';
+import Image from 'next/image';
 import getConfig from 'next/config';
 import { BeatLoader } from 'react-spinners';
 const LogIn = () => {
@@ -72,11 +72,43 @@ const LogIn = () => {
 
     return (
         <>
-            <Header />
-            <div className={Classes.auth_section}>
-                <div className={Classes.top}></div>
-
-                <div className={Classes.authenticateButton}>
+ <section class="flex min-h-screen w-screen "
+     style={{
+       backgroundImage: `url(${require("./static/loginbg.png")})`,
+       backgroundSize: 'cover',  // Adjust as needed
+       backgroundPosition: 'center',  // Adjust as needed
+       position:'relative',
+     }}
+>
+  <div className=' top-0'>
+   <Header/>
+   </div>
+   <div className=" mt-28 mx-auto p-2">
+   
+      <div class=" flex-1  h-auto max-w-4xl mx-auto bg-white rounded-3xl shadow-xl">
+        <div class="flex flex-col md:flex-row">
+          <div  className=' md:w-1/2 '>
+          
+              <Image
+                  src={require("./static/clip.png")}
+                  width={100}
+                  height={100}
+                  className=" md:h-full sm:h-fit w-screen "
+                  alt="signup"
+                />
+                <h1 class="absolute text-5xl w-7 text-white font-semibold top-20 mt-40 md:mt-40 px-14 tracking-wide">
+                    Login to your Account</h1>  
+            
+             
+          </div>
+          <div class="flex items-center justify-center p-6 sm:p-12 md:w-1/2">
+            
+            <div class="w-full">
+              
+              <h1 class="mb-12 text-6xl font-bold text-center text-black tracking-normal">
+                Login
+              </h1>
+              <div className={Classes.authenticateButton}>
                     <GoogleOAuthProvider
                         auto_select
                         clientId={clientId}
@@ -97,9 +129,14 @@ const LogIn = () => {
                         />
                     </GoogleOAuthProvider>
                 </div>
+              
             </div>
-
-            <Footer />
+          </div>
+        </div>
+      </div>
+    </div>
+  
+</section> 
         </>
     )
 }
