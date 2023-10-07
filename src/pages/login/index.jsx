@@ -1,4 +1,3 @@
-"use client"
 import React from 'react'
 import { GoogleOAuthProvider, useGoogleOneTapLogin, GoogleLogin } from '@react-oauth/google';
 import Classes from "./login.module.css"
@@ -9,7 +8,7 @@ import Image from 'next/image';
 import getConfig from 'next/config';
 import { BeatLoader } from 'react-spinners';
 const LogIn = () => {
-   
+    const [clicked, setClicked] = React.useState(false);
     const { publicRuntimeConfig } = getConfig();
 
 
@@ -28,6 +27,7 @@ const LogIn = () => {
 
         try {
             console.log("handleLogin invoked",credentialResponse);
+            setClicked(true);
             const response=await axios.post(backendURL+"/api/google-login", {
                 token: credentialResponse.credential,
                 audience: clientId,
@@ -51,12 +51,13 @@ const LogIn = () => {
                 // console.log(data);
 
                 sessionStorage.setItem('token', credentialResponse.credential);
-
-                const isNewUser = credentialResponse.select_by === "btn";
+//i have used it as opposite because for newer user there was large string in response.data.message
+                const isNewUser = response.data.message === "insti";
+                console.log(response.data.message)
                 sessionStorage.setItem('isNewUser', isNewUser);
 
 
-                if (isNewUser) {
+                if (!isNewUser) {
                   Router.push('/register'); 
               } else {
                   Router.push('/dashboard'); 
@@ -118,6 +119,8 @@ const LogIn = () => {
                             console.log(clientId)
                         }
                         {/* <BeatLoader size={15} color={'#123abc'} loading={true} /> */}
+                      {/*Loader action on onclick */}
+
                         <GoogleLogin
                             onSuccess={handleLogin}
                             onFailure={handleFailure}
