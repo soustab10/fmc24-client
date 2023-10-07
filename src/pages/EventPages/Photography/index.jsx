@@ -58,7 +58,7 @@ const Photography = () => {
 
 <div class="w-[380px] h-[440px] justify-center my-6 border border-white bg-gradient-to-t from-white/10 to-white/30 text-white rounded-[25px] bg-opacity-10 backdrop-blur-lg  shadow-xl drop-shadow-xl bg-blend-normal z-10 ">
   <div class="flex flex-col text-center justify-center align-middle px-6 py-4">
-  <div class=" flex flex-rows justify-center font-bold text-3xl mb-2 my-3.5"><div><Image className="icon" src={"/icon_photo.png"} width={40} height={10} alt="cameras"/></div><div className="ml-4">Portfolio in 24 Hours</div></div>
+  <div class=" flex flex-rows justify-center font-bold text-[28px] mb-2 my-3.5"><div><Image className="icon" src={"/icon_photo.png"} width={40} height={10} alt="cameras"/></div><div className="ml-4">Portfolio in 24 Hours</div></div>
     <p class="text-justify my-3.5 h-[180px]">
     We click a number of pictures and put them in the gallery, but Portfolio in 24 hrs of FMC Weekend brings you a chance to show your skills on India’s largest digital art festival. 
     </p>
