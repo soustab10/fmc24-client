@@ -8,6 +8,7 @@ import Image from 'next/image';
 import getConfig from 'next/config';
 import { BeatLoader } from 'react-spinners';
 const LogIn = () => {
+
     const [clicked, setClicked] = React.useState(false);
     const { publicRuntimeConfig } = getConfig();
 
@@ -24,9 +25,15 @@ const LogIn = () => {
     };
 
     const handleLogin = async (credentialResponse) => {
-
         try {
+            console.log(credentialResponse.getBasicProfile)
             console.log("handleLogin invoked", credentialResponse);
+            const idToken = credentialResponse.credential;
+            const info = await fetch("https://www.googleapis.com/oauth2/v3/tokeninfo?id_token=" + idToken)
+            console.log("info", info)
+            const data = await info.json();
+            console.log(data)
+            sessionStorage.setItem("img", data.picture)
             setClicked(true);
             const response = await axios.post(backendURL + "/api/google-login", {
                 token: credentialResponse.credential,
@@ -52,10 +59,9 @@ const LogIn = () => {
 
                 sessionStorage.setItem('token', credentialResponse.credential);
                 const isNewUser = response.data.message === "New user log in";
+                console.log(response)
                 console.log(response.data.message)
                 sessionStorage.setItem('isNewUser', isNewUser);
-
-
                 if (isNewUser) {
                     Router.push('/register');
                 } else {
