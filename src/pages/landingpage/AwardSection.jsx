@@ -122,7 +122,7 @@ const AwardSection = () => {
 
                 <center>
                   <br />
-                  <Link href="/comingsoon">
+                  <Link href="/events">
                   
                   <button className="border-solid border-2 mt-6 text-white rounded-3xl h-10 w-48 text-lg transition duration-300 transform  hover:shadow-xl hover:text-blue-950 bg-transparent hover:bg-white">
                     {text5}
@@ -173,7 +173,7 @@ const AwardSection = () => {
 
                 <center>
                   <br />
-                  <Link href="/comingsoon">
+                  <Link href="/events">
                   <button className="border-solid border-2 mt-6 text-white rounded-3xl h-10 w-48 text-lg transition duration-300 transform  hover:shadow-xl hover:text-blue-950 bg-transparent hover:bg-white">
                     {text5}
                   </button>
