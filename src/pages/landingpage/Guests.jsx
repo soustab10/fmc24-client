@@ -162,7 +162,7 @@ const Guests = ({ imageSrc }) => {
                     <div className={Classes.overlayText}>
                       <span>ABHIJEET SINGH PARAMAR</span>
                       {/* <br/> */}
-                      <p>
+                      <p> 
                         {
                           "An alumnus of IIT (BHU), he is the mind behind renowned and critically acclaimed series like Rocket Boys, Panchayat, Gullak and Cheesecake!. Having experience working as a writer, director and producer at renowned names such as TVF, he has begun his own venture Feel Good Films."
                         }{" "}

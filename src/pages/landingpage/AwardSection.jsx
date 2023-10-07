@@ -135,8 +135,8 @@ const AwardSection = () => {
               <Image
                 src="/Frame29.svg"
                 alt="frame29"
-                width={100}
-                height={100}
+                width={300}
+                height={300}
                 style={{}}
               />
             </center>
@@ -184,8 +184,8 @@ const AwardSection = () => {
               <Image
                 src="/Frame29.svg"
                 alt="frame29"
-                width={100}
-                height={100}
+                width={500}
+                height={500}
                 style={{}}
               />
             </center>
