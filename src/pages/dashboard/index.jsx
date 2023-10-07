@@ -6,9 +6,11 @@ import Router from 'next/router';
 import getConfig from 'next/config';
 import Loader from "../loading"
 import jwt_decode from 'jwt-decode';
+import Image from 'next/image';
 
 const DashBoard = () => {
     const { publicRuntimeConfig } = getConfig();
+    const [profileImage, setProfileImage] = useState('');
     const NEXT_PUBLIC_REACT_APP_BACKEND_URI = publicRuntimeConfig.NEXT_PUBLIC_REACT_APP_BACKEND_URI;
     const [isLoading, setIsLoading] = useState(false);
     const [userData, setUserData] = useState({
@@ -20,6 +22,12 @@ const DashBoard = () => {
         instaHandle: '_blah_',
         userType: '-1'
     });
+    useEffect(() => {
+        const storedImage = sessionStorage.getItem('img');
+        if (storedImage) {
+            setProfileImage(storedImage);
+        }
+    }, []);
 
     useEffect(() => {
         const token = sessionStorage.getItem('token');
@@ -67,7 +75,7 @@ const DashBoard = () => {
                 Router.push('/');
             }
         };
-       
+
         fetchUserData();
     }, []);
 
@@ -111,6 +119,10 @@ const DashBoard = () => {
                                 {/* <i class="fa fa-pen fa-xs edit"></i> */}
                                 <table>
                                     <tbody>
+                                        <tr>
+                                            
+                                            <center><td><Image src={profileImage} width={100} height={100} alt='dp' style={{borderRadius:"100px"}}/></td></center>
+                                        </tr>
                                         <tr>
                                             <td>
                                                 <strong>Name</strong>
