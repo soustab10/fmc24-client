@@ -54,6 +54,8 @@ const DashBoard = () => {
                 }
 
                 const data = await res.json();
+                const cartItems = data.user.userCart.cartItems
+                // console.log(data.user.userCart.cartItems)
                 const user = data.user.userID || data.user; // Adjust this based on your API response structure
 
                 setUserData({
@@ -83,102 +85,117 @@ const DashBoard = () => {
         sessionStorage.clear();
         Router.push('/');
     };
-
+    const reset = () => {
+        Router.push("/register");
+    }
     return (
         <div>
             {isLoading ? (
                 <Loader />
             ) : (
-                <div>
-                    <div className={Classes.container}>
-                        <h1>Dashboard</h1>
-                        <div className={`${Classes.section_accessible}`}>
-                            {userData.userType == 0 && (
-                                <Fragment>
+                <>
+                    <div>
+                        <div className={Classes.container}>
+                            <h1>Dashboard</h1>
+                            <div className={`${Classes.section_accessible}`}>
+                                {userData.userType == 0 && (
+                                    <Fragment>
+                                        <h1>
+                                            <a href="#">Events</a>
+                                        </h1>
+                                        <br />
+                                        <h1>
+                                            <a href="#">Merchandise</a>
+                                        </h1>
+                                    </Fragment>
+                                )}
+                                {userData.userType == 1 && (
                                     <h1>
                                         <a href="#">Events</a>
                                     </h1>
-                                    <br />
-                                    <h1>
-                                        <a href="#">Merchandise</a>
-                                    </h1>
-                                </Fragment>
-                            )}
-                            {userData.userType == 1 && (
-                                <h1>
-                                    <a href="#">Events</a>
-                                </h1>
-                            )}
+                                )}
+                            </div>
                         </div>
-                    </div>
 
-                    <div className={`${Classes.main} ${Classes.column_2}`}>
-                        <h2>User Information</h2>
-                        <div className={Classes.card}>
-                            <div className={Classes.card_body}>
-                                {/* <i class="fa fa-pen fa-xs edit"></i> */}
-                                <table>
-                                    <tbody>
-                                        <tr>
-                                            
-                                            <center><td><Image src={profileImage} width={100} height={100} alt='dp' style={{borderRadius:"100px"}}/></td></center>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <strong>Name</strong>
-                                            </td>
-                                            <td>:</td>
-                                            <td>{userData.name}</td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <strong>Email</strong>
-                                            </td>
-                                            <td>:</td>
-                                            <td>{userData.email}</td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <strong>College/University</strong>
-                                            </td>
-                                            <td>:</td>
-                                            <td>{userData.college}</td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <strong>Phone</strong>
-                                            </td>
-                                            <td>:</td>
-                                            <td>{userData.phone}</td>
-                                        </tr>
-                                        <tr>
+                        <div className={`${Classes.main} ${Classes.column_2}`}>
+                            <h2>User Information</h2>
+                            <div className={Classes.card}>
+                                <div className={Classes.card_body}>
+                                    {/* <i class="fa fa-pen fa-xs edit"></i> */}
+                                    <table>
+                                        <tbody>
+                                            <tr>
+
+                                                <center><td><Image src={profileImage} width={100} height={100} alt='dp' style={{ borderRadius: "100px" }} /></td></center>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <strong>Name</strong>
+                                                </td>
+                                                <td>:</td>
+                                                <td>{userData.name}</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <strong>Email</strong>
+                                                </td>
+                                                <td>:</td>
+                                                <td>{userData.email}</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <strong>College/University</strong>
+                                                </td>
+                                                <td>:</td>
+                                                <td>{userData.college}</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <strong>Phone</strong>
+                                                </td>
+                                                <td>:</td>
+                                                <td>{userData.phone}</td>
+                                            </tr>
+                                            {/*No need because backend is not giving us yaer of study */}
+                                            {/* <tr>
                                             <td>
                                                 <strong>Year of Study</strong>
                                             </td>
                                             <td>:</td>
                                             <td>{userData.year}</td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <strong>Instagram Handle</strong>
-                                            </td>
-                                            <td>:</td>
-                                            <td>{userData.instaHandle}</td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <strong>User Type</strong>
-                                            </td>
-                                            <td>:</td>
-                                            <td>{userData.userType == 2 ? 'Campus Ambassador' : 'Participant'}</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+                                        </tr> */}
+                                            <tr>
+                                                <td>
+                                                    <strong>Instagram Handle</strong>
+                                                </td>
+                                                <td>:</td>
+                                                <td>{userData.instaHandle}</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <strong>User Type</strong>
+                                                </td>
+                                                <td>:</td>
+                                                <td>{userData.userType == 2 ? 'Campus Ambassador' : 'Participant'}</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
                             </div>
+                            <div className={Classes.logout} style={{ alignSelf: "start" }}>
+                                <Button onClick={reset}>Edit Info</Button>
+                            </div>
+                            <div className={Classes.logout} style={{ alignSelf: "end" }}>
+                                <Button onClick={logOutHandler}>Logout</Button>
+                            </div>
+
                         </div>
+
                     </div>
-                </div>
+
+                </>
             )}
+
         </div>
     );
 }
