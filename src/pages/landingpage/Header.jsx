@@ -8,7 +8,7 @@ const navbarGlass = {
   boxShadow: '0 8px 32px 0 rgba(31, 38, 135, 0.37)',
   backdropFilter: 'blur(16.5px)',
   WebkitBackdropFilter: 'blur(16.5px)',
-  
+
 };
 
 const logoLeftPadding = {
@@ -55,6 +55,12 @@ const Header = () => {
             team
           </Link>
           <Link
+            href="/login"
+            className="nav-menu links-header w-24 place-self-center"
+          >
+            login
+          </Link>
+          <Link
             href="/"
             className=" links-header w-auto pr-4 place-self-center"
           >
@@ -74,7 +80,7 @@ const Header = () => {
                   <div className="fmcw-logo-header basis-1/6 place-self-center z-100"></div>
                 </Link>
                 <div className="list">
-                  <Link href="/comingsoon" className="menu-list">
+                  <Link href="/events" className="menu-list">
                     events
                   </Link>
                   <Link href="/comingsoon" className="menu-list">
@@ -85,6 +91,9 @@ const Header = () => {
                   </Link>
                   <Link href="/comingsoon" className="menu-list">
                     team
+                  </Link>
+                  <Link href="/login" className="menu-list">
+                    login
                   </Link>
                 </div>
               </div>
@@ -104,5 +113,4 @@ const Header = () => {
     </>
   );
 };
-
 export default Header;
