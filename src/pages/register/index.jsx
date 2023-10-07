@@ -137,18 +137,24 @@ const Register = () => {
         <label htmlFor="college" className="block text-sm">
           University / College Name
         </label>
-        
-        <input
-          type="text"
-          name="college"
-          className="w-full px-4 py-2 text-sm border rounded-md focus:border-blue-400 focus:outline-none focus:ring-1 focus:ring-blue-600"
-          value={
-            email.endsWith('@iitbhu.ac.in') || email.endsWith('@itbhu.ac.in')
-              ? 'Indian Institute of Technology (BHU) Varanasi'
-              : ''
-          }
-          required
-        />
+        {  email.endsWith('@iitbhu.ac.in') || email.endsWith('@itbhu.ac.in')
+              ? (
+                      <input
+                        type="text"
+                        name="college"
+                        value='Indian Institute of Technology (BHU) Varanasi'
+                        readOnly
+                        required
+                        className="w-full px-4 py-2 text-sm border rounded-md focus:border-blue-400 focus:outline-none focus:ring-1 focus:ring-blue-600"
+                      />
+                    ) : (
+                      <input
+                        type="text"
+                        name="college"
+                        required
+                        className="w-full px-4 py-2 text-sm border rounded-md focus:border-blue-400 focus:outline-none focus:ring-1 focus:ring-blue-600"
+                      />
+                    )}
         </div>
               
         <PhoneInput
