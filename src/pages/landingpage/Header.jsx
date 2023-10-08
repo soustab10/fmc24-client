@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from "react";
-import Link from "next/link";
 import Image from "next/image";
+import Link from "next/link";
+import { useState } from "react";
 // import Classes from "./styles/Header.module.css";
 
 const navbarGlass = {

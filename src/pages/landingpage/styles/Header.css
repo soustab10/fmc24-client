@@ -23,6 +23,7 @@
 
 .nav-menu {
     transition: transform 0.2s ease-in-out;
+    border-radius: 10px;
 }
 
 .nav-menu:hover {
@@ -81,6 +82,7 @@
     .menu-list{
         color:#FFF;
         padding: 20px;
+        border-radius: 10px;
     }
     
 
