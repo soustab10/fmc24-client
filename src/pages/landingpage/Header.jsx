@@ -49,7 +49,7 @@ const Header = () => {
             sponsors
           </Link>
           <Link
-            href="/comingsoon"
+            href="/glimpses"
             className="nav-menu links-header mr-8  place-self-center "
           >
             glimpses
@@ -98,7 +98,7 @@ const Header = () => {
                   <Link href="/comingsoon" className="menu-list">
                     sponsors
                   </Link>
-                  <Link href="/comingsoon" className="menu-list">
+                  <Link href="/glimpses" className="menu-list">
                     glimpses
                   </Link>
                   <Link href="/comingsoon" className="menu-list">
