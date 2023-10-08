@@ -49,7 +49,7 @@ const Photography = () => {
     <p class="text-justify my-3.5 h-[180px]">
     Participants of the event will be tasked with producing a short film within a tight deadline of 50 hours. The theme for their film will be unveiled at the start of the event, and all filming and production will be conducted on the campus.
     </p>
-    <a href="https://drive.google.com/file/d/1hMvmOgtINusjSAHijt9OXxh5x9GBrHc2/view?usp=drive_link" className="text-white-800 my-3.5 italic hover:underline">VIEW PROBLEM STATEMENT</a>
+    <a href="https://drive.google.com/file/d/1hMvmOgtINusjSAHijt9OXxh5x9GBrHc2/view?usp=drive_link" className="text-white-800 my-3.5 italic hover:underline">View Problem Statement</a>
     <div className="my-3.5 align-middle justify-evenly">
         <button className="border p-2 border-white rounded-[15px] hover:text-[15px] hover:font-semibold transition-all duration-5000 ease-in-out ">REGISTRATION WILL BE LIVE SOON</button>
     </div>
@@ -62,7 +62,7 @@ const Photography = () => {
     <p class="text-justify my-3.5 h-[180px]">
     Frame by Frame is an Open-theme Online event, and stop-motion entries are to be submitted in due time. The participants need to create a stop-motion movie using only inanimate objects.
     </p>
-    <a href="https://drive.google.com/file/d/1mKRsu2kBdiTaDy2K5Ce7n0rk0uopbvgB/view?usp=drive_link" className="text-white-800 my-3.5 italic hover:underline">VIEW PROBLEM STATEMENT</a>
+    <a href="https://drive.google.com/file/d/1mKRsu2kBdiTaDy2K5Ce7n0rk0uopbvgB/view?usp=drive_link" className="text-white-800 my-3.5 italic hover:underline">View Problem Statement</a>
     <div className="my-3.5 align-middle justify-evenly">
         <button className="border p-2 border-white rounded-[15px] hover:text-[15px] hover:font-semibold transition-all duration-5000 ease-in-out ">REGISTRATION WILL BE LIVE SOON</button>
     </div>
@@ -75,7 +75,7 @@ const Photography = () => {
     <p class="text-justify my-3.5 h-[180px]">
     Participants will be given different genres ,from which they will choose to make a video based on the clips given to them .The time duration of the video can be from 30-60 seconds.
     </p>
-    <a href="https://drive.google.com/file/d/1FiV4Zsg5ieR0t6Tq9IuxAuV155Ea_U2c/view?usp=drive_link" className="text-white-800 my-3.5 italic hover:underline">VIEW PROBLEM STATEMENT</a>
+    <a href="https://drive.google.com/file/d/1FiV4Zsg5ieR0t6Tq9IuxAuV155Ea_U2c/view?usp=drive_link" className="text-white-800 my-3.5 italic hover:underline">View Problem Statement</a>
     <div className="my-3.5 align-middle justify-evenly">
         <button className="border p-2 border-white rounded-[12.5px] hover:text-[15px] hover:font-semibold transition-all duration-5000 ease-in-out ">REGISTRATION WILL BE LIVE SOON</button>
     </div>
@@ -89,7 +89,7 @@ const Photography = () => {
     For this event, you&apos;ve got to aim the lenses inwards and indulge in the mesmerizing beauty of life&apos;s precious moments; hence the theme - “Joy in Motion: Cinematic Vignettes of Life&apos;s Beauty”. Let each frame ignite your senses and remind you of the remarkable beauty that surrounds us all and make everyone and their friends turn their heads
     </p>
     <a href="https://drive.google.com/file/d/1QD-WIBJJnv0KRfJFqomDZrLSo-7LdhNs/view?usp=drive_link
-" className="text-white-800 my-3.5 italic hover:underline">VIEW PROBLEM STATEMENT</a>
+" className="text-white-800 my-3.5 italic hover:underline">View Problem Statement</a>
     <div className="my-3.5 align-middle justify-evenly">
         <button className="border p-2 border-white rounded-[15px] hover:text-[15px] hover:font-semibold transition-all duration-5000 ease-in-out ">REGISTRATION WILL BE LIVE SOON</button>
     </div>
