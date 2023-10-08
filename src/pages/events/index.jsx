@@ -59,7 +59,7 @@ const events = () => {
       <div class="flex flex-col text-center justify-center align-middle px-6 py-4">
       <div class=" flex flex-rows justify-center font-bold text-[28px] mb-2 my-3.5"><div><Image className="icon" src={"/icon_photo.png"} width={40} height={10} alt="cameras"/></div><div className="ml-4">Portfolio in 24 Hours</div></div>
         <p class="text-justify my-3.5 h-[180px]">
-        We click a number of pictures and put them in the gallery, but Portfolio in 24 hrs of FMC Weekend brings you a chance to show your skills on India’s largest digital art festival. 
+        We click a number of pictures and put them in the gallery, but Portfolio in 24 hrs of FMC Weekend brings you a chance to show your skills on Indias largest digital art festival. 
         </p>
         <a href="https://drive.google.com/file/d/1BhtGMD-lpnIZAv-8f1CIjZhPV2PDiS-B/view?usp=drive_link" className="text-white-800 my-3.5 italic hover:underline">VIEW PROBLEM STATEMENT</a>
         <div className="my-3.5 align-middle justify-evenly">
@@ -72,7 +72,7 @@ const events = () => {
       <div class="flex flex-col text-center justify-center align-middle px-6 py-4">
       <div class=" flex flex-rows justify-center font-bold text-3xl mb-2 my-3.5"><div><Image className="icon" src={"/icon_photo.png"} width={40} height={10} alt="cameras"/></div><div className="ml-4">Photoart</div></div>
         <p class="text-justify my-3.5 h-[180px]">
-        This is what Manipulation means,so let’s dive into this imaginary world and paint the canvas with our imagination.Themes on which the event will take place are given below: Post Apocalypse, Wildlife, Retro Futurism, Surrealism
+        This is what Manipulation means,so lets dive into this imaginary world and paint the canvas with our imagination.Themes on which the event will take place are given below: Post Apocalypse, Wildlife, Retro Futurism, Surrealism
         </p>
         <a href="https://drive.google.com/file/d/1qSMgfIKxQB8GIQBn74k2hwd01Jkt4HEo/view?usp=drive_link" className="text-white-800 my-3.5 italic hover:underline">VIEW PROBLEM STATEMENT</a>
         <div className="my-3.5 align-middle justify-evenly">
