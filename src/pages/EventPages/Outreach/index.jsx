@@ -44,7 +44,7 @@ const Outreach = () => {
         </div>
 <div className={Classes.MajorBod} >
 
-<div className={Classes.Card}>
+<div className={Classes.CardOu}>
   <div class="flex flex-col text-center justify-center align-middle px-6 py-4">
   <div class=" flex flex-rows justify-center font-bold text-3xl mb-2 my-3.5"><div><Image className="icon" src={"/icon_outreach.png"} width={40} height={10} alt="cameras"/></div><div className="ml-4">AdMad</div></div>
     <p class="text-justify my-3.5 h-[180px]">
@@ -57,7 +57,7 @@ const Outreach = () => {
   </div>
 </div>
 
-<div className={Classes.Card}>
+<div className={Classes.CardOu}>
   <div class="flex flex-col text-center justify-center align-middle px-6 py-4">
   <div class=" flex flex-rows justify-center font-bold text-3xl mb-2 my-3.5"><div><Image className="icon" src={"/icon_outreach.png"} width={40} height={10} alt="cameras"/></div><div className="ml-4">Vlogoholic</div></div>
     <p class="text-justify my-3.5 h-[180px]">
@@ -71,7 +71,7 @@ const Outreach = () => {
   </div>
 </div>
 
-<div className={Classes.Card}>
+<div className={Classes.CardOu}>
   <div class="flex flex-col text-center justify-center align-middle px-6 py-4">
   <div class=" flex flex-rows justify-center font-bold text-3xl mb-2 my-3.5"><div><Image className="icon" src={"/icon_outreach.png"} width={40} height={10} alt="cameras"/></div><div className="ml-4">Rant It</div></div>
     <p class="text-justify my-3.5 h-[180px]">
@@ -84,7 +84,7 @@ const Outreach = () => {
   </div>
 </div>
  
-<div className={Classes.Card}>
+<div className={Classes.CardOu}>
   <div class="flex flex-col text-center justify-center align-middle px-6 py-4">
   <div class=" flex flex-rows justify-center font-bold text-3xl mb-2 my-3.5"><div><Image className="icon" src={"/icon_outreach.png"} width={40} height={10} alt="cameras"/></div><div className="ml-4">Documentary</div></div>
     <p class="text-justify my-3.5 h-[180px] max-md:h-[230px]">
