@@ -207,6 +207,18 @@ const Footer = () => {
                 <label>
                   <input
                     type="text"
+                    placeholder="Your name"
+                    className={Classes.input_name}
+                    required
+                  />
+                  <input
+                    type="text"
+                    placeholder="example@gmail.com"
+                    className={Classes.input_mail}
+                    required
+                  />
+                  <input
+                    type="text"
                     placeholder="Tell us about anything and everything"
                     className={Classes.input}
                     required
