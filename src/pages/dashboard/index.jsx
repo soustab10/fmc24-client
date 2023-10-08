@@ -7,6 +7,11 @@ import getConfig from 'next/config';
 import Loader from "../loading"
 import jwt_decode from 'jwt-decode';
 import Image from 'next/image';
+import Header from '../landingpage/Header';
+import Footer from '../landingpage/Footer';
+import ContestCard from './contestCard/ContestCard';
+import WorkshopCard from './workshopCard/WorkshopCard';
+
 
 const DashBoard = () => {
     const { publicRuntimeConfig } = getConfig();
@@ -95,7 +100,8 @@ const DashBoard = () => {
             ) : (
                 <>
                     <div>
-                        <div className={Classes.container}>
+                        <Header/>
+                        {/* <div className={Classes.container}>
                             <h1>Dashboard</h1>
                             <div className={`${Classes.section_accessible}`}>
                                 {userData.userType == 0 && (
@@ -115,82 +121,132 @@ const DashBoard = () => {
                                     </h1>
                                 )}
                             </div>
-                        </div>
+                        </div> */}
 
                         <div className={`${Classes.main} ${Classes.column_2}`}>
-                            <h2>User Information</h2>
-                            <div className={Classes.card}>
-                                <div className={Classes.card_body}>
-                                    {/* <i class="fa fa-pen fa-xs edit"></i> */}
-                                    <table>
-                                        <tbody>
-                                            <tr>
+                        
+                            <div class=" mt-28 w-[80vw] h-auto p-6 justify-center my-6 border mr-5 border-white bg-gradient-to-t from-white/10 to-white/30 text-white rounded-[14px] bg-opacity-10 backdrop-blur-lg  shadow-xl drop-shadow-xl bg-blend-normal z-10 ">
+        <div class="flex flex-col md:flex-row">
+          <div  className=' md:w-1/2 text-center'>
+          
+              <Image
+                  src={profileImage}
+                  width={100}
+                  height={100}
+                  className=" rounded-full mx-auto mt-14 h-48 w-48 "
+                  alt="signup"
+                />
+                
+                <div className='flex items-center mx-auto m'>
+    <div className='mx-auto mt-14'>
+      <button className=' text-white font-bold py-1 px-4 rounded-lg text-lg bg-lime-500/20 mx-4' onClick={reset}  >Edit Info</button>
+      <button className='bg-red-500 hover:bg-red-700 text-white  text-lg rounded-lg font-bold py-1 px-4 ' onClick={logOutHandler}>Logout</button>
+    </div>
+  </div>
+             
+          </div>
+          <div class="flex items-center justify-center p-6 sm:p-12 md:w-1/2">
+            
+            <div class="w-full">
+              
+              <h1 class="mb-12 text-6xl font-bold text-center text-white tracking-normal font-mono">
+                {userData.name}
+              </h1>
+              <form className=''>
+             
+           <div className='mt-3'>
+              <label className="block text-sm">
+                Email
+              </label>
+              <div
+              
+              className="w-full  py-2 text-sm font-extrabold"
+             >{userData.email}</div>
+             
+              </div>
+             
+        <div className='mt-3'>
+        
+        <label htmlFor="college" className="block text-sm">
+          University / College Name
+        </label>
+        <div
+              
+              className="w-full  py-2 text-sm font-extrabold"
+             >{userData.college}</div>
+                  
+        </div>
+        <div className='mt-3'>
+        <label htmlFor="insta"  class="block text-sm">
+        Phone
+        </label>
+        <div
+              
+              className="w-full  py-2 text-sm font-extrabold"
+             >{userData.phone}</div>
+        </div>
+        
+        <div className='mt-3'>
+        <label htmlFor="insta"  class="block text-sm">
+        Instagram Handle
+        </label>
+        <div
+              
+              className="w-full  py-2 text-sm font-extrabold"
+             >{userData.instaHandle}</div>
+        </div>
+        <div className='mt-3'>
+        <label htmlFor="insta"  class="block text-sm">
+        User Type
+        </label>
+        <div
+              
+              className="w-full  py-2 text-sm font-extrabold"
+             >{userData.userType == 2 ? 'Campus Ambassador' : 'Participant'}</div>
+        </div>
 
-                                                <center><td><Image src={profileImage} width={100} height={100} alt='dp' style={{ borderRadius: "100px" }} /></td></center>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <strong>Name</strong>
-                                                </td>
-                                                <td>:</td>
-                                                <td>{userData.name}</td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <strong>Email</strong>
-                                                </td>
-                                                <td>:</td>
-                                                <td>{userData.email}</td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <strong>College/University</strong>
-                                                </td>
-                                                <td>:</td>
-                                                <td>{userData.college}</td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <strong>Phone</strong>
-                                                </td>
-                                                <td>:</td>
-                                                <td>{userData.phone}</td>
-                                            </tr>
-                                            {/*No need because backend is not giving us yaer of study */}
-                                            {/* <tr>
-                                            <td>
-                                                <strong>Year of Study</strong>
-                                            </td>
-                                            <td>:</td>
-                                            <td>{userData.year}</td>
-                                        </tr> */}
-                                            <tr>
-                                                <td>
-                                                    <strong>Instagram Handle</strong>
-                                                </td>
-                                                <td>:</td>
-                                                <td>{userData.instaHandle}</td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <strong>User Type</strong>
-                                                </td>
-                                                <td>:</td>
-                                                <td>{userData.userType == 2 ? 'Campus Ambassador' : 'Participant'}</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                            <div className={Classes.logout} style={{ alignSelf: "start" }}>
-                                <Button onClick={reset}>Edit Info</Button>
-                            </div>
-                            <div className={Classes.logout} style={{ alignSelf: "end" }}>
-                                <Button onClick={logOutHandler}>Logout</Button>
-                            </div>
 
-                        </div>
-
+      
+</form>
+            </div>
+          </div>
+        </div>
+      </div>
+                            
+                            <div className=' text-3xl text-white font-mono font-semibold mt-4'>Registered Contests</div>
+                            <div className="flex flex-col flex-wrap md:flex-row justify-between p-10  text-[14px]">
+      
+        
+       
+       
+        <ContestCard title={'Contest name'} imageSrc={'/icon_photo.png'}/>
+        <div class="w-[392px] h-[267px] justify-center my-6 border mx-2 border-white bg-gradient-to-t from-white/10 to-white/30 text-white rounded-[14px] bg-opacity-10 backdrop-blur-lg  shadow-xl drop-shadow-xl bg-blend-normal z-10 ">
+        <div class="flex flex-col text-center justify-center align-middle px-6 py-4">
+        <div class=" flex flex-rows justify-around font-bold text-7xl text-black mb-2 my-5"><div>+</div></div>
+        <p class=" my-3.5 h-[180px] text-2xl text-center">
+            Add more contests
+            </p>
+           
+        </div>
+        </div>
+                </div>
+                <div className=' text-3xl text-white font-bold  font-mono'>Registered Workshops</div>
+                            <div className="flex flex-col flex-wrap md:flex-row justify-between p-10  text-[14px]">
+                               
+       
+        <WorkshopCard title={'Workshop name'} imageSrc={'/workshop.png'}/>
+        
+        <div class="w-[392px] h-[267px] justify-center my-6 border mx-2 border-white bg-gradient-to-t from-white/10 to-white/30 text-white rounded-[14px] bg-opacity-10 backdrop-blur-lg  shadow-xl drop-shadow-xl bg-blend-normal z-10 ">
+        <div class="flex flex-col text-center justify-center align-middle px-6 py-4">
+        <div class=" flex flex-rows justify-around font-bold text-7xl text-black mb-2 my-5"><div>+</div></div>
+        <p class=" my-3.5 h-[180px] text-2xl text-center">
+            Add more workshops
+            </p>
+        </div>
+        </div>
+                </div>
+                     </div>
+                        <Footer/>
                     </div>
 
                 </>
