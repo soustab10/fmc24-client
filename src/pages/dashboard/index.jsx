@@ -59,7 +59,7 @@ const DashBoard = () => {
                 }
 
                 const data = await res.json();
-                const cartItems = data.user.userCart.cartItems
+                // const cartItems = data.user.userCart.cartItems
                 // console.log(data.user.userCart.cartItems)
                 const user = data.user.userID || data.user; // Adjust this based on your API response structure
 
