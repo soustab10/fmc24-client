@@ -3,6 +3,7 @@ import Header from "../../landingpage/Header";
 import Footer from "../../landingpage/Footer";
 import Index from "../../events";
 import Link from "next/link";
+import Classes from "../indexe.module.css";
 
 import Image from "next/image";
 
@@ -10,40 +11,40 @@ const divStyle = {
     minHeight: "100px",
   };
 
-const Photography = () => {
+const Cinematography = () => {
     return (
-        <div className="flex flex-col">
-            <Header/>
-            <div>
-      <div style={divStyle}><h1 hidden>Hello</h1></div>
-      
-        <div className="flex flex-row justify-center items-center text-[18px] m-[20px] ">
-           <div className="border border-white bg-gradient-to-t from-white/10 to-white/30 text-white flex flex-row h-[80px]   justify-center items-center rounded-[25px] bg-opacity-10 backdrop-blur-lg  shadow-xl drop-shadow-xl bg-blend-normal z-10 ">
-             <div className="w-[170px] flex justify-center items-center glow-effect-blue"> 
-             <Link href="../EventPages/Photography" className="hover:text-[24px] hover:font-semibold transition-all duration-5000 ease-in-out">Photography</Link>
-             </div>
-             <div className="w-[160px] flex justify-center items-center glow-effect-green">
-             <Link href="../EventPages/Design" className="hover:text-[24px] hover:font-semibold transition-all duration-5000 ease-in-out">Design</Link>
-             </div>
-             <div className="w-[160px] flex justify-center items-center glow-effect-red">
-             <Link href="../EventPages/Animation" className="hover:text-[24px] hover:font-semibold transition-all duration-5000 ease-in-out">Animation</Link>
-             </div>
-             <div className="w-[190px] flex justify-center items-center glow-effect-yellow">
-             <Link href="../EventPages/Cinematography" className="hover:text-[24px] hover:font-semibold transition-all duration-5000 ease-in-out">Cinematography</Link>
-             </div>
-             <div className="w-[160px] flex justify-center items-center glow-effect-orange">
-             <Link href="../EventPages/Media" className="hover:text-[24px] hover:font-semibold transition-all duration-5000 ease-in-out">Media</Link>
-             </div>
-             <div className="w-[160px] flex justify-center items-center glow-effect-purple">
-             <Link href="../EventPages/Outreach" className="hover:text-[24px] hover:font-semibold transition-all duration-5000 ease-in-out">Outreach</Link> 
-             </div>
+<div className={Classes.FullPage}>
+        <Header/>
+        <div>
+  <div className="mt-[100px] max-md:mt-[80px]"><h1 hidden>Hello</h1></div>
+  
+    <div className={Classes.TopBar}>
+       <div className={Classes.BarIn}>
+         <div className="w-[170px] max-md:w-full max-md:h-[70px] flex justify-center items-center glow-effect-blue"> 
+         <Link href="../EventPages/Photography" className="hover:text-[24px] hover:font-semibold transition-all duration-5000 ease-in-out">Photography</Link>
+         </div>
+         <div className="w-[160px] max-md:w-full max-md:h-[70px] flex justify-center items-center glow-effect-green">
+         <Link href="../EventPages/Design" className="hover:text-[24px] hover:font-semibold transition-all duration-5000 ease-in-out">Design</Link>
+         </div>
+         <div className="w-[160px] max-md:w-full max-md:h-[70px] flex justify-center items-center glow-effect-red">
+         <Link href="../EventPages/Animation" className="hover:text-[24px] hover:font-semibold transition-all duration-5000 ease-in-out">Animation</Link>
+         </div>
+         <div className="w-[190px] max-md:w-full max-md:h-[70px] flex justify-center items-center glow-effect-yellow">
+         <Link href="../EventPages/Cinematography" className="hover:text-[24px] hover:font-semibold transition-all duration-5000 ease-in-out">Cinematography</Link>
+         </div>
+         <div className="w-[160px] max-md:w-full max-md:h-[70px] flex justify-center items-center glow-effect-orange">
+         <Link href="../EventPages/Media" className="hover:text-[24px] hover:font-semibold transition-all duration-5000 ease-in-out">Media</Link>
+         </div>
+         <div className="w-[160px] max-md:w-full max-md:h-[70px] flex justify-center items-center glow-effect-purple">
+         <Link href="../EventPages/Outreach" className="hover:text-[24px] hover:font-semibold transition-all duration-5000 ease-in-out">Outreach</Link> 
+         </div>
              
            </div>
         </div> 
         </div>
-        <div className="flex flex-row flex-wrap justify-between p-24 text-[14px]">
-<div class="w-[380px] h-[440px] justify-center my-6 border border-white bg-gradient-to-t from-white/10 to-white/30 text-white rounded-[25px] bg-opacity-10 backdrop-blur-lg  shadow-xl drop-shadow-xl bg-blend-normal z-10 ">
+        <div className={Classes.MajorBod} >
 
+<div className={Classes.Card}>
   <div class="flex flex-col text-center justify-center align-middle px-6 py-4">
   <div class=" flex flex-rows justify-center font-bold text-3xl mb-2 my-3.5"><div><Image className="icon" src={"/icon_cine.png"} width={40} height={10} alt="cameras"/></div><div className="ml-4">Director&apos;s Cut</div></div>
     <p class="text-justify my-3.5 h-[180px]">
@@ -56,9 +57,9 @@ const Photography = () => {
   </div>
 </div>
 
-<div class="w-[380px] h-[440px] justify-center my-6 border border-white bg-gradient-to-t from-white/10 to-white/30 text-white rounded-[25px] bg-opacity-10 backdrop-blur-lg  shadow-xl drop-shadow-xl bg-blend-normal z-10 ">
+<div className={Classes.Card}>
   <div class="flex flex-col text-center justify-center align-middle px-6 py-4">
-  <div class=" flex flex-rows justify-center font-bold text-3xl mb-2 my-3.5"><div><Image className="icon" src={"/icon_cine.png"} width={40} height={10} alt="cameras"/></div><div className="ml-4">Frame By Frame</div></div>
+  <div class=" flex flex-rows justify-center font-bold text-3xl mb-2 my-3.5 max-md:text-[27px]"><div><Image className="icon" src={"/icon_cine.png"} width={40} height={10} alt="cameras"/></div><div className="ml-4">Frame By Frame</div></div>
     <p class="text-justify my-3.5 h-[180px]">
     Frame by Frame is an Open-theme Online event, and stop-motion entries are to be submitted in due time. The participants need to create a stop-motion movie using only inanimate objects.
     </p>
@@ -69,7 +70,7 @@ const Photography = () => {
   </div>
 </div>
 
-<div class="w-[380px] h-[440px] justify-center my-6 border border-white bg-gradient-to-t from-white/10 to-white/30 text-white rounded-[25px] bg-opacity-10 backdrop-blur-lg  shadow-xl drop-shadow-xl bg-blend-normal z-10 ">
+<div className={Classes.Card}>
   <div class="flex flex-col text-center justify-center align-middle px-6 py-4">
   <div class=" flex flex-rows justify-center font-bold text-3xl mb-2 my-3.5"><div><Image className="icon" src={"/icon_cine.png"} width={40} height={10} alt="cameras"/></div><div className="ml-4">Make It short</div></div>
     <p class="text-justify my-3.5 h-[180px]">
@@ -82,9 +83,9 @@ const Photography = () => {
   </div>
 </div>
 
-<div class="w-[380px] h-[440px] justify-center my-6 border border-white bg-gradient-to-t from-white/10 to-white/30 text-white rounded-[25px] bg-opacity-10 backdrop-blur-lg  shadow-xl drop-shadow-xl bg-blend-normal z-10 ">
+<div className={Classes.Card}>
   <div class="flex flex-col text-center justify-center align-middle px-6 py-4">
-  <div class=" flex flex-rows justify-center font-bold text-3xl mb-2 my-3.5"><div><Image className="icon" src={"/icon_cine.png"} width={40} height={10} alt="cameras"/></div><div className="ml-4">That&apos;s How B-roll</div></div>
+  <div class=" flex flex-rows justify-center font-bold text-3xl mb-2 my-3.5 max-md:text-[27px]"><div><Image className="icon" src={"/icon_cine.png"} width={40} height={10} alt="cameras"/></div><div className="ml-4">That&apos;s How B-roll</div></div>
     <p class="text-justify my-3.5 h-[180px]">
     For this event, you&apos;ve got to aim the lenses inwards and indulge in the mesmerizing beauty of life&apos;s precious moments; hence the theme - “Joy in Motion: Cinematic Vignettes of Life&apos;s Beauty”. Let each frame ignite your senses and remind you of the remarkable beauty that surrounds us all and make everyone and their friends turn their heads
     </p>
@@ -103,4 +104,4 @@ const Photography = () => {
     );
 };
 
-export default Photography
+export default Cinematography

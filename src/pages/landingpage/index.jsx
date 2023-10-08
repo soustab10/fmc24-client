@@ -21,12 +21,15 @@ import Competitions from "./Competitions"
 import Sponsors from "./Sponsors"
 import AwardSection from "./AwardSection"
 import Guests from "./Guests"
+import Router  from 'next/router';
 const IndexLanding = () => {
     const [counterOn, setCounterOn] = useState(false);
   const [button, setButton] = useState(true);
   const [visits, setVisits] = useState(0);
   const [isShown, setIsShown] = useState(false);
   const [isShown2, setIsShown2] = useState(false);
+  const [dashboard,setDashboard]=useState(false);
+  const [register,setRegister]=useState(false);
   const modalState = () => {
     setIsShown((current) => !current);
   };
@@ -41,6 +44,17 @@ const IndexLanding = () => {
       setButton(true);
     }
   };
+  useEffect(()=>{
+    if(sessionStorage.getItem('isNewUser')!==null){
+      if(sessionStorage.getItem('isNewUser')=="true"){
+        setRegister(true);
+      }
+      if(sessionStorage.getItem('isNewUser')=="false"){
+        setDashboard(true);
+      }
+      
+    }
+  },[]);
   const ref_container = useRef();
   // useEffect(() => {
   //   const scrollDiv = document.getElementById('header').offsetTop;
@@ -52,23 +66,24 @@ const IndexLanding = () => {
     window.location.href = '/';
     closeMobileMenu();
   };
-
-  return (
-    <>
-    <Header/>
-    <Hero/>
-    <AboutUs/>
-    <AwardSection/>
-    <Guests/>
-    {/* <Demo/> */}
-    {/* <Competitions/> */}
-    <OAT/>
-    {/* <Testimonials/> */}
-    <Sponsors/>
- 
-    <Footer/>
-  </>
-  )
+    return (
+      <>
+      <Header/>
+      {dashboard?<button href="/dashboard">Dashboard</button>:<></>}
+      {register?<button href="/register">Register</button>:<></>}
+      <Hero/>
+      <AboutUs/>
+      <AwardSection/>
+      <Guests/>
+      {/* <Demo/> */}
+      {/* <Competitions/> */}
+      <OAT/>
+      {/* <Testimonials/> */}
+      <Sponsors/>
+  
+      <Footer/>
+    </>
+    )
 }
 
 export default IndexLanding
