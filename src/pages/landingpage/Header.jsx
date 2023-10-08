@@ -32,31 +32,43 @@ const Header = () => {
         <div className="links-container-header flex justify-end flex-row basis-5/6">
           <Link
             href="/events"
-            className="nav-menu links-header w-24 place-self-center"
+            className="nav-menu links-header mr-8  place-self-center"
           >
             events
           </Link>
           <Link
+            href="/workshops"
+            className="nav-menu links-header mr-8  place-self-center"
+          >
+            workshops
+          </Link>
+          <Link
             href="/comingsoon"
-            className="nav-menu links-header w-24 place-self-center "
+            className="nav-menu links-header mr-8  place-self-center "
           >
             sponsors
           </Link>
           <Link
             href="/comingsoon"
-            className="nav-menu links-header w-24 place-self-center "
+            className="nav-menu links-header mr-8  place-self-center "
           >
             glimpses
           </Link>
           <Link
             href="/comingsoon"
-            className="nav-menu links-header w-24 place-self-center"
+            className="nav-menu links-header mr-8  place-self-center"
           >
             team
           </Link>
           <Link
+            href="/faq"
+            className="nav-menu links-header mr-8  place-self-center"
+          >
+            faq
+          </Link>
+          <Link
             href="/login"
-            className="nav-menu links-header w-24 place-self-center"
+            className="nav-menu links-header mr-8  place-self-center"
           >
             login
           </Link>
