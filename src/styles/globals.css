@@ -8,6 +8,11 @@
   --background-end-rgb: 255, 255, 255;
 }
 
+.custom-font {
+  font-family: 'Magica', serif;
+  
+}
+
 
 body {
   color: rgb(var(--foreground-rgb));
@@ -22,3 +27,56 @@ body {
   {
     display: none;
   }
+
+  .glow-effect-red:hover{
+    /* text-shadow: 0 0 70px rgb(255,0,0,10000), 0 0 40px rgb(255,0,0,1000), 0 0 40px rgb(255,0,0,1000), 0 0 40px rgb(255,0,0,1000); */
+    background-image:url('../pages/events/assets/red.png');
+    background-size:100% auto;
+    padding: 20px 0px;
+    background-repeat: no-repeat;
+  }
+
+  .glow-effect-blue:hover{
+    /* text-shadow: 0 0 70px rgb(255,0,0,10000), 0 0 40px rgb(255,0,0,1000), 0 0 40px rgb(255,0,0,1000), 0 0 40px rgb(255,0,0,1000); */
+    background-image:url('../pages/events/assets/blue.png');
+    background-size:100% auto;
+    padding: 20px 0px;
+    background-repeat: no-repeat;
+  }
+
+  .glow-effect-purple:hover{
+    /* text-shadow: 0 0 70px rgb(255,0,0,10000), 0 0 40px rgb(255,0,0,1000), 0 0 40px rgb(255,0,0,1000), 0 0 40px rgb(255,0,0,1000); */
+    background-image:url('../pages/events/assets/purple.png');
+    background-size:100% auto;
+    padding: 20px 0px;
+    background-repeat: no-repeat;
+  }
+  .glow-effect-green:hover{
+    /* text-shadow: 0 0 70px rgb(255,0,0,10000), 0 0 40px rgb(255,0,0,1000), 0 0 40px rgb(255,0,0,1000), 0 0 40px rgb(255,0,0,1000); */
+    background-image:url('../pages/events/assets/green.png');
+    background-size:100% auto;
+    padding: 20px 0px;
+    background-repeat: no-repeat;
+  }
+  .glow-effect-orange:hover{
+    /* text-shadow: 0 0 70px rgb(255,0,0,10000), 0 0 40px rgb(255,0,0,1000), 0 0 40px rgb(255,0,0,1000), 0 0 40px rgb(255,0,0,1000); */
+    background-image:url('../pages/events/assets/orange.png');
+    background-size:100% auto;
+    padding: 20px 0px;
+    background-repeat: no-repeat;
+  }
+  .glow-effect-yellow:hover{
+    /* text-shadow: 0 0 70px rgb(255,0,0,10000), 0 0 40px rgb(255,0,0,1000), 0 0 40px rgb(255,0,0,1000), 0 0 40px rgb(255,0,0,1000); */
+    background-image:url('../pages/events/assets/yellow.png');
+    background-size:100% auto;
+    padding: 20px 0px;
+    background-repeat: no-repeat;
+  }
+
+  .gradient-border {
+    border: 2px solid transparent; 
+    border-radius: 25px;
+    border-image: linear-gradient(to right, #ff0000, #00ff00);
+    border-image-slice: 1;
+  }
+

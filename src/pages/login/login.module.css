@@ -1,0 +1,28 @@
+
+  .authenticateButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 3rem;
+    background: #ffffff;
+    border: .5px solid #000000;
+    border-radius: 10px;
+    
+  }
+  
+  .gButton {
+  
+    background: #ffffff;
+    border-radius: 10px!important;
+    font-size: 26px;
+    opacity: 1!important;
+    z-index: -1;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-weight: 500;
+  }
+  
+ 

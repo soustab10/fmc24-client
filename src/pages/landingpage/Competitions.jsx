@@ -14,6 +14,7 @@ const Competitions = () => {
           <Image
             src={require('./../../../public/images/Rectangle51.png')}
             alt= "Rectangle51"
+            className='rounded-3xl'
           />
         </div>
         <div className='flex pt-4 pl-14 flex-col place-content-start w-auto text-white h-fit justify-center'>
@@ -31,13 +32,14 @@ const Competitions = () => {
             WORKSHOP
           </h>
           <h className='font-normal text-2xl h-16'>
-          Lorem ipsum dolor sit amet consectetur. Sed non placerat purus vitae in. Pellentesque et tempor tortor enim ac sit.
+          
           </h>
         </div>
         <div className='flex min-w-max min-h-max flex-col'>
           <Image
             src={require('./../../../public/images/Rectangle52.png')}
             alt= "Rectangle52"
+            className='rounded-3xl'
           />
         </div>
       </div>

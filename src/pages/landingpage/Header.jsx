@@ -1,57 +1,116 @@
-import React from 'react'
+import Image from "next/image";
+import Link from "next/link";
+import { useState } from "react";
+// import Classes from "./styles/Header.module.css";
 
+const navbarGlass = {
+  background: 'rgba(0, 0, 25, 0.3)',
+  boxShadow: '0 8px 32px 0 rgba(31, 38, 135, 0.37)',
+  backdropFilter: 'blur(16.5px)',
+  WebkitBackdropFilter: 'blur(16.5px)',
 
+};
+
+const logoLeftPadding = {
+  paddingLeft: "15rem",
+};
 const Header = () => {
-  const [header_open,set_header_open]=React.useState(true);
-  if (typeof window !== 'undefined') {
-    React.useEffect(() => {
-      const onPageLoad = () => {
-        Array.from(document.getElementsByClassName('links-header-links')).forEach((a)=>{a.style.transition="translate 1s";});
-        document.getElementsByClassName("links-header-collapser")[0].style.transition="rotate 1s";
-      };
-      if (document.readyState === 'complete') {
-        onPageLoad();
-      } else {
-        window.addEventListener('load', onPageLoad);
-        return () => window.removeEventListener('load', onPageLoad);
-      }
-    }, []);
-    window.onload=()=>{
-    }
-    if(header_open){
-      Array.from(document.getElementsByClassName('links-header-links')).forEach((a)=>{a.style.translate="0px 0px";});
-      document.getElementsByClassName("links-header-collapser")[0].style.rotate="0deg";
-    }else{
-      Array.from(document.getElementsByClassName('links-header-links')).forEach((a)=>{a.style.translate=String(document.getElementsByClassName('collapsing-links-container')[0].offsetWidth)+"px 0px";});
-      document.getElementsByClassName("links-header-collapser")[0].style.rotate="180deg";
-    }
-  }
-  const slide=()=>{
-    set_header_open(!header_open);
-  }
+  const [menuState, setMenuState] = useState(false);
+  const handleMenu = () => {
+    setMenuState(!menuState);
+  };
+
   return (
     <>
-    <div className='container-header flex flex-row h-20 fixed left-0 right-0'>
-      <div className='fmcw-logo-header basis-1/6 place-self-center'></div>
-      <div className='links-container-header flex justify-end flex-row basis-5/6'>
-        <div className='collapsing-links-container flex justify-end flex-row overflow-hidden'>
-          <a href="" className='links-header links-header-links w-24 place-self-center'>events</a>
-          <a href="" className='links-header links-header-links w-24 place-self-center'>sponsors</a>
-          <a href="" className='links-header links-header-links w-24 place-self-center'>glimpses</a>
-          <a href="" className='links-header links-header-links w-24 place-self-center'>team</a>
-        </div>
-        <div className='links-header w-16 place-self-center' onClick={slide}>
-          <svg xmlns="http://www.w3.org/2000/svg" className='links-header-collapser' width="27.922" height="11.688" viewBox="0 0 30 14" fill="none">
-          <path d="M1 1.15576H28.9218" stroke="white" stroke-width="1.94803" stroke-linecap="round"/>
-          <path d="M1 7H28.9218" stroke="white" stroke-width="1.94803" stroke-linecap="round"/>
-          <path d="M1 12.8442H28.9218" stroke="white" stroke-width="1.94803" stroke-linecap="round"/>
-          </svg>
+      <div
+        className="container-header flex flex-row h-20 fixed left-0 right-0 z-50"
+        style={navbarGlass}
+      >
+        <Link href="/">
+          <div className="fmcw-logo-header place-self-center z-100" style={logoLeftPadding}></div>
+        </Link>
+        <div className="links-container-header flex justify-end flex-row basis-5/6">
+          <Link
+            href="/events"
+            className="nav-menu links-header w-24 place-self-center"
+          >
+            events
+          </Link>
+          <Link
+            href="/comingsoon"
+            className="nav-menu links-header w-24 place-self-center "
+          >
+            sponsors
+          </Link>
+          <Link
+            href="/comingsoon"
+            className="nav-menu links-header w-24 place-self-center "
+          >
+            glimpses
+          </Link>
+          <Link
+            href="/comingsoon"
+            className="nav-menu links-header w-24 place-self-center"
+          >
+            team
+          </Link>
+          <Link
+            href="/login"
+            className="nav-menu links-header w-24 place-self-center"
+          >
+            login
+          </Link>
+          <Link
+            href="/"
+            className=" links-header w-auto pr-4 place-self-center"
+          >
+            <button onClick={handleMenu}>
+              {menuState ? null : (
+                <div className="menu-link space-y-1">
+                  <div className="w-8 h-0.5 bg-white"></div>
+                  <div className="w-8 h-0.5 bg-white"></div>
+                  <div className="w-8 h-0.5 bg-white"></div>
+                </div>
+              )}
+            </button>
+
+            {menuState ? (
+              <div className="menu-design">
+                <Link href="/">
+                  <div className="fmcw-logo-header basis-1/6 place-self-center z-100"></div>
+                </Link>
+                <div className="list">
+                  <Link href="/events" className="menu-list">
+                    events
+                  </Link>
+                  <Link href="/comingsoon" className="menu-list">
+                    sponsors
+                  </Link>
+                  <Link href="/comingsoon" className="menu-list">
+                    glimpses
+                  </Link>
+                  <Link href="/comingsoon" className="menu-list">
+                    team
+                  </Link>
+                  <Link href="/login" className="menu-list">
+                    login
+                  </Link>
+                </div>
+              </div>
+            ) : null}
+          </Link>
+          {menuState ? (
+            <button onClick={handleMenu}>
+              <Image
+                className="cross-cut"
+                alt="cross-cut"
+                src={require("./../../../public/crosscut.png")}
+              ></Image>
+            </button>
+          ) : null}
         </div>
       </div>
-    </div>
-     
     </>
-  )
-}
-
-export default Header
+  );
+};
+export default Header;

@@ -2,9 +2,45 @@ import React from "react";
 import { Container } from "react-bootstrap";
 import Carousel from "react-multi-carousel";
 import Classes from "@/styles/Sponsor.module.css";
+import Marquee from "react-fast-marquee";
 import Image from "next/image";
 import "react-multi-carousel/lib/styles.css";
 const Sponsors = () => {
+  const strokeTextStyle = {
+    fontFamily: "'Work Sans', sans-serif",
+    fontSize: "36px",
+    fontStyle: "normal",
+    fontWeight: "600",
+    lineHeight: "normal",
+    WebkitTextFillColor: "transparent",
+    WebkitTextStrokeWidth: "2px",
+    WebkitTextStrokeColor: "white",
+    paddingRight: "36px",
+  };
+  const filledTextStyle = {
+    fontFamily: "'Work Sans', sans-serif",
+    fontSize: "36px",
+    fontStyle: "normal",
+    fontWeight: "600",
+    lineHeight: "normal",
+    color: "white",
+    paddingRight: "36px",
+  };
+
+  const topSectionPadding = {
+    paddingTop: "200px",
+    paddingBottom: "100px",
+  };
+
+  const bottomPadding = {
+    paddingBottom: "20px",
+  };
+
+  const carouselItem = {
+    paddingRight: "5px",
+    width: "420px",
+    height: "273.77px",
+  }
   const responsive = {
     superLargeDesktop: {
       // the naming can be any, depends on you.
@@ -22,14 +58,32 @@ const Sponsors = () => {
     mobile: {
       breakpoint: { max: 680, min: 0 },
       items: 1,
+      
     },
   };
   return (
     <>
-      <section className={Classes.sponsor} id="sponsors">
+      <section
+        className={Classes.sponsor}
+        style={topSectionPadding}
+        id="sponsors"
+      >
+        <div style={bottomPadding}>
+          <Marquee gradient={false} speed={50} direction="right">
+            <div style={filledTextStyle}>PREVIOUS SPONSORS</div>
+            <div style={strokeTextStyle}>PREVIOUS SPONSORS</div>
+            <div style={filledTextStyle}>PREVIOUS SPONSORS</div>
+            <div style={strokeTextStyle}>PREVIOUS SPONSORS</div>
+            <div style={filledTextStyle}>PREVIOUS SPONSORS</div>
+            <div style={strokeTextStyle}>PREVIOUS SPONSORS</div>
+            <div style={filledTextStyle}>PREVIOUS SPONSORS</div>
+            <div style={strokeTextStyle}>PREVIOUS SPONSORS</div>
+            <div style={filledTextStyle}>PREVIOUS SPONSORS</div>
+            <div style={strokeTextStyle}>PREVIOUS SPONSORS</div>
+          </Marquee>
+        </div>
         <Container>
           <div className={Classes.sponsor_bx}>
-            <h2 className={Classes.heading}>SPONSORS</h2>
             <Carousel
               responsive={responsive}
               infinite={true}
@@ -37,44 +91,60 @@ const Sponsors = () => {
               autoPlaySpeed={2000}
               className="slider"
             >
-              <div className={Classes.item}>
+              <div style = {carouselItem}  >
                 <Image
-                  src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MXw3NjA4Mjc3NHx8ZW58MHx8fHx8&w=1000&q=80"
-                  alt="Rectangle"
-                  width={100}
-                  height={100}
+                  src="/canon.png"
+                   alt="Rectangle"  className={Classes.carousel_item}
+                  width={300}
+                  height={300}
                 />
               </div>
-              <div className={Classes.item}>
+              <div style = {carouselItem}  >
                 <Image
-                  src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MXw3NjA4Mjc3NHx8ZW58MHx8fHx8&w=1000&q=80"
-                  alt="Rectangle"
-                  width={100}
-                  height={100}
+                  src="/fujisq.png"
+                   alt="Rectangle"  className={Classes.carousel_item}
+                  width={300}
+                  height={300}
                 />
               </div>
-              <div className={Classes.item}>
+              <div style = {carouselItem}  >
                 <Image
-                  src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MXw3NjA4Mjc3NHx8ZW58MHx8fHx8&w=1000&q=80"
-                  alt="Rectangle"
-                  width={100}
-                  height={100}
+                  src="/huion-01.png"
+                    alt="Rectangle"  className={Classes.carousel_item} 
+                  width={300}
+                  height={300}
                 />
               </div>
-              <div className={Classes.item}>
+              <div style = {carouselItem}  >
                 <Image
-                  src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MXw3NjA4Mjc3NHx8ZW58MHx8fHx8&w=1000&q=80"
-                  alt="Rectangle"
-                  width={100}
-                  height={100}
+                  src="/kalkaari.jpg"
+                   alt="Rectangle"  className={Classes.carousel_item}
+                  width={300}
+                  height={300}
                 />
               </div>
-              <div className={Classes.item}>
+              <div style = {carouselItem}  >
                 <Image
-                  src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MXw3NjA4Mjc3NHx8ZW58MHx8fHx8&w=1000&q=80"
-                  alt="Rectangle"
-                  width={100}
-                  height={100}
+                  src="/ifp.jpg"
+                   alt="Rectangle"  className={Classes.carousel_item}
+                  width={300}
+                  height={300}
+                />
+              </div>
+              <div style = {carouselItem}  >
+                <Image
+                  src="/redfm.jpg"
+                   alt="Rectangle"  className={Classes.carousel_item}
+                  width={300}
+                  height={300}
+                />
+              </div>
+              <div style = {carouselItem}  >
+                <Image
+                  src="/redbull.png"
+                   alt="Rectangle"  className={Classes.carousel_item}
+                  width={300}
+                  height={300}
                 />
               </div>
             </Carousel>

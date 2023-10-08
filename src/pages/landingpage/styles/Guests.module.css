@@ -1,0 +1,92 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Poppins:wght@300&family=Work+Sans:wght@300&display=swap");
+
+.sponsor {
+  padding: 0 0 3rem 0;
+  position: relative;
+}
+
+.sponsor_bx {
+  text-align: center;
+  text-align: center;
+  padding: 2.5rem 2rem;
+}
+
+.heading {
+  font-size: 3rem;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 600;
+  color: #ffffff;
+  top: 61px;
+  font-style: normal;
+  line-height: normal;
+}
+
+.slider {
+  width: 80%;
+  margin: 0 auto;
+  position: relative;
+  gap: 6.56rem;
+}
+
+.item img {
+  width: 9rem;
+  height: 9rem;
+  margin: 0 auto 1.1rem auto;
+  margin-top: 7%;
+  border-radius: 14px;
+  box-shadow: 0px 0px 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.guest img {
+  width: 15rem;
+  height: 15rem;
+  margin: 0 auto 1rem auto;
+  margin-top: 7%;
+  box-shadow: 0px 0px 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.guest {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.overlayText {
+  font-size: xx-small;
+  font-family: "Work Sans", sans-serif;
+  position: absolute;
+  top: 1;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 10px;
+  margin: 0px 25px;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+
+}
+
+.overlayText span{
+  font-size: small ;
+}
+.item {
+  overflow: hidden;
+}
+.guest:hover .overlayText {
+  background: rgba(0, 0, 0, 0.7);
+  opacity: 1;
+  z-index: 1;
+}
+
+.guestimg:after {
+
+  background: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+}
+.guestimg:hover:after {
+  opacity: 1;
+}
