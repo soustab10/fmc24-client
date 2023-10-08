@@ -10,7 +10,77 @@
   flex-direction: column;
 }
 
-.Card{
+.CardPh{
+  width: 380px;
+  height: 440px;
+  justify-content: center;
+  margin-top: 24px;
+  margin-bottom: 24px;
+  color:  white;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.3),rgba(255,255,255,0.1));
+  border-radius: 25px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(1.5px);
+  -webkit-backdrop-filter: blur(1.9px);
+  border: 1px solid rgba(255, 255, 255, 1);
+}
+.CardOu{
+  width: 380px;
+  height: 440px;
+  justify-content: center;
+  margin-top: 24px;
+  margin-bottom: 24px;
+  color:  white;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.3),rgba(255,255,255,0.1));
+  border-radius: 25px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(1.5px);
+  -webkit-backdrop-filter: blur(1.9px);
+  border: 1px solid rgba(255, 255, 255, 1);
+}
+.CardMe{
+  width: 380px;
+  height: 440px;
+  justify-content: center;
+  margin-top: 24px;
+  margin-bottom: 24px;
+  color:  white;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.3),rgba(255,255,255,0.1));
+  border-radius: 25px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(1.5px);
+  -webkit-backdrop-filter: blur(1.9px);
+  border: 1px solid rgba(255, 255, 255, 1);
+}
+.CardDe{
+  width: 380px;
+  height: 440px;
+  justify-content: center;
+  margin-top: 24px;
+  margin-bottom: 24px;
+  color:  white;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.3),rgba(255,255,255,0.1));
+  border-radius: 25px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(1.5px);
+  -webkit-backdrop-filter: blur(1.9px);
+  border: 1px solid rgba(255, 255, 255, 1);
+}
+.CardCi{
+  width: 380px;
+  height: 440px;
+  justify-content: center;
+  margin-top: 24px;
+  margin-bottom: 24px;
+  color:  white;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.3),rgba(255,255,255,0.1));
+  border-radius: 25px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(1.5px);
+  -webkit-backdrop-filter: blur(1.9px);
+  border: 1px solid rgba(255, 255, 255, 1);
+}
+.CardAn{
   width: 380px;
   height: 440px;
   justify-content: center;
@@ -25,6 +95,25 @@
   border: 1px solid rgba(255, 255, 255, 1);
 }
 
+.CardPh:hover{
+  box-shadow: 0px 0px 40px 0px #2FC9FF;
+}
+.CardOu:hover{
+  box-shadow: 0px 0px 40px 0px #9B1DCD;
+}
+.CardMe:hover{
+  box-shadow: 0px 0px 40px 0px #FF7B00;
+}
+.CardDe:hover{
+  box-shadow: 0px 0px 40px 0px #0CFF8E;
+}
+.CardCi:hover{
+  box-shadow: 0px 0px 40px 0px #FFEE2D;
+}
+.CardAn:hover{
+  box-shadow: 0px 0px 40px 0px #FF435A;
+}
+
 .MajorBod{
   display: flex;
   flex-direction: row;
@@ -35,9 +124,7 @@
   font-size: 14px;
 }
 
-.Card:hover{
-  box-shadow: 0px 0px 40px 0px #79dcfc;
-}
+
 
 .TopBar{
   display: flex;
@@ -69,10 +156,29 @@
 }
 
 @media only screen and (max-width:420px){
-  .Card{
+  .CardPh{
     width: 330px;
     height: 500px;
-
+  }
+  .CardOu{
+    width: 330px;
+    height: 500px;
+  }
+  .CardMe{
+    width: 330px;
+    height: 500px;
+  }
+  .CardDe{
+    width: 330px;
+    height: 500px;
+  }
+  .CardCi{
+    width: 330px;
+    height: 500px;
+  }
+  .CardAn{
+    width: 330px;
+    height: 500px;
   }
   .MajorBod{
     padding: 1px;
