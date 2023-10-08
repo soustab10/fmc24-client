@@ -3,6 +3,7 @@ import Header from "../landingpage/Header";
 import Footer from "../landingpage/Footer";
 import Link from "next/link";
 import Image from "next/image";
+import Classes from "./indexe.module.css";
 
 const divStyle = {
     minHeight: "100px",
@@ -11,39 +12,39 @@ const divStyle = {
 
 const events = () => {
     return (
-        <div className="flex flex-col">
+        <div className={Classes.FullPage}>
             <Header/>
             <div>
-      <div style={divStyle}><h1 hidden>Hello</h1></div>
+      <div className="mt-[100px] max-md:mt-[80px]"><h1 hidden>Hello</h1></div>
       
-        <div className="flex flex-row justify-center items-center text-[18px] m-[20px] ">
-           <div className="border border-white bg-gradient-to-t from-white/10 to-white/30 text-white flex flex-row h-[80px]   justify-center items-center rounded-[25px] bg-opacity-10 backdrop-blur-lg  shadow-xl drop-shadow-xl bg-blend-normal z-10 ">
-             <div className="w-[170px] flex justify-center items-center glow-effect-blue"> 
+        <div className={Classes.TopBar}>
+           <div className={Classes.BarIn}>
+             <div className="w-[170px] max-md:w-full max-md:h-[70px] flex justify-center items-center glow-effect-blue"> 
              <Link href="../EventPages/Photography" className="hover:text-[24px] hover:font-semibold transition-all duration-5000 ease-in-out">Photography</Link>
              </div>
-             <div className="w-[160px] flex justify-center items-center glow-effect-green">
+             <div className="w-[160px] max-md:w-full max-md:h-[70px] flex justify-center items-center glow-effect-green">
              <Link href="../EventPages/Design" className="hover:text-[24px] hover:font-semibold transition-all duration-5000 ease-in-out">Design</Link>
              </div>
-             <div className="w-[160px] flex justify-center items-center glow-effect-red">
+             <div className="w-[160px] max-md:w-full max-md:h-[70px] flex justify-center items-center glow-effect-red">
              <Link href="../EventPages/Animation" className="hover:text-[24px] hover:font-semibold transition-all duration-5000 ease-in-out">Animation</Link>
              </div>
-             <div className="w-[190px] flex justify-center items-center glow-effect-yellow">
+             <div className="w-[190px] max-md:w-full max-md:h-[70px] flex justify-center items-center glow-effect-yellow">
              <Link href="../EventPages/Cinematography" className="hover:text-[24px] hover:font-semibold transition-all duration-5000 ease-in-out">Cinematography</Link>
              </div>
-             <div className="w-[160px] flex justify-center items-center glow-effect-orange">
+             <div className="w-[160px] max-md:w-full max-md:h-[70px] flex justify-center items-center glow-effect-orange">
              <Link href="../EventPages/Media" className="hover:text-[24px] hover:font-semibold transition-all duration-5000 ease-in-out">Media</Link>
              </div>
-             <div className="w-[160px] flex justify-center items-center glow-effect-purple">
+             <div className="w-[160px] max-md:w-full max-md:h-[70px] flex justify-center items-center glow-effect-purple">
              <Link href="../EventPages/Outreach" className="hover:text-[24px] hover:font-semibold transition-all duration-5000 ease-in-out">Outreach</Link> 
              </div>
              
            </div>
         </div> 
         </div>
-        <div className="flex flex-row flex-wrap justify-between p-24 text-[14px]">
-    <div class="w-[380px] h-[440px] justify-center my-6 border border-white bg-gradient-to-t from-white/10 to-white/30 text-white rounded-[25px] bg-opacity-10 backdrop-blur-lg  shadow-xl drop-shadow-xl bg-blend-normal z-10 ">
-    
-      <div class="flex flex-col text-center justify-center  px-6 py-4">
+        <div className={Classes.MajorBod} >
+
+    <div className={Classes.Card}>
+      <div class="flex flex-col text-center justify-center  px-6 py-4 ">
         <div class=" flex flex-rows justify-center font-bold text-3xl mb-2 my-3.5"><div><Image className="icon" src={"/icon_photo.png"} width={40} height={10} alt="cameras"/></div><div className="ml-4">Snapchase</div></div>
         <p class="text-justify my-3.5 h-[180px]">
         Snapchase is a treasure hunt where you have to take pictures of a special place by solving clues and riddles and submit them before time runs out.
@@ -55,9 +56,9 @@ const events = () => {
       </div>
     </div>
     
-    <div class="w-[380px] h-[440px] justify-center my-6 border border-white bg-gradient-to-t from-white/10 to-white/30 text-white rounded-[25px] bg-opacity-10 backdrop-blur-lg  shadow-xl drop-shadow-xl bg-blend-normal z-10 ">
+    <div className={Classes.Card}>
       <div class="flex flex-col text-center justify-center align-middle px-6 py-4">
-      <div class=" flex flex-rows justify-center font-bold text-[28px] mb-2 my-3.5"><div><Image className="icon" src={"/icon_photo.png"} width={40} height={10} alt="cameras"/></div><div className="ml-4">Portfolio in 24 Hours</div></div>
+      <div class=" flex flex-rows justify-center font-bold text-[28px] max-md:text-[23px] mb-2 my-3.5"><div><Image className="icon" src={"/icon_photo.png"} width={40} height={10} alt="cameras"/></div><div className="ml-4">Portfolio in 24 Hours</div></div>
         <p class="text-justify my-3.5 h-[180px]">
         We click a number of pictures and put them in the gallery, but Portfolio in 24 hrs of FMC Weekend brings you a chance to show your skills on Indias largest digital art festival. 
         </p>
@@ -68,7 +69,7 @@ const events = () => {
       </div>
     </div>
     
-    <div class="w-[380px] h-[440px] justify-center my-6 border border-white bg-gradient-to-t from-white/10 to-white/30 text-white rounded-[25px] bg-opacity-10 backdrop-blur-lg  shadow-xl drop-shadow-xl bg-blend-normal z-10 ">
+    <div className={Classes.Card}>
       <div class="flex flex-col text-center justify-center align-middle px-6 py-4">
       <div class=" flex flex-rows justify-center font-bold text-3xl mb-2 my-3.5"><div><Image className="icon" src={"/icon_photo.png"} width={40} height={10} alt="cameras"/></div><div className="ml-4">Photoart</div></div>
         <p class="text-justify my-3.5 h-[180px]">
@@ -81,7 +82,7 @@ const events = () => {
       </div>
     </div>
     
-    <div class="w-[380px] h-[440px] justify-center my-6 border border-white bg-gradient-to-t from-white/10 to-white/30 text-white rounded-[25px] bg-opacity-10 backdrop-blur-lg  shadow-xl drop-shadow-xl bg-blend-normal z-10 ">
+    <div class={Classes.Card}>
       <div class="flex flex-col text-center justify-center align-middle px-6 py-4">
       <div class=" flex flex-rows justify-center font-bold text-3xl mb-2 my-3.5"><div><Image className="icon" src={"/icon_photo.png"} width={40} height={10} alt="cameras"/></div><div className="ml-4">Instameet</div></div>
         <p class="text-justify my-3.5 h-[180px]">
@@ -94,7 +95,7 @@ const events = () => {
       </div>
     </div>
     
-    <div class="w-[380px] h-[440px] justify-center my-6 border border-white bg-gradient-to-t from-white/10 to-white/30 text-white rounded-[25px] bg-opacity-10 backdrop-blur-lg  shadow-xl drop-shadow-xl bg-blend-normal z-10 ">
+    <div class={Classes.Card}>
       <div class="flex flex-col text-center justify-center align-middle px-6 py-4">
       <div class=" flex flex-rows justify-center font-bold text-3xl mb-2 my-3.5"><div><Image className="icon" src={"/icon_photo.png"} width={40} height={10} alt="cameras"/></div><div className="ml-4">Infocus</div></div>
         <p class="text-justify my-3.5 h-[180px]">
