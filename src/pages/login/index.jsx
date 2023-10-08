@@ -16,9 +16,10 @@ const LogIn = () => {
     const clientId = publicRuntimeConfig.GOOGLE_CLIENT_ID;
 
     const backendURL = publicRuntimeConfig.NEXT_PUBLIC_REACT_APP_BACKEND_URI;
+    // console.log(backendURL)
 
 
-    console.log(backendURL);
+    console.log("backendURL : "+backendURL);
 
     const handleFailure = (error) => {
         console.log("Authentication failed", error);
@@ -26,15 +27,18 @@ const LogIn = () => {
 
     const handleLogin = async (credentialResponse) => {
         try {
-            console.log(credentialResponse.getBasicProfile)
+            // console.log(credentialResponse.getBasicProfile)
             console.log("handleLogin invoked", credentialResponse);
             const idToken = credentialResponse.credential;
             const info = await fetch("https://www.googleapis.com/oauth2/v3/tokeninfo?id_token=" + idToken)
+            console.log(idToken);
             console.log("info", info)
             const data = await info.json();
             console.log(data)
             sessionStorage.setItem("img", data.picture)
             setClicked(true);
+            console.log(credentialResponse.credential);
+            sessionStorage.setItem('token',credentialResponse.credential);
             const response = await axios.post(backendURL + "/api/google-login", {
                 token: credentialResponse.credential,
                 audience: clientId,
@@ -57,7 +61,7 @@ const LogIn = () => {
                 // const data = await response.data.json();
                 // console.log(data);
 
-                sessionStorage.setItem('token', credentialResponse.credential);
+                // sessionStorage.setItem('token', credentialResponse.credential);
                 const isNewUser = response.data.message === "New user log in";
                 console.log(response)
                 console.log(response.data.message)
@@ -119,20 +123,16 @@ const LogIn = () => {
                                             auto_select
                                             clientId={clientId}
                                             className={Classes.gButton}
-                                        >
-                                            {
-                                                console.log(clientId)
-                                            }
+                                            >
+                                            
                                             {/* <BeatLoader size={15} color={'#123abc'} loading={true} /> */}
                                             {/*Loader action on onclick */}
 
                                             <GoogleLogin
                                                 onSuccess={handleLogin}
                                                 onFailure={handleFailure}
+
                                                 cookiePolicy="single_host_origin"
-                                                onError={error => {
-                                                    console.error('Login Failed:', error);
-                                                }}
                                                 useOneTap
                                             />
                                         </GoogleOAuthProvider>
