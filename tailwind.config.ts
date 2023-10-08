@@ -15,8 +15,9 @@ const config: Config = {
       fontFamily: {
         sans: ['"Work Sans"', 'sans'],
       },
-      height: {
+      spacing: {
         '426': '426px',
+        '600':'600px'
       },
       boxShadow: {
         'custom-sm': '0 1px 3px rgba(0, 0, 0, 0.1)',
