@@ -44,7 +44,7 @@ const Cinematography = () => {
         </div>
         <div className={Classes.MajorBod} >
 
-<div className={Classes.Card}>
+<div className={Classes.CardCi}>
   <div class="flex flex-col text-center justify-center align-middle px-6 py-4">
   <div class=" flex flex-rows justify-center font-bold text-3xl mb-2 my-3.5"><div><Image className="icon" src={"/icon_cine.png"} width={40} height={10} alt="cameras"/></div><div className="ml-4">Director&apos;s Cut</div></div>
     <p class="text-justify my-3.5 h-[180px]">
@@ -57,7 +57,7 @@ const Cinematography = () => {
   </div>
 </div>
 
-<div className={Classes.Card}>
+<div className={Classes.CardCi}>
   <div class="flex flex-col text-center justify-center align-middle px-6 py-4">
   <div class=" flex flex-rows justify-center font-bold text-3xl mb-2 my-3.5 max-md:text-[27px]"><div><Image className="icon" src={"/icon_cine.png"} width={40} height={10} alt="cameras"/></div><div className="ml-4">Frame By Frame</div></div>
     <p class="text-justify my-3.5 h-[180px]">
@@ -70,7 +70,7 @@ const Cinematography = () => {
   </div>
 </div>
 
-<div className={Classes.Card}>
+<div className={Classes.CardCi}>
   <div class="flex flex-col text-center justify-center align-middle px-6 py-4">
   <div class=" flex flex-rows justify-center font-bold text-3xl mb-2 my-3.5"><div><Image className="icon" src={"/icon_cine.png"} width={40} height={10} alt="cameras"/></div><div className="ml-4">Make It short</div></div>
     <p class="text-justify my-3.5 h-[180px]">
@@ -83,7 +83,7 @@ const Cinematography = () => {
   </div>
 </div>
 
-<div className={Classes.Card}>
+<div className={Classes.CardCi}>
   <div class="flex flex-col text-center justify-center align-middle px-6 py-4">
   <div class=" flex flex-rows justify-center font-bold text-3xl mb-2 my-3.5 max-md:text-[27px]"><div><Image className="icon" src={"/icon_cine.png"} width={40} height={10} alt="cameras"/></div><div className="ml-4">That&apos;s How B-roll</div></div>
     <p class="text-justify my-3.5 h-[180px]">
