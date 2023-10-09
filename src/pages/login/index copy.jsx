@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import {
   GoogleOAuthProvider,
   useGoogleOneTapLogin,
@@ -82,23 +82,6 @@ const LogIn = () => {
     }
   };
 
-  const [isSmallScreen, setIsSmallScreen] = useState(false);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsSmallScreen(window.innerWidth < 768);
-    };
-
-    if (typeof window !== "undefined") {
-      handleResize();
-      window.addEventListener("resize", handleResize);
-
-      return () => {
-        window.removeEventListener("resize", handleResize);
-      };
-    }
-  }, []);
-
   return (
     <>
       <section
@@ -113,55 +96,24 @@ const LogIn = () => {
         <div className=" top-0">
           <Header />
         </div>
-        {isSmallScreen ? (
-          <div className="flex justify-center items-center w-[100%] h-screen">
-            <div class="flex w-[60%] bg-white rounded-3xl shadow-2xl">
-              <div class="p-10 text-4xl w-full">
-                <h1 class="flex my-10 font-bold text-center text-black tracking-normal">
-                  Login
-                </h1>
-                <div className="flex w-full justify-center items-center">
-                  <div className={Classes.authenticateButton}>
-                    <GoogleOAuthProvider
-                      auto_select
-                      clientId={clientId}
-                      className={Classes.gButton}
-                    >
-                      {/* <BeatLoader size={15} color={'#123abc'} loading={true} /> */}
-                      {/*Loader action on onclick */}
-
-                      <GoogleLogin
-                        onSuccess={handleLogin}
-                        onFailure={handleFailure}
-                        cookiePolicy="single_host_origin"
-                        useOneTap
-                      />
-                    </GoogleOAuthProvider>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        ) : (
-          <div className="flex justify-center items-center w-[100%] h-screen">
-            <div class="flex w-[full] md:max-w-[55%] bg-white rounded-3xl shadow-2xl">
-              <div class="flex flex-col md:flex-row w-[0%] md:w-[50%]">
+        <div className=" mt-28 mx-auto p-2">
+          <div class=" flex-1 h-auto max-w-4xl mx-auto bg-white rounded-3xl shadow-xl">
+            <div class="flex flex-col md:flex-row">
+              <div className=" md:w-1/2 ">
                 <Image
                   src={require("./static/clip.png")}
                   width={100}
                   height={100}
-                  className=" h-auto w-screen rounded-l-3xl"
+                  className=" md:h-full sm:h-fit w-screen "
                   alt="signup"
                 />
-                <div className="absolute flex flex-col justify-center items-center">
-                  <h1 class="xl:text-5xl lg:text-4xl lg:py-32 py-20 px-10 md:text-2xl text-xl w-7 text-white font-semibold tracking-wide">
-                    Login to your Account
-                  </h1>
-                </div>
+                <h1 class="absolute text-5xl w-7 text-white font-semibold top-20 mt-40 md:mt-40 px-14 tracking-wide">
+                  Login to your Account
+                </h1>
               </div>
-              <div class="flex items-center justify-center p-4 sm:p-12 w-[50%]">
-                <div class="w-full mb-20">
-                  <h1 class="flex my-10 lg:text-5xl md:text-3xl font-bold text-center text-black tracking-normal">
+              <div class="flex items-center justify-center p-6 sm:p-12 md:w-1/2">
+                <div class="w-full">
+                  <h1 class="mb-12 text-6xl font-bold text-center text-black tracking-normal">
                     Login
                   </h1>
                   <div className={Classes.authenticateButton}>
@@ -185,7 +137,7 @@ const LogIn = () => {
               </div>
             </div>
           </div>
-        )}
+        </div>
       </section>
     </>
   );
