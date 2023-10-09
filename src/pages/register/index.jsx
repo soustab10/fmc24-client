@@ -93,7 +93,7 @@ const Register = () => {
                   src={require("./static/clip.png")}
                   width={100}
                   height={100}
-                  className=" md:h-full sm:h-96 w-screen "
+                  className=" md:h-full sm:h-96 w-screen md:rounded-tl-3xl md:rounded-bl-3xl rounded-tl-3xl  max-md:rounded-tr-3xl"
                   alt="signup"
                 />
                 <h1 class="absolute text-6xl w-2 text-white font-semibold top-20 mt-40 md:mt-72 px-14 tracking-wide">

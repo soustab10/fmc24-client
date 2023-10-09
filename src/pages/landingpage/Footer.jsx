@@ -5,7 +5,9 @@ import Image from "next/image";
 import axios from "axios";
 import getConfig from 'next/config';
 const Footer = () => {
-
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
   const [isMobile, setIsMobile] = useState(false);
   const { publicRuntimeConfig } = getConfig();
 
@@ -13,8 +15,8 @@ const Footer = () => {
   // const clientId = publicRuntimeConfig.GOOGLE_CLIENT_ID;
 
   const backendURL = publicRuntimeConfig.NEXT_PUBLIC_REACT_APP_BACKEND_URI;
-  const contactUs=()=>{
-    axios.post(backendURL+"/api/contact-us");
+  const contactUs = () => {
+    axios.post(backendURL + "/api/contact-us");
     alert("Thank you for contacting us. We will get back to you soon.")
   }
   useEffect(() => {
@@ -47,6 +49,22 @@ const Footer = () => {
   }
   const handleSubmit = (e) => {
     e.preventDefault();
+    const name = e.target[0].value;
+    const email = e.target[1].value;
+    const message = e.target[2].value;
+    var raw = JSON.stringify({
+      "name": name,
+      "email": email,
+      "message": message
+    });
+    axios.post(backendURL + "/api/contact-us", {
+      body: raw,
+    });
+    alert(`Thanks ${name}  for contacting us. We will get back to you soon.`)
+    setName("");
+    setEmail("");
+    setMessage("");
+
     // setTextt("");
     // Add your form submission logic here
   };
@@ -208,24 +226,31 @@ const Footer = () => {
                   <input
                     type="text"
                     placeholder="Your name"
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
                     className={Classes.input_name}
                     required
                   />
                   <input
                     type="text"
                     placeholder="example@gmail.com"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
                     className={Classes.input_mail}
+
                     required
                   />
                   <input
                     type="text"
+                    value={message}
                     placeholder="Tell us about anything and everything"
+                    onChange={(e) => setMessage(e.target.value)}
                     className={Classes.input}
                     required
                   />
                 </label>
                 <button type="submit" className={Classes.button}
-                  onClick={contactUs}
+                // onClick={contactUs}
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -255,6 +280,7 @@ const Footer = () => {
                   <div className={Classes.text_wrapper_head}>
                     Ritesh Soni
                   </div>
+
                   <div className={Classes.text_wrapper_phn}>+91 8905322603</div>
                 </div>
                 <div className={Classes.contact_pr}>

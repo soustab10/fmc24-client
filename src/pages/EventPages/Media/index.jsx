@@ -43,10 +43,10 @@ const Media = () => {
         </div> 
         </div>
         <div className={Classes.MajorBod} >
-<div className={Classes.Card}>
+<div className={Classes.CardMe}>
   <div class="flex flex-col text-center justify-center align-middle px-6 py-4">
   <div class=" flex flex-rows justify-center font-bold text-3xl mb-2 my-3.5"><div><Image className="icon" src={"/icon_media.png"} width={40} height={10} alt="cameras"/></div><div className="ml-4">Infinite Tales</div></div>
-    <p class="text-justify my-3.5 h-[180px]">
+    <p class="text-justify my-3.5 h-[180px] max-md:h-[230px]">
     Participants have to come in pairs at the allotted location.They will be provided with the topics randomly These topics can range from an idea or words to an opening phrase.You will get a partner with whom you have to make the story on the basis of chit system.You and your partner have to complete the story by adding sentences alternatively.A twist in the middle of the story will be given by the judges to spice things up a bit.
     </p>
     <a href="https://drive.google.com/file/d/1VbF0YBAfZmryC-23_R4iv_WwSd9JqEYm/view?usp=drive_link" className="text-white-800 my-3.5 italic hover:underline">View Problem Statement</a>
@@ -56,7 +56,7 @@ const Media = () => {
   </div>
 </div>
 
-<div className={Classes.Card}>
+<div className={Classes.CardMe}>
   <div class="flex flex-col text-center justify-center align-middle px-6 py-4">
   <div class=" flex flex-rows justify-center font-bold text-3xl mb-2 my-3.5 max-md:text-[26px]"><div><Image className="icon" src={"/icon_media.png"} width={40} height={10} alt="cameras"/></div><div className="ml-4">Straight From Site</div></div>
     <p class="text-justify my-3.5 h-[180px]">
@@ -69,7 +69,7 @@ const Media = () => {
   </div>
 </div>
 
-<div className={Classes.Card}>
+<div className={Classes.CardMe}>
   <div class="flex flex-col text-center justify-center align-middle px-6 py-4">
   <div class=" flex flex-rows justify-center font-bold text-3xl mb-2 my-3.5 max-md:text-[27px]"><div><Image className="icon" src={"/icon_media.png"} width={40} height={10} alt="cameras"/></div><div className="ml-4">Laughing Gazette</div></div>
     <p class="text-justify my-3.5 h-[180px]">
@@ -82,7 +82,7 @@ const Media = () => {
   </div>
 </div>
 
-<div className={Classes.Card}>
+<div className={Classes.CardMe}>
   <div class="flex flex-col text-center justify-center align-middle px-6 py-4">
   <div class=" flex flex-rows justify-center font-bold text-3xl mb-2 my-3.5"><div><Image className="icon" src={"/icon_media.png"} width={40} height={10} alt="cameras"/></div><div className="ml-4">Writer&apos;s Block</div></div>
     <p class="text-justify my-3.5 h-[180px]">
