@@ -58,15 +58,14 @@ const Footer = () => {
       "message": message
     });
     axios.post(backendURL + "/api/contact-us", {
-      body: raw,
+      "name": name,
+      "email": email,
+      "message": message
     });
     alert(`Thanks ${name}  for contacting us. We will get back to you soon.`)
     setName("");
     setEmail("");
     setMessage("");
-
-    // setTextt("");
-    // Add your form submission logic here
   };
   // const backgroundColor = isClicked
   //   ? "#A782FF"
