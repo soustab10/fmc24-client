@@ -122,7 +122,7 @@ const AwardSection = () => {
 
                 <center>
                   <br />
-                  <Link href="/comingsoon">
+                  <Link href="/events">
                   
                   <button className="border-solid border-2 mt-6 text-white rounded-3xl h-10 w-48 text-lg transition duration-300 transform  hover:shadow-xl hover:text-blue-950 bg-transparent hover:bg-white">
                     {text5}
@@ -135,8 +135,8 @@ const AwardSection = () => {
               <Image
                 src="/Frame29.svg"
                 alt="frame29"
-                width={100}
-                height={100}
+                width={300}
+                height={300}
                 style={{}}
               />
             </center>
@@ -173,7 +173,7 @@ const AwardSection = () => {
 
                 <center>
                   <br />
-                  <Link href="/comingsoon">
+                  <Link href="/events">
                   <button className="border-solid border-2 mt-6 text-white rounded-3xl h-10 w-48 text-lg transition duration-300 transform  hover:shadow-xl hover:text-blue-950 bg-transparent hover:bg-white">
                     {text5}
                   </button>
@@ -184,8 +184,8 @@ const AwardSection = () => {
               <Image
                 src="/Frame29.svg"
                 alt="frame29"
-                width={100}
-                height={100}
+                width={500}
+                height={500}
                 style={{}}
               />
             </center>

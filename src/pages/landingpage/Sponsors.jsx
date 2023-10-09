@@ -37,7 +37,9 @@ const Sponsors = () => {
   };
 
   const carouselItem = {
-    paddingRight: "10px",
+    paddingRight: "5px",
+    width: "420px",
+    height: "273.77px",
   }
   const responsive = {
     superLargeDesktop: {
@@ -89,60 +91,60 @@ const Sponsors = () => {
               autoPlaySpeed={2000}
               className="slider"
             >
-              <div style = {carouselItem}>
+              <div style = {carouselItem}  >
                 <Image
                   src="/canon.png"
-                  alt="Rectangle"
-                  width={100}
-                  height={100}
+                   alt="Rectangle"  className={Classes.carousel_item}
+                  width={300}
+                  height={300}
                 />
               </div>
-              <div style = {carouselItem}>
+              <div style = {carouselItem}  >
                 <Image
                   src="/fujisq.png"
-                  alt="Rectangle"
-                  width={100}
-                  height={100}
+                   alt="Rectangle"  className={Classes.carousel_item}
+                  width={300}
+                  height={300}
                 />
               </div>
-              <div style = {carouselItem}>
+              <div style = {carouselItem}  >
                 <Image
                   src="/huion-01.png"
-                  alt="Rectangle"
-                  width={100}
-                  height={100}
+                    alt="Rectangle"  className={Classes.carousel_item} 
+                  width={300}
+                  height={300}
                 />
               </div>
-              <div style = {carouselItem}>
+              <div style = {carouselItem}  >
                 <Image
                   src="/kalkaari.jpg"
-                  alt="Rectangle"
-                  width={100}
-                  height={100}
+                   alt="Rectangle"  className={Classes.carousel_item}
+                  width={300}
+                  height={300}
                 />
               </div>
-              <div style = {carouselItem}>
+              <div style = {carouselItem}  >
                 <Image
                   src="/ifp.jpg"
-                  alt="Rectangle"
-                  width={100}
-                  height={100}
+                   alt="Rectangle"  className={Classes.carousel_item}
+                  width={300}
+                  height={300}
                 />
               </div>
-              <div style = {carouselItem}>
+              <div style = {carouselItem}  >
                 <Image
                   src="/redfm.jpg"
-                  alt="Rectangle"
-                  width={100}
-                  height={100}
+                   alt="Rectangle"  className={Classes.carousel_item}
+                  width={300}
+                  height={300}
                 />
               </div>
-              <div style = {carouselItem}>
+              <div style = {carouselItem}  >
                 <Image
                   src="/redbull.png"
-                  alt="Rectangle"
-                  width={100}
-                  height={100}
+                   alt="Rectangle"  className={Classes.carousel_item}
+                  width={300}
+                  height={300}
                 />
               </div>
             </Carousel>

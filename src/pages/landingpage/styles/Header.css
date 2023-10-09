@@ -4,7 +4,7 @@
     color: #FFF;
     text-align: center;    
     font-size: 16px;
-    font-weight: 400;
+    font-weight: 600;
     line-height: normal;
     
 }
@@ -23,6 +23,7 @@
 
 .nav-menu {
     transition: transform 0.2s ease-in-out;
+    border-radius: 10px;
 }
 
 .nav-menu:hover {
@@ -81,6 +82,7 @@
     .menu-list{
         color:#FFF;
         padding: 20px;
+        border-radius: 10px;
     }
     
 

@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from "react";
-import Link from "next/link";
 import Image from "next/image";
+import Link from "next/link";
+import { useState } from "react";
 // import Classes from "./styles/Header.module.css";
 
 const navbarGlass = {
@@ -8,7 +8,7 @@ const navbarGlass = {
   boxShadow: '0 8px 32px 0 rgba(31, 38, 135, 0.37)',
   backdropFilter: 'blur(16.5px)',
   WebkitBackdropFilter: 'blur(16.5px)',
-  
+
 };
 
 const logoLeftPadding = {
@@ -32,27 +32,45 @@ const Header = () => {
         <div className="links-container-header flex justify-end flex-row basis-5/6">
           <Link
             href="/events"
-            className="nav-menu links-header w-24 place-self-center"
+            className="nav-menu links-header mr-8  place-self-center"
           >
             events
           </Link>
           <Link
+            href="/workshops"
+            className="nav-menu links-header mr-8  place-self-center"
+          >
+            workshops
+          </Link>
+          <Link
             href="/comingsoon"
-            className="nav-menu links-header w-24 place-self-center "
+            className="nav-menu links-header mr-8  place-self-center "
           >
             sponsors
           </Link>
           <Link
-            href="/comingsoon"
-            className="nav-menu links-header w-24 place-self-center "
+            href="/glimpses"
+            className="nav-menu links-header mr-8  place-self-center "
           >
             glimpses
           </Link>
           <Link
             href="/comingsoon"
-            className="nav-menu links-header w-24 place-self-center"
+            className="nav-menu links-header mr-8  place-self-center"
           >
             team
+          </Link>
+          <Link
+            href="/faq"
+            className="nav-menu links-header mr-8  place-self-center"
+          >
+            faq
+          </Link>
+          <Link
+            href="/login"
+            className="nav-menu links-header mr-8  place-self-center"
+          >
+            login
           </Link>
           <Link
             href="/"
@@ -74,17 +92,20 @@ const Header = () => {
                   <div className="fmcw-logo-header basis-1/6 place-self-center z-100"></div>
                 </Link>
                 <div className="list">
-                  <Link href="/comingsoon" className="menu-list">
+                  <Link href="/events" className="menu-list">
                     events
                   </Link>
                   <Link href="/comingsoon" className="menu-list">
                     sponsors
                   </Link>
-                  <Link href="/comingsoon" className="menu-list">
+                  <Link href="/glimpses" className="menu-list">
                     glimpses
                   </Link>
                   <Link href="/comingsoon" className="menu-list">
                     team
+                  </Link>
+                  <Link href="/login" className="menu-list">
+                    login
                   </Link>
                 </div>
               </div>
@@ -104,5 +125,4 @@ const Header = () => {
     </>
   );
 };
-
 export default Header;

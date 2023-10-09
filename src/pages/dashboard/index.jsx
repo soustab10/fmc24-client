@@ -5,10 +5,22 @@ import Button from './Button/Button';
 import Router from 'next/router';
 import getConfig from 'next/config';
 import Loader from "../loading"
+import jwt_decode from 'jwt-decode';
+import Image from 'next/image';
+import Header from '../landingpage/Header';
+import Footer from '../landingpage/Footer';
+import ContestCard from './contestCard/ContestCard';
+import WorkshopCard from './workshopCard/WorkshopCard';
+import Link from 'next/link';
+
+
 const DashBoard = () => {
     const { publicRuntimeConfig } = getConfig();
-    const REACT_APP_BACKEND_URI = publicRuntimeConfig.REACT_APP_BACKEND_URI;
+    const [profileImage, setProfileImage] = useState('');
+    const NEXT_PUBLIC_REACT_APP_BACKEND_URI = publicRuntimeConfig.NEXT_PUBLIC_REACT_APP_BACKEND_URI;
     const [isLoading, setIsLoading] = useState(false);
+    const [contests, setContests] = useState([]);
+    const [workshops, setWorkshops] = useState([]);
     const [userData, setUserData] = useState({
         name: 'John Doe',
         email: 'foo@foo.com',
@@ -18,23 +30,30 @@ const DashBoard = () => {
         instaHandle: '_blah_',
         userType: '-1'
     });
+    useEffect(() => {
+        const storedImage = sessionStorage.getItem('img');
+        if (storedImage) {
+            setProfileImage(storedImage);
+        }
+    }, []);
 
     useEffect(() => {
-        const token = sessionStorage.getItem('idToken');
+        const token = sessionStorage.getItem('token');
         if (!token) {
             Router.push('/');
             return;
         }
-
+        const decodedToken = jwt_decode(token);
+        const storedEmail = decodedToken.email;
         setIsLoading(true);
 
         const fetchUserData = async () => {
             try {
-                const res = await fetch(REACT_APP_BACKEND_URI + 'api/user', {
+                const res = await fetch(NEXT_PUBLIC_REACT_APP_BACKEND_URI + '/api/user', {
                     method: 'GET',
                     headers: {
                         'Content-Type': 'application/json',
-                        token: token,
+                        email: storedEmail,
                     },
                 });
 
@@ -43,6 +62,36 @@ const DashBoard = () => {
                 }
 
                 const data = await res.json();
+                console.log(data)
+                if (data && typeof data === 'object' &&
+                    data.user && typeof data.user === 'object' &&
+                    data.user.userID && typeof data.user.userID === 'object' &&
+                    data.user.userID.userCart !== null) {
+
+
+                    const cartItems = data.user.userID.userCart.cartItems;
+                    const contestItems = new Set();
+                    const workshopItems = new Set();
+
+                    cartItems.forEach((item) => {
+                        if (item.Type === 'Contest' && item.payment.status === -1) {
+                            const { title, img, id } = item;
+                            contestItems.add({ title, img, id });
+                        } else if (item.Type === 'Workshop' && item.payment.status === -1) {
+                            const { title, img, id } = item;
+                            workshopItems.add({ title, img, id });
+                        }
+                    });
+                    setContests([...contests, ...contestItems]);
+                    setWorkshops([...workshops, ...workshopItems]);
+                    console.log(contests, workshops)
+                    sessionStorage.setItem('cartItems', JSON.stringify(cartItems));
+                    console.log("cartItems", cartItems);
+                } else {
+
+                    console.log("Data or userCart is missing or null.");
+                }
+
                 const user = data.user.userID || data.user; // Adjust this based on your API response structure
 
                 setUserData({
@@ -64,7 +113,7 @@ const DashBoard = () => {
                 Router.push('/');
             }
         };
-       
+
         fetchUserData();
     }, []);
 
@@ -72,98 +121,170 @@ const DashBoard = () => {
         sessionStorage.clear();
         Router.push('/');
     };
-
+    const reset = () => {
+        Router.push("/register");
+    }
     return (
         <div>
             {isLoading ? (
                 <Loader />
             ) : (
-                <div>
-                    <div className={Classes.container}>
-                        <h1>Dashboard</h1>
-                        <div className={`${Classes.section_accessible}`}>
-                            {userData.userType == 0 && (
-                                <Fragment>
-                                    <h1>
-                                        <a href="#">Events</a>
-                                    </h1>
-                                    <br />
-                                    <h1>
-                                        <a href="#">Merchandise</a>
-                                    </h1>
-                                </Fragment>
-                            )}
-                            {userData.userType == 1 && (
-                                <h1>
-                                    <a href="#">Events</a>
-                                </h1>
-                            )}
-                        </div>
-                    </div>
+                <>
+                    <div>
+                        <Header />
 
-                    <div className={`${Classes.main} ${Classes.column_2}`}>
-                        <h2>User Information</h2>
-                        <div className={Classes.card}>
-                            <div className={Classes.card_body}>
-                                {/* <i class="fa fa-pen fa-xs edit"></i> */}
-                                <table>
-                                    <tbody>
-                                        <tr>
-                                            <td>
-                                                <strong>Name</strong>
-                                            </td>
-                                            <td>:</td>
-                                            <td>{userData.name}</td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <strong>Email</strong>
-                                            </td>
-                                            <td>:</td>
-                                            <td>{userData.email}</td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <strong>College/University</strong>
-                                            </td>
-                                            <td>:</td>
-                                            <td>{userData.college}</td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <strong>Phone</strong>
-                                            </td>
-                                            <td>:</td>
-                                            <td>{userData.phone}</td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <strong>Year of Study</strong>
-                                            </td>
-                                            <td>:</td>
-                                            <td>{userData.year}</td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <strong>Instagram Handle</strong>
-                                            </td>
-                                            <td>:</td>
-                                            <td>{userData.instaHandle}</td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <strong>User Type</strong>
-                                            </td>
-                                            <td>:</td>
-                                            <td>{userData.userType == 2 ? 'Campus Ambassador' : 'Participant'}</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+
+                        <div className={`${Classes.main} ${Classes.column_2}`}>
+
+                            <div class=" mt-28 w-[80vw] h-auto p-6 justify-center my-6 border mr-5 border-white bg-gradient-to-t from-white/10 to-white/30 text-white rounded-[14px] bg-opacity-10 backdrop-blur-lg  shadow-xl drop-shadow-xl bg-blend-normal z-10 ">
+                                <div class="flex flex-col md:flex-row">
+                                    <div className=' md:w-1/2 text-center'>
+
+                                        <Image
+                                            src={profileImage}
+                                            width={100}
+                                            height={100}
+                                            className=" rounded-full mx-auto mt-14 h-48 w-48 "
+                                            alt="signup"
+                                        />
+
+                                        <div className='flex items-center mx-auto m'>
+                                            <div className='mx-auto mt-14'>
+                                                <button className=' text-white font-bold py-1 px-4 rounded-lg text-lg bg-lime-500/20 mx-4' onClick={reset}  >Edit Info</button>
+                                                <button className='bg-red-500 hover:bg-red-700 text-white  text-lg rounded-lg font-bold py-1 px-4 ' onClick={logOutHandler}>Logout</button>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="flex items-center justify-center p-6 sm:p-12 md:w-1/2">
+
+                                        <div class="w-full">
+
+                                            <h1 class="mb-12 text-6xl font-bold text-center text-white tracking-normal font-mono">
+                                                {userData.name}
+                                            </h1>
+                                            <form className=''>
+
+                                                <div className='mt-3'>
+                                                    <label className="block text-sm">
+                                                        Email
+                                                    </label>
+                                                    <div
+
+                                                        className="w-full  py-2 text-sm font-extrabold"
+                                                    >{userData.email}</div>
+
+                                                </div>
+
+                                                <div className='mt-3'>
+
+                                                    <label htmlFor="college" className="block text-sm">
+                                                        University / College Name
+                                                    </label>
+                                                    <div
+
+                                                        className="w-full  py-2 text-sm font-extrabold"
+                                                    >{userData.college}</div>
+
+                                                </div>
+                                                <div className='mt-3'>
+                                                    <label htmlFor="insta" class="block text-sm">
+                                                        Phone
+                                                    </label>
+                                                    <div
+
+                                                        className="w-full  py-2 text-sm font-extrabold"
+                                                    >{userData.phone}</div>
+                                                </div>
+
+                                                <div className='mt-3'>
+                                                    <label htmlFor="insta" class="block text-sm">
+                                                        Instagram Handle
+                                                    </label>
+                                                    <div
+
+                                                        className="w-full  py-2 text-sm font-extrabold"
+                                                    >{userData.instaHandle}</div>
+                                                </div>
+                                                <div className='mt-3'>
+                                                    <label htmlFor="insta" class="block text-sm">
+                                                        User Type
+                                                    </label>
+                                                    <div
+
+                                                        className="w-full  py-2 text-sm font-extrabold"
+                                                    >{userData.userType == 2 ? 'Campus Ambassador' : 'Participant'}</div>
+                                                </div>
+
+
+
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div className=' text-3xl text-white font-mono font-semibold mt-4'>Registered Contests</div>
+                            <div className="flex flex-col flex-wrap md:flex-row justify-between p-10  text-[14px]">
+
+
+                                {
+                                    contests.map((contest) => (
+                                        <ContestCard
+                                            title={contest.title}
+                                            imageSrc={'/icon_photo.png'}
+                                            key={contest.id}
+                                        />
+                                    ))
+                                }
+
+
+                                <ContestCard title={'Contest name'} imageSrc={'/icon_photo.png'} />
+                                <div class="w-[392px] h-[267px] justify-center my-6 border mx-2 border-white bg-gradient-to-t from-white/10 to-white/30 text-white rounded-[14px] bg-opacity-10 backdrop-blur-lg  shadow-xl drop-shadow-xl bg-blend-normal z-10 ">
+                                    <div class="flex flex-col text-center justify-center align-middle px-6 py-4">
+                                        <div class=" flex flex-rows justify-around font-bold text-7xl text-black mb-2 my-5"><div>+</div></div>
+                                      <Link href="/cart">  
+                                        <p class=" my-3.5 h-[180px] text-2xl text-center">
+                                            Add more contests
+                                        </p>
+                                        </Link>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div className=' text-3xl text-white font-bold  font-mono'>Registered Workshops</div>
+                            <div className="flex flex-col flex-wrap md:flex-row justify-between p-10  text-[14px]">
+                                {
+                                    workshops.map((workshop) => (
+                                        <WorkshopCard
+                                            title={workshop.title}
+                                            imageSrc={'/workshop.png'}
+                                            key={workshop.id}
+                                        />
+                                    ))
+
+                                }
+
+                                <WorkshopCard title={'Workshop name'} imageSrc={'/workshop.png'} />
+
+                                <div class="w-[392px] h-[267px] justify-center my-6 border mx-2 border-white bg-gradient-to-t from-white/10 to-white/30 text-white rounded-[14px] bg-opacity-10 backdrop-blur-lg  shadow-xl drop-shadow-xl bg-blend-normal z-10 ">
+                                    <div class="flex flex-col text-center justify-center align-middle px-6 py-4">
+                                        <div class=" flex flex-rows justify-around font-bold text-7xl text-black mb-2 my-5"><div>+</div></div>
+                                        <Link href="/cart">
+                                        <p class=" my-3.5 h-[180px] text-2xl text-center">
+                                            Add more workshops
+                                        </p>
+                                        </Link>
+                                    </div>
+                                </div>
                             </div>
                         </div>
+                        <Footer />
                     </div>
-                </div>
+
+                </>
             )}
+
         </div>
     );
 }

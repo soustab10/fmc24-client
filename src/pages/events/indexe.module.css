@@ -1,0 +1,99 @@
+.glow-effect:hover{
+    box-shadow: 0 0 70px rgb(255,0,0,10000), 0 0 40px rgb(255,0,0,1000), 0 0 40px rgb(255,0,0,1000), 0 0 40px rgb(255,0,0,1000);
+  }
+
+
+
+
+.FullPage{
+  display: flex;
+  flex-direction: column;
+}
+
+.Card{
+  width: 380px;
+  height: 440px;
+  justify-content: center;
+  margin-top: 24px;
+  margin-bottom: 24px;
+  color:  white;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.3),rgba(255,255,255,0.1));
+  border-radius: 25px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(1.5px);
+  -webkit-backdrop-filter: blur(1.9px);
+  border: 1px solid rgba(255, 255, 255, 1);
+}
+
+.MajorBod{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content:space-between ;
+  align-items: center;
+  padding: 96px;
+  font-size: 14px;
+}
+
+.Card:hover{
+  box-shadow: 0px 0px 40px 0px #2FC9FF;
+}
+
+.TopBar{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font: 18px;
+  margin: 20px;
+}
+
+.BarIn{
+  color:  white;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.3),rgba(255,255,255,0.1));
+  border-radius: 25px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(1.5px);
+  -webkit-backdrop-filter: blur(1.5px);
+  border: 1px solid rgba(255, 255, 255, 1);
+  display: flex;
+  flex-direction: row;
+  height: 80px;
+  justify-content: center;
+}
+
+@media only screen and (max-width:768px) {
+  .MajorBod{
+    flex-direction: column;
+    padding: 20px;}
+}
+
+@media only screen and (max-width:420px){
+  .Card{
+    width: 330px;
+    height: 500px;
+
+  }
+  .MajorBod{
+    padding: 1px;
+  }
+  .TopBar{
+    margin: 0;
+    width: 100%;
+  }
+  
+
+}
+
+@media only screen and (max-width:768px){
+  .BarIn{
+    flex-direction: column;
+    margin-top: 0;
+    width: 100%;
+    height: auto;
+    border-radius: 0;
+  }
+  .TopBar{
+    margin: 0;
+  }
+}
