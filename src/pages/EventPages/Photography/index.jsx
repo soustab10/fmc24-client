@@ -62,8 +62,8 @@ const Photography = () => {
 </div>
 
 <div className={Classes.CardPh}>
-  <div class="flex flex-col text-center justify-center align-middle px-6 py-4">
-  <div class=" flex flex-rows h-[40px] justify-center font-bold text-[28px] max-md:text-[23px] mb-2 my-3.5"><div><Image className="icon" src={"/icon_photo.png"} width={40} height={10} alt="cameras"/></div><div className="ml-4">Portfolio in 24 Hours</div></div>
+  <div class="flex flex-col text-center justify-center align-middle s py-4">
+  <div class=" flex flex-rows h-[40px] justify-center font-bold text-[24px] max-md:text-[23px] mb-2 my-3.5"><div><Image className="icon" src={"/icon_photo.png"} width={40} height={10} alt="cameras"/></div><div className="ml-4">Portfolio in 24 Hours</div></div>
     <p class="text-justify my-3.5 h-[180px]">
     We click a number of pictures and put them in the gallery, but Portfolio in 24 hrs of FMC Weekend brings you a chance to show your skills on Indias largest digital art festival. 
     </p>
