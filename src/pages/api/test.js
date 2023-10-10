@@ -1,5 +1,5 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
-import { NextApiRequest, NextApiResponse } from 'next';
+
 import getConfig from 'next/config';
 // define your handler function
 export default function handler(req, res) {
