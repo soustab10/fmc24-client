@@ -7,6 +7,9 @@ import comboData from "./combopass_data.json";
 import randomPassData from "./randompass_data.json";
 import combinedData from "./combined_data.json";
 import { useState, useEffect } from "react";
+import Link from 'next/link';
+
+
 const textStyleBold = {
   backdropFilter: "blur(9px) saturate(100%)",
   WebkitBackdropFilter: "blur(9px) saturate(100%)",
@@ -19,6 +22,15 @@ const textStyleBold = {
 };
 const divStyle = {
   minHeight: "100px",
+};
+
+const checkoutBtnStyle = {
+  backgroundColor: '#007BFF',
+  color: 'white',
+  padding: '10px 20px',
+  border: 'none',
+  borderRadius: '5px',
+  cursor: 'pointer',
 };
 
 const Index = () => {
@@ -166,6 +178,11 @@ const Index = () => {
                 </li>
               ))}
             </ul>
+            <button style={checkoutBtnStyle}>
+          <Link href="/checkout" style={{ color: 'white', textDecoration: 'none' }}>
+            Checkout
+          </Link>
+        </button>
           </div>
         </div>
 
