@@ -23,6 +23,7 @@
 
 .Card{
   width: 40%;
+  min-width: 360px;
   height: 440px;
   justify-content: center;
   margin-top: 24px;
@@ -82,7 +83,7 @@
   .Card{
     width: 330px;
     height: 500px;
-
+    min-width: none;
   }
   .MajorBod{
     padding: 1px;
