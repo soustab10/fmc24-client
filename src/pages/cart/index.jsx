@@ -1,15 +1,14 @@
 import React from "react";
 import Header from "../landingpage/Header";
 import Footer from "../landingpage/Footer";
-import Classes from "./styles/mainpage.module.css";
 import jsonData from "./events_data.json";
 import comboData from "./combopass_data.json";
 import randomPassData from "./randompass_data.json";
 import combinedData from "./combined_data.json";
 import { useState, useEffect } from "react";
-import Link from 'next/link';
-
-
+import Link from "next/link";
+import Classes from "./indexe.module.css";
+import RandomPass from "./randomPass";
 const textStyleBold = {
   backdropFilter: "blur(9px) saturate(100%)",
   WebkitBackdropFilter: "blur(9px) saturate(100%)",
@@ -25,12 +24,12 @@ const divStyle = {
 };
 
 const checkoutBtnStyle = {
-  backgroundColor: '#007BFF',
-  color: 'white',
-  padding: '10px 20px',
-  border: 'none',
-  borderRadius: '5px',
-  cursor: 'pointer',
+  backgroundColor: "#007BFF",
+  color: "white",
+  padding: "10px 20px",
+  border: "none",
+  borderRadius: "5px",
+  cursor: "pointer",
 };
 
 const Index = () => {
@@ -67,107 +66,181 @@ const Index = () => {
     setSelectedOption(option);
   };
 
+  const glassCard = {
+    backdropFilter: "blur(21px) saturate(99%)",
+    WebkitBackdropFilter: "blur(21px) saturate(99%)",
+    backgroundColor: "rgba(0, 23, 53, 0.82)",
+  };
+
   return (
     <div
       style={{ display: "flex", flexDirection: "column", minHeight: "100vh" }}
     >
       <Header />
-      <div>
-        <div className="flex flex-row h-512 w-512 mt-20">
-          <div className="w-36 mr-16 bg-emerald-900 h-512 ">
-            <button onClick={() => handleOptionSelect("A")}>Event Pass</button>
-            <button onClick={() => handleOptionSelect("B")}>Combo Pass</button>
-            <button onClick={() => handleOptionSelect("C")}>Random Pass</button>
+      <div className="flex">
+        <div className={Classes.TopBar}>
+          <div className={Classes.BarIn}>
+            <div className="w-[275px]  h-[125px] flex justify-center items-center">
+              Select your pass below
+            </div>
+            <div className="w-[275px]  h-[125px] flex justify-center items-center">
+              <button
+                className="text-[20px] hover:text-[25px] hover:font-semibold transition-all duration-5000 ease-in-out"
+                onClick={() => handleOptionSelect("A")}
+              >
+                Event Pass
+              </button>
+            </div>
+
+            <div className="w-[275px]  h-[125px] flex justify-center items-center">
+              <button
+                className="text-[20px] hover:text-[25px] hover:font-semibold transition-all duration-5000 ease-in-out"
+                onClick={() => handleOptionSelect("B")}
+              >
+                Combo Pass
+              </button>
+            </div>
+            <div className="w-[275px]  h-[125px] flex justify-center items-center">
+              <button
+                className="text-[20px] hover:text-[25px] hover:font-semibold transition-all duration-5000 ease-in-out"
+                onClick={() => handleOptionSelect("C")}
+              >
+                Random Pass
+              </button>
+            </div>
           </div>
+        </div>
+        <div className="flex flex-row  mt-20 pl-4 pt-1">
           <div className="w-108 mr-96">
             <div>
               {selectedOption === "A" && (
                 <div>
                   {jsonData.map((item, index) => (
-                <div key={index} className="item-container flex flex-row">
-                  <input
-                    type="checkbox"
-                    checked={selectedItems.includes(item.id)}
-                    onChange={() => handleCheckboxChange(item.id)}
-                  />
-                  <div className="title mr-4 ml-2">{item.Title}</div>
-                  <div className="title mr-4">{item.genre}</div>
-                  <div className="title mr-4">{item.type}</div>
-                  <div className="title mr-4">{item.price}</div>
-                  {/* You can add additional content here */}
-                </div>
-              ))}
-              <style jsx>{`
-                .item-container {
-                  border: 1px solid #ccc;
-                  margin-bottom: 10px;
-                  padding: 10px;
-                }
-                .title {
-                  font-weight: bold;
-                }
-              `}</style>
+                    <div
+                      key={index}
+                      className="mt-4 mb-4 pt-4 pb-4 pl-2 pr-2 border-2 w-[60vw] border-light-50 border-radiu"
+                    >
+                      <div className="inline-flex items-center ">
+                        <label
+                          className="relative flex cursor-pointer items-center rounded-full p-3"
+                          for="login"
+                          data-ripple-dark="true"
+                        >
+                          <input
+                            type="checkbox"
+                            checked={selectedItems.includes(item.id)}
+                            onChange={() => handleCheckboxChange(item.id)}
+                            className="before:content[''] peer relative h-5 w-5 cursor-pointer appearance-none rounded-md border border-blue-gray-200 transition-all before:absolute before:top-2/4 before:left-2/4 before:block before:h-12 before:w-12 before:-translate-y-2/4 before:-translate-x-2/4 before:rounded-full before:bg-blue-gray-500 before:opacity-0 before:transition-opacity checked:border-green-500 checked:bg-green-500 checked:before:bg-green-500 hover:before:opacity-10"
+                          />
+
+                          <div className="pointer-events-none absolute top-2/4 left-2/4 -translate-y-2/4 -translate-x-2/4 text-white opacity-0 transition-opacity peer-checked:opacity-100">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              className="h-3.5 w-3.5"
+                              viewBox="0 0 20 20"
+                              fill="currentColor"
+                              stroke="currentColor"
+                              stroke-width="1"
+                            >
+                              <path
+                                fill-rule="evenodd"
+                                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                clip-rule="evenodd"
+                              ></path>
+                            </svg>
+                          </div>
+                        </label>
+                        <label
+                          className="mt-px cursor-pointer flex flex-row select-none font-light text-white"
+                          for="login"
+                        >
+                          <div className="title mr-4 ml-2">{item.Title}</div>
+                          <div className="title mr-4">{item.genre}</div>
+                          <div className="title mr-4">{item.type}</div>
+                          <div className="title mr-4">Rs. {item.price}</div>
+                        </label>
+                      </div>
+
+                      {/* You can add additional content here */}
+                    </div>
+                  ))}
+                  <style jsx>{`
+                    .item-container {
+                      border: 1px solid #ccc;
+                      margin-bottom: 10px;
+                      padding: 10px;
+                    }
+                    .title {
+                      font-weight: bold;
+                    }
+                  `}</style>
                 </div>
               )}
               {selectedOption === "B" && (
                 <div>
                   {comboData.map((item, index) => (
-                <div key={index} className="item-container flex flex-row">
-                  <input
-                    type="checkbox"
-                    checked={selectedItems.includes(item.id)}
-                    onChange={() => handleCheckboxChange(item.id)}
-                  />
-                  <div className="title mr-4 ml-2">{item.Title}</div>
-                  <div className="title mr-4">{item.genre}</div>
-                  <div className="title mr-4">{item.type}</div>
-                  <div className="title mr-4">{item.price}</div>
-                  {/* You can add additional content here */}
-                </div>
-              ))}
-              <style jsx>{`
-                .item-container {
-                  border: 1px solid #ccc;
-                  margin-bottom: 10px;
-                  padding: 10px;
-                }
-                .title {
-                  font-weight: bold;
-                }
-              `}</style>
+                    <div
+                      key={index}
+                      className="mt-4 mb-4 pt-4 pb-4 pl-2 pr-2 border-2 w-[60vw] border-light-50 border-radiu"
+                    >
+                      <div className="inline-flex items-center ">
+                        <label
+                          className="relative flex cursor-pointer items-center rounded-full p-3"
+                          for="login"
+                          data-ripple-dark="true"
+                        >
+                          <input
+                            type="checkbox"
+                            checked={selectedItems.includes(item.id)}
+                            onChange={() => handleCheckboxChange4(item.id)}
+                            className="before:content[''] peer relative h-5 w-5 cursor-pointer appearance-none rounded-md border border-blue-gray-200 transition-all before:absolute before:top-2/4 before:left-2/4 before:block before:h-12 before:w-12 before:-translate-y-2/4 before:-translate-x-2/4 before:rounded-full before:bg-blue-gray-500 before:opacity-0 before:transition-opacity checked:border-green-500 checked:bg-green-500 checked:before:bg-green-500 hover:before:opacity-10"
+                          />
+
+                          <div className="pointer-events-none absolute top-2/4 left-2/4 -translate-y-2/4 -translate-x-2/4 text-white opacity-0 transition-opacity peer-checked:opacity-100">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              className="h-3.5 w-3.5"
+                              viewBox="0 0 20 20"
+                              fill="currentColor"
+                              stroke="currentColor"
+                              stroke-width="1"
+                            >
+                              <path
+                                fill-rule="evenodd"
+                                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                clip-rule="evenodd"
+                              ></path>
+                            </svg>
+                          </div>
+                        </label>
+                        <label
+                          className="mt-px cursor-pointer flex flex-row select-none font-light text-white"
+                          for="login"
+                        >
+                          <div className="title mr-4 ml-2">{item.Title}</div>
+                          <div className="title mr-4">Rs. {item.price}</div>
+                        </label>
+                      </div>
+
+                      {/* You can add additional content here */}
+                    </div>
+                  ))}
+                  <style jsx>{`
+                    .item-container {
+                      border: 1px solid #ccc;
+                      margin-bottom: 10px;
+                      padding: 10px;
+                    }
+                    .title {
+                      font-weight: bold;
+                    }
+                  `}</style>
                 </div>
               )}
-              {selectedOption === "C" && (
-                <div>
-                  {randomPassData.map((item, index) => (
-                <div key={index} className="item-container flex flex-row">
-                  <input
-                    type="checkbox"
-                    checked={selectedItems.includes(item.id)}
-                    onChange={() => handleCheckboxChange(item.id)}
-                  />
-                  <div className="title mr-4 ml-2">{item.Title}</div>
-                  <div className="title mr-4">{item.genre}</div>
-                  <div className="title mr-4">{item.type}</div>
-                  <div className="title mr-4">{item.price}</div>
-                  {/* You can add additional content here */}
-                </div>
-              ))}
-              <style jsx>{`
-                .item-container {
-                  border: 1px solid #ccc;
-                  margin-bottom: 10px;
-                  padding: 10px;
-                }
-                .title {
-                  font-weight: bold;
-                }
-              `}</style>
-                </div>
-              )}
-              
+              {selectedOption === "C" && <RandomPass />}
             </div>
           </div>
+
           <div className="absolute right-0 bg-emerald-900 w-48 h-[180%]">
             <h2>Total Price:</h2>
             <p>Total Price: Rs.{sumOfSelectedItems}</p>
@@ -179,10 +252,13 @@ const Index = () => {
               ))}
             </ul>
             <button style={checkoutBtnStyle}>
-          <Link href="/checkout" style={{ color: 'white', textDecoration: 'none' }}>
-            Checkout
-          </Link>
-        </button>
+              <Link
+                href="/checkout"
+                style={{ color: "white", textDecoration: "none" }}
+              >
+                Checkout
+              </Link>
+            </button>
           </div>
         </div>
 
