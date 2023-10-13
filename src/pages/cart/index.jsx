@@ -9,6 +9,8 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import Classes from "./indexe.module.css";
 import RandomPass from "./randomPass";
+import Router from "next/router";
+import getConfig from 'next/config';
 const textStyleBold = {
   backdropFilter: "blur(9px) saturate(100%)",
   WebkitBackdropFilter: "blur(9px) saturate(100%)",
@@ -33,10 +35,69 @@ const checkoutBtnStyle = {
 };
 
 const Index = () => {
+  const { publicRuntimeConfig } = getConfig();
+  const backendURL = publicRuntimeConfig.NEXT_PUBLIC_REACT_APP_BACKEND_URI;
   // const [jsonData, setJsonData] = useState([]);
   const [selectedItems, setSelectedItems] = useState([]);
   const [selectedOption, setSelectedOption] = useState("");
-  const handleCheckboxChange = (itemId) => {
+  const [open, setOpen] = React.useState(false);
+  useEffect(() => {
+    const loginOrNot = sessionStorage.getItem('isLoggedIn');
+    console.log(loginOrNot);
+    if (loginOrNot === 'true') {
+      setOpen(true);
+    } else {
+      // alert('Please Sign in first');
+      Router.push('/login');
+    }
+  }, [])
+  const addToCart = async (userId,cartItem) => {
+    console.log("action to be added to cart")
+
+    // const response = await fetch(backendURL + "/api/cart", {
+    //   method: "POST",
+    //   headers: {
+    //     "Content-Type": "application/json",
+    //   },
+    //   body: JSON.stringify({
+    //     userID: userId,
+    //     cartItem: cartItem,
+    //   }),
+    // });
+    // const data = await response.json();
+    // console.log(data);
+    // if (data.success) {
+    //   console.log("Items added to cart");
+    // } else {
+    //   console.log("Error adding to cart");
+    // }
+  }
+  const deleteFromCart = async (userId,itemId) => {
+    console.log("action to be deleted from cart")
+      
+      // const response = await fetch(backendURL + "/api/cart", {
+      //   method: "DELETE",
+      //   headers: {
+      //     "Content-Type": "application/json",
+      //   },
+      //   body: JSON.stringify({
+      //     userID: userId,
+      //     itemId: itemId,
+      //   }),
+      // });
+      // const data = await response.json();
+      // console.log(data);
+      // if (data.success) {
+      //   console.log("Items deleted from cart");
+      // } else {
+      //   console.log("Error deleting from cart");
+      // }
+  }
+  const handleCheckboxChange = (itemId, item) => {
+    const user = sessionStorage.getItem('userData');
+    const userInfo = JSON.parse(user);
+    // console.log(userInfo.user._id);
+    const userId = userInfo.user.userID._id;
     // Toggle selected state for the clicked item
     const updatedSelectedItems = [...selectedItems];
     console.log("item selected");
@@ -44,8 +105,11 @@ const Index = () => {
 
     if (index !== -1) {
       updatedSelectedItems.splice(index, 1);
+      deleteFromCart(userId,itemId);
     } else {
       updatedSelectedItems.push(itemId);
+      console.log(item)
+      addToCart(userId,item);
     }
     console.log(updatedSelectedItems);
     setSelectedItems(updatedSelectedItems);
@@ -129,7 +193,7 @@ const Index = () => {
                           <input
                             type="checkbox"
                             checked={selectedItems.includes(item.id)}
-                            onChange={() => handleCheckboxChange(item.id)}
+                            onChange={() => handleCheckboxChange(item.id, item)}
                             className="before:content[''] peer relative h-5 w-5 cursor-pointer appearance-none rounded-md border border-blue-gray-200 transition-all before:absolute before:top-2/4 before:left-2/4 before:block before:h-12 before:w-12 before:-translate-y-2/4 before:-translate-x-2/4 before:rounded-full before:bg-blue-gray-500 before:opacity-0 before:transition-opacity checked:border-green-500 checked:bg-green-500 checked:before:bg-green-500 hover:before:opacity-10"
                           />
 
@@ -192,7 +256,7 @@ const Index = () => {
                           <input
                             type="checkbox"
                             checked={selectedItems.includes(item.id)}
-                            onChange={() => handleCheckboxChange4(item.id)}
+                            onChange={() => handleCheckboxChange(item.id)}
                             className="before:content[''] peer relative h-5 w-5 cursor-pointer appearance-none rounded-md border border-blue-gray-200 transition-all before:absolute before:top-2/4 before:left-2/4 before:block before:h-12 before:w-12 before:-translate-y-2/4 before:-translate-x-2/4 before:rounded-full before:bg-blue-gray-500 before:opacity-0 before:transition-opacity checked:border-green-500 checked:bg-green-500 checked:before:bg-green-500 hover:before:opacity-10"
                           />
 

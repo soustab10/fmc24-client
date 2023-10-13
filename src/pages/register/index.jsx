@@ -56,6 +56,7 @@ const Register = () => {
     if (data.message === 'success') {
       sessionStorage.removeItem('isNewUser');
       sessionStorage.setItem('isNewUser',false);
+      sessionStorage.removeItem("userData")
       Router.push('/dashboard');
     } else {
       // alert('login failed, please try later');
