@@ -39,6 +39,15 @@ const Index = () => {
   const backendURL = publicRuntimeConfig.NEXT_PUBLIC_REACT_APP_BACKEND_URI;
   // const [jsonData, setJsonData] = useState([]);
   const [selectedItems, setSelectedItems] = useState([]);
+
+  useEffect(() => {
+    const storedItems = sessionStorage.getItem("cartItems");
+    console.log("storedItems", storedItems)
+    const initialItems = storedItems ? JSON.parse(storedItems) : [];
+    setSelectedItems(initialItems);
+  }, []);
+
+
   const [selectedOption, setSelectedOption] = useState("");
   const [open, setOpen] = React.useState(false);
   useEffect(() => {
@@ -51,47 +60,47 @@ const Index = () => {
       Router.push('/login');
     }
   }, [])
-  const addToCart = async (userId,cartItem) => {
+  const addToCart = async (userId, cartItem) => {
     console.log("action to be added to cart")
 
-    // const response = await fetch(backendURL + "/api/cart", {
-    //   method: "POST",
-    //   headers: {
-    //     "Content-Type": "application/json",
-    //   },
-    //   body: JSON.stringify({
-    //     userID: userId,
-    //     cartItem: cartItem,
-    //   }),
-    // });
-    // const data = await response.json();
-    // console.log(data);
-    // if (data.success) {
-    //   console.log("Items added to cart");
-    // } else {
-    //   console.log("Error adding to cart");
-    // }
+    const response = await fetch(backendURL + "/api/cart", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        userID: userId,
+        cartItem: cartItem,
+      }),
+    });
+    const data = await response.json();
+    console.log(data);
+    if (data.status === "success") {
+      console.log("Items added to cart");
+    } else {
+      console.log("Error adding to cart");
+    }
   }
-  const deleteFromCart = async (userId,itemId) => {
+  const deleteFromCart = async (userId, itemId) => {
     console.log("action to be deleted from cart")
-      
-      // const response = await fetch(backendURL + "/api/cart", {
-      //   method: "DELETE",
-      //   headers: {
-      //     "Content-Type": "application/json",
-      //   },
-      //   body: JSON.stringify({
-      //     userID: userId,
-      //     itemId: itemId,
-      //   }),
-      // });
-      // const data = await response.json();
-      // console.log(data);
-      // if (data.success) {
-      //   console.log("Items deleted from cart");
-      // } else {
-      //   console.log("Error deleting from cart");
-      // }
+
+    const response = await fetch(backendURL + "/api/cart", {
+      method: "DELETE",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        userID: userId,
+        itemId: itemId,
+      }),
+    });
+    const data = await response.json();
+    console.log(data);
+    if (data.status === 200) {
+      console.log("Items deleted from cart");
+    } else {
+      console.log("Error deleting from cart");
+    }
   }
   const handleCheckboxChange = (itemId, item) => {
     const user = sessionStorage.getItem('userData');
@@ -105,11 +114,11 @@ const Index = () => {
 
     if (index !== -1) {
       updatedSelectedItems.splice(index, 1);
-      deleteFromCart(userId,itemId);
+      deleteFromCart(userId, itemId);
     } else {
       updatedSelectedItems.push(itemId);
       console.log(item)
-      addToCart(userId,item);
+      addToCart(userId, item);
     }
     console.log(updatedSelectedItems);
     setSelectedItems(updatedSelectedItems);
