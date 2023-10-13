@@ -19,7 +19,7 @@ const LogIn = () => {
     // console.log(backendURL)
 
 
-    console.log("backendURL : "+backendURL);
+    console.log("backendURL : " + backendURL);
 
     const handleFailure = (error) => {
         console.log("Authentication failed", error);
@@ -40,28 +40,15 @@ const LogIn = () => {
             sessionStorage.setItem("img", data.picture)
             setClicked(true);
             console.log(credentialResponse.credential);
-            sessionStorage.setItem('token',credentialResponse.credential);
-            const response = await axios.post(backendURL+"/api/google-login", {
+            sessionStorage.setItem('token', credentialResponse.credential);
+            const response = await axios.post(backendURL + "/api/google-login", {
                 token: credentialResponse.credential,
                 audience: clientId,
             });
             console.log("axios data", response);
-
-            // const response1 = await fetch(backendURL+"/api/google-login", {
-            //     method: 'POST',
-            //     headers: {
-            //         Authorization: `Bearer ${credentialResponse.credential}`,
-            //         'Content-Type': 'application/json',
-            //     },
-            //     body: JSON.stringify({  
-            //         token: credentialResponse.credential,
-            //         audience: clientId,
-            //     }),
-            // });
-            //    console.log("fetch",response1)
             if (response.status === 200) {
 
-               
+
                 // const data = await response.data.json();
                 // console.log(data);
 
@@ -128,8 +115,8 @@ const LogIn = () => {
                                             auto_select
                                             clientId={clientId}
                                             className={Classes.gButton}
-                                            >
-                                            
+                                        >
+
                                             {/* <BeatLoader size={15} color={'#123abc'} loading={true} /> */}
                                             {/*Loader action on onclick */}
 
