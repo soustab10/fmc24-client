@@ -26,6 +26,8 @@ const LogIn = () => {
     };
 
     const handleLogin = async (credentialResponse) => {
+        sessionStorage.clear();
+        localStorage.clear();
         try {
             // console.log(credentialResponse.getBasicProfile)
             console.log("handleLogin invoked", credentialResponse);
@@ -58,6 +60,8 @@ const LogIn = () => {
             // });
             //    console.log("fetch",response1)
             if (response.status === 200) {
+
+               
                 // const data = await response.data.json();
                 // console.log(data);
 
@@ -66,6 +70,7 @@ const LogIn = () => {
                 console.log(response)
                 console.log(response.data.message)
                 sessionStorage.setItem('isNewUser', isNewUser);
+                sessionStorage.setItem('isLoggedIn', true);
                 if (isNewUser) {
                     Router.push('/register');
                 } else {
