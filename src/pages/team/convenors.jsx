@@ -16,10 +16,10 @@ const Convenors = () => {
           <div class="md:ml-20 lg:ml-20 grid gap-12 px-4 sm:px-20 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
             
             <div class="group relative rounded-3xl h-50 space-y-5 overflow-hidden border-solid border-2">
-            <div class="h-[20rem]">
+            <div class="h-[24rem]">
               <img
-                class="mx-auto h-[14rem] w-full object-cover"
-                src="/aboutuspic.png"
+                class="mx-auto h-[18rem] w-full object-cover"
+                src="/team/aboutuspic.png"
                 alt="woman"
                 loading="lazy"
                 width="640"
@@ -36,10 +36,10 @@ const Convenors = () => {
             </div>
             
             <div class="group relative rounded-3xl  space-y-5 overflow-hidden border-solid border-2">
-              <div class="h-[20rem]">
+              <div class="h-[24rem]">
               <img
-                class="mx-auto h-[14rem] w-full object-cover"
-                src="/aboutuspic.png"
+                class="mx-auto h-[18rem] w-full object-cover"
+                src="/team/aboutuspic.png"
                 alt="woman"
                 loading="lazy"
                 width="640"
@@ -54,10 +54,10 @@ const Convenors = () => {
               </div>
             </div>
             <div class="group relative rounded-3xl h-50  space-y-4 overflow-hidden border-solid border-2">
-            <div class="h-[20rem]">
+            <div class="h-[24rem]">
               <img
-                class="mx-auto h-[14rem] w-full object-cover"
-                src="/aboutuspic.png"
+                class="mx-auto h-[18rem] w-full object-cover"
+                src="/team/aboutuspic.png"
                 alt="woman"
                 loading="lazy"
                 width="640"

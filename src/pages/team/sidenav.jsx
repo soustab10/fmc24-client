@@ -1,6 +1,37 @@
-import React from "react";
+import React,{useEffect} from "react";
 import Classes from "./sidenav.module.css";
 const Sidenav = () => {
+    
+
+  useEffect(() => {
+    const navbar = document.getElementById('nav'); 
+    const abc=document.getElementById('abcd');
+    const ab = abc.getBoundingClientRect().top + window.scrollY - window.innerHeight;
+    console.log(ab);
+    const handleScroll = () => {
+      const ab = abc.getBoundingClientRect().top + window.scrollY - window.innerHeight;
+      if (window.scrollY < ab) {
+        navbar.style.position = 'fixed';
+        navbar.style.top='0';
+        navbar.style.left='0';
+      } else {
+        navbar.style.position='absolute';
+        navbar.style.top=`${ab}px`;
+        console.log(ab);
+        navbar.style.left='0';
+      }
+    };
+   
+   
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+  
+
+
+
     function handleClick(e) {
         e.preventDefault();
         const yOffset = -90;
@@ -14,7 +45,7 @@ const Sidenav = () => {
     
     return (     
              
-      <div className={Classes.sidenav}>
+      <div className={Classes.sidenav} id='nav'>
    
       <div className={Classes.imagecontainer}>
 

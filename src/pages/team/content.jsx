@@ -14,20 +14,38 @@ const Content = () => {
           </div>
           <div class="md:ml-20 lg:ml-20 grid gap-12 px-4 sm:px-20 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
             <div class="group relative rounded-3xl  space-y-5 overflow-hidden border-solid border-2">
-            <div class="h-[20rem]">
+            <div class="h-[24rem]">
               <img
-                class="mx-auto h-[14rem] w-full object-cover"
-                src="/Lakshay.jpg"
-                alt="woman"
+                class="mx-auto h-[18rem] w-full object-cover"
+                src="/team/Lakshay.jpg"
+                alt="lakshay"
                 loading="lazy"
                 width="640"
                 height="700"
               />
               </div>
-              <div class="absolute bottom-0 inset-x-0 h-max mt-auto px-8 lg:py-6 md:py-0 sm:py-3 backdrop-blur bg-white/50">
+              <div class="absolute bottom-0 inset-x-0 h-max mt-auto px-8 py-6 backdrop-blur bg-white/50">
                 <div>
                   <h4 class="text-xl text-center font-bold dark:text-white">Lakshay Kalra</h4>
                   <span class="block text-center text-sm font-semibold text-black">Content Executive</span>
+                </div>
+              </div>
+            </div>
+            <div class="group relative rounded-3xl  space-y-5 overflow-hidden border-solid border-2">
+            <div class="h-[24rem]">
+              <img
+                class="mx-auto h-[18rem] w-full object-cover"
+                src="/team/Sparsh.jpg"
+                alt="sparsh"
+                loading="lazy"
+                width="640"
+                height="700"
+              />
+              </div>
+              <div class="absolute bottom-0 inset-x-0 h-max mt-auto px-8 py-6 backdrop-blur bg-white/50">
+                <div>
+                  <h4 class="text-xl text-center font-bold dark:text-white">Sparsh Somani</h4>
+                  <span class="block text-center text-sm font-semibold text-black">Content Head</span>
                 </div>
               </div>
             </div>

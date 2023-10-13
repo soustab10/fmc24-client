@@ -14,17 +14,17 @@ const Publicity = () => {
           </div>
           <div class="md:ml-20 lg:ml-20 grid gap-12 px-4 sm:px-20 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
             <div class="group relative rounded-3xl  space-y-5 overflow-hidden border-solid border-2">
-              <div class="h-[20rem]">
+              <div class="h-[24rem]">
               <img
-                class="mt-20mx-auto h-[14rem] w-full object-cover"
-                src="/Aman.jpeg"
-                alt="woman"
+                class="mt-20mx-auto h-[18rem] w-full object-cover"
+                src="/team/Aman.jpeg"
+                alt="aman"
                 loading="lazy"
                 width="640"
                 height="700"
               />
               </div>
-              <div class="absolute bottom-0 inset-x-0 h-max mt-auto px-8 lg:py-6 md:py-0 sm:py-3 backdrop-blur bg-white/50">
+              <div class="absolute bottom-0 inset-x-0 h-max mt-auto px-8 py-6 backdrop-blur bg-white/50">
                 <div>
                   <h4 class="text-xl text-center font-bold dark:text-white">Aman Kumar Yadav</h4>
                   <span class="block text-center text-sm font-semibold text-black">Publicity Head</span>
@@ -32,17 +32,17 @@ const Publicity = () => {
               </div>
             </div>
             <div class="group relative rounded-3xl  space-y-5 overflow-hidden border-solid border-2">
-            <div class="h-[20rem]">
+            <div class="h-[24rem]">
               <img
-                class="mx-auto h-[14rem] w-full object-cover"
-                src="/Sundeep.png"
-                alt="woman"
+                class="mx-auto h-[18rem] w-full object-cover"
+                src="/team/Sundeep.png"
+                alt="sundeep"
                 loading="lazy"
                 width="640"
                 height="700"
               />
               </div>
-              <div class="absolute bottom-0 inset-x-0 h-max mt-auto px-8 lg:py-6 md:py-2.5 sm:py-3 backdrop-blur bg-white/50">
+              <div class="absolute bottom-0 inset-x-0 h-max mt-auto px-8 py-6 backdrop-blur bg-white/50">
                 <div>
                   <h4 class="text-xl text-center font-bold dark:text-white">Sundeep Chowdary</h4>
                   <span class="block text-center text-sm font-semibold text-black">Publicity Head</span>
@@ -50,17 +50,17 @@ const Publicity = () => {
               </div>
             </div>
             <div class="group relative rounded-3xl  space-y-4 overflow-hidden border-solid border-2">
-            <div class="h-[20rem]">
+            <div class="h-[24rem]">
               <img
-                class="mx-auto h-[14rem] w-full object-cover"
-                src="/Janhavi.png"
-                alt="woman"
+                class="mx-auto h-[18rem] w-full object-cover"
+                src="/team/Janhavi.png"
+                alt="janhavi"
                 loading="lazy"
                 width="640"
                 height="805"
               />
               </div>
-              <div class="absolute bottom-0 inset-x-0 h-max mt-auto px-8 lg:py-6 md:py-2.5 sm:py-3 backdrop-blur bg-white/50">
+              <div class="absolute bottom-0 inset-x-0 h-max mt-auto px-8 py-6 backdrop-blur bg-white/50">
               <div>
                   <h4 class="text-xl text-center font-bold dark:text-white">Janhavi Verma</h4>
                   <span class="block text-center text-sm font-semibold text-black">Publicity Head</span>
@@ -68,17 +68,17 @@ const Publicity = () => {
               </div>
             </div>
             <div class="group relative rounded-3xl  space-y-4 overflow-hidden border-solid border-2">
-            <div class="h-[20rem]">
+            <div class="h-[24rem]">
               <img
-                class="mx-auto h-[14rem] w-full object-cover"
-                src="/Vishal.png"
-                alt="woman"
+                class="mx-auto h-[18rem] w-full object-cover"
+                src="/team/Vishal.png"
+                alt="vishal"
                 loading="lazy"
                 width="640"
                 height="805"
               />
               </div>
-              <div class="absolute bottom-0 inset-x-0 h-max mt-auto px-8 lg:py-6 md:py-2.5 sm:py-3 backdrop-blur bg-white/50">
+              <div class="absolute bottom-0 inset-x-0 h-max mt-auto px-8 py-6 backdrop-blur bg-white/50">
               <div>
                   <h4 class="text-xl text-center font-bold dark:text-white">Vishal Sharma</h4>
                   <span class="block text-center text-sm font-semibold text-black">Publicity Head</span>
@@ -86,17 +86,17 @@ const Publicity = () => {
               </div>
             </div>
             <div class="group relative rounded-3xl  space-y-4 overflow-hidden border-solid border-2">
-            <div class="h-[20rem]">
+            <div class="h-[24rem]">
               <img
-                class="mx-auto h-[14rem] w-full object-cover"
-                src="/Kancharla.png"
-                alt="woman"
+                class="mx-auto h-[18rem] w-full object-cover"
+                src="/team/Kancharla.png"
+                alt="kancharla"
                 loading="lazy"
                 width="640"
                 height="805"
               />
               </div>
-              <div class="absolute bottom-0 inset-x-0 h-max mt-auto px-8 lg:py-6 md:py-2.5 sm:py-3 backdrop-blur bg-white/50">
+              <div class="absolute bottom-0 inset-x-0 h-max mt-auto px-8 py-6 backdrop-blur bg-white/50">
               <div>
                   <h4 class="text-xl text-center font-bold dark:text-white">Kancharla Kiranmai</h4>
                   <span class="block text-center text-sm font-semibold text-black">Publicity Head</span>
@@ -104,17 +104,17 @@ const Publicity = () => {
               </div>
             </div>
             <div class="group relative rounded-3xl  space-y-4 overflow-hidden border-solid border-2">
-            <div class="h-[20rem]">
+            <div class="h-[24rem]">
               <img
-                class="mx-auto h-[14rem] w-full object-cover"
-                src="/Ritesh.png"
-                alt="woman"
+                class="mx-auto h-[18rem] w-full object-cover"
+                src="/team/Ritesh.png"
+                alt="ritesh"
                 loading="lazy"
                 width="640"
                 height="805"
               />
               </div>
-              <div class="absolute bottom-0 inset-x-0 h-max mt-auto px-8 lg:py-6 md:py-2.5 sm:py-3 backdrop-blur bg-white/50">
+              <div class="absolute bottom-0 inset-x-0 h-max mt-auto px-8 py-6 backdrop-blur bg-white/50">
               <div>
                   <h4 class="text-xl text-center font-bold dark:text-white">Ritesh Soni</h4>
                   <span class="block text-center text-sm font-semibold text-black">Publicity Head
