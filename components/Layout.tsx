@@ -35,7 +35,7 @@ const Layout = ({handleClick, isSomeActive, data, turn, setTurn}:LayoutProps) =>
                   (isSomeActive ? " rotate-180" : "rotate-0")
                 }
               >
-               <Image src={down} alt="" width={40} height={40}/>
+               <Image src={down} alt="" width={20} height={20}/>
               </div>
               {/* </div> */}
             </button>
