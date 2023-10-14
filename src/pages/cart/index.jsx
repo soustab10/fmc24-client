@@ -49,17 +49,17 @@ const Index = () => {
 
 
   const [selectedOption, setSelectedOption] = useState("");
-  const [open, setOpen] = React.useState(true);
-  // useEffect(() => {
-  //   const loginOrNot = sessionStorage.getItem('isLoggedIn');
-  //   console.log(loginOrNot);
-  //   if (loginOrNot === 'true') {
-  //     setOpen(true);
-  //   } else {
-  //     // alert('Please Sign in first');
-  //     Router.push('/login');
-  //   }
-  // }, [])
+  const [open, setOpen] = React.useState(false);
+  useEffect(() => {
+    const loginOrNot = sessionStorage.getItem('isLoggedIn');
+    console.log(loginOrNot);
+    if (loginOrNot === 'true') {
+      setOpen(true);
+    } else {
+      // alert('Please Sign in first');
+      Router.push('/login');
+    }
+  }, [])
   const addToCart = async (userId, cartItem) => {
     console.log("action to be added to cart")
 
