@@ -15,6 +15,7 @@ const Index = () => {
 <div className={Classes.FullPage}>
             <Header/>
             <div>
+              <h1></h1>
     <div className="mt-[80px]"><h1 hidden>Hello</h1></div>
     <div className={Classes.showMobile}>
     <div className="w-[300px]  h-[125px] flex justify-center items-center"> 
