@@ -50,7 +50,7 @@ const Index = () => {
         <Image src={"/Rohit.png"} width={387} height={350} className="rounded-tr-[25px] rounded-tl-[25px]" alt="null"></Image>
         <div class=" flex flex-rows h-[30px] justify-center font-bold text-3xl"><div className="ml-4 mt-5 font-bold text-[30px] p-[10px]">Interactive Session</div></div>
         <a href="https://drive.google.com/file/d/15WUfJ3wn_mWCNDiFmcOw_6DlY3z7ch5P/view?usp=drive_link" className="text-black mt-10 italic hover:underline text-[20px]  px-10 p-1 ">-by Rohit Mavle</a>
-        <p class="text-justify mx-2 mt-8 w-[290px]">A multifaceted creator, Rohit Mavle started as an actor, following a diploma in Film Acting post-engineering. Now, he's a popular Instagram figure, merging his love for acting, food, and travel into captivating content.
+        <p class="text-justify mx-2 mt-8 w-[290px]">A multifaceted creator, Rohit Mavle started as an actor, following a diploma in Film Acting post-engineering. Now, he is a popular Instagram figure, merging his love for acting, food, and travel into captivating content.
         </p>
         
         <div className="my-8 align-middle justify-evenly">

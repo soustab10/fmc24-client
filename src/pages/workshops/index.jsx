@@ -68,7 +68,7 @@ const Index = () => {
         <Image src={"/Subhash.png"} width={387} height={300} className="rounded-tr-[25px] rounded-tl-[25px]"  alt="null"></Image>
         <div class=" flex flex-rows h-[30px] justify-center font-bold text-3xl"><div className="ml-4 mt-5 font-bold text-[30px] p-[10px]">Wildlife Photography</div></div>
         <a href="https://drive.google.com/file/d/15WUfJ3wn_mWCNDiFmcOw_6DlY3z7ch5P/view?usp=drive_link" className="text-black mt-10 italic hover:underline text-[20px]  px-10 p-1  ">-by Subhash Nair</a>
-        <p class="text-justify mx-2 w-[290px] mt-10">Subhash Nair, a renowned wildlife photographer and avid traveler, captures the beauty of the natural world. He's a brand ambassador for Nikon India,framing breathtaking moments.
+        <p class="text-justify mx-2 w-[290px] mt-10">Subhash Nair, a renowned wildlife photographer and avid traveler, captures the beauty of the natural world. He is a brand ambassador for Nikon India,framing breathtaking moments.
         </p>
         
         <div className="my-10 align-middle justify-evenly">
@@ -81,7 +81,7 @@ const Index = () => {
         <Image src={"/Bhalovashi.png"} width={387} height={300} className="rounded-tr-[25px] rounded-tl-[25px]" alt="null"></Image>
         <div class=" flex flex-rows h-[30px] justify-center font-bold text-3xl"><div className="ml-4 mt-5 font-bold text-[30px] p-[10px]">Travel & Lifestyle Photography</div></div>
         <a href="https://drive.google.com/file/d/15WUfJ3wn_mWCNDiFmcOw_6DlY3z7ch5P/view?usp=drive_link" className="text-black mt-20 italic hover:underline text-[20px]  px-10 p-1 ">-by Bhalovashi</a>
-        <p class="text-justify mx-2 w-[290px] mt-5">She's involved in filmmaking, product promotions, drone photography, and creative direction. Her work spans across various landscapes  capturing emotions and unique perspectives.
+        <p class="text-justify mx-2 w-[290px] mt-5">She is involved in filmmaking, product promotions, drone photography, and creative direction. Her work spans across various landscapes  capturing emotions and unique perspectives.
         </p>
         
         <div className="my-6 align-middle justify-evenly ">

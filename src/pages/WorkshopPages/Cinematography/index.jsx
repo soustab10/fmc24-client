@@ -48,7 +48,7 @@ const Index = () => {
   <div className={Classes.MajorBod} >
     <div className={Classes.CardCi}>
       <div class="flex flex-col text-center justify-center items-center ">
-        <Image src={"/Sumit.png"} width={387} height={350} className="rounded-tr-[25px] rounded-tl-[25px]"></Image>
+        <Image src={"/Sumit.png"} width={387} height={350} className="rounded-tr-[25px] rounded-tl-[25px]" alt="null"></Image>
         <div class=" flex flex-rows h-[30px] justify-center font-bold text-3xl"><div className="ml-4  font-bold text-[30px] p-[10px]">Panel Discussion</div></div>
         <a href="https://drive.google.com/file/d/15WUfJ3wn_mWCNDiFmcOw_6DlY3z7ch5P/view?usp=drive_link" className="text-black mt-5 italic hover:underline text-[20px]  px-10 p-1">-by Sumit Saxena </a>
         <p class="text-justify mx-2  mt-4 w-[290px]">Sumit Saxena is known for Doctor G (2022), Hamid (2018) ,Lust Stories (2018)and Pyaar Ka Punchnama (2011) for his role as dialogue and screenplay writer . His writing has a lot of versatility , with well known works in genres of Romance, Drama ,Comedy and their combinations.
@@ -74,7 +74,7 @@ const Index = () => {
     </div>
     <div className={Classes.CardCi}>
       <div class="flex flex-col text-center justify-center items-center ">
-        <Image src={"/Dhawalika.png"} width={387} height={350} className="rounded-tr-[25px] rounded-tl-[25px]"></Image>
+        <Image src={"/Dhawalika.png"} width={387} height={350} className="rounded-tr-[25px] rounded-tl-[25px]" alt="null"></Image>
         <div class=" flex flex-rows h-[30px] justify-center font-bold text-3xl"><div className="ml-4 mt-5 font-bold text-[30px] p-[10px]">Cinematography</div></div>
         <a href="https://drive.google.com/file/d/15WUfJ3wn_mWCNDiFmcOw_6DlY3z7ch5P/view?usp=drive_link" className="text-black mt-10 italic hover:underline text-[20px]  px-10 p-1">-by Dhawalika Singh</a>
         <p class="text-justify mx-2 w-[290px] mt-5">Dhawalika Singh is a cinematographer and Director of Photography,who has worked on various Gujarati feature films like Kutch Express(2023) and Dear Father (2022) and Web Series like Aarya (2020) .[Aarya is not a Gujarati web series. Its in Hindi, starring Sushmita Sen]
