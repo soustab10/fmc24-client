@@ -314,7 +314,7 @@ const Index = () => {
             </div>
           </div>
 
-          <div className="absolute right-0 bg-emerald-900 w-48 h-[180%]">
+          <div className={Classes.checkout}>
             <h2>Total Price:</h2>
             <p>Total Price: Rs.{sumOfSelectedItems}</p>
             <ul>
