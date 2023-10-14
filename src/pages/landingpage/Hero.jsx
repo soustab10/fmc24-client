@@ -121,9 +121,9 @@ const Hero = () => {
       </div> */}
          <div className={Classes.outermaind}>
      <div className={Classes.innerdiv1}>
-     <Image src="/FMCswa-02 (1) 1.png" height={200} width={480}/>
+     <Image src="/FMCswa-02 (1) 1.png" height={200} width={480} alt="logo"/>
      <div className={Classes.content}>
-     <p>India's Largest Digital Art Fest</p>
+     <p>India&rsquo;s Largest Digital Art Fest</p>
      <h1>FMC Weekend</h1>
       {dashboard? (<Link href="/dashboard"><button className="border-solid border-2 mt-20 text-white rounded-3xl h-10 w-44 text-xl transition duration-300 transform  hover:shadow-xl hover:text-blue-950 bg-transparent hover:bg-white" style={{'zIndex':'100'}}>Dashboard</button></Link>):<></>}
       {register?(<Link href="/register"><button className="border-solid border-2 mt-20 text-white rounded-3xl h-10 w-44 text-xl transition duration-300 transform  hover:shadow-xl hover:text-blue-950 bg-transparent hover:bg-white" style={{'zIndex':'100'}} >Register</button></Link>):<></>}
@@ -132,8 +132,8 @@ const Hero = () => {
      
      </div>
      <div className={Classes.innerdiv2}>
-      <Image  className={Classes.img1} src="/heroimage2.png" width={820} height={100}/>
-      <Image  className={Classes.img2} src="/heroimage3.png" width={820} height={100}/>
+      <Image  className={Classes.img1} src="/heroimage2.png" width={820} height={100} alt="img1" />
+      <Image  className={Classes.img2} src="/heroimage3.png" width={820} height={100} alt="img2" />
      </div>
     
      </div>
