@@ -55,7 +55,7 @@ const Header = () => {
             glimpses
           </Link>
           <Link
-            href="/comingsoon"
+            href="/team"
             className="nav-menu links-header mr-8  place-self-center"
           >
             team
@@ -95,13 +95,16 @@ const Header = () => {
                   <Link href="/events" className="menu-list">
                     events
                   </Link>
+                  <Link href="/workshops" className="menu-list">
+                    workshops
+                  </Link>
                   <Link href="/comingsoon" className="menu-list">
                     sponsors
                   </Link>
                   <Link href="/glimpses" className="menu-list">
                     glimpses
                   </Link>
-                  <Link href="/comingsoon" className="menu-list">
+                  <Link href="/team" className="menu-list">
                     team
                   </Link>
                   <Link href="/login" className="menu-list">

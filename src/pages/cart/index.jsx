@@ -37,10 +37,11 @@ const checkoutBtnStyle = {
 
 const Index = () => {
   const { publicRuntimeConfig } = getConfig();
+  const [email,setEmail]= useState('');
   const backendURL = publicRuntimeConfig.NEXT_PUBLIC_REACT_APP_BACKEND_URI;
   // const [jsonData, setJsonData] = useState([]);
   const [selectedItems, setSelectedItems] = useState([]);
-  let updatedSelectedItems=[];
+  let updatedSelectedItems = [];
 
   useEffect(() => {
     const storedItems = sessionStorage.getItem("cartItems");
@@ -65,15 +66,25 @@ const Index = () => {
       Router.push('/login');
     }
   }, [])
-  let globalItems=[];
-  useEffect(()=>{
-    console.log("globalItems : ",globalItems)
-  },[]);
+  let globalItems = [];
+  useEffect(() => {
+    console.log("globalItems : ", globalItems)
+    try {
+      const email = sessionStorage.getItem('email');
+      setEmail(email);
+      console.log("email : ", email)
+    } catch (e) {
+      console.log(e);
+    }
+  }, []);
+
+  
+
   const addToCart = async (userId, cartItem) => {
     console.log("action to be added to cart")
 
-    console.log("userId : ",userId);
-    console.log("cartItem : ",cartItem);
+    console.log("userId : ", userId);
+    console.log("cartItem : ", cartItem);
     const response = await fetch(backendURL + "/api/cart", {
       method: "POST",
       headers: {
@@ -82,10 +93,11 @@ const Index = () => {
       body: JSON.stringify({
         userID: userId,
         cartItem: cartItem,
+        email: email,
       }),
     });
     const data = await response.json();
-    console.log("data : ",data);
+    console.log("data : ", data);
     if (data.status === "success") {
       console.log("Items added to cart");
     } else {
@@ -103,11 +115,12 @@ const Index = () => {
       body: JSON.stringify({
         userID: userId,
         itemId: itemId,
+        email: email,
       }),
     });
     const data = await response.json();
     console.log(data);
-    if (data.status === 200) {
+    if (data.status === "Success") {
       console.log("Items deleted from cart");
     } else {
       console.log("Error deleting from cart");
@@ -121,20 +134,20 @@ const Index = () => {
     console.log(userInfo.user._id);
     // Toggle selected state for the clicked item
     const updatedSelectedItems = [...selectedItems];
-    globalItems=updatedSelectedItems;
+    globalItems = updatedSelectedItems;
     console.log("item selected");
     // const index = selectedItems.indexOf(itemId);
     const index = updatedSelectedItems.indexOf(itemId);
 
     if (index !== -1) {
       updatedSelectedItems.splice(index, 1);
-      globalItems=updatedSelectedItems;
+      globalItems = updatedSelectedItems;
       // setSelectedItems(selectedItems.splice(index,1));
       deleteFromCart(userId, itemId);
       console.log(selectedItems);
     } else {
       updatedSelectedItems.push(itemId);
-      globalItems=updatedSelectedItems;
+      globalItems = updatedSelectedItems;
       console.log(selectedItems);
       // setSelectedItems(selectedItems.concat([itemId]));
       console.log(item)
@@ -172,41 +185,41 @@ const Index = () => {
       <Header />
       <div className={Classes.MainArea}>
         <div className={Classes.Hide}>
-        <div className={Classes.TopBar}>
-          <div className={Classes.BarIn}>
-            <div className="w-[275px]  h-[125px] flex justify-center items-center">
-              Select your pass below
-            </div>
-            <div className="w-[275px]  h-[125px] flex justify-center items-center">
-              <button
-                className="text-[20px] hover:text-[25px] hover:font-semibold transition-all duration-5000 ease-in-out"
-                onClick={() => handleOptionSelect("A")}
-              >
-                Event Pass
-              </button>
-            </div>
+          <div className={Classes.TopBar}>
+            <div className={Classes.BarIn}>
+              <div className="w-[275px]  h-[125px] flex justify-center items-center">
+                Select your pass below
+              </div>
+              <div className="w-[275px]  h-[125px] flex justify-center items-center">
+                <button
+                  className="text-[20px] hover:text-[25px] hover:font-semibold transition-all duration-5000 ease-in-out"
+                  onClick={() => handleOptionSelect("A")}
+                >
+                  Event Pass
+                </button>
+              </div>
 
-            <div className="w-[275px]  h-[125px] flex justify-center items-center">
-              <button
-                className="text-[20px] hover:text-[25px] hover:font-semibold transition-all duration-5000 ease-in-out"
-                onClick={() => handleOptionSelect("B")}
-              >
-                Combo Pass
-              </button>
-            </div>
-            <div className="w-[275px]  h-[125px] flex justify-center items-center">
-              <button
-                className="text-[20px] hover:text-[25px] hover:font-semibold transition-all duration-5000 ease-in-out"
-                onClick={() => handleOptionSelect("C")}
-              >
-                Random Pass
-              </button>
+              <div className="w-[275px]  h-[125px] flex justify-center items-center">
+                <button
+                  className="text-[20px] hover:text-[25px] hover:font-semibold transition-all duration-5000 ease-in-out"
+                  onClick={() => handleOptionSelect("B")}
+                >
+                  Combo Pass
+                </button>
+              </div>
+              <div className="w-[275px]  h-[125px] flex justify-center items-center">
+                <button
+                  className="text-[20px] hover:text-[25px] hover:font-semibold transition-all duration-5000 ease-in-out"
+                  onClick={() => handleOptionSelect("C")}
+                >
+                  Random Pass
+                </button>
+              </div>
             </div>
           </div>
         </div>
-        </div>
         <div className={Classes.showOnMobile}>
-        <div className={Classes.BarIn}>
+          <div className={Classes.BarIn}>
             <div className="w-[275px]  h-[125px] flex justify-center items-center">
               Select your pass below
             </div>
@@ -368,24 +381,24 @@ const Index = () => {
             </div>
           </div>
         </div>
-          <div className={Classes.checkout}>
-            <p className={Classes.TotalPrice}>Total Price: Rs.{sumOfSelectedItems}</p>
-            <ul className="flex flex-col justify-center align-middle">
-              {selectedItems.map((itemId) => (
-                <li key={itemId}>
-                  {combinedData.find((item) => item.id === itemId)?.Title}
-                </li>
-              ))}
-            </ul>
-            <button className={Classes.CheckOutBtnStyle}>
-              <Link
-                href="/checkout"
-                style={{ color: "white", textDecoration: "none" }}
-              >
-                Checkout
-              </Link>
-            </button>
-          </div>
+        <div className={Classes.checkout}>
+          <p className={Classes.TotalPrice}>Total Price: Rs.{sumOfSelectedItems}</p>
+          <ul className="flex flex-col justify-center align-middle">
+            {selectedItems.map((itemId) => (
+              <li key={itemId}>
+                {combinedData.find((item) => item.id === itemId)?.Title}
+              </li>
+            ))}
+          </ul>
+          <button className={Classes.CheckOutBtnStyle}>
+            <Link
+              href="/checkout"
+              style={{ color: "white", textDecoration: "none" }}
+            >
+              Checkout
+            </Link>
+          </button>
+        </div>
 
         <br />
       </div>
