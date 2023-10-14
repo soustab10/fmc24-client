@@ -78,7 +78,7 @@ const Index = () => {
     }
   }, []);
 
-  
+ 
 
   const addToCart = async (userId, cartItem) => {
     console.log("action to be added to cart")
