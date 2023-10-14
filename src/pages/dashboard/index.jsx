@@ -87,9 +87,12 @@ const DashBoard = () => {
                     data.user && typeof data.user === 'object' &&
                     data.user.userID && typeof data.user.userID === 'object' &&
                     data.user.userID.userCart !== null) {
-
-
-                    const cartItems = data.user.userID.userCart.cartItems;
+                    let cartItems=[];
+                    try{
+                        cartItems = data.user.userID.userCart.cartItems;
+                    }catch(error){
+                        console.log("no cart items");
+                    }
                     const contestItems = new Set();
                     const workshopItems = new Set();
 

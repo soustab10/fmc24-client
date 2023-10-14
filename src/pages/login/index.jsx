@@ -12,8 +12,8 @@ const LogIn = () => {
     const [clicked, setClicked] = React.useState(false);
     const { publicRuntimeConfig } = getConfig();
 
-
     const clientId = publicRuntimeConfig.GOOGLE_CLIENT_ID;
+    console.log("clientId : ",publicRuntimeConfig.GOOGLE_CLIENT_ID);
 
     const backendURL = publicRuntimeConfig.NEXT_PUBLIC_REACT_APP_BACKEND_URI;
     // console.log(backendURL)
