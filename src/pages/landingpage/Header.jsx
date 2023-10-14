@@ -95,6 +95,9 @@ const Header = () => {
                   <Link href="/events" className="menu-list">
                     events
                   </Link>
+                  <Link href="/workshops" className="menu-list">
+                    workshops
+                  </Link>
                   <Link href="/comingsoon" className="menu-list">
                     sponsors
                   </Link>
