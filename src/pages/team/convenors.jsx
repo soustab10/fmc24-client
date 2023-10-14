@@ -39,8 +39,8 @@ const Convenors = () => {
               <div class="h-[24rem]">
               <img
                 class="mx-auto h-[18rem] w-full object-cover"
-                src="/team/aboutuspic.png"
-                alt="woman"
+                src="/team/Sariki.jpg"
+                alt="Sariki"
                 loading="lazy"
                 width="640"
                 height="700"
@@ -48,8 +48,8 @@ const Convenors = () => {
               </div>
               <div class="absolute bottom-0 inset-x-0 h-max mt-auto px-8 py-6 backdrop-blur bg-white/50">
                 <div>
-                  <h4 class="text-xl text-center font-bold dark:text-white">Name</h4>
-                  <span class="block text-center text-sm font-semibold text-black">Convenor</span>
+                  <h4 class="text-xl text-center font-bold dark:text-white">Sariki Mohan Krishna</h4>
+                  <span class="block text-center text-sm font-semibold text-black">Co-Convenor</span>
                 </div>
               </div>
             </div>
