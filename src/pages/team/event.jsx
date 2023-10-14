@@ -69,7 +69,24 @@ const Event = () => {
                 </div>
               </div>
             </div>
-            
+            <div class="group relative rounded-3xl  space-y-4 overflow-hidden border-solid border-2">
+            <div class="h-[24rem]">
+              <img
+                class="mx-auto h-[18rem] w-full object-cover"
+                src="/team/Jeet.jpg"
+                alt="utkarsh"
+                loading="lazy"
+                width="640"
+                height="805"
+              />
+              </div>
+              <div class="absolute bottom-0 inset-x-0 h-max mt-auto px-8 py-6 backdrop-blur bg-white/50">
+              <div>
+                  <h4 class="text-xl text-center font-bold dark:text-white">Jeet Gupta</h4>
+                  <span class="block text-center text-sm font-semibold text-black">Cine Core Member</span>
+                </div>
+              </div>
+            </div>
             
               
             </div>

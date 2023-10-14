@@ -11,6 +11,7 @@ import Classes from "./indexe.module.css";
 import RandomPass from "./randomPass";
 import Router from "next/router";
 import getConfig from 'next/config';
+import { type } from "os";
 const textStyleBold = {
   backdropFilter: "blur(9px) saturate(100%)",
   WebkitBackdropFilter: "blur(9px) saturate(100%)",
@@ -39,15 +40,19 @@ const Index = () => {
   const backendURL = publicRuntimeConfig.NEXT_PUBLIC_REACT_APP_BACKEND_URI;
   // const [jsonData, setJsonData] = useState([]);
   const [selectedItems, setSelectedItems] = useState([]);
+  let updatedSelectedItems=[];
 
   useEffect(() => {
     const storedItems = sessionStorage.getItem("cartItems");
     console.log("storedItems", storedItems)
     const initialItems = storedItems ? JSON.parse(storedItems) : [];
     setSelectedItems(initialItems);
+    console.log(initialItems);
   }, []);
 
-
+  // useEffect(()=>{
+  //   setSelectedItems(updatedSelectedItems);
+  // },updatedSelectedItems);
   const [selectedOption, setSelectedOption] = useState("");
   const [open, setOpen] = React.useState(false);
   useEffect(() => {
@@ -60,9 +65,15 @@ const Index = () => {
       Router.push('/login');
     }
   }, [])
+  let globalItems=[];
+  useEffect(()=>{
+    console.log("globalItems : ",globalItems)
+  },[]);
   const addToCart = async (userId, cartItem) => {
     console.log("action to be added to cart")
 
+    console.log("userId : ",userId);
+    console.log("cartItem : ",cartItem);
     const response = await fetch(backendURL + "/api/cart", {
       method: "POST",
       headers: {
@@ -74,7 +85,7 @@ const Index = () => {
       }),
     });
     const data = await response.json();
-    console.log(data);
+    console.log("data : ",data);
     if (data.status === "success") {
       console.log("Items added to cart");
     } else {
@@ -105,18 +116,27 @@ const Index = () => {
   const handleCheckboxChange = (itemId, item) => {
     const user = sessionStorage.getItem('userData');
     const userInfo = JSON.parse(user);
-    // console.log(userInfo.user._id);
-    const userId = userInfo.user.userID._id;
+    console.log(userInfo);
+    const userId = userInfo.user._id;
+    console.log(userInfo.user._id);
     // Toggle selected state for the clicked item
     const updatedSelectedItems = [...selectedItems];
+    globalItems=updatedSelectedItems;
     console.log("item selected");
+    // const index = selectedItems.indexOf(itemId);
     const index = updatedSelectedItems.indexOf(itemId);
 
     if (index !== -1) {
       updatedSelectedItems.splice(index, 1);
+      globalItems=updatedSelectedItems;
+      // setSelectedItems(selectedItems.splice(index,1));
       deleteFromCart(userId, itemId);
+      console.log(selectedItems);
     } else {
       updatedSelectedItems.push(itemId);
+      globalItems=updatedSelectedItems;
+      console.log(selectedItems);
+      // setSelectedItems(selectedItems.concat([itemId]));
       console.log(item)
       addToCart(userId, item);
     }
@@ -230,7 +250,7 @@ const Index = () => {
                       <div className="inline-flex items-center ">
                         <label
                           className="relative flex cursor-pointer items-center rounded-full p-3"
-                          for="login"
+                          htmlFor="login"
                           data-ripple-dark="true"
                         >
                           <input
@@ -259,7 +279,7 @@ const Index = () => {
                         </label>
                         <label
                           className="mt-px cursor-pointer flex flex-row select-none font-light text-white"
-                          for="login"
+                          htmlFor="login"
                         >
                           <div className="title mr-4 ml-2">{item.Title}</div>
                           <div className="title mr-4">{item.genre}</div>
@@ -293,7 +313,7 @@ const Index = () => {
                       <div className="inline-flex items-center ">
                         <label
                           className="relative flex cursor-pointer items-center rounded-full p-3"
-                          for="login"
+                          htmlFor="login"
                           data-ripple-dark="true"
                         >
                           <input
@@ -322,7 +342,7 @@ const Index = () => {
                         </label>
                         <label
                           className="mt-px cursor-pointer flex flex-row select-none font-light text-white"
-                          for="login"
+                          htmlFor="login"
                         >
                           <div className="title mr-4 ml-2">{item.Title}</div>
                           <div className="title mr-4">Rs. {item.price}</div>
