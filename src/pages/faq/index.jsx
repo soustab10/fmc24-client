@@ -10,7 +10,7 @@ const divStyle = {
     minHeight: "100px",
   };
 
-export default function faq() {
+export default function Faq() {
   const [active, setActive] = useState([false, false, false, false, false, false, false, false, false, false]);
   const isSomeActive = active.some((element) => element);
   const handleClick = () => {

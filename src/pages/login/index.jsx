@@ -12,10 +12,14 @@ const LogIn = () => {
     const [clicked, setClicked] = React.useState(false);
     const { publicRuntimeConfig } = getConfig();
 
+    const clientId = "138547576187-sel98eo969cd1d2fles4i1j90dj6gdj3.apps.googleusercontent.com";
+    const backendURL = "https://fmcbackend.onrender.com";
+    
+    
+    
+    // const clientId = publicRuntimeConfig.GOOGLE_CLIENT_ID;
 
-    const clientId = publicRuntimeConfig.GOOGLE_CLIENT_ID;
-
-    const backendURL = publicRuntimeConfig.NEXT_PUBLIC_REACT_APP_BACKEND_URI;
+    // const backendURL = publicRuntimeConfig.NEXT_PUBLIC_REACT_APP_BACKEND_URI;
     // console.log(backendURL)
 
 
