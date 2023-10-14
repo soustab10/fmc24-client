@@ -29,7 +29,7 @@ const Register = () => {
   
   const handleSubmit = async(e)=>{
     e.preventDefault();
-    console.log("e : ",e);
+    // console.log("e : ",e);
     let obj = {
       name: e.target[0].value,
       email: e.target[1].value,
