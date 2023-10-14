@@ -3,16 +3,48 @@
   }
 
 .MainArea{
+  width: 80%;
+  height: 100%;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
 }
 
-
+.Hide{
+  width: 30%;
+  height: 100%;
+}
 
 .FullPage{
   display: flex;
   flex-direction: column;
+}
+
+.PassesCard{
+  width: 100%;
+  margin: 1rem 0rem;
+  padding : 1rem 0.5rem;
+  color:  white;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.3),rgba(255,255,255,0.1));
+  /* border-radius: 25px; */
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(1.5px);
+  -webkit-backdrop-filter: blur(1.9px);
+  border: 1px solid rgba(255, 255, 255, 1);
+}
+
+.divCards{
+  display: flex;
+  flex-direction: column;
+  margin-top: 80px;
+  padding-left: 2rem;
+  padding-top:0.125rem;
+  width: 67.5%;
+}
+
+.CardDisplay{
+  width: 100%;
+  margin-right: 80px;
 }
 
 .Card{
@@ -52,7 +84,7 @@
   align-items: center;
   font: 24px;
   margin-top: 75px;
-  min-height:100vh;
+  height:100%;
 }
 
 .BarIn{
@@ -66,6 +98,7 @@
   flex-direction: column;
   height: 100%;
   justify-content: start;
+  width: 100%;
 }
 
 .checkout{
@@ -74,7 +107,7 @@
   position: absolute;
   top:75px;
   right: 0;
-  width: 12em;
+  width: 20%;
   min-height: 100vh;
   height: 100%;
   color:  white;
@@ -89,22 +122,21 @@
 
 @media only screen and (max-width:768px) {
   .MajorBod{
-    flex-direction: column;
-    padding: 20px;}
+    flex-direction: column;}
+    .divCards{
+      width: 95%;
+      padding: 0;
+      margin-top: 75px;
+      margin-left: 10px;
+    }
+    .MainArea{
+      width: 100%;
+    }
 }
 
 @media only screen and (max-width:420px){
-  .Card{
-    width: 330px;
-    height: 500px;
-
-  }
   .MajorBod{
     padding: 1px;
-  }
-  .TopBar{
-    margin: 0;
-    width: 100%;
   }
 }
 
@@ -117,7 +149,9 @@
     display: none;
   }
   .Hide{
-    display: none;
+    /* display: none; */
+    width: 100%;
+    margin-top: 75px;
   }
   .BarIn{
     flex-direction: column;
@@ -130,6 +164,14 @@
   }
   .TopBar{
     margin: 0;
+  }
+  .checkout{
+    /* display: none; */
+    width: 100%;
+    
+    position: relative;
+    min-height: none;
+    height: fit-content;
   }
 }
 

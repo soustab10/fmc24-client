@@ -147,10 +147,11 @@ const Index = () => {
 
   return (
     <div
-      style={{ display: "flex", flexDirection: "column", minHeight: "100vh" }}
+      className={Classes.FullPage}
     >
       <Header />
-      <div className="flex">
+      <div className={Classes.MainArea}>
+        <div className={Classes.Hide}>
         <div className={Classes.TopBar}>
           <div className={Classes.BarIn}>
             <div className="w-[275px]  h-[125px] flex justify-center items-center">
@@ -183,15 +184,16 @@ const Index = () => {
             </div>
           </div>
         </div>
-        <div className="flex flex-row  mt-20 pl-4 pt-1">
-          <div className="w-108 mr-96">
+        </div>
+        <div className={Classes.divCards}>
+          <div className={Classes.CardDisplay}>
             <div>
               {selectedOption === "A" && (
                 <div>
                   {jsonData.map((item, index) => (
                     <div
                       key={index}
-                      className="mt-4 mb-4 pt-4 pb-4 pl-2 pr-2 border-2 w-[60vw] border-light-50 border-radiu"
+                      className={Classes.PassesCard}
                     >
                       <div className="inline-flex items-center ">
                         <label
@@ -314,7 +316,9 @@ const Index = () => {
             </div>
           </div>
 
-          <div className={Classes.checkout}>
+
+        </div>
+        <div className={Classes.checkout}>
             <h2>Total Price:</h2>
             <p>Total Price: Rs.{sumOfSelectedItems}</p>
             <ul>
@@ -333,7 +337,6 @@ const Index = () => {
               </Link>
             </button>
           </div>
-        </div>
 
         <br />
       </div>
