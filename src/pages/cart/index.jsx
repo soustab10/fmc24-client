@@ -185,6 +185,38 @@ const Index = () => {
           </div>
         </div>
         </div>
+        <div className={Classes.showOnMobile}>
+        <div className={Classes.BarIn}>
+            <div className="w-[275px]  h-[125px] flex justify-center items-center">
+              Select your pass below
+            </div>
+            <div className="w-[275px]  h-[125px] flex justify-center items-center">
+              <button
+                className="text-[20px] hover:text-[25px] hover:font-semibold transition-all duration-5000 ease-in-out"
+                onClick={() => handleOptionSelect("A")}
+              >
+                Event Pass
+              </button>
+            </div>
+
+            <div className="w-[275px]  h-[125px] flex justify-center items-center">
+              <button
+                className="text-[20px] hover:text-[25px] hover:font-semibold transition-all duration-5000 ease-in-out"
+                onClick={() => handleOptionSelect("B")}
+              >
+                Combo Pass
+              </button>
+            </div>
+            <div className="w-[275px]  h-[125px] flex justify-center items-center">
+              <button
+                className="text-[20px] hover:text-[25px] hover:font-semibold transition-all duration-5000 ease-in-out"
+                onClick={() => handleOptionSelect("C")}
+              >
+                Random Pass
+              </button>
+            </div>
+          </div>
+        </div>
         <div className={Classes.divCards}>
           <div className={Classes.CardDisplay}>
             <div>
@@ -256,7 +288,7 @@ const Index = () => {
                   {comboData.map((item, index) => (
                     <div
                       key={index}
-                      className="mt-4 mb-4 pt-4 pb-4 pl-2 pr-2 border-2 w-[60vw] border-light-50 border-radiu"
+                      className={Classes.PassesCard}
                     >
                       <div className="inline-flex items-center ">
                         <label
@@ -315,20 +347,17 @@ const Index = () => {
               {selectedOption === "C" && <RandomPass />}
             </div>
           </div>
-
-
         </div>
-        <div className={Classes.checkout}>
-            <h2>Total Price:</h2>
-            <p>Total Price: Rs.{sumOfSelectedItems}</p>
-            <ul>
+          <div className={Classes.checkout}>
+            <p className={Classes.TotalPrice}>Total Price: Rs.{sumOfSelectedItems}</p>
+            <ul className="flex flex-col justify-center align-middle">
               {selectedItems.map((itemId) => (
                 <li key={itemId}>
                   {combinedData.find((item) => item.id === itemId)?.Title}
                 </li>
               ))}
             </ul>
-            <button style={checkoutBtnStyle}>
+            <button className={Classes.CheckOutBtnStyle}>
               <Link
                 href="/checkout"
                 style={{ color: "white", textDecoration: "none" }}
