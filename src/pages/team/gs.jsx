@@ -1,7 +1,6 @@
 import React from "react";
 import Classes from "./styles.module.css"
-
-
+import Image from "next/image";
 const Gs = () => {
     return (
       <div className={Classes.margin}>
@@ -16,8 +15,8 @@ const Gs = () => {
        
             <div class="group relative rounded-3xl  space-y-4 overflow-hidden  border-solid border-2">
               <div class="h-[24rem]">
-              <img
-                class="mx-auto h-[18rem] w-full object-cover"
+              <Image
+                className="mx-auto h-[18rem] w-full object-cover"
                 src="/team/Khushi.jpg"
                 alt="khushi"
                 loading="lazy"
