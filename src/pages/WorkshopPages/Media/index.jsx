@@ -48,7 +48,7 @@ const Index = () => {
   <div className={Classes.MajorBod} >
     <div className={Classes.CardMe}>
       <div class="flex flex-col text-center justify-center items-center  px-6 py-4 ">
-        <Image src={"/workshop.png"} width={350} height={350}></Image>
+        <Image src={"/workshop.png"} width={350} height={350} alt="null"></Image>
         <div class=" flex flex-rows h-[30px] justify-center font-bold text-3xl"><div className="ml-4 font-normal text-[45px]">Lorem Ipsom</div></div>
         <a href="https://drive.google.com/file/d/15WUfJ3wn_mWCNDiFmcOw_6DlY3z7ch5P/view?usp=drive_link" className="text-black my-3.5 italic hover:underline text-[25px]  px-10 ">-by Problem Statement</a>
         <p class="text-justify mx-4 h-[60px] w-[250px]">Lorem ipsum dolor sit amet consectetur. Sed non placerat purus vitae in. Pellentesque et tempor tortor enim ac sit.

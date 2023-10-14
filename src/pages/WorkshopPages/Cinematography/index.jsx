@@ -61,7 +61,7 @@ const Index = () => {
     </div>
     <div className={Classes.CardCi}>
       <div class="flex flex-col text-center justify-center items-center  ">
-        <Image src={"/Abhijeet.png"} width={387} height={350} className="rounded-tr-[25px] rounded-tl-[25px]"></Image>
+        <Image src={"/Abhijeet.png"} width={387} height={350} className="rounded-tr-[25px] rounded-tl-[25px]" alt="null"></Image>
         <div class=" flex flex-rows h-[30px] justify-center font-bold text-3xl"><div className="ml-4 font-bold text-[30px] p-[10px]">Panel Discussion</div></div>
         <a href="https://drive.google.com/file/d/15WUfJ3wn_mWCNDiFmcOw_6DlY3z7ch5P/view?usp=drive_link" className="text-black mt-5 italic hover:underline text-[20px]  px-10 p-1 ">-by Abhijeet Singh Parmar</a>
         <p class="text-justify mx-2 mt-6 w-[290px]"> Abhijeet Singh Parmar is a versatile cinematographer with roles as associate director , creative and executive producer and screenplay writer in various web series like Panchayat(2020-2022) , Rocket Boys(2022) , Gullak(2018).

@@ -65,7 +65,7 @@ const Index = () => {
   <div className={Classes.MajorBod} >
     <div className={Classes.CardPh }>
       <div class="flex flex-col text-center justify-center items-center ">
-        <Image src={"/Subhash.png"} width={387} height={300} className="rounded-tr-[25px] rounded-tl-[25px]" ></Image>
+        <Image src={"/Subhash.png"} width={387} height={300} className="rounded-tr-[25px] rounded-tl-[25px]"  alt="null"></Image>
         <div class=" flex flex-rows h-[30px] justify-center font-bold text-3xl"><div className="ml-4 mt-5 font-bold text-[30px] p-[10px]">Wildlife Photography</div></div>
         <a href="https://drive.google.com/file/d/15WUfJ3wn_mWCNDiFmcOw_6DlY3z7ch5P/view?usp=drive_link" className="text-black mt-10 italic hover:underline text-[20px]  px-10 p-1  ">-by Subhash Nair</a>
         <p class="text-justify mx-2 w-[290px] mt-10">Subhash Nair, a renowned wildlife photographer and avid traveler, captures the beauty of the natural world. He's a brand ambassador for Nikon India,framing breathtaking moments.
@@ -78,7 +78,7 @@ const Index = () => {
     </div>
     <div className={Classes.CardPh} >
       <div class="flex flex-col text-center justify-center items-center  ">
-        <Image src={"/Bhalovashi.png"} width={387} height={300} className="rounded-tr-[25px] rounded-tl-[25px]"></Image>
+        <Image src={"/Bhalovashi.png"} width={387} height={300} className="rounded-tr-[25px] rounded-tl-[25px]" alt="null"></Image>
         <div class=" flex flex-rows h-[30px] justify-center font-bold text-3xl"><div className="ml-4 mt-5 font-bold text-[30px] p-[10px]">Travel & Lifestyle Photography</div></div>
         <a href="https://drive.google.com/file/d/15WUfJ3wn_mWCNDiFmcOw_6DlY3z7ch5P/view?usp=drive_link" className="text-black mt-20 italic hover:underline text-[20px]  px-10 p-1 ">-by Bhalovashi</a>
         <p class="text-justify mx-2 w-[290px] mt-5">She's involved in filmmaking, product promotions, drone photography, and creative direction. Her work spans across various landscapes  capturing emotions and unique perspectives.
@@ -91,7 +91,7 @@ const Index = () => {
     </div>
     <div className={Classes.CardPh}>
       <div class="flex flex-col text-center justify-center items-center  ">
-        <Image src={"/Satyam.png"} width={387} height={350} className="rounded-tr-[25px] rounded-tl-[25px]" ></Image>
+        <Image src={"/Satyam.png"} width={387} height={350} className="rounded-tr-[25px] rounded-tl-[25px]" alt="null"></Image>
         <div class=" flex flex-rows h-[30px] justify-center font-bold text-3xl"><div className="ml-4 mt-5 font-bold text-[30px] p-[10px]">Instameet & Adobe Lightroom</div></div>
         <a href="https://drive.google.com/file/d/15WUfJ3wn_mWCNDiFmcOw_6DlY3z7ch5P/view?usp=drive_link" className="text-black mt-20 italic hover:underline text-[20px]  px-10 p-1 ">-by Satyam Bhuyan</a>
         <p class="text-justify mx-2 w-[290px] mt-10">Satyam Bhuyan, a gifted photographer with an engineering and MBA background, creates visual masterpieces. As a Nikon India and Lightroom Ambassador, he elevates travel photography and NFT artistry to new heights.
