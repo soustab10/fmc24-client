@@ -12,15 +12,14 @@ function YourComponent() {
 
   // Fetch event data from JSON when the component mounts
 
-  const removeEvent = (index) => {
-    setSelectedEvents(
-      [
-        ...selectedEvents.splice(0,index),
-        ...selectedEvents.splice(index+1,selectedEvents.length)
-      ]
-    );
-  }
-
+  // const removeEvent = (index) => {
+  //   setSelectedEvents(
+  //     [
+  //       ...selectedEvents.splice(0,index),
+  //       ...selectedEvents.splice(index+1,selectedEvents.length)
+  //     ]
+  //   );
+  // }
 
   // Function to handle option selection
   const handleOptionSelect = (selectedOption) => {
@@ -34,24 +33,27 @@ function YourComponent() {
       setSelectedOptions(
         selectedOptions.filter((item) => item.id !== option.id)
       );
-      removeEvent(0);
+      setSelectedEvents(
+        selectedEvents.filter((item) => item !== option.Title)
+      );
     } else if (selectedOptions.length < 6 && selectedEvents.length < 6) {
       // If less than 6 options are selected, select the option
       setSelectedOptions([...selectedOptions, option]);
       console.log(selectedOptions)
-      setSelectedEvents([...selectedEvents,option]);
+      setSelectedEvents([...selectedEvents,option.Title]);
     }
   };
   const handleOptionSelectEvents4 = (option) => {
     if (selectedOptions.includes(option)) {
       // If the option is already selected, deselect it
-      setSelectedOptions(selectedOptions.filter((item) => item !== option));
+      setSelectedOptions(selectedOptions.filter((item) => item.id !== option.id));
       setSelectedEvents(
-        selectedEvents.filter((item) => item.id !== option.id)
+        selectedEvents.filter((item) => item !== option.Title)
       );
     } else if (selectedOptions.length < 4) {
       // If less than 4 options are selected, select the option
       setSelectedOptions([...selectedOptions, option]);
+      setSelectedEvents([...selectedEvents,option.Title]);
       console.log(selectedOptions)
     }
   };
