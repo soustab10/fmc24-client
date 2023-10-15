@@ -246,6 +246,10 @@
     margin-left: 1.33vw;
 }
 
+.img1{
+    width: 50px;
+    height: 50px;
+}
 @media(max-width:799px){
     .div1in img{
         height:49.8vh;
@@ -421,7 +425,7 @@
 
     }
     .div4in{
-        margin-top: 230px;
+        margin-top: 320px;
         right:-7vw;
         width:80vw;
         margin-bottom: 300px;
@@ -435,7 +439,7 @@
         font-size: 1.4rem;
     }
     .div4{
-        height:1300px;
+        height:1500px;
     }
     
     
