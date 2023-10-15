@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import  Classes from "./styles.module.css"
-
+import Image from "next/image";
 const Convenors = () => {
     return (
       <div className={Classes.margin}>
@@ -17,8 +17,8 @@ const Convenors = () => {
             
             <div class="group relative rounded-3xl h-50 space-y-5 overflow-hidden border-solid border-2">
             <div class="h-[24rem]">
-              <img
-                class="mx-auto h-[18rem] w-full object-cover"
+            <Image
+                className="mx-auto h-[18rem] w-full object-cover"
                 src="/team/aboutuspic.png"
                 alt="woman"
                 loading="lazy"
@@ -37,8 +37,8 @@ const Convenors = () => {
             
             <div class="group relative rounded-3xl  space-y-5 overflow-hidden border-solid border-2">
               <div class="h-[24rem]">
-              <img
-                class="mx-auto h-[18rem] w-full object-cover"
+              <Image
+                className="mx-auto h-[18rem] w-full object-cover"
                 src="/team/Sariki.jpg"
                 alt="Sariki"
                 loading="lazy"
@@ -55,8 +55,8 @@ const Convenors = () => {
             </div>
             <div class="group relative rounded-3xl h-50  space-y-4 overflow-hidden border-solid border-2">
             <div class="h-[24rem]">
-              <img
-                class="mx-auto h-[18rem] w-full object-cover"
+            <Image
+                className="mx-auto h-[18rem] w-full object-cover"
                 src="/team/aboutuspic.png"
                 alt="woman"
                 loading="lazy"

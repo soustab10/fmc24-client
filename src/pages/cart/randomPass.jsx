@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import randomPassData from "./randompass_data.json";
+import Classes from "./indexe.module.css"
 import jsonData from "./events_data.json";
 function YourComponent() {
   const [option, setOption] = useState(""); // State for selected option
@@ -8,6 +9,8 @@ function YourComponent() {
   const [selectedEvents, setSelectedEvents] = useState([]); // State for selected events
 
   // Fetch event data from JSON when the component mounts
+
+  
 
   // Function to handle option selection
   const handleOptionSelect = (selectedOption) => {
@@ -21,17 +24,26 @@ function YourComponent() {
       setSelectedOptions(
         selectedOptions.filter((item) => item.id !== option.id)
       );
-    } else if (selectedOptions.length < 6) {
+      setSelectedEvents(
+        selectedEvents.filter((item) => item.id !== option.id)
+      );
+      console.log(selectedEvents);
+    } else if (selectedOptions.length < 6 && selectedEvents.length < 6) {
       // If less than 6 options are selected, select the option
       setSelectedOptions([...selectedOptions, option]);
+      setSelectedEvents([...selectedEvents,option]);
+      console.log(selectedEvents);
     }
   };
   const handleOptionSelectEvents4 = (option) => {
     if (selectedOptions.includes(option)) {
       // If the option is already selected, deselect it
       setSelectedOptions(selectedOptions.filter((item) => item !== option));
+      setSelectedEvents(
+        selectedEvents.filter((item) => item.id !== option.id)
+      );
     } else if (selectedOptions.length < 4) {
-      // If less than 6 options are selected, select the option
+      // If less than 4 options are selected, select the option
       setSelectedOptions([...selectedOptions, option]);
     }
   };
@@ -47,9 +59,9 @@ function YourComponent() {
   };
 
   return (
-    <div>
+    <div className={Classes.SelectOption}>
+      <div className={Classes.OptionSelect}>
       <h2>Select an option:</h2>
-      <div>
         <label>
           6 Random Pass
           <input
@@ -75,7 +87,7 @@ function YourComponent() {
           {jsonData.map((option) => (
             <div
               key={option.id}
-              className="mt-4 mb-4 pt-4 pb-4 pl-2 pr-2 border-2 w-[60vw] border-light-50 border-radiu"
+              className={Classes.PassesCard}
             >
               <div className="inline-flex items-center ">
                 <label
@@ -138,7 +150,7 @@ function YourComponent() {
           {jsonData.map((option) => (
             <div
               key={option.id}
-              className="mt-4 mb-4 pt-4 pb-4 pl-2 pr-2 border-2 w-[60vw] border-light-50 border-radiu"
+              className={Classes.PassesCard}
             >
               <div className="inline-flex items-center ">
                 <label
@@ -197,7 +209,7 @@ function YourComponent() {
         </div>
       )}
 
-      <p>Selected Events: {selectedEvents.join(", ")}</p>
+      <p className={Classes.SelectedEvents}>Selected Events: {selectedEvents.join(", ")}</p>
     </div>
   );
 }

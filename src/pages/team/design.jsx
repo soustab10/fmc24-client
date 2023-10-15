@@ -1,7 +1,7 @@
 import React from "react";
 import Classes from "./styles.module.css"
 
-
+import Image from "next/image";
 const Design = () => {
     return (
       <div className={Classes.margin}>
@@ -15,8 +15,8 @@ const Design = () => {
           <div class="md:ml-20 lg:ml-20 grid gap-12 px-4 sm:px-20 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
             <div class="group relative rounded-3xl  space-y-5 overflow-hidden border-solid border-2">
             <div class="h-[24rem]">
-              <img
-                class="mx-auto h-[18rem] w-full object-cover"
+            <Image
+                className="mx-auto h-[18rem] w-full object-cover"
                 src="/team/aboutuspic.png"
                 alt="woman"
                 loading="lazy"
@@ -33,8 +33,8 @@ const Design = () => {
             </div>
             <div class="group relative rounded-3xl  space-y-5 overflow-hidden border-solid border-2">
             <div class="h-[24rem]">
-              <img
-                class="mx-auto h-[18rem] w-full object-cover"
+            <Image
+                className="mx-auto h-[18rem] w-full object-cover"
                 src="/team/aboutuspic.png"
                 alt="woman"
                 loading="lazy"
@@ -51,8 +51,8 @@ const Design = () => {
             </div>
             <div class="group relative rounded-3xl  space-y-4 overflow-hidden border-solid border-2">
             <div class="h-[24rem]">
-              <img
-                class="mx-auto h-[18rem] w-full object-cover"
+            <Image
+                className="mx-auto h-[18rem] w-full object-cover"
                 src="/team/aboutuspic.png"
                 alt="woman"
                 loading="lazy"

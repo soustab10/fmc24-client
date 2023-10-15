@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { useState,useEffect } from "react";
 // import Classes from "./styles/Header.module.css";
 
 const navbarGlass = {
@@ -15,11 +15,29 @@ const logoLeftPadding = {
   paddingLeft: "15rem",
 };
 const Header = () => {
+  const [isLoggedin, setIsLoggedin] = useState(false);
+
   const [menuState, setMenuState] = useState(false);
   const handleMenu = () => {
     setMenuState(!menuState);
   };
+  useEffect(() => {
+    try {
+      const x=sessionStorage.getItem("isLoggedIn");
+      console.log(x)
 
+      if(x===null || x===false)
+       setIsLoggedin(false);
+      else{
+        setIsLoggedin(true);
+      }
+       
+    }
+    catch (e) {
+      console.log(e);
+    }
+  }, [isLoggedin]);
+  console.log("logged in?",isLoggedin)
   return (
     <>
       <div
@@ -55,7 +73,7 @@ const Header = () => {
             glimpses
           </Link>
           <Link
-            href="/comingsoon"
+            href="/team"
             className="nav-menu links-header mr-8  place-self-center"
           >
             team
@@ -66,12 +84,18 @@ const Header = () => {
           >
             faq
           </Link>
-          <Link
+          {isLoggedin ? (<><Link
+            href="/logout"
+            className="nav-menu links-header mr-8  place-self-center"
+          >
+            logout
+          </Link></>):(<><Link
             href="/login"
             className="nav-menu links-header mr-8  place-self-center"
           >
             login
-          </Link>
+          </Link></>)}
+          
           <Link
             href="/"
             className=" links-header w-auto pr-4 place-self-center"
@@ -95,18 +119,26 @@ const Header = () => {
                   <Link href="/events" className="menu-list">
                     events
                   </Link>
+                  <Link href="/workshops" className="menu-list">
+                    workshops
+                  </Link>
                   <Link href="/comingsoon" className="menu-list">
                     sponsors
                   </Link>
                   <Link href="/glimpses" className="menu-list">
                     glimpses
                   </Link>
-                  <Link href="/comingsoon" className="menu-list">
+                  <Link href="/team" className="menu-list">
                     team
                   </Link>
-                  <Link href="/login" className="menu-list">
+                  {
+                    isLoggedin ? (<> <Link href="/logout" className="menu-list">
+                    logout
+                  </Link></>):(<> <Link href="/login" className="menu-list">
                     login
-                  </Link>
+                  </Link></>)
+                  }
+                 
                 </div>
               </div>
             ) : null}
