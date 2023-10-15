@@ -12,7 +12,10 @@ import Footer from '../landingpage/Footer';
 import ContestCard from './contestCard/ContestCard';
 import WorkshopCard from './workshopCard/WorkshopCard';
 import Link from 'next/link';
+import { useAuth } from '../../context/auth';
 const DashBoard = () => {
+    const {state} = useAuth();
+    const { isAuthenticated, user } = state;
     const { publicRuntimeConfig } = getConfig();
     const [profileImage, setProfileImage] = useState('');
     const NEXT_PUBLIC_REACT_APP_BACKEND_URI = publicRuntimeConfig.NEXT_PUBLIC_REACT_APP_BACKEND_URI;
@@ -145,6 +148,13 @@ const DashBoard = () => {
     const reset = () => {
         Router.push("/register");
     }
+
+    if(!isAuthenticated){
+        return <h1>Not authenticated. Please log in</h1>
+    }
+
+    console.log("state", state);
+
     return (
         <div>
             {isLoading ? (
