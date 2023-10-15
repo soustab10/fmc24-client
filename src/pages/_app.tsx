@@ -7,9 +7,13 @@ import '@/styles/customfont.css';
 import Head from 'next/head'
 
 import { useEffect } from "react";
+import {AuthProvider} from "../context/auth";
+
 export default function App({ Component, pageProps }: AppProps) {
 
   return (
+
+    <AuthProvider>
    
     <>
     <Head>
@@ -30,6 +34,8 @@ export default function App({ Component, pageProps }: AppProps) {
       <Component {...pageProps} />
     </div>
     </>
+
+    </AuthProvider>
     
   );
 }

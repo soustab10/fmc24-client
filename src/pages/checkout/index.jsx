@@ -4,8 +4,8 @@ import Footer from "../landingpage/Footer";
 import combinedData from "./combined_data.json";
 import Image from "next/image";
 import getConfig from 'next/config';
-import axios from 'axios';
 import Router from "next/router";
+import axios from 'axios';
 // import QRCode from "qrcode.react";
 
 const Checkout = () => {
@@ -16,18 +16,44 @@ const Checkout = () => {
   const [transcid, setTranscid] = useState("");
   const [selectedItems, setSelectedItems] = useState([]);
   const [itemData, setItemData] = useState(null);
+  const { publicRuntimeConfig } = getConfig();
+  const backendURL = publicRuntimeConfig.NEXT_PUBLIC_REACT_APP_BACKEND_URI;
+
+  const link = "https://docs.google.com/forms/d/e/1FAIpQLSdkNcyta0lRVHc7M4QvVqHnTXuI5G8yP_pK1wZv0EXqwjgA8g/viewform?usp=pp_url&entry.997687481=Shubham&entry.1447534415=6201060889&entry.1224001380=HUBHDEWQSN&entry.1589365680=HEBJWDNKQ&entry.2107420521=HBFJEWDKLQ&entry.248033448=+HCEJNWQ";
+
+
+  // const link="https://docs.google.com/forms/d/e/1FAIpQLSdkNcyta0lRVHc7M4QvVqHnTXuI5G8yP_pK1wZv0EXqwjgA8g/viewform?usp=pp_url&entry.997687481=Shubham&entry.1447534415=6201060889&entry.1224001380=HUBHDEWQSN&entry.1589365680=HEBJWDNKQ&entry.2107420521=HBFJEWDKLQ&entry.248033448=+HCEJNWQ"
   const formUrl= 'https://docs.google.com/forms/d/e/1FAIpQLSfmxwNrwZhBfLMMnaCpydwBV9Juozd6Uty0zwAgMRZNRDdMgg/formResponse';
   const handleSubmit =async (e) => {
-    e.preventDefault();
+    
+      e.preventDefault();
      try{
-      let response = await fetch(`https://docs.google.com/forms/d/e/1FAIpQLSfmxwNrwZhBfLMMnaCpydwBV9Juozd6Uty0zwAgMRZNRDdMgg/formResponse?&submit=Submit?usp=pp_url&entry.2058644330=${name}&entry.666527389=${phone}&entry.352462634=${email}&entry.161165018=${insti}&entry.169406111=${transcid}&entry.1113568387=${JSON.stringify(selectedItems)}`, { 
+      //dev gupta:(God)
+      // let response = await fetch(`https://docs.google.com/forms/d/e/1FAIpQLSfmxwNrwZhBfLMMnaCpydwBV9Juozd6Uty0zwAgMRZNRDdMgg/formResponse?&submit=Submit?usp=pp_url&entry.2058644330=${name}&entry.666527389=${phone}&entry.352462634=${email}&entry.161165018=${insti}&entry.169406111=${transcid}&entry.1113568387=${JSON.stringify(selectedItems)}`, { 
+      //fmc
+      // "https://docs.google.com/forms/d/e/1FAIpQLSdkNcyta0lRVHc7M4QvVqHnTXuI5G8yP_pK1wZv0EXqwjgA8g/viewform?usp=pp_url&entry.997687481=Shubham&entry.1447534415=6201060889&entry.1224001380=HUBHDEWQSN&entry.1589365680=HEBJWDNKQ&entry.2107420521=HBFJEWDKLQ&entry.248033448=+HCEJNWQ";
+      let response = await fetch(`https://docs.google.com/forms/d/e/1FAIpQLSdkNcyta0lRVHc7M4QvVqHnTXuI5G8yP_pK1wZv0EXqwjgA8g/formResponse?&submit=Submit?usp=pp_url&entry.997687481=${name}&entry.1447534415=${phone}&entry.1224001380=${email}&entry.1589365680=${insti}&entry.2107420521=H${transcid}&entry.248033448=${JSON.stringify(selectedItems)}`, { 
+
         method: "POST",
       });
     }catch(err){
       console.log("submitted");
+      // alert("Submitted we will update you soon");
+      const useremail=sessionStorage.getItem('email');
+      console.log(useremail)
+      const resp=await fetch(backendURL + "/api/carts", {
+          method: "DELETE",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            email: useremail,
+          }),
+        });
+        const data2 = await resp.json();
+        console.log(data2);
+        Router.push('/');
     }
-    
-    // Router.push('/dashboard');
 
   };
   const textBold = {
@@ -56,8 +82,6 @@ const Checkout = () => {
   };
 
   useEffect(() => {
-    const { publicRuntimeConfig } = getConfig();
-  const backendURL = publicRuntimeConfig.NEXT_PUBLIC_REACT_APP_BACKEND_URI;
     // Function to fetch item data from JSON or your data source
     const getInitialUsers=async ()=>{
       // let i,j;

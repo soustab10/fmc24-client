@@ -112,8 +112,8 @@ const Hero = () => {
      
      </div>
      <div className={Classes.innerdiv2}>
-      <Image  className={Classes.img1} src="/heroimage2.png" width={820} height={100} alt="img1" />
-      <Image  className={Classes.img2} src="/heroimage3.png" width={820} height={100} alt="img2" />
+      <Image  className={Classes.img1} src="/endgraffhigh.png" width={820} height={100} alt="img1" />
+      <Image  className={Classes.img2} src="/endgraffhigh.png" width={820} height={100} alt="img2" />
      </div>
     
      </div>
