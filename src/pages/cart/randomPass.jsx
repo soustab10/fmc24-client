@@ -10,6 +10,8 @@ function YourComponent() {
 
   // Fetch event data from JSON when the component mounts
 
+  
+
   // Function to handle option selection
   const handleOptionSelect = (selectedOption) => {
     setOption(selectedOption);
@@ -25,9 +27,12 @@ function YourComponent() {
       setSelectedEvents(
         selectedEvents.filter((item) => item.id !== option.id)
       );
-    } else if (selectedOptions.length < 6) {
+      console.log(selectedEvents);
+    } else if (selectedOptions.length < 6 && selectedEvents.length < 6) {
       // If less than 6 options are selected, select the option
       setSelectedOptions([...selectedOptions, option]);
+      setSelectedEvents([...selectedEvents,option]);
+      console.log(selectedEvents);
     }
   };
   const handleOptionSelectEvents4 = (option) => {
