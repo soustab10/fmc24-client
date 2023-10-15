@@ -38,6 +38,8 @@ const LogIn = () => {
             const data = await info.json();
             console.log(data)
             sessionStorage.setItem("img", data.picture)
+            sessionStorage.setItem("name", data.name)
+            sessionStorage.setItem("email", data.email)
             setClicked(true);
             console.log(credentialResponse.credential);
             sessionStorage.setItem('token', credentialResponse.credential);

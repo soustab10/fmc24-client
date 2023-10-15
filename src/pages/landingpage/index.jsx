@@ -21,21 +21,23 @@ import Competitions from "./Competitions"
 import Sponsors from "./Sponsors"
 import AwardSection from "./AwardSection"
 import Guests from "./Guests"
-import Router  from 'next/router';
+import Router from 'next/router';
 const IndexLanding = () => {
-    const [counterOn, setCounterOn] = useState(false);
+  const [counterOn, setCounterOn] = useState(false);
   const [button, setButton] = useState(true);
   const [visits, setVisits] = useState(0);
   const [isShown, setIsShown] = useState(false);
   const [isShown2, setIsShown2] = useState(false);
-  const [dashboard,setDashboard]=useState(false);
-  const [register,setRegister]=useState(false);
+  const [dashboard, setDashboard] = useState(false);
+  const [register, setRegister] = useState(false);
+ 
   const modalState = () => {
     setIsShown((current) => !current);
   };
   const modalState2 = () => {
     setIsShown2((current) => !current);
   };
+
 
   // const showButton = () => {
   //   if (window.innerWidth > 960) {
@@ -52,7 +54,7 @@ const IndexLanding = () => {
   //     if(sessionStorage.getItem('isNewUser')=="false"){
   //       setDashboard(true);
   //     }
-      
+
   //   }
   // },[]);
   const ref_container = useRef();
@@ -66,24 +68,24 @@ const IndexLanding = () => {
     window.location.href = '/';
     closeMobileMenu();
   };
-    return (
-      <>
-      <Header/>
+  return (
+    <>
+      <Header />
       {/* {dashboard?<button style={{'zIndex':'100'}} href="/dashboard">Dashboard</button>:<></>}
       {register?<button style={{'zIndex':'100'}} href="/register">Register</button>:<></>} */}
-      <Hero/>
-      <AboutUs/>
-      <AwardSection/>
-      <Guests/>
+      <Hero />
+      <AboutUs />
+      <AwardSection />
+      <Guests />
       {/* <Demo/> */}
       {/* <Competitions/> */}
-      <OAT/>
+      <OAT />
       {/* <Testimonials/> */}
-      <Sponsors/>
-  
-      <Footer/>
+      <Sponsors />
+
+      <Footer />
     </>
-    )
+  )
 }
 
 export default IndexLanding

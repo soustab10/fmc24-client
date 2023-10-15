@@ -1,6 +1,6 @@
 import React from "react";
 import Classes from "./styles.module.css"
-
+import Image from "next/image";
 
 
 const Animation = () => {
@@ -16,8 +16,8 @@ const Animation = () => {
           <div class="md:ml-20 lg:ml-20 grid gap-12 px-4 sm:px-20 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
             <div class="group relative rounded-3xl  space-y-5 overflow-hidden border-solid border-2">
               <div class="h-[24rem]">
-              <img
-                class="mx-auto h-[18rem] w-full object-cover"
+              <Image
+                className="mx-auto h-[18rem] w-full object-cover"
                 src="/team/Yaswanth.jpg"
                 alt="yaswanth"
                 loading="lazy"
@@ -36,8 +36,8 @@ const Animation = () => {
             
             <div class="group relative rounded-3xl  space-y-4 overflow-hidden border-solid border-2">
             <div class="h-[24rem]">
-              <img
-                class="mx-auto h-[18rem] w-full object-cover"
+            <Image
+                className="mx-auto h-[18rem] w-full object-cover"
                 src="/team/Divyansh.jpg"
                 alt="divyansh"
                 loading="lazy"

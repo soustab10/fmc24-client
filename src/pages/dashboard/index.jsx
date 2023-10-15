@@ -12,8 +12,6 @@ import Footer from '../landingpage/Footer';
 import ContestCard from './contestCard/ContestCard';
 import WorkshopCard from './workshopCard/WorkshopCard';
 import Link from 'next/link';
-
-
 const DashBoard = () => {
     const { publicRuntimeConfig } = getConfig();
     const [profileImage, setProfileImage] = useState('');
