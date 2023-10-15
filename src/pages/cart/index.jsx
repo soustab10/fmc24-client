@@ -223,14 +223,14 @@ const Index = () => {
           <div className={Classes.TopBar}>
             <div className={Classes.BarIn}>
               <div className="w-[275px]  h-[125px] flex justify-center items-center">
-                Select your pass below
+                Select your Tickets below
               </div>
               <div className="w-[275px]  h-[125px] flex justify-center items-center">
                 <button
                   className="text-[20px] hover:text-[25px] hover:font-semibold transition-all duration-5000 ease-in-out"
                   onClick={() => handleOptionSelect("A")}
                 >
-                  Event Pass
+                  Event Tickets
                 </button>
               </div>
 
@@ -239,7 +239,7 @@ const Index = () => {
                   className="text-[20px] hover:text-[25px] hover:font-semibold transition-all duration-5000 ease-in-out"
                   onClick={() => handleOptionSelect("B")}
                 >
-                  Combo Pass
+                  Combo Tickets
                 </button>
               </div>
               <div className="w-[275px]  h-[125px] flex justify-center items-center">
@@ -247,7 +247,7 @@ const Index = () => {
                   className="text-[20px] hover:text-[25px] hover:font-semibold transition-all duration-5000 ease-in-out"
                   onClick={() => handleOptionSelect("C")}
                 >
-                  Random Pass
+                  Random Tickets
                 </button>
               </div>
             </div>
@@ -263,7 +263,7 @@ const Index = () => {
                 className="text-[20px] hover:text-[25px] hover:font-semibold transition-all duration-5000 ease-in-out"
                 onClick={() => handleOptionSelect("A")}
               >
-                Event Pass
+                Event Tickets
               </button>
             </div>
 
@@ -272,7 +272,7 @@ const Index = () => {
                 className="text-[20px] hover:text-[25px] hover:font-semibold transition-all duration-5000 ease-in-out"
                 onClick={() => handleOptionSelect("B")}
               >
-                Combo Pass
+                Combo Tickets
               </button>
             </div>
             <div className="w-[275px]  h-[125px] flex justify-center items-center">
@@ -280,7 +280,7 @@ const Index = () => {
                 className="text-[20px] hover:text-[25px] hover:font-semibold transition-all duration-5000 ease-in-out"
                 onClick={() => handleOptionSelect("C")}
               >
-                Random Pass
+                Random Tickets
               </button>
             </div>
           </div>

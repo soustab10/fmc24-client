@@ -2,17 +2,17 @@ import React from "react";
 import { motion } from "framer-motion";
 
 const loadingContainer = {
-  width: "16rem",
-  height: "16rem",
+  width: "8rem",
+  height: "8rem",
   display: "flex",
   justifyContent: "space-around",
 };
 const loadingCircle = {
   display: "block",
-  width: "4rem",
-  height: "4rem",
+  width: "1rem",
+  height: "1rem",
   backgroundColor: "#ffffff",
-  borderRadius: "2rem",
+  borderRadius: "0.5rem",
 };
 
 const loadingContainerVariants = {
