@@ -4,7 +4,7 @@ import Footer from "../../landingpage/Footer";
 import Index from "../../events";
 import Link from "next/link";
 import Classes from "../indexe.module.css";
-
+import Definer from "../../events/definer";
 import Image from "next/image";
 import "./styles.module.css";
 const divStyle = {
@@ -55,9 +55,7 @@ const Photography = () => {
     Snapchase is a treasure hunt where you have to take pictures of a special place by solving clues and riddles and submit them before time runs out.
     </p>
     <a href="https://drive.google.com/file/d/15WUfJ3wn_mWCNDiFmcOw_6DlY3z7ch5P/view?usp=drive_link" className="text-white-800 my-3.5 italic hover:underline">View Problem Statement</a>
-    <div className="my-3.5 align-middle justify-evenly">
-        <button className="border p-2 border-white rounded-[15px] hover:text-[15px] hover:font-semibold transition-all duration-5000 ease-in-out ">REGISTRATION WILL BE LIVE SOON</button>
-    </div>
+     <Definer/>
   </div>
 </div>
 
@@ -68,9 +66,7 @@ const Photography = () => {
         We click a number of pictures and put them in the gallery, but Portfolio in 24 hrs of FMC Weekend brings you a chance to show your skills on Indias largest digital art festival. 
         </p>
         <a href="https://drive.google.com/file/d/1BhtGMD-lpnIZAv-8f1CIjZhPV2PDiS-B/view?usp=drive_link" className="text-white-800 my-3.5 italic hover:underline">View Problem Statement</a>
-        <div className="my-3.5 align-middle justify-evenly">
-            <button className="border p-2 border-white rounded-[15px] hover:text-[15px] hover:font-semibold transition-all duration-5000 ease-in-out ">REGISTRATION WILL BE LIVE SOON</button>
-        </div>
+          <Definer/>
       </div>
     </div>
 
@@ -81,9 +77,7 @@ const Photography = () => {
     This is what Manipulation means,so lets dive into this imaginary world and paint the canvas with our imagination.Themes on which the event will take place are given below: Post Apocalypse, Wildlife, Retro Futurism, Surrealism
     </p>
     <a href="https://drive.google.com/file/d/1qSMgfIKxQB8GIQBn74k2hwd01Jkt4HEo/view?usp=drive_link" className="text-white-800 my-3.5 italic hover:underline">View Problem Statement</a>
-    <div className="my-3.5 align-middle justify-evenly">
-        <button className="border p-2 border-white rounded-[12.5px] hover:text-[15px] hover:font-semibold transition-all duration-5000 ease-in-out ">REGISTRATION WILL BE LIVE SOON</button>
-    </div>
+      <Definer/>
   </div>
 </div>
 
@@ -94,9 +88,7 @@ const Photography = () => {
     This is an offline theme based photography event.This event bears the challenge to capture the beauty of Varanasi, its lifestyle, communities, cultures, rituals, and religion. A photowalk will be organized during which you will have to click the pictures for the event submission.
     </p>
     <a href="https://drive.google.com/file/d/1x4_OCREwU6SjhTbnKNcIQ9o-2774uam-/view?usp=drive_link" className="text-white-800 my-3.5 italic hover:underline">View Problem Statement</a>
-    <div className="my-3.5 align-middle justify-evenly">
-        <button className="border p-2 border-white rounded-[15px] hover:text-[15px] hover:font-semibold transition-all duration-5000 ease-in-out ">REGISTRATION WILL BE LIVE SOON</button>
-    </div>
+     <Definer/>
   </div>
 </div>
 
@@ -107,9 +99,7 @@ const Photography = () => {
     Embrace the essence of creativity and composition as the pivotal criteria for your submissions. Your artwork should resonate with one of the following themes, and winners will be recognized separately for each theme: 1.Long Exposure 2.Minimal 3.Culture of India  4.Monochrome
     </p>
     <a href="https://drive.google.com/file/d/1Nw5y8pmE8JL4BKq_CNwyhi90_nfqN9w3/view?usp=drive_link" className="text-white-800 my-3.5 italic hover:underline">View Problem Statement</a>
-    <div className="my-3.5 align-middle justify-evenly">
-        <button className="border p-2 border-white rounded-[15px] hover:text-[15px] hover:font-semibold transition-all duration-5000 ease-in-out ">REGISTRATION WILL BE LIVE SOON</button>
-    </div>
+     <Definer/>
   </div>
 </div>
 <div className={Classes.Ghost}>

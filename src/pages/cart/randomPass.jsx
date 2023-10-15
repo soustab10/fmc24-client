@@ -7,21 +7,8 @@ function YourComponent() {
   const [selectedOptions, setSelectedOptions] = useState([]);
   const [events, setEvents] = useState([]); // State for the list of events
   const [selectedEvents, setSelectedEvents] = useState([]); // State for selected events
-  const [rmpsix,setRmpsix]=useState([]);
-  const [rmpfour,setRmpfour]=useState([]);
-
-  // Fetch event data from JSON when the component mounts
-
-  // const removeEvent = (index) => {
-  //   setSelectedEvents(
-  //     [
-  //       ...selectedEvents.splice(0,index),
-  //       ...selectedEvents.splice(index+1,selectedEvents.length)
-  //     ]
-  //   );
-  // }
-
-  // Function to handle option selection
+  const [selectedEvents4, setSelectedEvents4] = useState([]);
+  const [selectedEvents6, setSelectedEvents6] = useState([]);
   const handleOptionSelect = (selectedOption) => {
     setOption(selectedOption);
     setSelectedEvents([]); // Clear the selected events when the option changes
