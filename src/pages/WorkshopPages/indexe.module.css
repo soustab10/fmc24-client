@@ -132,7 +132,7 @@ flex-direction: column;
   
           .CardMe{
             width: 387px;
-            height: 670px;
+            height: 690px;
             justify-content: center;
             margin-top: 50px;
             margin-bottom: 50px;
@@ -222,12 +222,12 @@ justify-content: start;
 }
 }
 .Ghost{
-width: 40%;
-height: 440px;
-justify-content: center;
-margin-top: 24px;
-margin-bottom: 24px;
-}
+  width: 387px;
+  height: 618px;
+  justify-content: center;
+  margin-top: 24px;
+  margin-bottom: 24px;
+  }
 
 @media only screen and (max-width:768px){
 .MainArea{
@@ -329,13 +329,7 @@ justify-content: start;
 }
 }
 
-.Ghost{
-width: 40%; min-width:360px;
-height: 440px;
-justify-content: center;
-margin-top: 24px;
-margin-bottom: 24px;
-}
+
 
 @media only screen and (max-width:420px){
 .CardPh{
