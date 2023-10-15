@@ -164,6 +164,17 @@
   align-items: center;
 }
 
+.Accomodation{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+.Accomodation>*{
+  margin: 5px;
+}
+
+
+
 .SelectedItemsList>*{
   margin: 5px;
 }
@@ -190,6 +201,10 @@
   justify-content: center;
   align-items: center;
   justify-content: space-evenly;
+}
+
+.AccoHeader{
+  color: white;
 }
 
 .RandomSelect{
@@ -271,6 +286,9 @@
   .showOnMobile{
     display: flex;
     margin-top: 80px;
+  }
+  .Accomodation{
+    flex-direction: column;
   }
 }
 
