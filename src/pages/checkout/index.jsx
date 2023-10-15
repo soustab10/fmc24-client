@@ -4,6 +4,7 @@ import Footer from "../landingpage/Footer";
 import combinedData from "./combined_data.json";
 import Image from "next/image";
 import getConfig from 'next/config';
+import axios from 'axios';
 // import QRCode from "qrcode.react";
 
 const Checkout = () => {
@@ -14,10 +15,17 @@ const Checkout = () => {
   const [transcid, setTranscid] = useState("");
   const [selectedItems, setSelectedItems] = useState([]);
   const [itemData, setItemData] = useState(null);
-
-  const handleSubmit = (e) => {
+  const formUrl= 'https://docs.google.com/forms/d/e/1FAIpQLSfmxwNrwZhBfLMMnaCpydwBV9Juozd6Uty0zwAgMRZNRDdMgg/formResponse';
+  const handleSubmit =async (e) => {
     e.preventDefault();
-    // handle form submission
+     try{
+      let response = await fetch(`https://docs.google.com/forms/d/e/1FAIpQLSfmxwNrwZhBfLMMnaCpydwBV9Juozd6Uty0zwAgMRZNRDdMgg/formResponse?&submit=Submit?usp=pp_url&entry.2058644330=${name}&entry.666527389=${phone}&entry.352462634=${email}&entry.161165018=${insti}&entry.169406111=${transcid}&entry.1113568387=${JSON.stringify(selectedItems)}`, { 
+        method: "POST",
+      });
+    }catch(err){
+      console.log("submitted");
+    }
+
   };
   const textBold = {
     fontWeight: "bold",
