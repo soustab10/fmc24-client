@@ -5,6 +5,7 @@ import jsonData from "./events_data.json";
 import comboData from "./combopass_data.json";
 import randomPassData from "./randompass_data.json";
 import combinedData from "./combined_data.json";
+import combinedWithoutAcco from "./combopass_without_acco_data.json";
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import Classes from "./indexe.module.css";
@@ -317,7 +318,9 @@ const Index = () => {
                 </div>
               )}
               {selectedOption === "B" && (
+                <div className={Classes.Accomodation}>
                 <div>
+                  <h className={Classes.AccoHeader}>Accomodation Included</h>
                   {comboData.map((item, index) => (
                     <div
                       key={index}
@@ -361,7 +364,6 @@ const Index = () => {
                           <div className="title mr-4">Rs. {item.price}</div>
                         </label>
                       </div>
-
                       {/* You can add additional content here */}
                     </div>
                   ))}
@@ -376,6 +378,66 @@ const Index = () => {
                     }
                   `}</style>
                 </div>
+                <div>
+                <h className={Classes.AccoHeader}>Accomodation Excluded</h>
+                {combinedWithoutAcco.map((item, index) => (
+                  <div
+                    key={index}
+                    className={Classes.PassesCard}
+                  >
+                    <div className="inline-flex items-center ">
+                      <label
+                        className="relative flex cursor-pointer items-center rounded-full p-3"
+                        htmlFor="login"
+                        data-ripple-dark="true"
+                      >
+                        <input
+                          type="checkbox"
+                          checked={selectedItems.includes(item.id)}
+                          onChange={() => handleCheckboxChange(item.id)}
+                          className="before:content[''] peer relative h-5 w-5 cursor-pointer appearance-none rounded-md border border-blue-gray-200 transition-all before:absolute before:top-2/4 before:left-2/4 before:block before:h-12 before:w-12 before:-translate-y-2/4 before:-translate-x-2/4 before:rounded-full before:bg-blue-gray-500 before:opacity-0 before:transition-opacity checked:border-green-500 checked:bg-green-500 checked:before:bg-green-500 hover:before:opacity-10"
+                        />
+
+                        <div className="pointer-events-none absolute top-2/4 left-2/4 -translate-y-2/4 -translate-x-2/4 text-white opacity-0 transition-opacity peer-checked:opacity-100">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            className="h-3.5 w-3.5"
+                            viewBox="0 0 20 20"
+                            fill="currentColor"
+                            stroke="currentColor"
+                            stroke-width="1"
+                          >
+                            <path
+                              fill-rule="evenodd"
+                              d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                              clip-rule="evenodd"
+                            ></path>
+                          </svg>
+                        </div>
+                      </label>
+                      <label
+                        className="mt-px cursor-pointer flex flex-row select-none font-light text-white"
+                        htmlFor="login"
+                      >
+                        <div className="title mr-4 ml-2">{item.Title}</div>
+                        <div className="title mr-4">Rs. {item.price}</div>
+                      </label>
+                    </div>
+                    {/* You can add additional content here */}
+                  </div>
+                ))}
+                <style jsx>{`
+                  .item-container {
+                    border: 1px solid #ccc;
+                    margin-bottom: 10px;
+                    padding: 10px;
+                  }
+                  .title {
+                    font-weight: bold;
+                  }
+                `}</style>
+              </div>
+              </div>
               )}
               {selectedOption === "C" && <RandomPass />}
             </div>
@@ -383,7 +445,7 @@ const Index = () => {
         </div>
         <div className={Classes.checkout}>
           <p className={Classes.TotalPrice}>Total Price: Rs.{sumOfSelectedItems}</p>
-          <ul className="flex flex-col justify-center align-middle">
+          <ul className={Classes.SelectedItemsList}>
             {selectedItems.map((itemId) => (
               <li key={itemId}>
                 {combinedData.find((item) => item.id === itemId)?.Title}

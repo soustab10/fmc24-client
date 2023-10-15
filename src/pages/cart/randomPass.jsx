@@ -22,6 +22,9 @@ function YourComponent() {
       setSelectedOptions(
         selectedOptions.filter((item) => item.id !== option.id)
       );
+      setSelectedEvents(
+        selectedEvents.filter((item) => item.id !== option.id)
+      );
     } else if (selectedOptions.length < 6) {
       // If less than 6 options are selected, select the option
       setSelectedOptions([...selectedOptions, option]);
@@ -31,8 +34,11 @@ function YourComponent() {
     if (selectedOptions.includes(option)) {
       // If the option is already selected, deselect it
       setSelectedOptions(selectedOptions.filter((item) => item !== option));
+      setSelectedEvents(
+        selectedEvents.filter((item) => item.id !== option.id)
+      );
     } else if (selectedOptions.length < 4) {
-      // If less than 6 options are selected, select the option
+      // If less than 4 options are selected, select the option
       setSelectedOptions([...selectedOptions, option]);
     }
   };
