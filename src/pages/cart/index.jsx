@@ -42,7 +42,39 @@ const Index = () => {
   const backendURL = publicRuntimeConfig.NEXT_PUBLIC_REACT_APP_BACKEND_URI;
   // const [jsonData, setJsonData] = useState([]);
   const [selectedItems, setSelectedItems] = useState([]);
+  const [loaded,setLoaded]=useState(false);
   let updatedSelectedItems = [];
+  const getInitialUsers=async ()=>{
+    // let i,j;
+    const useremail=sessionStorage.getItem('email');
+    console.log(useremail)
+    const data=await fetch("https://fmcbackend.onrender.com/api/carts",{
+      method:"POST",
+      headers:{
+        "Content-Type":"application/json"
+      },
+      body:JSON.stringify({
+        email:useremail
+      })
+    });
+    let cart,cartArray_temp=[],cartArray;
+    const response=await data.json();
+    console.log(response.cartItems)
+    cart=response.cartItems
+    for(let j in cart){
+      cartArray_temp.push(cart[j].id)
+    }
+    cartArray=cartArray_temp
+    // console.log(cartArray_temp)
+    setSelectedItems(cartArray)
+  }
+  useEffect(()=>{
+    if(!loaded){
+      console.log("loaded");
+      setLoaded(true);
+      getInitialUsers();
+    }
+  },loaded)
 
   useEffect(() => {
     const storedItems = sessionStorage.getItem("cartItems");
@@ -84,8 +116,8 @@ const Index = () => {
   const addToCart = async (userId, cartItem) => {
     console.log("action to be added to cart")
 
-    console.log("userId : ", userId);
-    console.log("cartItem : ", cartItem);
+    console.log("userId : ",userId);
+    console.log("cartItem : ",cartItem);
     const response = await fetch(backendURL + "/api/cart", {
       method: "POST",
       headers: {
@@ -94,11 +126,11 @@ const Index = () => {
       body: JSON.stringify({
         userID: userId,
         cartItem: cartItem,
-        email: email,
+        email:email
       }),
     });
     const data = await response.json();
-    console.log("data : ", data);
+    console.log("data : ",data);
     if (data.status === "success") {
       console.log("Items added to cart");
     } else {
