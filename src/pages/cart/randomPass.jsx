@@ -7,10 +7,20 @@ function YourComponent() {
   const [selectedOptions, setSelectedOptions] = useState([]);
   const [events, setEvents] = useState([]); // State for the list of events
   const [selectedEvents, setSelectedEvents] = useState([]); // State for selected events
+  const [rmpsix,setRmpsix]=useState([]);
+  const [rmpfour,setRmpfour]=useState([]);
 
   // Fetch event data from JSON when the component mounts
 
-  
+  const removeEvent = (index) => {
+    setSelectedEvents(
+      [
+        ...selectedEvents.splice(0,index),
+        ...selectedEvents.splice(index+1,selectedEvents.length)
+      ]
+    );
+  }
+
 
   // Function to handle option selection
   const handleOptionSelect = (selectedOption) => {
@@ -24,15 +34,12 @@ function YourComponent() {
       setSelectedOptions(
         selectedOptions.filter((item) => item.id !== option.id)
       );
-      setSelectedEvents(
-        selectedEvents.filter((item) => item.id !== option.id)
-      );
-      console.log(selectedEvents);
+      removeEvent(0);
     } else if (selectedOptions.length < 6 && selectedEvents.length < 6) {
       // If less than 6 options are selected, select the option
       setSelectedOptions([...selectedOptions, option]);
+      console.log(selectedOptions)
       setSelectedEvents([...selectedEvents,option]);
-      console.log(selectedEvents);
     }
   };
   const handleOptionSelectEvents4 = (option) => {
@@ -45,6 +52,7 @@ function YourComponent() {
     } else if (selectedOptions.length < 4) {
       // If less than 4 options are selected, select the option
       setSelectedOptions([...selectedOptions, option]);
+      console.log(selectedOptions)
     }
   };
 
@@ -63,7 +71,7 @@ function YourComponent() {
       <div className={Classes.OptionSelect}>
       <h2>Select an option:</h2>
         <label>
-          6 Random Pass
+          6 Random Tickets
           <input
             type="radio"
             value="A"
@@ -72,7 +80,7 @@ function YourComponent() {
           />
         </label>
         <label>
-          4 Random Pass
+          4 Random Tickets
           <input
             type="radio"
             value="B"
