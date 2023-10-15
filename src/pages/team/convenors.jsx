@@ -19,7 +19,7 @@ const Convenors = () => {
             <div class="h-[24rem]">
             <Image
                 className="mx-auto h-[18rem] w-full object-cover"
-                src="/team/aboutuspic.png"
+                src="https://res.cloudinary.com/dnmu26tku/image/upload/v1697371959/ocyvpsf8issdgtswafcu.jpg"
                 alt="woman"
                 loading="lazy"
                 width="640"
@@ -28,7 +28,7 @@ const Convenors = () => {
               </div>
               <div class="absolute bottom-0 inset-x-0 h-max mt-auto px-8 py-6 backdrop-blur bg-white/50">
                 <div>
-                  <h4 class="text-xl text-center font-bold dark:text-white">Name</h4>
+                  <h4 class="text-xl text-center font-bold dark:text-white">Shreya Jain</h4>
                   <span class="block text-center text-sm font-semibold text-black">Convenor</span>
                 </div>
               </div>
@@ -39,8 +39,8 @@ const Convenors = () => {
               <div class="h-[24rem]">
               <Image
                 className="mx-auto h-[18rem] w-full object-cover"
-                src="/team/Sariki.jpg"
-                alt="Sariki"
+                src="https://res.cloudinary.com/dnmu26tku/image/upload/v1697371959/pe83eqyag0cxjtccln1o.jpg"
+                alt="Jayesh"
                 loading="lazy"
                 width="640"
                 height="700"
@@ -48,7 +48,7 @@ const Convenors = () => {
               </div>
               <div class="absolute bottom-0 inset-x-0 h-max mt-auto px-8 py-6 backdrop-blur bg-white/50">
                 <div>
-                  <h4 class="text-xl text-center font-bold dark:text-white">Sariki Mohan Krishna</h4>
+                  <h4 class="text-xl text-center font-bold dark:text-white">Jayesh Dewangan</h4>
                   <span class="block text-center text-sm font-semibold text-black">Co-Convenor</span>
                 </div>
               </div>
@@ -66,7 +66,7 @@ const Convenors = () => {
               </div>
               <div class="absolute bottom-0 inset-x-0 h-max mt-auto px-8 py-6 backdrop-blur bg-white/50">
               <div>
-                  <h4 class="text-xl text-center font-bold dark:text-white">Name</h4>
+                  <h4 class="text-xl text-center font-bold dark:text-white">Sariki Mohan Krishna</h4>
                   <span class="block text-center text-sm font-semibold text-black">Convenor</span>
                 </div>
               </div>

@@ -35,7 +35,7 @@ const Tech = () => {
               <div class="h-[24rem]">
                 <Image
                   className="mx-auto h-[18rem] w-full object-cover"
-                  src="https://res.cloudinary.com/dnmu26tku/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1697365210/fmc/public/nreifyvn6omfz8lphrzp.jpg"
+                  src="https://res.cloudinary.com/dnmu26tku/image/upload/v1697367398/ins2omefttkflcaxhuos.jpg"
                   alt="shubham"
                   loading="lazy"
                   width="640"
