@@ -157,6 +157,17 @@
   display: none;
 }
 
+.SelectedItemsList{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.SelectedItemsList>*{
+  margin: 5px;
+}
+
 .SelectOption{
   display: flex;
   flex-direction: column;

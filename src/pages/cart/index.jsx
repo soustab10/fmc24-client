@@ -370,7 +370,7 @@ const Index = () => {
         </div>
           <div className={Classes.checkout}>
             <p className={Classes.TotalPrice}>Total Price: Rs.{sumOfSelectedItems}</p>
-            <ul className="flex flex-col justify-center align-middle">
+            <ul className={Classes.SelectedItemsList}>
               {selectedItems.map((itemId) => (
                 <li key={itemId}>
                   {combinedData.find((item) => item.id === itemId)?.Title}
