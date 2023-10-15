@@ -4,8 +4,6 @@ import Footer from "../landingpage/Footer";
 import combinedData from "./combined_data.json";
 import Image from "next/image";
 import getConfig from 'next/config';
-import axios from 'axios';
-// import QRCode from "qrcode.react";
 
 const Checkout = () => {
   const [name, setName] = useState("");
