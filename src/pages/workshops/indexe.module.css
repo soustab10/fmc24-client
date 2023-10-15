@@ -188,12 +188,12 @@
   }
 }
 .Ghost{
-  width: 40%;
-  height: 440px;
+  width: 387px;
+  height: 618px;
   justify-content: center;
   margin-top: 24px;
   margin-bottom: 24px;
-}
+  }
 
 @media only screen and (max-width:768px){
   .MainArea{

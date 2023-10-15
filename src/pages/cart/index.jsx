@@ -48,7 +48,7 @@ const Index = () => {
     // let i,j;
     const useremail=sessionStorage.getItem('email');
     console.log(useremail)
-    const data=await fetch("https://fmcbackend.onrender.com/api/carts",{
+    const data=await fetch(backendURL+"/api/carts",{
       method:"POST",
       headers:{
         "Content-Type":"application/json"

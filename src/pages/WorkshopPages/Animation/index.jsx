@@ -8,6 +8,8 @@ import Classes from "../indexe.module.css";
 const divStyle = {
     minHeight: "100px",
   };
+
+  const isLoggedIn = true;
   
 
 const Index = () => {
@@ -41,9 +43,9 @@ const Index = () => {
              <div className="w-[275px]  h-[125px] flex justify-center items-center glow-effect-orange">
              <Link href="../WorkshopPages/Media" className="text-[20px] hover:text-[36px] hover:font-semibold transition-all duration-5000 ease-in-out">Media</Link>
              </div>
-             <div className="w-[275px]  h-[125px] flex justify-center items-center glow-effect-purple">
+             {/* <div className="w-[275px]  h-[125px] flex justify-center items-center glow-effect-purple">
              <Link href="../WorkshopPages/Outreach" className="text-[20px] hover:text-[36px] hover:font-semibold transition-all duration-5000 ease-in-out">Outreach</Link> 
-             </div>
+             </div> */}
            </div>
         </div> 
   <div className={Classes.MajorBod} >
@@ -51,12 +53,12 @@ const Index = () => {
       <div class="flex flex-col text-center justify-center items-center  ">
         <Image src={"/Subhajeet.png"} width={387} height={350} className="rounded-tr-[25px] rounded-tl-[25px]" alt="null"></Image>
         <div class=" flex flex-rows h-[30px] justify-center font-bold text-3xl"><div className="ml-4 mt-5 font-bold text-[30px] p-[10px]">2D-Animation</div></div>
-        <a href="https://drive.google.com/file/d/15WUfJ3wn_mWCNDiFmcOw_6DlY3z7ch5P/view?usp=drive_link" className="text-black mt-10 italic hover:underline text-[20px]  px-10 p-1 ">-by Shubhajeet Dey</a>
+        <a href="https://www.instagram.com/calmchorofficial/" className="text-black mt-10 italic hover:underline text-[20px]  px-10 p-1 ">-by Shubhajeet Dey</a>
         <p class="text-justify mx-2 mt-8 w-[290px]">Shubhajeet Dey, a renowned Instagram artist, is the creative force behind Calmchor Cartoons. He is celebrated for his witty comics and animations, showcasing his talent as an illustrator and animator.
         </p>
         
         <div className="my-8 align-middle justify-evenly">
-            <button className="border px-6 py-2  border-black rounded-[20px] hover:text-[15px] hover:font-semibold transition-all duration-5000 ease-in-out text-black ">Checkout</button>
+            <button className="border px-6 py-2  border-black rounded-[20px] hover:text-[15px] hover:font-semibold transition-all duration-5000 ease-in-out text-black ">{isLoggedIn ? (<Link href="../../Cart">Checkout</Link>):(<Link href="../../login"></Link>)}</button>
         </div>
       </div>
     </div>

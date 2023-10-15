@@ -40,21 +40,21 @@ const Index = () => {
              <div className="w-[275px]  h-[125px] flex justify-center items-center glow-effect-orange">
              <Link href="../WorkshopPages/Media" className="text-[20px] hover:text-[36px] hover:font-semibold transition-all duration-5000 ease-in-out">Media</Link>
              </div>
-             <div className="w-[275px]  h-[125px] flex justify-center items-center glow-effect-purple">
+             {/* <div className="w-[275px]  h-[125px] flex justify-center items-center glow-effect-purple">
              <Link href="../WorkshopPages/Outreach" className="text-[20px] hover:text-[36px] hover:font-semibold transition-all duration-5000 ease-in-out">Outreach</Link> 
-             </div>
+             </div> */}
            </div>
         </div> 
   <div className={Classes.MajorBod} >
     <div className={Classes.CardMe}>
-      <div class="flex flex-col text-center justify-center items-center  px-6 py-4 ">
-        <Image src={"/workshop.png"} width={350} height={350} alt="null"></Image>
-        <div class=" flex flex-rows h-[30px] justify-center font-bold text-3xl"><div className="ml-4 font-normal text-[45px]">Lorem Ipsom</div></div>
-        <a href="https://drive.google.com/file/d/15WUfJ3wn_mWCNDiFmcOw_6DlY3z7ch5P/view?usp=drive_link" className="text-black my-3.5 italic hover:underline text-[25px]  px-10 ">-by Problem Statement</a>
-        <p class="text-justify mx-4 h-[60px] w-[250px]">Lorem ipsum dolor sit amet consectetur. Sed non placerat purus vitae in. Pellentesque et tempor tortor enim ac sit.
+      <div class="flex flex-col text-center justify-center items-center  ">
+        <Image src={"/Saurabh.png"} width={387} height={350} alt="null"  className="rounded-tr-[25px] rounded-tl-[25px]"></Image>
+        <div className=" flex flex-rows h-[30px] justify-center font-bold text-3xl"><div className="ml-4  font-bold text-[30px] p-[10px]">Panel Discussion</div></div>
+        <a href="https://instagram.com/saurabhshuklajourno?igshid=MzRlODBiNWFlZA==" className="text-black mt-5 italic hover:underline text-[20px]  px-10 p-1 ">-by Saurabh Shukla</a>
+        <p className="text-justify mx-2 mt-3 w-[310px]">Saurabh Shukla is a renowned journalist and TV anchor . He is  the Founder and Editor-in-Chief of NewsMobile , which is an application that helps you to fact check rumors to prevent misinformation from spreading amongst the masses , apart from keeping you updated with the daily news across various domains in different parts of the world. He is also an expert in Geopolitics. 
         </p>
         
-        <div className="my-8 align-middle justify-evenly">
+        <div className="my-4 align-middle justify-evenly">
             <button className="border px-6 py-2 border-black rounded-[20px] hover:text-[15px] hover:font-semibold transition-all duration-5000 ease-in-out text-black ">Checkout</button>
         </div>
       </div>

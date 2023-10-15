@@ -40,9 +40,9 @@ const Index = () => {
              <div className="w-[275px]  h-[125px] flex justify-center items-center glow-effect-orange">
              <Link href="../WorkshopPages/Media" className="text-[20px] hover:text-[36px] hover:font-semibold transition-all duration-5000 ease-in-out">Media</Link>
              </div>
-             <div className="w-[275px]  h-[125px] flex justify-center items-center glow-effect-purple">
+             {/* <div className="w-[275px]  h-[125px] flex justify-center items-center glow-effect-purple">
              <Link href="../WorkshopPages/Outreach" className="text-[20px] hover:text-[36px] hover:font-semibold transition-all duration-5000 ease-in-out">Outreach</Link> 
-             </div>
+             </div> */}
            </div>
         </div> 
   <div className={Classes.MajorBod} >
@@ -50,7 +50,7 @@ const Index = () => {
       <div class="flex flex-col text-center justify-center items-center">
         <Image src={"/Vimal.png"} width={387} height={350} className="rounded-tr-[25px] rounded-tl-[25px]" alt="null"></Image>
         <div class=" flex flex-rows h-[30px] justify-center font-bold text-3xl"><div className="ml-4 mt-5 font-bold text-[30px] p-[10px]">Product Design</div></div>
-        <a href="https://drive.google.com/file/d/15WUfJ3wn_mWCNDiFmcOw_6DlY3z7ch5P/view?usp=drive_link" className="text-black mt-10 italic hover:underline text-[20px]  px-10 p-1">-by Vimal Krishnattri </a>
+        <a href="https://instagram.com/artloverjv?igshid=NjIwNzIyMDk2Mg==" className="text-black mt-10 italic hover:underline text-[20px]  px-10 p-1">-by Vimal Krishnattri </a>
         <p class="text-justify mt-10 mx-2  w-[290px]">Vimal Krishnattri is a skilled graphic designer and illustrator. He showcases AI-generated artwork and adept photoshopping on his Instagram account artloverjv.
         </p>
         
