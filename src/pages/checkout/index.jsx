@@ -33,6 +33,7 @@ const Checkout = () => {
       });
     }catch(err){
       console.log("submitted");
+      alert("Submitted we will update you soon");
     }
 
   };
