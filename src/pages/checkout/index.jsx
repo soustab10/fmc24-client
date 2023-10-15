@@ -3,6 +3,7 @@ import Header from "../landingpage/Header";
 import Footer from "../landingpage/Footer";
 import combinedData from "./combined_data.json";
 import Image from "next/image";
+import getConfig from 'next/config';
 // import QRCode from "qrcode.react";
 
 const Checkout = () => {
@@ -44,7 +45,34 @@ const Checkout = () => {
   };
 
   useEffect(() => {
+    const { publicRuntimeConfig } = getConfig();
+  const backendURL = publicRuntimeConfig.NEXT_PUBLIC_REACT_APP_BACKEND_URI;
     // Function to fetch item data from JSON or your data source
+    const getInitialUsers=async ()=>{
+      // let i,j;
+      const useremail=sessionStorage.getItem('email');
+      console.log(useremail)
+      const data=await fetch(backendURL+"/api/carts",{
+        method:"POST",
+        headers:{
+          "Content-Type":"application/json"
+        },
+        body:JSON.stringify({
+          email:useremail
+        })
+      });
+      let cart,cartArray_temp=[],cartArray;
+      const response=await data.json();
+      console.log(response.cartItems)
+      cart=response.cartItems
+      for(let j in cart){
+        cartArray_temp.push(cart[j].id)
+      }
+      cartArray=cartArray_temp
+      setSelectedItems(cartArray);
+    }
+
+
     const fetchItemData = async () => {
       try {
         const data = combinedData;
@@ -58,9 +86,18 @@ const Checkout = () => {
     fetchItemData();
 
     // Load selected item IDs from local storage
-    const storedSelectedItems =
-      JSON.parse(localStorage.getItem("selectedItems")) || [];
-    setSelectedItems(storedSelectedItems);
+    // const storedSelectedItems =
+      // JSON.parse(localStorage.getItem("selectedItems")) || [];
+      getInitialUsers();
+    
+  }, []);
+
+  useEffect(() => {
+    const storedItems = sessionStorage.getItem("cartItems");
+    console.log("storedItems", storedItems)
+    const initialItems = storedItems ? JSON.parse(storedItems) : [];
+    setSelectedItems(initialItems);
+    console.log(initialItems);
   }, []);
 
   const getItemDetails = (itemId) => {
