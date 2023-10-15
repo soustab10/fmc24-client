@@ -7,8 +7,11 @@ import axios from 'axios';
 import Image from 'next/image';
 import getConfig from 'next/config';
 import { BeatLoader } from 'react-spinners';
-const LogIn = () => {
+import {useAuth} from "../../context/auth";
 
+const LogIn = () => {
+    
+    const {state, dispatch} = useAuth();
     const [clicked, setClicked] = React.useState(false);
     const { publicRuntimeConfig } = getConfig();
 
@@ -60,6 +63,11 @@ const LogIn = () => {
                 console.log(response.data.message)
                 sessionStorage.setItem('isNewUser', isNewUser);
                 sessionStorage.setItem('isLoggedIn', true);
+                
+                const user = response.data.user;
+
+                dispatch({type: "LOGIN", user})
+
                 if (isNewUser) {
                     Router.push('/register');
                 } else {
