@@ -7,12 +7,8 @@ function YourComponent() {
   const [selectedOptions, setSelectedOptions] = useState([]);
   const [events, setEvents] = useState([]); // State for the list of events
   const [selectedEvents, setSelectedEvents] = useState([]); // State for selected events
-
-  // Fetch event data from JSON when the component mounts
-
-  
-
-  // Function to handle option selection
+  const [selectedEvents4, setSelectedEvents4] = useState([]);
+  const [selectedEvents6, setSelectedEvents6] = useState([]);
   const handleOptionSelect = (selectedOption) => {
     setOption(selectedOption);
     setSelectedEvents([]); // Clear the selected events when the option changes
@@ -25,26 +21,27 @@ function YourComponent() {
         selectedOptions.filter((item) => item.id !== option.id)
       );
       setSelectedEvents(
-        selectedEvents.filter((item) => item.id !== option.id)
+        selectedEvents.filter((item) => item !== option.Title)
       );
-      console.log(selectedEvents);
     } else if (selectedOptions.length < 6 && selectedEvents.length < 6) {
       // If less than 6 options are selected, select the option
       setSelectedOptions([...selectedOptions, option]);
-      setSelectedEvents([...selectedEvents,option]);
-      console.log(selectedEvents);
+      console.log(selectedOptions)
+      setSelectedEvents([...selectedEvents,option.Title]);
     }
   };
   const handleOptionSelectEvents4 = (option) => {
     if (selectedOptions.includes(option)) {
       // If the option is already selected, deselect it
-      setSelectedOptions(selectedOptions.filter((item) => item !== option));
+      setSelectedOptions(selectedOptions.filter((item) => item.id !== option.id));
       setSelectedEvents(
-        selectedEvents.filter((item) => item.id !== option.id)
+        selectedEvents.filter((item) => item !== option.Title)
       );
     } else if (selectedOptions.length < 4) {
       // If less than 4 options are selected, select the option
       setSelectedOptions([...selectedOptions, option]);
+      setSelectedEvents([...selectedEvents,option.Title]);
+      console.log(selectedOptions)
     }
   };
 
@@ -63,7 +60,7 @@ function YourComponent() {
       <div className={Classes.OptionSelect}>
       <h2>Select an option:</h2>
         <label>
-          6 Random Pass
+          6 Random Tickets
           <input
             type="radio"
             value="A"
@@ -72,7 +69,7 @@ function YourComponent() {
           />
         </label>
         <label>
-          4 Random Pass
+          4 Random Tickets
           <input
             type="radio"
             value="B"

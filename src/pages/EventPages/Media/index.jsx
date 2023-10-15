@@ -6,7 +6,7 @@ import Link from "next/link";
 import Classes from "../indexe.module.css"
 
 import Image from "next/image";
-
+import Definer from "../../events/definer";
 const divStyle = {
     minHeight: "100px",
   };
@@ -54,9 +54,7 @@ const Media = () => {
     Participants have to come in pairs at the allotted location.They will be provided with the topics randomly These topics can range from an idea or words to an opening phrase.You will get a partner with whom you have to make the story on the basis of chit system.You and your partner have to complete the story by adding sentences alternatively.A twist in the middle of the story will be given by the judges to spice things up a bit.
     </p>
     <a href="https://drive.google.com/file/d/1VbF0YBAfZmryC-23_R4iv_WwSd9JqEYm/view?usp=drive_link" className="text-white-800 my-3.5 italic hover:underline">View Problem Statement</a>
-    <div className="my-3.5 align-middle justify-evenly">
-        <button className="border p-2 border-white rounded-[15px] hover:text-[15px] hover:font-semibold transition-all duration-5000 ease-in-out ">REGISTRATION WILL BE LIVE SOON</button>
-    </div>
+     <Definer/>
   </div>
 </div>
 
@@ -67,9 +65,7 @@ const Media = () => {
     Whatever the news may be, wherever it may be, regardless of how harsh the circumstances might be, you can always count on a reporter to deliver the news to you in the comfort of your home. In this event, you will put yourself in the shoes of such on-site reporters. Analyse the scene, collect your thoughts and speak!
     </p>
     <a href="https://drive.google.com/file/d/1QYqLXkxnJQbVZgxKUFUb6k9_K64vJ4N4/view?usp=drive_link" className="text-white-800 my-3.5 italic hover:underline">View Problem Statement</a>
-    <div className="my-3.5 align-middle justify-evenly">
-        <button className="border p-2 border-white rounded-[15px] hover:text-[15px] hover:font-semibold transition-all duration-5000 ease-in-out ">REGISTRATION WILL BE LIVE SOON</button>
-    </div>
+     <Definer/>
   </div>
 </div>
 
@@ -80,9 +76,7 @@ const Media = () => {
     Satarical approach to news reporting! An article will be given to every participants and they will have to make it funny..
     </p>
     <a href="https://drive.google.com/file/d/1eMLFYATK2fvBMybOkn38oAEnfStQUsuH/view?usp=drive_link" className="text-white-800 my-3.5 italic hover:underline">View Problem Statement</a>
-    <div className="my-3.5 align-middle justify-evenly">
-        <button className="border p-2 border-white rounded-[15px] hover:text-[15px] hover:font-semibold transition-all duration-5000 ease-in-out ">REGISTRATION WILL BE LIVE SOON</button>
-    </div>
+     <Definer/>
   </div>
 </div>
 
@@ -93,9 +87,7 @@ const Media = () => {
     Embark on a thrilling journey of creativity in our script writing competition! Ignite your imagination and weave mesmerizing tales. Showcase your storytelling finesse and make your script come alive in this exhilarating challenge.
     </p>
     <a href="https://drive.google.com/file/d/1Us5nh2mnh1yufjMa7xq6fod6BghL3IAC/view?usp=drive_link" className="text-white-800 my-3.5 italic hover:underline">View Problem Statement</a>
-    <div className="my-3.5 align-middle justify-evenly">
-        <button className="border p-2 border-white rounded-[12.5px] hover:text-[15px] hover:font-semibold transition-all duration-5000 ease-in-out ">REGISTRATION WILL BE LIVE SOON</button>
-    </div>
+  <Definer/>
   </div>
 </div>
 </div>

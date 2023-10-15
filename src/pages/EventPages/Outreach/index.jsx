@@ -4,7 +4,7 @@ import Footer from "../../landingpage/Footer";
 import Index from "../../events";
 import Link from "next/link";
 import Classes from "../indexe.module.css";
-
+import Definer from "../../events/definer";
 import Image from "next/image";
 
 const divStyle = {
@@ -54,9 +54,7 @@ const Outreach = () => {
     The participants need to make an advertisement on the provided, within 36 hrs. The themes for the same would be released at the start of theevent and participants need to submit their entries in due time.
     </p>
     <a href="https://drive.google.com/file/d/1gnNykqXp5YDkPydygZo4D-IhukmH9KH4/view?usp=drive_link" className="text-white-800 my-3.5 italic hover:underline">View Problem Statement</a>
-    <div className="my-3.5 align-middle justify-evenly">
-        <button className="border p-2 border-white rounded-[15px] hover:text-[15px] hover:font-semibold transition-all duration-5000 ease-in-out ">REGISTRATION WILL BE LIVE SOON</button>
-    </div>
+     <Definer/>
   </div>
 </div>
 
@@ -68,9 +66,7 @@ const Outreach = () => {
     </p>
     <a href="https://drive.google.com/file/d/1sB71TnZAhPaZH3NUMgVYNG2HqgQYBkQ-/view?usp=drive_link
 " className="text-white-800 my-3.5 italic hover:underline">View Problem Statement</a>
-    <div className="my-3.5 align-middle justify-evenly">
-        <button className="border p-2 border-white rounded-[15px] hover:text-[15px] hover:font-semibold transition-all duration-5000 ease-in-out ">REGISTRATION WILL BE LIVE SOON</button>
-    </div>
+     <Definer/>
   </div>
 </div>
 
@@ -81,9 +77,7 @@ const Outreach = () => {
     You will have to give a live solo open-mic performance of your rant. It could be a monologue, an interview, a prank or anything else that can captivate the interest of the public
     </p>
     <a href="https://drive.google.com/file/d/1xUAcYefHYvTkBAYSGQ9ROoLctT9ddDwO/view?usp=drive_link" className="text-white-800 my-3.5 italic hover:underline">View Problem Statement</a>
-    <div className="my-3.5 align-middle justify-evenly">
-        <button className="border p-2 border-white rounded-[12.5px] hover:text-[15px] hover:font-semibold transition-all duration-5000 ease-in-out ">REGISTRATION WILL BE LIVE SOON</button>
-    </div>
+   <Definer/>
   </div>
 </div>
  
@@ -94,9 +88,7 @@ const Outreach = () => {
     Step into the world of storytelling through lenses and frames, where truth meets creativity, and reality is transformed into compelling narratives. Join us for &apos;Capturing Reality: The Art of Documentary Filmmaking,&apos; a captivating and enlightening documentary-making event that dives deep into the fascinating realm of non-fiction storytelling. Participants are required to prepare a documentary film on any topic about any genre.
     </p>
     <a href="https://drive.google.com/file/d/1sZVovLahZ1jiyv31_uyQYAdKmIwyHtZ3/view?usp=drive_link" className="text-white-800 my-3.5 italic hover:underline">View Problem Statement</a>
-    <div className="my-3.5 align-middle justify-evenly">
-        <button className="border p-2 border-white rounded-[15px] hover:text-[15px] hover:font-semibold transition-all duration-5000 ease-in-out ">REGISTRATION WILL BE LIVE SOON</button>
-    </div>
+     <Definer/>
   </div>
 </div>
 </div>
