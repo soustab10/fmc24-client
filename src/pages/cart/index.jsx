@@ -160,6 +160,8 @@ const Index = () => {
     }
   }
   const handleCheckboxChange = (itemId, item) => {
+    console.log("item",item);
+    console.log("itemId",itemId)
     const user = sessionStorage.getItem('userData');
     const userInfo = JSON.parse(user);
     console.log(userInfo);
@@ -367,7 +369,7 @@ const Index = () => {
                           <input
                             type="checkbox"
                             checked={selectedItems.includes(item.id)}
-                            onChange={() => handleCheckboxChange(item.id)}
+                            onChange={() => handleCheckboxChange(item.id,item)}
                             className="before:content[''] peer relative h-5 w-5 cursor-pointer appearance-none rounded-md border border-blue-gray-200 transition-all before:absolute before:top-2/4 before:left-2/4 before:block before:h-12 before:w-12 before:-translate-y-2/4 before:-translate-x-2/4 before:rounded-full before:bg-blue-gray-500 before:opacity-0 before:transition-opacity checked:border-green-500 checked:bg-green-500 checked:before:bg-green-500 hover:before:opacity-10"
                           />
 
@@ -426,7 +428,7 @@ const Index = () => {
                         <input
                           type="checkbox"
                           checked={selectedItems.includes(item.id)}
-                          onChange={() => handleCheckboxChange(item.id)}
+                          onChange={() => handleCheckboxChange(item.id,item)}
                           className="before:content[''] peer relative h-5 w-5 cursor-pointer appearance-none rounded-md border border-blue-gray-200 transition-all before:absolute before:top-2/4 before:left-2/4 before:block before:h-12 before:w-12 before:-translate-y-2/4 before:-translate-x-2/4 before:rounded-full before:bg-blue-gray-500 before:opacity-0 before:transition-opacity checked:border-green-500 checked:bg-green-500 checked:before:bg-green-500 hover:before:opacity-10"
                         />
 
