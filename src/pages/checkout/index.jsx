@@ -5,6 +5,7 @@ import combinedData from "./combined_data.json";
 import Image from "next/image";
 import getConfig from 'next/config';
 import axios from 'axios';
+import Router from "next/router";
 // import QRCode from "qrcode.react";
 
 const Checkout = () => {
@@ -25,6 +26,8 @@ const Checkout = () => {
     }catch(err){
       console.log("submitted");
     }
+    
+    // Router.push('/dashboard');
 
   };
   const textBold = {
