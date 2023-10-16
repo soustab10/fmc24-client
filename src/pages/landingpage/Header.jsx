@@ -131,6 +131,9 @@ const Header = () => {
                   <Link href="/team" className="menu-list">
                     team
                   </Link>
+                  <Link href="/faq" className="menu-list">
+                    faq
+                  </Link>
                   {
                     isLoggedin ? (<> <Link href="/logout" className="menu-list">
                     logout
