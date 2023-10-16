@@ -84,24 +84,26 @@ const Checkout = () => {
       });
 
     try {
-      try {
-        let systemicData;
-        selectedItems.map((e) => {
-          
-
-        })
-
+      var t=0;
+      var val=[];
+      for(var i=0;i<selectedItems.length;i++){
+        const selectedItem = getItemDetails(selectedItems[i]);
+        let x=selectedItem.Title;
+        x+=':'
+        x+=selectedItem.price;
+        val.push(x);
+        t=t+selectedItem.price;
       }
-      catch (err) {
-        console.log(err)
-      }
+      console.log(t)
+      console.log(val)
 
       console.log(prices)
+     
       //dev gupta:(God)
       // let response = await fetch(`https://docs.google.com/forms/d/e/1FAIpQLSfmxwNrwZhBfLMMnaCpydwBV9Juozd6Uty0zwAgMRZNRDdMgg/formResponse?&submit=Submit?usp=pp_url&entry.2058644330=${name}&entry.666527389=${phone}&entry.352462634=${email}&entry.161165018=${insti}&entry.169406111=${transcid}&entry.1113568387=${JSON.stringify(selectedItems)}`, { 
       //fmc
       //https://docs.google.com/forms/d/e/1FAIpQLSdkNcyta0lRVHc7M4QvVqHnTXuI5G8yP_pK1wZv0EXqwjgA8g/viewform?usp=pp_url&entry.997687481=Shubham&entry.1447534415=6201060889&entry.1224001380=shubham.kikayujs&entry.1589365680=ieghsfuia&entry.2107420521=56789u&entry.248033448=123425twrgefsd&entry.953972318=qerwt435&entry.1901095039=1e3qrwge
-      let response = await fetch(`https://docs.google.com/forms/d/e/1FAIpQLSdkNcyta0lRVHc7M4QvVqHnTXuI5G8yP_pK1wZv0EXqwjgA8g/formResponse?&submit=Submit?usp=pp_url&entry.997687481=${name}&entry.1447534415=${phone}&entry.1224001380=${email}&entry.1589365680=${insti}&entry.2107420521=H${transcid}&entry.248033448=${JSON.stringify(selectedItems)}&entry.953972318=${prices}&entry.1901095039=${naming}`, {
+      let response = await fetch(`https://docs.google.com/forms/d/e/1FAIpQLSdkNcyta0lRVHc7M4QvVqHnTXuI5G8yP_pK1wZv0EXqwjgA8g/formResponse?&submit=Submit?usp=pp_url&entry.997687481=${name}&entry.1447534415=${phone}&entry.1224001380=${email}&entry.1589365680=${insti}&entry.2107420521=H${transcid}&entry.248033448=${val}&entry.953972318=${t}&entry.1901095039=${naming}`, {
 
         method: "POST",
       });
@@ -195,9 +197,20 @@ const Checkout = () => {
     getInitialUsers();
 
   }, []);
+  useEffect(()=>{
+    try{
+      const x=sessionStorage.getItem("total");
+      setPrices(x);
+
+    }catch(err){
+
+      console.log(err)
+    }
+  })
 
   useEffect(() => {
     const storedItems = sessionStorage.getItem("cartItems");
+
     console.log("storedItems", storedItems)
     const initialItems = storedItems ? JSON.parse(storedItems) : [];
     setSelectedItems(initialItems);
@@ -215,7 +228,7 @@ const Checkout = () => {
     if (item) {
       return acc + item.price;
     }
-    setPrices(acc)
+    // setPrices(acc)
     return acc;
   }, 0);
 
