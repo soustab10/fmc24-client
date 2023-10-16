@@ -52,7 +52,7 @@ const DashBoard = () => {
             const storedUserData = sessionStorage.getItem('userData');
             if (storedUserData) {
                 const parsedUserData = JSON.parse(storedUserData);
-                const user = parsedUserData.user.userID || parsedUserData.user; // Adjust this based on your API response structure
+                const user = parsedUserData.user.userID || parsedUserData.user; 
 
                 setUserData({
                     name: user.name,
@@ -149,11 +149,11 @@ const DashBoard = () => {
         Router.push("/register");
     }
 
-    if(!isAuthenticated){
-        return <h1>Not authenticated. Please log in</h1>
-    }
+    // if(!isAuthenticated){
+    //     return <h1>Not authenticated. Please log in</h1>
+    // }
 
-    console.log("state", state);
+    // console.log("state", state);
 
     return (
         <div>
