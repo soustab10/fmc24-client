@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Classes from "./styles/Footer.module.css";
 import { ClassNames } from "@emotion/react";
 import Image from "next/image";
-// import axios from "axios";
+import axios from "axios";
 import getConfig from 'next/config';
 const Footer = () => {
   const [name, setName] = useState("");

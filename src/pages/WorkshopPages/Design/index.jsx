@@ -4,6 +4,8 @@ import Footer from "../../landingpage/Footer";
 import Link from "next/link";
 import Image from "next/image";
 import Classes from "../indexe.module.css";
+import {useAuth} from "../../../context/auth";
+import { useEffect } from "react";
 
 const divStyle = {
     minHeight: "100px",
@@ -11,6 +13,14 @@ const divStyle = {
   
 
 const Index = () => {
+  const {state} = useAuth();
+  const {isAuthenticated} = state;
+  const [isLoggedin, setIsLoggedin] = React.useState(false);
+  useEffect(()=>{
+    if(isAuthenticated){
+      setIsLoggedin(true);
+    }
+  },[state])
     return (
 <div className={Classes.FullPage}>
             <Header/>
@@ -55,7 +65,24 @@ const Index = () => {
         </p>
         
         <div className="my-8 align-middle justify-evenly">
-            <button className="border px-6 py-2 border-black rounded-[20px] hover:text-[15px] hover:font-semibold transition-all duration-5000 ease-in-out text-black ">Checkout</button>
+        {isLoggedin ? (
+              <a>
+                  <Link href="../cart">
+                  <button className="border mb-10 px-6 py-2 border-black rounded-[20px] hover:text-[15px] hover:font-semibold transition-all duration-5000 ease-in-out text-black">
+                    Go to Cart
+                  </button>
+                  </Link>
+                  
+                </a>
+              ) : (
+              <a>
+                <Link href="../login">
+                <button className="border mb-10 px-6 py-2 border-black rounded-[20px] hover:text-[15px] hover:font-semibold transition-all duration-5000 ease-in-out text-black">
+                    Login
+                  </button>
+                </Link>
+                </a>
+              )}
         </div>
       </div>
     </div>
