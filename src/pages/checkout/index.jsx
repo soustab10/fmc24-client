@@ -7,7 +7,6 @@ import getConfig from 'next/config';
 import Router from "next/router";
 import axios from 'axios';
 import { v4 as uuidv4 } from 'uuid';
-
 // import QRCode from "qrcode.react";
 
 const Checkout = () => {
@@ -28,6 +27,7 @@ const Checkout = () => {
   const [filename, setFilename] = useState('');
   const [url, setUrl] = useState('');
   const [prices, setPrices] = useState(0);
+  const [showScanner, setShowScanner] = useState(false);
   const handleFileChange = async (event) => {
     setFile(event.target.files[0]);
     console.log(file)
@@ -84,21 +84,21 @@ const Checkout = () => {
       });
 
     try {
-      var t=0;
-      var val=[];
-      for(var i=0;i<selectedItems.length;i++){
+      var t = 0;
+      var val = [];
+      for (var i = 0; i < selectedItems.length; i++) {
         const selectedItem = getItemDetails(selectedItems[i]);
-        let x=selectedItem.Title;
-        x+=':'
-        x+=selectedItem.price;
+        let x = selectedItem.Title;
+        x += ':'
+        x += selectedItem.price;
         val.push(x);
-        t=t+selectedItem.price;
+        t = t + selectedItem.price;
       }
       console.log(t)
       console.log(val)
 
       console.log(prices)
-     
+
       //dev gupta:(God)
       // let response = await fetch(`https://docs.google.com/forms/d/e/1FAIpQLSfmxwNrwZhBfLMMnaCpydwBV9Juozd6Uty0zwAgMRZNRDdMgg/formResponse?&submit=Submit?usp=pp_url&entry.2058644330=${name}&entry.666527389=${phone}&entry.352462634=${email}&entry.161165018=${insti}&entry.169406111=${transcid}&entry.1113568387=${JSON.stringify(selectedItems)}`, { 
       //fmc
@@ -197,12 +197,12 @@ const Checkout = () => {
     getInitialUsers();
 
   }, []);
-  useEffect(()=>{
-    try{
-      const x=sessionStorage.getItem("total");
+  useEffect(() => {
+    try {
+      const x = sessionStorage.getItem("total");
       setPrices(x);
 
-    }catch(err){
+    } catch (err) {
 
       console.log(err)
     }
@@ -336,7 +336,19 @@ const Checkout = () => {
 
           <div class=" flex-1  h-auto max-w-4xl mx-auto bg-white rounded-3xl shadow-xl">
             <div class="flex flex-col md:flex-row">
-              <div className=' flex items-center justify-center  md:w-1/2 '>
+              {showScanner ? (<>
+                <div className=' flex items-center justify-center  md:w-1/2 '>
+
+                  <Image
+                    src={"https://res.cloudinary.com/shubhamiitbhu/image/upload/v1697495693/payment/cyxaib9xqen474rg6qvn.jpg"}
+                    width={100}
+                    height={100}
+                    className=" md:h-full sm:h-fit w-[70vw] md:w-screen md:rounded-tl-3xl md:rounded-bl-3xl rounded-tl-3xl  max-md:rounded-tr-3xl"
+                    alt="signup"
+                  />
+
+                </div>
+              </>) : (<><div className=' flex items-center justify-center  md:w-1/2 '  >
 
                 <Image
                   src={require("./static/clip.png")}
@@ -350,7 +362,10 @@ const Checkout = () => {
                   Complete your purchase</h1>
                 <h2 class="absolute text-xl text-center text-white font-semibold top-20 mt-32 md:mt-32 px-14 tracking-wide">
                   Selected Items:</h2>
-                <ul class="absolute text-lg text-center text-white font-semibold top-28 mt-40 md:mt-40 px-14 tracking-wide">
+                 
+                <ul class="absolute text-lg text-center text-white font-semibold top-28 mt-40 md:mt-40 px-14 tracking-wide"
+
+                >
                   {selectedItems.map((itemId) => {
                     const selectedItem = getItemDetails(itemId);
                     if (selectedItem) {
@@ -367,7 +382,8 @@ const Checkout = () => {
                 <h3 className="absolute text-lg md:text-xl mb-2 text-center text-white font-semibold  mt-64 md:mt-64 border-white border-2 p-2 rounded-lg px-4 "> Total Amount to be paid: {sumOfSelectedItems} </h3>
 
 
-              </div>
+              </div></>)}
+
               <div class="flex items-center justify-center p-6 sm:p-12 md:w-1/2">
 
                 <div class="w-full">
@@ -435,14 +451,23 @@ const Checkout = () => {
 
                     />
 
-                    <div className='text-center'>
+                    <div className="flex-row">
                       <button type="submit"
                         class="mt-7 ml-12 px-4 py-2 border flex gap-2 border-slate-200 rounded-lg text-slate-700 hover:border-slate-400 hover:text-slate-900 hover:shadow transition duration-15 bg-lime-400 ">
 
                         <span>Submit</span>
                       </button>
+
                     </div>
                   </form>
+                  <button type="submit"
+                    onClick={() => setShowScanner(!showScanner)}
+                    class="mt-7 ml-12 px-4 py-2 border flex gap-2 border-slate-200 rounded-lg text-slate-700 hover:border-slate-400 hover:text-slate-900 hover:shadow transition duration-15 bg-lime-400 ">
+                    {
+                      showScanner ? (<span>Hide QR</span>) : (<span>Show QR</span>)
+                    }
+
+                  </button>
 
 
                 </div>
