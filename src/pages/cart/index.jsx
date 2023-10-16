@@ -202,6 +202,10 @@ const Index = () => {
     }
     return acc;
   }, 0);
+  useEffect(()=>{
+    sessionStorage.setItem("total",sumOfSelectedItems);
+
+  },[sumOfSelectedItems])
 
   const handleOptionSelect = (option) => {
     setSelectedOption(option);
