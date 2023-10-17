@@ -112,6 +112,21 @@ const Checkout = () => {
       alert("Submitted we will update you soon");
       const useremail = sessionStorage.getItem('email');
       console.log(useremail)
+
+      
+      // add current cart to registered events
+
+      // const response2=await fetch(backendURL+"/api/events/add",{
+      //   method:"POST",
+      //   body:{
+      //     email:useremail,
+      //     appendToRegisteredEvents:selectedItems
+      //   }
+      // })
+      // const data3=await response2.json();
+      // console.log(data3);
+
+
       // const resp=await fetch(backendURL + "/api/carts", {
       //     method: "DELETE",
       //     headers: {
@@ -122,8 +137,8 @@ const Checkout = () => {
       //     }),
       //   });
       //   const data2 = await resp.json();
-      // console.log(data2);
-      Router.push('/dashboard');
+      //   console.log(data2);
+        Router.push('/dashboard');
     }
 
   };
