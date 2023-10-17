@@ -307,7 +307,7 @@ const Guests = ({ imageSrc }) => {
                     </div>
                   </div>
                 </Carousel>
-                <Link href="/comingsoon">
+                <Link href="/workshops">
                   <button className="border-solid border-2 mt-6 text-white rounded-3xl h-10 w-60 text-lg transition duration-300 transform  hover:shadow-xl hover:text-blue-950 bg-transparent hover:bg-white">
                     {text5}
                   </button>
@@ -528,7 +528,7 @@ const Guests = ({ imageSrc }) => {
                     </div>
                   </div>
                 </Carousel>
-                <Link href="/comingsoon">
+                <Link href="/workshops">
                   <button className="border-solid border-2 mt-6 text-white rounded-3xl h-10 w-60 text-lg transition duration-300 transform  hover:shadow-xl hover:text-blue-950 bg-transparent hover:bg-white">
                     {text5}
                   </button>
