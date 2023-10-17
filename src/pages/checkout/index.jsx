@@ -562,13 +562,25 @@ const Checkout = () => {
           </div>
           <div>
             <label htmlFor="file" class="text-xs font-semibold text-gray-500">Upload Screenshot of Payment</label>
-            <img src="https://res.cloudinary.com/shubhamiitbhu/image/upload/v1697495693/payment/cyxaib9xqen474rg6qvn.jpg" id="qrcode" className=" h-60 w-60"></img>
+            <button
+            type="button"
+            onClick={() => setShowScanner(!showScanner)}
+             class="mt-4 inline-flex w-full items-center justify-center rounded bg-gray-600/60 py-2.5 px-4 text-base font-semibold tracking-wide text-white text-opacity-80 outline-none ring-offset-2 transition hover:text-opacity-100  sm:text-lg">
+            {
+                      showScanner ? (<span>Hide QR</span>) : (<span>Show QR</span>)
+            }
+            </button>
+            {
+            showScanner ? (<>
+                 <img src="https://res.cloudinary.com/shubhamiitbhu/image/upload/c_thumb,w_200,g_face/v1697544418/Gens/i74wgd922idblu0gwdq8.svg" id="qrcode" className=" h-60 w-60"></img>
+              </>) : ( null)
+            }   
             <input 
             type="file"
             id="file"
             required
             onChange={(e) => setScreenShot(e.target.files[0])}
-            className="mt-1 block w-full rounded text-xs border-gray-300 bg-gray-50 py-3 px-4  placeholder-gray-300 shadow-sm outline-none transition focus:ring-2 focus:ring-purple-500" />
+            className="mt-2 block w-full rounded text-xs border-gray-300 bg-gray-50 py-3 px-4  placeholder-gray-300 shadow-sm outline-none transition focus:ring-2 focus:ring-purple-500" />
           </div>
           
           
