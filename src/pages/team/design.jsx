@@ -17,7 +17,7 @@ const Design = () => {
             <div class="h-[24rem]">
             <Image
                 className="mx-auto h-[18rem] w-full object-cover"
-                src="/team/aboutuspic.png"
+                src="/team/Samar.jpg"
                 alt="woman"
                 loading="lazy"
                 width="640"
@@ -26,7 +26,7 @@ const Design = () => {
               </div>
               <div class="absolute bottom-0 inset-x-0 h-max mt-auto px-8 py-6 backdrop-blur bg-white/50">
                 <div>
-                  <h4 class="text-xl text-center font-bold dark:text-white">Name</h4>
+                  <h4 class="text-xl text-center font-bold dark:text-white">Samar Singh Randhawa</h4>
                   <span class="block text-center text-sm font-semibold text-black">Design Head</span>
                 </div>
               </div>
@@ -35,7 +35,7 @@ const Design = () => {
             <div class="h-[24rem]">
             <Image
                 className="mx-auto h-[18rem] w-full object-cover"
-                src="/team/aboutuspic.png"
+                src="/team/Princy.jpg"
                 alt="woman"
                 loading="lazy"
                 width="640"
@@ -44,31 +44,12 @@ const Design = () => {
               </div>
               <div class="absolute bottom-0 inset-x-0 h-max mt-auto px-8 py-6 backdrop-blur bg-white/50">
                 <div>
-                  <h4 class="text-xl text-center font-bold dark:text-white">Name</h4>
-                  <span class="block text-center text-sm font-semibold text-black">Design Head</span>
-                </div>
-              </div>
-            </div>
-            <div class="group relative rounded-3xl  space-y-4 overflow-hidden border-solid border-2">
-            <div class="h-[24rem]">
-            <Image
-                className="mx-auto h-[18rem] w-full object-cover"
-                src="/team/aboutuspic.png"
-                alt="woman"
-                loading="lazy"
-                width="640"
-                height="805"
-              />
-              </div>
-              <div class="absolute bottom-0 inset-x-0 h-max mt-auto px-8 py-6 backdrop-blur bg-white/50">
-              <div>
-                  <h4 class="text-xl text-center font-bold dark:text-white">Name</h4>
+                  <h4 class="text-xl text-center font-bold dark:text-white">Princy Sinha</h4>
                   <span class="block text-center text-sm font-semibold text-black">Design Head</span>
                 </div>
               </div>
             </div>
             
-              
             </div>
           </div>
         </div>
