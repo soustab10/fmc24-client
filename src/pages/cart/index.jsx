@@ -283,7 +283,7 @@ const Index = () => {
                   className="text-[20px] hover:text-[25px] hover:font-semibold transition-all duration-5000 ease-in-out"
                   onClick={() => handleOptionSelect("C")}
                 >
-                  Random Tickets
+                  <Special></Special> Tickets
                 </button>
               </div>
             </div>
@@ -316,7 +316,7 @@ const Index = () => {
                 className="text-[20px] hover:text-[25px] hover:font-semibold transition-all duration-5000 ease-in-out"
                 onClick={() => handleOptionSelect("C")}
               >
-                Random Tickets
+                Special Tickets
               </button>
             </div>
           </div>
