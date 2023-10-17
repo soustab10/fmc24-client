@@ -52,7 +52,7 @@ const DashBoard = () => {
             const storedUserData = sessionStorage.getItem('userData');
             if (storedUserData) {
                 const parsedUserData = JSON.parse(storedUserData);
-                const user = parsedUserData.user.userID || parsedUserData.user; // Adjust this based on your API response structure
+                const user = parsedUserData.user.userID || parsedUserData.user; 
 
                 setUserData({
                     name: user.name,
@@ -149,11 +149,11 @@ const DashBoard = () => {
         Router.push("/register");
     }
 
-    if(!isAuthenticated){
-        return <h1>Not authenticated. Please log in</h1>
-    }
+    // if(!isAuthenticated){
+    //     return <h1>Not authenticated. Please log in</h1>
+    // }
 
-    console.log("state", state);
+    // console.log("state", state);
 
     return (
         <div>
@@ -167,22 +167,22 @@ const DashBoard = () => {
 
                         <div className={`${Classes.main} ${Classes.column_2}`}>
 
-                            <div class=" mt-28 w-[80vw] h-auto p-6 justify-center my-6 border mr-5 border-white bg-gradient-to-t from-white/10 to-white/30 text-white rounded-[14px] bg-opacity-10 backdrop-blur-lg  shadow-xl drop-shadow-xl bg-blend-normal z-10 ">
+                            <div class=" shadow-lg  shadow-amber-200/30 mt-28 w-[80vw] h-auto p-6 justify-center my-6 border mr-5 border-white bg-gradient-to-t from-white/10 to-white/30 text-white rounded-[14px] bg-opacity-10 backdrop-blur-lg  drop-shadow-xl bg-blend-normal z-10 ">
                                 <div class="flex flex-col md:flex-row">
-                                    <div className=' md:w-1/2 text-center'>
+                                    <div className=' md:w-1/2 text-center  md:border-r-2 border-white '>
 
                                         <Image
                                             src={profileImage}
                                             width={100}
                                             height={100}
-                                            className=" rounded-full mx-auto mt-14 h-48 w-48 "
+                                            className=" rounded-full mx-auto mt-14 h-56 w-56 "
                                             alt="signup"
                                         />
 
                                         <div className='flex items-center mx-auto m'>
                                             <div className='mx-auto mt-14'>
-                                                <button className=' text-white font-bold py-1 px-4 rounded-lg text-lg bg-lime-500/20 mx-4' onClick={reset}  >Edit Info</button>
-                                                <button className='bg-red-500 hover:bg-red-700 text-white  text-lg rounded-lg font-bold py-1 px-4 ' onClick={logOutHandler}>Logout</button>
+                                                <button className=' text-white font-bold py-1 px-4 rounded-lg text-lg  mx-4  border-white bg-gradient-to-t from-white/10 to-white/30 bg-opacity-10 backdrop-blur-lg  drop-shadow-xl bg-blend-normal z-10' onClick={reset}  >Edit Info</button>
+                                                <button className=' bg-red-700 text-white  text-lg rounded-lg font-bold py-1 px-4  border-white bg-gradient-to-t from-red-600/50 to-red-700/70 bg-opacity-10 backdrop-blur-lg  drop-shadow-xl bg-blend-normal z-10 ' onClick={logOutHandler}>Logout</button>
                                             </div>
                                         </div>
 
@@ -191,7 +191,7 @@ const DashBoard = () => {
 
                                         <div class="w-full">
 
-                                            <h1 class="mb-12 text-6xl font-bold text-center text-white tracking-normal font-mono">
+                                            <h1 class="mb-12 text-6xl font-normal text-center text-white tracking-normal font-sans">
                                                 {userData.name}
                                             </h1>
                                             <form className=''>
@@ -202,7 +202,7 @@ const DashBoard = () => {
                                                     </label>
                                                     <div
 
-                                                        className="w-full  py-2 text-sm font-extrabold"
+                                                        className="w-full  py-2 text-sm font-bold"
                                                     >{userData.email}</div>
 
                                                 </div>
@@ -214,7 +214,7 @@ const DashBoard = () => {
                                                     </label>
                                                     <div
 
-                                                        className="w-full  py-2 text-sm font-extrabold"
+                                                        className="w-full  py-2 text-sm font-bold"
                                                     >{userData.college}</div>
 
                                                 </div>
@@ -224,7 +224,7 @@ const DashBoard = () => {
                                                     </label>
                                                     <div
 
-                                                        className="w-full  py-2 text-sm font-extrabold"
+                                                        className="w-full  py-2 text-sm font-bold"
                                                     >{userData.phone}</div>
                                                 </div>
 
@@ -234,7 +234,7 @@ const DashBoard = () => {
                                                     </label>
                                                     <div
 
-                                                        className="w-full  py-2 text-sm font-extrabold"
+                                                        className="w-full  py-2 text-sm font-bold"
                                                     >{userData.instaHandle}</div>
                                                 </div>
                                                 <div className='mt-3'>
@@ -243,7 +243,7 @@ const DashBoard = () => {
                                                     </label>
                                                     <div
 
-                                                        className="w-full  py-2 text-sm font-extrabold"
+                                                        className="w-full  py-2 text-sm font-bold"
                                                     >{userData.userType == 2 ? 'Campus Ambassador' : 'Participant'}</div>
                                                 </div>
 
@@ -268,13 +268,14 @@ const DashBoard = () => {
                                         />
                                     ))
                                 }
+{/* 
 
-
-                                <ContestCard title={'Contest name'} imageSrc={'/icon_photo.png'} />
-                                <div class="w-[392px] h-[267px] justify-center my-6 border mx-2 border-white bg-gradient-to-t from-white/10 to-white/30 text-white rounded-[14px] bg-opacity-10 backdrop-blur-lg  shadow-xl drop-shadow-xl bg-blend-normal z-10 ">
+                                <ContestCard title={'Contest name'} imageSrc={'/icon_photo.png'} /> */}
+                                <div class="w-[340px] h-[250px] justify-center my-6   hover:shadow-amber-100/20  transition-all border mx-2 border-white bg-gradient-to-t from-white/10 to-white/30 text-white rounded-[14px] bg-opacity-10 backdrop-blur-lg  shadow-xl drop-shadow-xl bg-blend-normal z-10 ">
                                     <div class="flex flex-col text-center justify-center align-middle px-6 py-4">
+                                    <Link href="/cart"> 
                                         <div class=" flex flex-rows justify-around font-bold text-7xl text-black mb-2 my-5"><div>+</div></div>
-                                      <Link href="/cart">  
+                                       
                                         <p class=" my-3.5 h-[180px] text-2xl text-center">
                                             Add more contests
                                         </p>
@@ -295,13 +296,14 @@ const DashBoard = () => {
                                     ))
 
                                 }
+{/* 
+                                <WorkshopCard title={'Workshop name'} imageSrc={'/workshop.png'} /> */}
 
-                                <WorkshopCard title={'Workshop name'} imageSrc={'/workshop.png'} />
-
-                                <div class="w-[392px] h-[267px] justify-center my-6 border mx-2 border-white bg-gradient-to-t from-white/10 to-white/30 text-white rounded-[14px] bg-opacity-10 backdrop-blur-lg  shadow-xl drop-shadow-xl bg-blend-normal z-10 ">
+                                <div class="w-[340px] h-[250px] justify-center hover:shadow-amber-100/20 transition-all my-6 border mx-2 border-white bg-gradient-to-t from-white/10 to-white/30 text-white rounded-[14px] bg-opacity-10 backdrop-blur-lg  shadow-xl drop-shadow-xl bg-blend-normal z-10 ">
                                     <div class="flex flex-col text-center justify-center align-middle px-6 py-4">
+                                    <Link href="/cart">
                                         <div class=" flex flex-rows justify-around font-bold text-7xl text-black mb-2 my-5"><div>+</div></div>
-                                        <Link href="/cart">
+                                       
                                         <p class=" my-3.5 h-[180px] text-2xl text-center">
                                             Add more workshops
                                         </p>

@@ -12,6 +12,7 @@ import {useAuth} from "../../context/auth";
 const LogIn = () => {
     
     const {state, dispatch} = useAuth();
+    const [domain, setDomain] = React.useState("");
     const [clicked, setClicked] = React.useState(false);
     const { publicRuntimeConfig } = getConfig();
 
@@ -43,6 +44,12 @@ const LogIn = () => {
             sessionStorage.setItem("img", data.picture)
             sessionStorage.setItem("name", data.name)
             sessionStorage.setItem("email", data.email)
+            setDomain(data.hd)
+            if(data.hd === "itbhu.ac.in"){
+                sessionStorage.setItem("college","IIT BHU")
+                 
+            }
+            sessionStorage.setItem("domain", data.hd)
             setClicked(true);
             console.log(credentialResponse.credential);
             sessionStorage.setItem('token', credentialResponse.credential);
