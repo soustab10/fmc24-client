@@ -336,7 +336,7 @@ const Checkout = () => {
       {/* <div>
         <a href="https://google.com">Google Form</a>
       </div> */}
-      <section class="flex min-h-screen w-screen "
+      {/* <section class="flex min-h-screen w-screen "
         style={{
 
           backgroundSize: 'cover',  // Adjust as needed
@@ -495,11 +495,148 @@ const Checkout = () => {
           </div>
         </div>
 
-      </section>
+
+
+        
+
+      </section> */}
+      <section class="flex min-h-screen w-screen "
+        style={{
+
+          backgroundSize: 'cover',  // Adjust as needed
+          backgroundPosition: 'center',  // Adjust as needed
+          position: 'relative',
+        }}
+      >
+      <div class="relative mx-auto w-[80vw] bg-white rounded-3xl mt-24 mb-4">
+  <div class="grid min-h-screen grid-cols-10">
+    <div class="col-span-full py-6 px-4 sm:py-12 lg:col-span-6 lg:py-24">
+      <div class="mx-auto w-full max-w-lg">
+        <h1 class="relative text-2xl font-medium text-gray-700 sm:text-3xl tracking-wide p-2">Checkout<span class="mt-2 block h-1 w-10 bg-purple-600 sm:w-20"></span></h1>
+        <form onSubmit={(e) => handleSubmit(e)} class="mt-10 flex flex-col space-y-4 p-1">
+          <div>
+            <label for="name" class="text-xs font-semibold text-gray-500">Name</label>
+            <input 
+             type="text"
+             id="name"
+             value={name}
+             required
+             onChange={(e) => setName(e.target.value)}
+            className="mt-1 block w-full rounded border-gray-300 bg-gray-50 py-3 px-4 text-sm placeholder-gray-300 shadow-sm outline-none transition focus:ring-2 focus:ring-purple-500" />
+          </div>
+          <div>
+            <label htmlFor="phone" class="text-xs font-semibold text-gray-500">Phone</label>
+            <input 
+            type="tel"
+            id="phone"
+            value={phone}
+            required
+            onChange={(e) => setPhone(e.target.value)}
+            className="mt-1 block w-full rounded border-gray-300 bg-gray-50 py-3 px-4 text-sm placeholder-gray-300 shadow-sm outline-none transition focus:ring-2 focus:ring-purple-500" />
+          </div>
+          <div>
+            <label htmlFor="email" class="text-xs font-semibold text-gray-500">Email</label>
+            <input 
+              type="email"
+              id="email"
+              value={email}
+              required
+              onChange={(e) => setEmail(e.target.value)}
+              className="mt-1 block w-full rounded border-gray-300 bg-gray-50 py-3 px-4 text-sm placeholder-gray-300 shadow-sm outline-none transition focus:ring-2 focus:ring-purple-500" />
+          </div>
+          <div>
+            <label htmlFor="insti" class="text-xs font-semibold text-gray-500">Institution</label>
+            <input 
+             type="text"
+             id="insti"
+             value={insti}
+             required
+             onChange={(e) => setInsti(e.target.value)}
+            className="mt-1 block w-full rounded border-gray-300 bg-gray-50 py-3 px-4 text-sm placeholder-gray-300 shadow-sm outline-none transition focus:ring-2 focus:ring-purple-500" />
+          </div>
+          <div>
+            <label htmlFor="transcid"  class="text-xs font-semibold text-gray-500">Transaction ID</label>
+            <input 
+             type="text"
+             id="transcid"
+             value={transcid}
+             required
+             onChange={(e) => setTranscid(e.target.value)}
+            className="mt-1 block w-full rounded border-gray-300 bg-gray-50 py-3 px-4 text-sm placeholder-gray-300 shadow-sm outline-none transition focus:ring-2 focus:ring-purple-500" />
+          </div>
+          <div>
+            <label htmlFor="file" class="text-xs font-semibold text-gray-500">Upload Screenshot of Payment</label>
+            <button
+            type="button"
+            onClick={() => setShowScanner(!showScanner)}
+             class="mt-4 inline-flex w-full items-center justify-center rounded bg-gray-600/60 py-2.5 px-4 text-base font-semibold tracking-wide text-white text-opacity-80 outline-none ring-offset-2 transition hover:text-opacity-100  sm:text-lg">
+            {
+                      showScanner ? (<span>Hide QR</span>) : (<span>Show QR</span>)
+            }
+            </button>
+            {
+            showScanner ? (<>
+                 <img src="https://res.cloudinary.com/shubhamiitbhu/image/upload/c_thumb,w_200,g_face/v1697544418/Gens/i74wgd922idblu0gwdq8.svg" id="qrcode" className=" h-60 w-60"></img>
+              </>) : ( null)
+            }   
+            <input 
+            type="file"
+            id="file"
+            required
+            onChange={(e) => setScreenShot(e.target.files[0])}
+            className="mt-2 block w-full rounded text-xs border-gray-300 bg-gray-50 py-3 px-4  placeholder-gray-300 shadow-sm outline-none transition focus:ring-2 focus:ring-purple-500" />
+          </div>
+          
+          
+          <button type="submit" class="mt-4 inline-flex w-full items-center justify-center rounded bg-purple-600/60 py-2.5 px-4 text-base font-semibold tracking-wide text-white text-opacity-80 outline-none ring-offset-2 transition hover:text-opacity-100 focus:ring-2 focus:ring-purple-500 sm:text-lg">Place Order</button>
+      
+        </form>
+        </div>
+       
+        
+    </div>
+    <div class="relative col-span-full flex flex-col py-6 pl-8 pr-4 sm:py-12 lg:col-span-4 lg:py-24">
+      
+      <div>
+        <img src="clip.png" alt="" class="absolute inset-0 h-full w-full object-cover md:rounded-tr-3xl md:rounded-br-3xl max-lg:rounded-bl-3xl  max-lg:rounded-br-3xl" />
+        <div class="absolute inset-0 h-full w-full bg-gradient-to-t  opacity-95"></div>
+      </div>
+      <div class="relative">
+      <div class="space-y-2">
+          <p class="flex justify-between text-3xl mb-3 font-thin text-white p-4"><span>Order Summary</span></p>
+        </div>
+      <ul class="space-y-3">
+  {selectedItems.map((itemId) => {
+    const selectedItem = getItemDetails(itemId);
+    if (selectedItem) {
+      return (
+        <li className="flex justify-between" key={itemId}>
+          <div class="inline-flex">
+              <div class="ml-3">
+                <p class="text-base font-semibold text-white">{selectedItem.Title}</p>
+              </div>
+            </div>
+            <p class="text-sm font-semibold text-white">₹ {selectedItem.price}</p>
+        </li>
+      );
+    }
+    return null; // Handle if the item is not found in the data
+  })}
+</ul>
+        <div class="my-5 h-0.5 w-full bg-white bg-opacity-30"></div>
+        <div class="space-y-2">
+          <p class="flex justify-between text-lg font-bold text-white"><span>Total Price:</span><span>₹ {sumOfSelectedItems}</span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</section>
       <Footer />
 
     </div>
-  );
-};
+)
+}
 
 export default Checkout;
