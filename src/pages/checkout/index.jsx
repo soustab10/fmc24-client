@@ -113,7 +113,7 @@ const Checkout = () => {
       const useremail = sessionStorage.getItem('email');
       console.log(useremail)
 
-      
+
       // add current cart to registered events
 
       // const response2=await fetch(backendURL+"/api/events/add",{
@@ -138,7 +138,7 @@ const Checkout = () => {
       //   });
       //   const data2 = await resp.json();
       //   console.log(data2);
-        Router.push('/dashboard');
+      Router.push('/dashboard');
     }
 
   };
@@ -355,7 +355,7 @@ const Checkout = () => {
                 <div className=' flex items-center justify-center  md:w-1/2 '>
 
                   <Image
-                    src={"https://res.cloudinary.com/shubhamiitbhu/image/upload/v1697495693/payment/cyxaib9xqen474rg6qvn.jpg"}
+                    src={"https://res.cloudinary.com/shubhamiitbhu/image/upload/c_thumb,w_200,g_face/v1697544418/Gens/i74wgd922idblu0gwdq8.svg"}
                     width={100}
                     height={100}
                     className=" md:h-full sm:h-fit w-[70vw] md:w-screen md:rounded-tl-3xl md:rounded-bl-3xl rounded-tl-3xl  max-md:rounded-tr-3xl"
@@ -377,7 +377,7 @@ const Checkout = () => {
                   Complete your purchase</h1>
                 <h2 class="absolute text-xl text-center text-white font-semibold top-20 mt-32 md:mt-32 px-14 tracking-wide">
                   Selected Items:</h2>
-                 
+
                 <ul class="absolute text-lg text-center text-white font-semibold top-28 mt-40 md:mt-40 px-14 tracking-wide"
 
                 >
@@ -465,24 +465,28 @@ const Checkout = () => {
                       onChange={(e) => setScreenShot(e.target.files[0])}
 
                     />
+                    <div className="flex flex-row">
+                      <div className="flex-row">
+                        <button type="submit"
+                          class="mt-7 ml-12 px-4 py-2 border flex gap-2 border-slate-200 rounded-lg text-white hover:border-slate-400 hover:text-slate-900 hover:shadow transition duration-15 bg-blue-900 ">
 
-                    <div className="flex-row">
-                      <button type="submit"
-                        class="mt-7 ml-12 px-4 py-2 border flex gap-2 border-slate-200 rounded-lg text-slate-700 hover:border-slate-400 hover:text-slate-900 hover:shadow transition duration-15 bg-lime-400 ">
+                          <span>Submit</span>
+                        </button>
 
-                        <span>Submit</span>
+                      </div>
+
+                      <button type="button"
+                        onClick={() => setShowScanner(!showScanner)}
+                        class="mt-7 ml-12 px-4 py-2 border flex gap-2 border-slate-200 rounded-lg text-white hover:border-slate-400 hover:text-slate-900 hover:shadow transition duration-15 bg-blue-900 ">
+                        {
+                          showScanner ? (<span>Hide QR</span>) : (<span>Show QR</span>)
+                        }
+
                       </button>
-
                     </div>
-                  </form>
-                  <button type="submit"
-                    onClick={() => setShowScanner(!showScanner)}
-                    class="mt-7 ml-12 px-4 py-2 border flex gap-2 border-slate-200 rounded-lg text-slate-700 hover:border-slate-400 hover:text-slate-900 hover:shadow transition duration-15 bg-lime-400 ">
-                    {
-                      showScanner ? (<span>Hide QR</span>) : (<span>Show QR</span>)
-                    }
 
-                  </button>
+                  </form>
+
 
 
                 </div>

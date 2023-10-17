@@ -13,6 +13,7 @@ import RandomPass from "./randomPass";
 import Router from "next/router";
 import getConfig from 'next/config';
 import { type } from "os";
+import Image from "next/image";
 const textStyleBold = {
   backdropFilter: "blur(9px) saturate(100%)",
   WebkitBackdropFilter: "blur(9px) saturate(100%)",
@@ -38,34 +39,34 @@ const checkoutBtnStyle = {
 
 const Index = () => {
   const { publicRuntimeConfig } = getConfig();
-  const [email,setEmail]= useState('');
+  const [email, setEmail] = useState('');
   const backendURL = publicRuntimeConfig.NEXT_PUBLIC_REACT_APP_BACKEND_URI;
   // const [jsonData, setJsonData] = useState([]);
   const [selectedItems, setSelectedItems] = useState([]);
   const [disabledItems, setDisabledItems] = useState([]);
-  const [loaded,setLoaded]=useState(false);
+  const [loaded, setLoaded] = useState(false);
   let updatedSelectedItems = [];
-  const getInitialUsers=async ()=>{
+  const getInitialUsers = async () => {
     // let i,j;
-    const useremail=sessionStorage.getItem('email');
+    const useremail = sessionStorage.getItem('email');
     console.log(useremail)
-    const data=await fetch(backendURL+"/api/carts",{
-      method:"POST",
-      headers:{
-        "Content-Type":"application/json"
+    const data = await fetch(backendURL + "/api/carts", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
       },
-      body:JSON.stringify({
-        email:useremail
+      body: JSON.stringify({
+        email: useremail
       })
     });
-    let cart,cartArray_temp=[],cartArray;
-    const response=await data.json();
+    let cart, cartArray_temp = [], cartArray;
+    const response = await data.json();
     console.log(response.cartItems)
-    cart=response.cartItems
-    for(let j in cart){
+    cart = response.cartItems
+    for (let j in cart) {
       cartArray_temp.push(cart[j].id)
     }
-    cartArray=cartArray_temp
+    cartArray = cartArray_temp
 
     // disable registered events
 
@@ -88,13 +89,13 @@ const Index = () => {
     // console.log(cartArray_temp)
     setSelectedItems(cartArray)
   }
-  useEffect(()=>{
-    if(!loaded){
+  useEffect(() => {
+    if (!loaded) {
       console.log("loaded");
       setLoaded(true);
       getInitialUsers();
     }
-  },loaded)
+  }, loaded)
 
   useEffect(() => {
     const storedItems = sessionStorage.getItem("cartItems");
@@ -107,7 +108,7 @@ const Index = () => {
   // useEffect(()=>{
   //   setSelectedItems(updatedSelectedItems);
   // },updatedSelectedItems);
-  const [selectedOption, setSelectedOption] = useState("");
+  const [selectedOption, setSelectedOption] = useState("D");
   const [open, setOpen] = React.useState(false);
   useEffect(() => {
     const loginOrNot = sessionStorage.getItem('isLoggedIn');
@@ -131,13 +132,13 @@ const Index = () => {
     }
   }, []);
 
- 
+
 
   const addToCart = async (userId, cartItem) => {
     console.log("action to be added to cart")
 
-    console.log("userId : ",userId);
-    console.log("cartItem : ",cartItem);
+    console.log("userId : ", userId);
+    console.log("cartItem : ", cartItem);
     const response = await fetch(backendURL + "/api/cart", {
       method: "POST",
       headers: {
@@ -146,11 +147,11 @@ const Index = () => {
       body: JSON.stringify({
         userID: userId,
         cartItem: cartItem,
-        email:email
+        email: email
       }),
     });
     const data = await response.json();
-    console.log("data : ",data);
+    console.log("data : ", data);
     if (data.status === "success") {
       console.log("Items added to cart");
     } else {
@@ -180,8 +181,8 @@ const Index = () => {
     }
   }
   const handleCheckboxChange = (itemId, item) => {
-    console.log("item",item);
-    console.log("itemId",itemId)
+    console.log("item", item);
+    console.log("itemId", itemId)
     const user = sessionStorage.getItem('userData');
     const userInfo = JSON.parse(user);
     console.log(userInfo);
@@ -222,10 +223,10 @@ const Index = () => {
     }
     return acc;
   }, 0);
-  useEffect(()=>{
-    sessionStorage.setItem("total",sumOfSelectedItems);
+  useEffect(() => {
+    sessionStorage.setItem("total", sumOfSelectedItems);
 
-  },[sumOfSelectedItems])
+  }, [sumOfSelectedItems])
 
   const handleOptionSelect = (option) => {
     setSelectedOption(option);
@@ -246,9 +247,20 @@ const Index = () => {
         <div className={Classes.Hide}>
           <div className={Classes.TopBar}>
             <div className={Classes.BarIn}>
-              <div className="w-[275px]  h-[125px] flex justify-center items-center">
+              <div className="w-[275px]  h-[125px] flex  flex-col justify-center items-center">
                 Select your Tickets below
+                <div className="w-[275px]  h-[40px] flex justify-center items-center">
+                  <button
+                    className="text-[14px] hover:text-[18px] hover:font-bold transition-all duration-5000 ease-in-out"
+                    onClick={() => handleOptionSelect("D")}
+                  >
+                    View Event Ticket Structure
+                  </button>
+                </div>
               </div>
+
+
+
               <div className="w-[275px]  h-[125px] flex justify-center items-center">
                 <button
                   className="text-[20px] hover:text-[25px] hover:font-semibold transition-all duration-5000 ease-in-out"
@@ -312,6 +324,22 @@ const Index = () => {
         <div className={Classes.divCards}>
           <div className={Classes.CardDisplay}>
             <div>
+              {/* {
+              selectedOption==="D"&&(<>
+                <Image src={"https://res.cloudinary.com/shubhamiitbhu/image/upload/v1697540907/Gens/rwfr3rpktsoglese1oca.jpg"} alt="Picture of the author" width={500} height={500} />
+              </>)
+            } */}
+              {selectedOption === "D" && (
+                <div>
+                  <Image
+                    src="https://res.cloudinary.com/shubhamiitbhu/image/upload/v1697543402/Gens/tnune40leba6gy6vh0aw.jpg" // Replace with the actual Unsplash image URL
+                    alt="Image"
+                    className="w-[60vw]"
+                    width={400} // Specify the desired width
+                    height={400} // Specify the desired height to make it square
+                  />
+                </div>
+              )}
               {selectedOption === "A" && (
                 <div>
                   {jsonData.map((item, index) => (
@@ -377,55 +405,55 @@ const Index = () => {
               )}
               {selectedOption === "B" && (
                 <div className={Classes.Accomodation}>
-                <div>
-                  <h className={Classes.AccoHeader}>Accomodation Included</h>
-                  {comboData.map((item, index) => (
-                    <div
-                      key={index}
-                      className={Classes.PassesCard}
-                    >
-                      <div className="inline-flex items-center ">
-                        <label
-                          className="relative flex cursor-pointer items-center rounded-full p-3"
-                          htmlFor="login"
-                          data-ripple-dark="true"
-                        >
-                          <input
-                            type="checkbox"
-                            checked={selectedItems.includes(item.id)}
-                            onChange={() => handleCheckboxChange(item.id,item)}
-                            className="before:content[''] peer relative h-5 w-5 cursor-pointer appearance-none rounded-md border border-blue-gray-200 transition-all before:absolute before:top-2/4 before:left-2/4 before:block before:h-12 before:w-12 before:-translate-y-2/4 before:-translate-x-2/4 before:rounded-full before:bg-blue-gray-500 before:opacity-0 before:transition-opacity checked:border-green-500 checked:bg-green-500 checked:before:bg-green-500 hover:before:opacity-10"
-                          />
+                  <div>
+                    <h className={Classes.AccoHeader}>Accomodation Included</h>
+                    {comboData.map((item, index) => (
+                      <div
+                        key={index}
+                        className={Classes.PassesCard}
+                      >
+                        <div className="inline-flex items-center ">
+                          <label
+                            className="relative flex cursor-pointer items-center rounded-full p-3"
+                            htmlFor="login"
+                            data-ripple-dark="true"
+                          >
+                            <input
+                              type="checkbox"
+                              checked={selectedItems.includes(item.id)}
+                              onChange={() => handleCheckboxChange(item.id, item)}
+                              className="before:content[''] peer relative h-5 w-5 cursor-pointer appearance-none rounded-md border border-blue-gray-200 transition-all before:absolute before:top-2/4 before:left-2/4 before:block before:h-12 before:w-12 before:-translate-y-2/4 before:-translate-x-2/4 before:rounded-full before:bg-blue-gray-500 before:opacity-0 before:transition-opacity checked:border-green-500 checked:bg-green-500 checked:before:bg-green-500 hover:before:opacity-10"
+                            />
 
-                          <div className="pointer-events-none absolute top-2/4 left-2/4 -translate-y-2/4 -translate-x-2/4 text-white opacity-0 transition-opacity peer-checked:opacity-100">
-                            <svg
-                              xmlns="http://www.w3.org/2000/svg"
-                              className="h-3.5 w-3.5"
-                              viewBox="0 0 20 20"
-                              fill="currentColor"
-                              stroke="currentColor"
-                              stroke-width="1"
-                            >
-                              <path
-                                fill-rule="evenodd"
-                                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                                clip-rule="evenodd"
-                              ></path>
-                            </svg>
-                          </div>
-                        </label>
-                        <label
-                          className="mt-px cursor-pointer flex flex-row select-none font-light text-white"
-                          htmlFor="login"
-                        >
-                          <div className="title mr-4 ml-2">{item.Title}</div>
-                          <div className="title mr-4">Rs. {item.price}</div>
-                        </label>
+                            <div className="pointer-events-none absolute top-2/4 left-2/4 -translate-y-2/4 -translate-x-2/4 text-white opacity-0 transition-opacity peer-checked:opacity-100">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                className="h-3.5 w-3.5"
+                                viewBox="0 0 20 20"
+                                fill="currentColor"
+                                stroke="currentColor"
+                                stroke-width="1"
+                              >
+                                <path
+                                  fill-rule="evenodd"
+                                  d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                  clip-rule="evenodd"
+                                ></path>
+                              </svg>
+                            </div>
+                          </label>
+                          <label
+                            className="mt-px cursor-pointer flex flex-row select-none font-light text-white"
+                            htmlFor="login"
+                          >
+                            <div className="title mr-4 ml-2">{item.Title}</div>
+                            <div className="title mr-4">Rs. {item.price}</div>
+                          </label>
+                        </div>
+                        {/* You can add additional content here */}
                       </div>
-                      {/* You can add additional content here */}
-                    </div>
-                  ))}
-                  <style jsx>{`
+                    ))}
+                    <style jsx>{`
                     .item-container {
                       border: 1px solid #ccc;
                       margin-bottom: 10px;
@@ -435,56 +463,56 @@ const Index = () => {
                       font-weight: bold;
                     }
                   `}</style>
-                </div>
-                <div>
-                <h className={Classes.AccoHeader}>Accomodation Excluded</h>
-                {combinedWithoutAcco.map((item, index) => (
-                  <div
-                    key={index}
-                    className={Classes.PassesCard}
-                  >
-                    <div className="inline-flex items-center ">
-                      <label
-                        className="relative flex cursor-pointer items-center rounded-full p-3"
-                        htmlFor="login"
-                        data-ripple-dark="true"
-                      >
-                        <input
-                          type="checkbox"
-                          checked={selectedItems.includes(item.id)}
-                          onChange={() => handleCheckboxChange(item.id,item)}
-                          className="before:content[''] peer relative h-5 w-5 cursor-pointer appearance-none rounded-md border border-blue-gray-200 transition-all before:absolute before:top-2/4 before:left-2/4 before:block before:h-12 before:w-12 before:-translate-y-2/4 before:-translate-x-2/4 before:rounded-full before:bg-blue-gray-500 before:opacity-0 before:transition-opacity checked:border-green-500 checked:bg-green-500 checked:before:bg-green-500 hover:before:opacity-10"
-                        />
-
-                        <div className="pointer-events-none absolute top-2/4 left-2/4 -translate-y-2/4 -translate-x-2/4 text-white opacity-0 transition-opacity peer-checked:opacity-100">
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            className="h-3.5 w-3.5"
-                            viewBox="0 0 20 20"
-                            fill="currentColor"
-                            stroke="currentColor"
-                            stroke-width="1"
-                          >
-                            <path
-                              fill-rule="evenodd"
-                              d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                              clip-rule="evenodd"
-                            ></path>
-                          </svg>
-                        </div>
-                      </label>
-                      <label
-                        className="mt-px cursor-pointer flex flex-row select-none font-light text-white"
-                        htmlFor="login"
-                      >
-                        <div className="title mr-4 ml-2">{item.Title}</div>
-                        <div className="title mr-4">Rs. {item.price}</div>
-                      </label>
-                    </div>
-                    {/* You can add additional content here */}
                   </div>
-                ))}
-                <style jsx>{`
+                  <div>
+                    <h className={Classes.AccoHeader}>Accomodation Excluded</h>
+                    {combinedWithoutAcco.map((item, index) => (
+                      <div
+                        key={index}
+                        className={Classes.PassesCard}
+                      >
+                        <div className="inline-flex items-center ">
+                          <label
+                            className="relative flex cursor-pointer items-center rounded-full p-3"
+                            htmlFor="login"
+                            data-ripple-dark="true"
+                          >
+                            <input
+                              type="checkbox"
+                              checked={selectedItems.includes(item.id)}
+                              onChange={() => handleCheckboxChange(item.id, item)}
+                              className="before:content[''] peer relative h-5 w-5 cursor-pointer appearance-none rounded-md border border-blue-gray-200 transition-all before:absolute before:top-2/4 before:left-2/4 before:block before:h-12 before:w-12 before:-translate-y-2/4 before:-translate-x-2/4 before:rounded-full before:bg-blue-gray-500 before:opacity-0 before:transition-opacity checked:border-green-500 checked:bg-green-500 checked:before:bg-green-500 hover:before:opacity-10"
+                            />
+
+                            <div className="pointer-events-none absolute top-2/4 left-2/4 -translate-y-2/4 -translate-x-2/4 text-white opacity-0 transition-opacity peer-checked:opacity-100">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                className="h-3.5 w-3.5"
+                                viewBox="0 0 20 20"
+                                fill="currentColor"
+                                stroke="currentColor"
+                                stroke-width="1"
+                              >
+                                <path
+                                  fill-rule="evenodd"
+                                  d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                  clip-rule="evenodd"
+                                ></path>
+                              </svg>
+                            </div>
+                          </label>
+                          <label
+                            className="mt-px cursor-pointer flex flex-row select-none font-light text-white"
+                            htmlFor="login"
+                          >
+                            <div className="title mr-4 ml-2">{item.Title}</div>
+                            <div className="title mr-4">Rs. {item.price}</div>
+                          </label>
+                        </div>
+                        {/* You can add additional content here */}
+                      </div>
+                    ))}
+                    <style jsx>{`
                   .item-container {
                     border: 1px solid #ccc;
                     margin-bottom: 10px;
@@ -494,8 +522,8 @@ const Index = () => {
                     font-weight: bold;
                   }
                 `}</style>
-              </div>
-              </div>
+                  </div>
+                </div>
               )}
               {selectedOption === "C" && <RandomPass />}
             </div>
@@ -510,14 +538,17 @@ const Index = () => {
               </li>
             ))}
           </ul>
-          <button className={Classes.CheckOutBtnStyle}>
-            <Link
-              href="/checkout"
-              style={{ color: "white", textDecoration: "none" }}
-            >
+          <Link
+            href="/checkout"
+            //style={{ color: "white", width: "100px", textDecoration: "none" }}
+            className={Classes.CheckOutBtnStyle}
+          >
+            <button >
+
               Checkout
-            </Link>
-          </button>
+
+            </button>
+          </Link>
         </div>
 
         <br />
