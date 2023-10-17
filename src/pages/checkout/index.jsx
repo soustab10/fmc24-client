@@ -103,7 +103,7 @@ const Checkout = () => {
       // let response = await fetch(`https://docs.google.com/forms/d/e/1FAIpQLSfmxwNrwZhBfLMMnaCpydwBV9Juozd6Uty0zwAgMRZNRDdMgg/formResponse?&submit=Submit?usp=pp_url&entry.2058644330=${name}&entry.666527389=${phone}&entry.352462634=${email}&entry.161165018=${insti}&entry.169406111=${transcid}&entry.1113568387=${JSON.stringify(selectedItems)}`, { 
       //fmc
       //https://docs.google.com/forms/d/e/1FAIpQLSdkNcyta0lRVHc7M4QvVqHnTXuI5G8yP_pK1wZv0EXqwjgA8g/viewform?usp=pp_url&entry.997687481=Shubham&entry.1447534415=6201060889&entry.1224001380=shubham.kikayujs&entry.1589365680=ieghsfuia&entry.2107420521=56789u&entry.248033448=123425twrgefsd&entry.953972318=qerwt435&entry.1901095039=1e3qrwge
-      let response = await fetch(`https://docs.google.com/forms/d/e/1FAIpQLSdkNcyta0lRVHc7M4QvVqHnTXuI5G8yP_pK1wZv0EXqwjgA8g/formResponse?&submit=Submit?usp=pp_url&entry.997687481=${name}&entry.1447534415=${phone}&entry.1224001380=${email}&entry.1589365680=${insti}&entry.2107420521=H${transcid}&entry.248033448=${val}&entry.953972318=${t}&entry.1901095039=${naming}`, {
+      let response = await fetch(`https://docs.google.com/forms/d/e/1FAIpQLSdkNcyta0lRVHc7M4QvVqHnTXuI5G8yP_pK1wZv0EXqwjgA8g/formResponse?&submit=Submit?usp=pp_url&entry.997687481=${name}&entry.1447534415=${phone}&entry.1224001380=${email}&entry.1589365680=${insti}&entry.2107420521=${transcid}&entry.248033448=${val}&entry.953972318=${t}&entry.1901095039=${naming}`, {
 
         method: "POST",
       });
