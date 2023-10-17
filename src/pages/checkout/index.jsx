@@ -582,7 +582,7 @@ const Checkout = () => {
     <div class="relative col-span-full flex flex-col py-6 pl-8 pr-4 sm:py-12 lg:col-span-4 lg:py-24">
       
       <div>
-        <img src="clip.png" alt="" class="absolute inset-0 h-full w-full object-cover lg:rounded-r-3xl rounded-b-3xl" />
+        <img src="clip.png" alt="" class="absolute inset-0 h-full w-full object-cover md:rounded-tr-3xl md:rounded-br-3xl max-lg:rounded-bl-3xl  max-lg:rounded-br-3xl" />
         <div class="absolute inset-0 h-full w-full bg-gradient-to-t  opacity-95"></div>
       </div>
       <div class="relative">
