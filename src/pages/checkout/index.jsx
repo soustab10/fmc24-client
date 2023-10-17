@@ -588,7 +588,7 @@ const Checkout = () => {
           </div>
           
           
-          <button type="submit" class="mt-4 inline-flex w-full items-center justify-center rounded bg-purple-600/60 py-2.5 px-4 text-base font-semibold tracking-wide text-white text-opacity-80 outline-none ring-offset-2 transition hover:text-opacity-100 focus:ring-2 focus:ring-teal-500 sm:text-lg">Place Order</button>
+          <button type="submit" class="mt-4 inline-flex w-full items-center justify-center rounded bg-purple-600/60 py-2.5 px-4 text-base font-semibold tracking-wide text-white text-opacity-80 outline-none ring-offset-2 transition hover:text-opacity-100 focus:ring-2 focus:ring-purple-500 sm:text-lg">Place Order</button>
       
         </form>
         </div>
