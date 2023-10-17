@@ -23,12 +23,14 @@ const Register = () => {
     if (storedName) {
       setName(storedName);
     }
+
   }, []);
 
   const text = `Let's get to know you a bit. We are a step closer to the world of FMC Weekend.`;
   
   const handleSubmit = async(e)=>{
     e.preventDefault();
+    document.getElementById("submitButton").disabled=true;
     // console.log("e : ",e);
     let obj = {
       name: e.target[0].value,
@@ -234,7 +236,7 @@ const Register = () => {
         </select>
         </div>
         <div className='text-center'>
-  <button type="submit"
+  <button type="submit" id="submitButton"
     class="mt-7 ml-12 px-4 py-2 border flex gap-2 border-slate-200 rounded-lg text-slate-700 hover:border-slate-400 hover:text-slate-900 hover:shadow transition duration-15 bg-lime-400 ">
     
     <span>Submit</span>
