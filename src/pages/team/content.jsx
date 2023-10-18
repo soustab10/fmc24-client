@@ -26,8 +26,8 @@ const Content = () => {
               </div>
               <div class="absolute bottom-0 inset-x-0 h-max mt-auto px-8 py-6 backdrop-blur bg-white/50">
                 <div>
-                  <h4 class="text-xl text-center font-bold dark:text-white">Lakshay Kalra</h4>
-                  <span class="block text-center text-sm font-semibold text-black">Content Executive</span>
+                  <h4 class="text-xl text-center font-bold dark:text-white">Kartikeya Mishra</h4>
+                  <span class="block text-center text-sm font-semibold text-black">Content Head</span>
                 </div>
               </div>
             </div>
@@ -35,7 +35,7 @@ const Content = () => {
             <div class="h-[24rem]">
             <Image
                 className="mx-auto h-[18rem] w-full object-cover"
-                src="/team/Sparsh.jpg"
+                src="/team/Juhi.jpg"
                 alt="sparsh"
                 loading="lazy"
                 width="640"
@@ -44,7 +44,7 @@ const Content = () => {
               </div>
               <div class="absolute bottom-0 inset-x-0 h-max mt-auto px-8 py-6 backdrop-blur bg-white/50">
                 <div>
-                  <h4 class="text-xl text-center font-bold dark:text-white">Sparsh Somani</h4>
+                  <h4 class="text-xl text-center font-bold dark:text-white">Juhi Bajpayee</h4>
                   <span class="block text-center text-sm font-semibold text-black">Content Head</span>
                 </div>
               </div>

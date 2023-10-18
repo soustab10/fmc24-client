@@ -283,7 +283,7 @@ const Index = () => {
                   className="text-[20px] hover:text-[25px] hover:font-semibold transition-all duration-5000 ease-in-out"
                   onClick={() => handleOptionSelect("C")}
                 >
-                  Random Tickets
+                  Special Tickets
                 </button>
               </div>
             </div>
@@ -316,7 +316,7 @@ const Index = () => {
                 className="text-[20px] hover:text-[25px] hover:font-semibold transition-all duration-5000 ease-in-out"
                 onClick={() => handleOptionSelect("C")}
               >
-                Random Tickets
+                Special Tickets
               </button>
             </div>
           </div>
@@ -332,7 +332,7 @@ const Index = () => {
               {selectedOption === "D" && (
                 <div>
                   <Image
-                    src="https://res.cloudinary.com/shubhamiitbhu/image/upload/v1697543402/Gens/tnune40leba6gy6vh0aw.jpg" // Replace with the actual Unsplash image URL
+                    src="/passes.png" // Replace with the actual Unsplash image URL
                     alt="Image"
                     className="w-[60vw]"
                     width={400} // Specify the desired width
