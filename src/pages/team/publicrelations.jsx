@@ -12,6 +12,24 @@ const Pr = () => {
             </h2>
           </div>
           <div class="md:ml-20 lg:ml-20 grid gap-12 px-4 sm:px-20 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+          <div class="group relative rounded-3xl  space-y-4 overflow-hidden border-solid border-2">
+              <div class="h-[24rem]">
+                <Image
+                  className="mx-auto h-[18rem] w-full object-cover"
+                  src="/team/Sameer.png"
+                  alt="sameer"
+                  loading="lazy"
+                  width="640"
+                  height="805"
+                />
+              </div>
+              <div class="absolute bottom-0 inset-x-0 h-max mt-auto px-8 py-6 backdrop-blur bg-white/50">
+                <div>
+                  <h4 class="text-xl text-center font-bold dark:text-white">Sameer Wanjari</h4>
+                  <span class="block text-center text-sm font-semibold text-black">Public Relations Head</span>
+                </div>
+              </div>
+            </div>
             <div class="group relative rounded-3xl  space-y-5 overflow-hidden border-solid border-2">
               <div class="h-[24rem]">
                 <Image
@@ -48,24 +66,7 @@ const Pr = () => {
                 </div>
               </div>
             </div>
-            <div class="group relative rounded-3xl  space-y-4 overflow-hidden border-solid border-2">
-              <div class="h-[24rem]">
-                <Image
-                  className="mx-auto h-[18rem] w-full object-cover"
-                  src="/team/Sameer.png"
-                  alt="sameer"
-                  loading="lazy"
-                  width="640"
-                  height="805"
-                />
-              </div>
-              <div class="absolute bottom-0 inset-x-0 h-max mt-auto px-8 py-6 backdrop-blur bg-white/50">
-                <div>
-                  <h4 class="text-xl text-center font-bold dark:text-white">Sameer Wanjari</h4>
-                  <span class="block text-center text-sm font-semibold text-black">Public Relations Head</span>
-                </div>
-              </div>
-            </div>
+
             <div class="group relative rounded-3xl  space-y-4 overflow-hidden border-solid border-2">
               <div class="h-[24rem]">
                 <Image
@@ -80,6 +81,24 @@ const Pr = () => {
               <div class="absolute bottom-0 inset-x-0 h-max mt-auto px-8 py-6 backdrop-blur bg-white/50">
                 <div>
                   <h4 class="text-xl text-center font-bold dark:text-white">Pawan Kumar Mali</h4>
+                  <span class="block text-center text-sm font-semibold text-black">Public Relations Head</span>
+                </div>
+              </div>
+            </div>
+            <div class="group relative rounded-3xl  space-y-4 overflow-hidden border-solid border-2">
+              <div class="h-[24rem]">
+                <Image
+                  className="mx-auto h-[18rem] w-full object-cover"
+                  src="/team/Sanjay.jpg"
+                  alt="pawan"
+                  loading="lazy"
+                  width="640"
+                  height="805"
+                />
+              </div>
+              <div class="absolute bottom-0 inset-x-0 h-max mt-auto px-8 py-6 backdrop-blur bg-white/50">
+                <div>
+                  <h4 class="text-xl text-center font-bold dark:text-white">Sanjay Patel</h4>
                   <span class="block text-center text-sm font-semibold text-black">Public Relations Head</span>
                 </div>
               </div>

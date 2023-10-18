@@ -13,7 +13,6 @@ import Content from './content';
 import Header from '../landingpage/Header';
 import Sidenav from './sidenav';
 import Animation from './animation';
-import Advisors from './advisors';
 import Footer from '../landingpage/Footer'
 
 
@@ -41,7 +40,6 @@ const Index = () => {
         <Tech ref={Tech} />
         <Secrataries ref={Secrataries}/>
         <Animation ref={Animation} />
-        <Advisors ref={Advisors} />
         <div id="abcd" >
           </div>
         < Footer />

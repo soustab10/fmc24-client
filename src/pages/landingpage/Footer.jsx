@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Classes from "./styles/Footer.module.css";
 import { ClassNames } from "@emotion/react";
 import Image from "next/image";
+import Link from "next/link";
 import axios from "axios";
 import getConfig from 'next/config';
 const Footer = () => {
@@ -116,17 +117,17 @@ const Footer = () => {
 
               <div className={Classes.footer_flex_row}>
                 <div className={Classes.group_col}>
-                  <div className={Classes.text_wrapper_bold}>Home</div>
-                  <div className={Classes.text_wrapper}>About Us</div>
-                  <div className={Classes.text_wrapper}>Events</div>
-                  <div className={Classes.text_wrapper}>Workshop</div>
+                  <Link href="/"> <div className={Classes.text_wrapper_bold}>Home</div> </Link>
+                  <Link href="/glimpses"><div className={Classes.text_wrapper}>About Us</div></Link>
+                  <Link href="/events"><div className={Classes.text_wrapper}>Events</div></Link>
+                  <Link href="/workshops"><div className={Classes.text_wrapper}>Workshop</div></Link>
                 </div>
-                <div className={Classes.group_col}>
+                {/* <div className={Classes.group_col}>
                   <div className={Classes.text_wrapper_bold}>Terms of Use</div>
                   <div className={Classes.text_wrapper}>Privacy and Policy</div>
                   <div className={Classes.text_wrapper}>Accessibility</div>
                   <div className={Classes.text_wrapper}>Features</div>
-                </div>
+                </div> */}
               </div>
 
               <div className={Classes.footer_flex_col}>
