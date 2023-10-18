@@ -3,13 +3,13 @@
     "idx":1,
     "question": "When is FMC Weekend?",
     "answer":
-      "FMC Weekend is set to be held from 3 November- 5 November 2023. You can register now and enroll yourself into various workshops and events."
+      "FMC Weekend is set to be held from 3rd November to 5th November 2023. You can register now and enroll yourself in various workshops and events."
   },
   {
     "idx":2,
-    "question": "Is the participation in events and workshops paid?",
+    "question": "What is the theme for this year's FMC Weekend?",
     "answer":
-      "FMC Weekend offers a variety of pocket-friendly passes for attending stimulating workshops and participating in exciting events!"
+      "The theme for FMC Weekend this year is “The Euphoria Of Expression” which symbolizes the exhilaration and fulfillment that comes from unrestricted, heartfelt self-expression in various forms, highlighting its importance in human creativity and connection."
   },
 
   {
@@ -20,37 +20,32 @@
   },
   {
     "idx":4,
-    "question": "How does the referral code work?",
+    "question": "Is the participation in events and workshops paid?",
     "answer":
-      "Each participant will be provided with a referral code, which they may distribute among their acquaintances, who would receive a 10% discount on their pass prices. The leaderboard will display the number of times a referral code has been used and rank the participants accordingly. Whosoevers referral code is used the maximum number of times will receive cash prizes worth 3k!"
+      "FMC Weekend offers a variety of pocket-friendly passes for attending stimulating workshops and participating in exciting events!"
   },
   {
     "idx":5,
-    "question": "Are vehicles allowed inside?",
-    "answer": "Yes, vehicles are allowed."
-  },
-  {
-    "idx":6,
     "question": "Should I carry ID proof every time?",
-    "answer": "It is preferable to carry an ID Card as well as Event Passes."
+    "answer": "It is preferable to carry an ID Card as well as the registration card."
   }, 
   {
-    "idx":7,
+    "idx":6,
     "question": "How will I find out about the timings of events?",
-    "answer": "Stay tuned to our social handles and be in touch with event coordinators for event timings."
+    "answer": "Stay tuned to our social handles, and the website, and be in touch with event coordinators for event timings."
   },
   {
-    "idx":8,
+    "idx":7,
     "question": "What are the specific venues for events in IIT BHU?",
     "answer": "FMC Weekend will take place in IIT BHU Campus. Specific Venues for all offline events and Pronites will be communicated on our social media handles (Instagram - @fmc_weekend, Facebook - FMC Weekend and LinkedIn - FMC Weekend) "
   },
   {
-    "idx":9,
+    "idx":8,
     "question": "Are on-spot registrations allowed during the fest?",
     "answer": "Yes, on-spot registrations are allowed for offline events. For online events, registrations must be done before the event begins."
   },
   {
-    "idx":10,
+    "idx":9,
     "question": " Are there any online competitions?",
     "answer": "Yes, there are both online and offline competitions, for more information regarding each event, check out https://www.fmcweekend.in/event"
   }
