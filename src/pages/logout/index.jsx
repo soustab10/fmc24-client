@@ -1,7 +1,7 @@
 import React from 'react'
 import Router from 'next/router'
 import {useAuth} from "../../context/auth";
-
+import loading from "../loading"
 const Logout = () => {
   const {state, dispatch} = useAuth();
     try{
@@ -14,7 +14,9 @@ const Logout = () => {
         console.log("E");
     }
   return (
-    <div>Logout</div>
+  <>
+  {loading()}
+  </>
   )
 }
 
