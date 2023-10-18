@@ -69,20 +69,20 @@ const Index = () => {
 
     // disable registered events
 
-    // const response2=await fetch(backendURL+"/api/events",{
-    //   method:"GET",
-    //   body:{
-    //     email:useremail
-    //   }
-    // })
-    // const data2=await response2.json();
-    // let events=data2.registeredEvents;
-    // let eventsArray,eventsArray_temp=[];
-    // for(let i in events){
-    //   eventsArray_temp.push(events[i].id)
-    // }
-    // eventsArray=eventsArray_temp;
-    // setDisabledItems(eventsArray);
+    const response2=await fetch(backendURL+"/api/events",{
+      method:"POST",
+      headers: { 
+        'Content-Type':  
+            'application/json;charset=utf-8'
+    },
+      body:JSON.stringify({
+        email:useremail
+      })
+    })
+    const data2=await response2.json();
+    let events=data2.registeredEvents;
+    console.log(events)
+    setDisabledItems(events);
 
 
     // console.log(cartArray_temp)
@@ -327,8 +327,8 @@ const Index = () => {
                         >
                           <input
                             type="checkbox"
-                            checked={selectedItems.includes(item.id)} disbaled={disabledItems.includes(item.id)}
-                            onChange={() => handleCheckboxChange(item.id, item)}
+                            checked={selectedItems.includes(item.id)} disabled={disabledItems.includes(item.id)}
+                            onChange={() => handleCheckboxChange(item.id, item)} style={disabledItems.includes(item.id)?{'backgroundColor':'grey'}:{}}
                             className="before:content[''] peer relative h-5 w-5 cursor-pointer appearance-none rounded-md border border-blue-gray-200 transition-all before:absolute before:top-2/4 before:left-2/4 before:block before:h-12 before:w-12 before:-translate-y-2/4 before:-translate-x-2/4 before:rounded-full before:bg-blue-gray-500 before:opacity-0 before:transition-opacity checked:border-green-500 checked:bg-green-500 checked:before:bg-green-500 hover:before:opacity-10"
                           />
 
@@ -392,7 +392,8 @@ const Index = () => {
                         >
                           <input
                             type="checkbox"
-                            checked={selectedItems.includes(item.id)}
+                            checked={selectedItems.includes(item.id)} disabled={disabledItems.includes(item.id)}
+                            style={disabledItems.includes(item.id)?{'backgroundColor':'grey'}:{}}
                             onChange={() => handleCheckboxChange(item.id,item)}
                             className="before:content[''] peer relative h-5 w-5 cursor-pointer appearance-none rounded-md border border-blue-gray-200 transition-all before:absolute before:top-2/4 before:left-2/4 before:block before:h-12 before:w-12 before:-translate-y-2/4 before:-translate-x-2/4 before:rounded-full before:bg-blue-gray-500 before:opacity-0 before:transition-opacity checked:border-green-500 checked:bg-green-500 checked:before:bg-green-500 hover:before:opacity-10"
                           />
@@ -451,7 +452,8 @@ const Index = () => {
                       >
                         <input
                           type="checkbox"
-                          checked={selectedItems.includes(item.id)}
+                          checked={selectedItems.includes(item.id)} disabled={disabledItems.includes(item.id)}
+                          style={disabledItems.includes(item.id)?{'backgroundColor':'grey'}:{}}
                           onChange={() => handleCheckboxChange(item.id,item)}
                           className="before:content[''] peer relative h-5 w-5 cursor-pointer appearance-none rounded-md border border-blue-gray-200 transition-all before:absolute before:top-2/4 before:left-2/4 before:block before:h-12 before:w-12 before:-translate-y-2/4 before:-translate-x-2/4 before:rounded-full before:bg-blue-gray-500 before:opacity-0 before:transition-opacity checked:border-green-500 checked:bg-green-500 checked:before:bg-green-500 hover:before:opacity-10"
                         />
