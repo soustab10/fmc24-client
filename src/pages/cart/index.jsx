@@ -332,7 +332,8 @@ const Index = () => {
               {selectedOption === "D" && (
                 <div>
                   <Image
-                    src="https://res.cloudinary.com/shubhamiitbhu/image/upload/v1697543402/Gens/tnune40leba6gy6vh0aw.jpg" // Replace with the actual Unsplash image URL
+                    // src="https://res.cloudinary.com/shubhamiitbhu/image/upload/v1697543402/Gens/tnune40leba6gy6vh0aw.jpg" // Replace with the actual Unsplash image URL
+                    src="https://res.cloudinary.com/dkyhoira8/image/upload/v1697651660/vbj6qfnk1gq42hykf2sy.png"
                     alt="Image"
                     className="w-[60vw]"
                     width={400} // Specify the desired width
