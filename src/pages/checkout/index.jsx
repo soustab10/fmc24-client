@@ -577,7 +577,7 @@ const Checkout = () => {
             </button>
             {
             showScanner ? (<>
-                 <img src="https://res.cloudinary.com/shubhamiitbhu/image/upload/c_thumb,w_200,g_face/v1697544418/Gens/i74wgd922idblu0gwdq8.svg" id="qrcode" className=" h-60 w-60"></img>
+                 <Image src="https://res.cloudinary.com/shubhamiitbhu/image/upload/c_thumb,w_200,g_face/v1697544418/Gens/i74wgd922idblu0gwdq8.svg" id="qrcode" className=" h-60 w-60" alt="qr" width={100} height={100}/>
               </>) : ( null)
             }   
             <input 
@@ -599,7 +599,7 @@ const Checkout = () => {
     <div class="relative col-span-full flex flex-col py-6 pl-8 pr-4 sm:py-12 lg:col-span-4 lg:py-24">
       
       <div>
-        <img src="clip.png" alt="" class="absolute inset-0 h-full w-full object-cover md:rounded-tr-3xl md:rounded-br-3xl max-lg:rounded-bl-3xl  max-lg:rounded-br-3xl" />
+        <Image src="/clip.png" alt="" class="absolute inset-0 h-full w-full object-cover md:rounded-tr-3xl md:rounded-br-3xl max-lg:rounded-bl-3xl  max-lg:rounded-br-3xl" width={100} height={100} />
         <div class="absolute inset-0 h-full w-full bg-gradient-to-t  opacity-95"></div>
       </div>
       <div class="relative">
