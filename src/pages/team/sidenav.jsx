@@ -60,7 +60,6 @@ const Sidenav = () => {
           <li onClick={handleClick} ><p className={Classes.gloweffectgreen} name='te'>Tech</p></li>
           <li onClick={handleClick} ><p className={Classes.gloweffectorange} name='se'>Secretaries</p></li>
           <li onClick={handleClick} ><p className={Classes.gloweffectred} name='an'>Animation</p></li>
-          <li onClick={handleClick} ><p className={Classes.gloweffectblue} name='ad'>Advisors</p></li>
 
         </ul>
 

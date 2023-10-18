@@ -1,14 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
-import { useState,useEffect } from "react";
+import { useState, useEffect } from "react";
 // import Classes from "./styles/Header.module.css";
 
 const navbarGlass = {
-  background: 'rgba(0, 0, 25, 0.3)',
-  boxShadow: '0 8px 32px 0 rgba(31, 38, 135, 0.37)',
-  backdropFilter: 'blur(16.5px)',
-  WebkitBackdropFilter: 'blur(16.5px)',
-
+  background: "rgba(0, 0, 25, 0.3)",
+  boxShadow: "0 8px 32px 0 rgba(31, 38, 135, 0.37)",
+  backdropFilter: "blur(16.5px)",
+  WebkitBackdropFilter: "blur(16.5px)",
 };
 
 const logoLeftPadding = {
@@ -23,21 +22,18 @@ const Header = () => {
   };
   useEffect(() => {
     try {
-      const x=sessionStorage.getItem("isLoggedIn");
-      console.log(x)
+      const x = sessionStorage.getItem("isLoggedIn");
+      console.log(x);
 
-      if(x===null || x===false)
-       setIsLoggedin(false);
-      else{
+      if (x === null || x === false) setIsLoggedin(false);
+      else {
         setIsLoggedin(true);
       }
-       
-    }
-    catch (e) {
+    } catch (e) {
       console.log(e);
     }
   }, [isLoggedin]);
-  console.log("logged in?",isLoggedin)
+  console.log("logged in?", isLoggedin);
   return (
     <>
       <div
@@ -45,7 +41,10 @@ const Header = () => {
         style={navbarGlass}
       >
         <Link href="/">
-          <div className="fmcw-logo-header place-self-center z-100" style={logoLeftPadding}></div>
+          <div
+            className="fmcw-logo-header place-self-center z-100"
+            style={logoLeftPadding}
+          ></div>
         </Link>
         <div className="links-container-header flex justify-end flex-row basis-5/6">
           <Link
@@ -60,12 +59,7 @@ const Header = () => {
           >
             workshops
           </Link>
-          <Link
-            href="/comingsoon"
-            className="nav-menu links-header mr-8  place-self-center "
-          >
-            sponsors
-          </Link>
+
           <Link
             href="/glimpses"
             className="nav-menu links-header mr-8  place-self-center "
@@ -84,18 +78,32 @@ const Header = () => {
           >
             faq
           </Link>
-          {isLoggedin ? (<><Link
-            href="/logout"
-            className="nav-menu links-header mr-8  place-self-center"
-          >
-            logout
-          </Link></>):(<><Link
-            href="/login"
-            className="nav-menu links-header mr-8  place-self-center"
-          >
-            login
-          </Link></>)}
-          
+          {isLoggedin ? (
+            <>
+              <Link
+                href="/dashboard"
+                className="nav-menu links-header mr-8  place-self-center"
+              >
+                dashboard
+              </Link>
+              <Link
+                href="/logout"
+                className="nav-menu links-header mr-8  place-self-center"
+              >
+                logout
+              </Link>
+            </>
+          ) : (
+            <>
+              <Link
+                href="/login"
+                className="nav-menu links-header mr-8  place-self-center"
+              >
+                login
+              </Link>
+            </>
+          )}
+
           <Link
             href="/"
             className=" links-header w-auto pr-4 place-self-center"
@@ -122,9 +130,6 @@ const Header = () => {
                   <Link href="/workshops" className="menu-list">
                     workshops
                   </Link>
-                  <Link href="/comingsoon" className="menu-list">
-                    sponsors
-                  </Link>
                   <Link href="/glimpses" className="menu-list">
                     glimpses
                   </Link>
@@ -134,14 +139,21 @@ const Header = () => {
                   <Link href="/faq" className="menu-list">
                     faq
                   </Link>
-                  {
-                    isLoggedin ? (<> <Link href="/logout" className="menu-list">
-                    logout
-                  </Link></>):(<> <Link href="/login" className="menu-list">
-                    login
-                  </Link></>)
-                  }
-                 
+                  {isLoggedin ? (
+                    <>
+                      {" "}
+                      <Link href="/logout" className="menu-list">
+                        logout
+                      </Link>
+                    </>
+                  ) : (
+                    <>
+                      {" "}
+                      <Link href="/login" className="menu-list">
+                        login
+                      </Link>
+                    </>
+                  )}
                 </div>
               </div>
             ) : null}

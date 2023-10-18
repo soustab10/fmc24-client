@@ -17,6 +17,24 @@ const Gs = () => {
               <div class="h-[24rem]">
               <Image
                 className="mx-auto h-[18rem] w-full object-cover"
+                src="/team/rishav.jpg"
+                alt="khushi"
+                loading="lazy"
+                width="640"
+                height="805"
+              />
+              </div>
+              <div class="absolute bottom-0 inset-x-0 h-max mt-auto px-8 py-6 backdrop-blur bg-white/50">
+                <div>
+                <h4 class="text-xl text-center font-bold dark:text-white">Rishav Singh</h4>
+                  <span class="block text-center text-sm font-semibold text-black">General Secretary</span>
+                </div>
+              </div>
+            </div>
+            <div class="group relative rounded-3xl  space-y-4 overflow-hidden  border-solid border-2">
+              <div class="h-[24rem]">
+              <Image
+                className="mx-auto h-[18rem] w-full object-cover"
                 src="/team/Khushi.jpg"
                 alt="khushi"
                 loading="lazy"
@@ -26,7 +44,25 @@ const Gs = () => {
               </div>
               <div class="absolute bottom-0 inset-x-0 h-max mt-auto px-8 py-6 backdrop-blur bg-white/50">
                 <div>
-                <h4 class="text-xl text-center font-bold dark:text-white">Kushi Kapoor</h4>
+                <h4 class="text-xl text-center font-bold dark:text-white">Khushi Kapoor</h4>
+                  <span class="block text-center text-sm font-semibold text-black">Joint General Secretary</span>
+                </div>
+              </div>
+            </div>
+            <div class="group relative rounded-3xl  space-y-4 overflow-hidden  border-solid border-2">
+              <div class="h-[24rem]">
+              <Image
+                className="mx-auto h-[18rem] w-full object-cover"
+                src="https://drive.google.com/uc?export=view&id=15qD2uQjvhAgk_sJ0C7dmGsacjin485uc"
+                alt="khushi"
+                loading="lazy"
+                width="640"
+                height="805"
+              />
+              </div>
+              <div class="absolute bottom-0 inset-x-0 h-max mt-auto px-8 py-6 backdrop-blur bg-white/50">
+                <div>
+                <h4 class="text-xl text-center font-bold dark:text-white">Aman Bhaskar</h4>
                   <span class="block text-center text-sm font-semibold text-black">Joint General Secretary</span>
                 </div>
               </div>

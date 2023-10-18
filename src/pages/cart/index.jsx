@@ -283,7 +283,7 @@ const Index = () => {
                   className="text-[20px] hover:text-[25px] hover:font-semibold transition-all duration-5000 ease-in-out"
                   onClick={() => handleOptionSelect("C")}
                 >
-                  Random Tickets
+                  Special Tickets
                 </button>
               </div>
             </div>
@@ -316,7 +316,7 @@ const Index = () => {
                 className="text-[20px] hover:text-[25px] hover:font-semibold transition-all duration-5000 ease-in-out"
                 onClick={() => handleOptionSelect("C")}
               >
-                Random Tickets
+                Special Tickets
               </button>
             </div>
           </div>
@@ -332,7 +332,7 @@ const Index = () => {
               {selectedOption === "D" && (
                 <div>
                   <Image
-                    src="https://res.cloudinary.com/shubhamiitbhu/image/upload/v1697543402/Gens/tnune40leba6gy6vh0aw.jpg" // Replace with the actual Unsplash image URL
+                    src="/passeshigh.png" // Replace with the actual Unsplash image URL
                     alt="Image"
                     className="w-[60vw]"
                     width={400} // Specify the desired width
@@ -381,10 +381,13 @@ const Index = () => {
                           className="mt-px cursor-pointer flex flex-row select-none font-light text-white"
                           htmlFor="login"
                         >
-                          <div className="title mr-4 ml-2">{item.Title}</div>
-                          <div className="title mr-4">{item.genre}</div>
-                          <div className="title mr-4">{item.type}</div>
-                          <div className="title mr-4">Rs. {item.price}</div>
+                        
+                          <div className="font-bold mr-4 ml-2 self-center">{item.Title}</div>
+                          <div className=" bg-blue-900 hover:bg-blue-300 px-4 py-4 border-dark-500 font-semibold mr-4">Genre: {item.genre}</div>
+                          <div className="font-light mr-4 self-center">{item.type}</div>
+                          <div className="font-semibold mr-4 self-center">Price: Rs. {item.price}</div>
+                
+                          
                         </label>
                       </div>
 
