@@ -21,25 +21,8 @@ const Layout = ({handleClick, isSomeActive, data, turn, setTurn}:LayoutProps) =>
   return (
     <div className={Classes.main}>
         <span className={Classes.heading}>
-            Frequently Asked Questions
+            Campus Facilites
         </span>
-      <div className={Classes.qna}>
-          <button
-              className={Classes.cardi}
-              onClick={handleClick}
-            >
-              <span className={Classes.div1}> {!isSomeActive ? "Open All" : "Close All"}</span>
-              {/* <div className={Classes.div2}> */}
-              <div
-                className={
-                  (isSomeActive ? " rotate-180" : "rotate-0")
-                }
-              >
-               <Image src={down} alt="" width={20} height={20}/>
-              </div>
-              {/* </div> */}
-            </button>
-      </div>
 
       {data.map((el,i)=>{
         return (
