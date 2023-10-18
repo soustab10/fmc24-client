@@ -14,6 +14,13 @@ function YourComponent() {
     setSelectedEvents([]); // Clear the selected events when the option changes
   };
 
+  const eventHeadsStyle = {
+    padding: "10px",
+    display: "flex",
+    justifyContent: "space-between",
+    alignItems: "center",
+  }
+
   const handleOptionSelectEvents = (option) => {
     if (selectedOptions.includes(option)) {
       // If the option is already selected, deselect it
@@ -27,7 +34,7 @@ function YourComponent() {
       // If less than 6 options are selected, select the option
       setSelectedOptions([...selectedOptions, option]);
       console.log(selectedOptions)
-      setSelectedEvents([...selectedEvents,option.Title]);
+      setSelectedEvents([...selectedEvents, option.Title]);
     }
   };
   const handleOptionSelectEvents4 = (option) => {
@@ -40,7 +47,7 @@ function YourComponent() {
     } else if (selectedOptions.length < 4) {
       // If less than 4 options are selected, select the option
       setSelectedOptions([...selectedOptions, option]);
-      setSelectedEvents([...selectedEvents,option.Title]);
+      setSelectedEvents([...selectedEvents, option.Title]);
       console.log(selectedOptions)
     }
   };
@@ -57,7 +64,26 @@ function YourComponent() {
 
   return (
     <div className={Classes.SelectOption}>
-      <div className={Classes.OptionSelect}>
+      <h2 className={Classes.OptionSelect}>
+        For Purchase of Special Tickets Contact
+      </h2>
+
+      <div className={Classes.OptionSelect2} >
+        <p>
+          Mahi Bansal
+          <br />
+          9413603935
+        </p>
+      </div>
+      <div className={Classes.OptionSelect2}>
+        <p>
+          Atmadeep Bhattacharya
+          <br />
+          9609925061
+        </p>
+      </div>
+
+      {/* <div className={Classes.OptionSelect}>
       <h2>Select an option:</h2>
         <label>
           6 Random Tickets
@@ -127,7 +153,7 @@ function YourComponent() {
                 </label>
               </div>
 
-              {/* You can add additional content here */}
+            
             </div>
           ))}
           <style jsx>{`
@@ -190,7 +216,7 @@ function YourComponent() {
                 </label>
               </div>
 
-              {/* You can add additional content here */}
+             
             </div>
           ))}
           <style jsx>{`
@@ -206,7 +232,7 @@ function YourComponent() {
         </div>
       )}
 
-      <p className={Classes.SelectedEvents}>Selected Events: {selectedEvents.join(", ")}</p>
+      <p className={Classes.SelectedEvents}>Selected Events: {selectedEvents.join(", ")}</p> */}
     </div>
   );
 }

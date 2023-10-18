@@ -13,6 +13,25 @@ const SocialMedia = () => {
             </h2>
           </div>
           <div class="md:ml-20 lg:ml-20 grid gap-12 px-4 sm:px-20 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+          <div class="group relative rounded-3xl  space-y-4 overflow-hidden border-solid border-2">
+              <div class="h-[24rem]">
+                <Image
+                  className="mx-auto h-[18rem] w-full object-cover"
+                  src="/team/Aditi.jpg"
+                  alt="aditi"
+                  loading="lazy"
+                  width="640"
+                  height="805"
+                />
+              </div>
+              <div class="absolute bottom-0 inset-x-0 h-max mt-auto px-8 py-6 backdrop-blur bg-white/50">
+                <div>
+                  <h4 class="text-xl text-center font-bold dark:text-white">Aditi Solanki</h4>
+                  <span class="block text-center text-sm font-semibold text-black">Social Media Head
+                  </span>
+                </div>
+              </div>
+            </div>
             <div class="group relative rounded-3xl  space-y-5 overflow-hidden border-solid border-2">
               <div class="h-[24rem]">
                 <Image
@@ -32,44 +51,8 @@ const SocialMedia = () => {
                 </div>
               </div>
             </div>
-            <div class="group relative rounded-3xl  space-y-5 overflow-hidden border-solid border-2">
-              <div class="h-[24rem]">
-                <Image
-                  className="mx-auto h-[18rem] w-full object-cover"
-                  src="/team/Vidushi.jpg"
-                  alt="vidushi"
-                  loading="lazy"
-                  width="640"
-                  height="700"
-                />
-              </div>
-              <div class="absolute bottom-0 inset-x-0 h-max mt-auto px-8 py-6 backdrop-blur bg-white/50">
-                <div>
-                  <h4 class="text-xl text-center font-bold dark:text-white">Vidushi Bansal</h4>
-                  <span class="block text-center text-sm font-semibold text-black">Social Media Head
-                  </span>
-                </div>
-              </div>
-            </div>
-            <div class="group relative rounded-3xl  space-y-4 overflow-hidden border-solid border-2">
-              <div class="h-[24rem]">
-                <Image
-                  className="mx-auto h-[18rem] w-full object-cover"
-                  src="/team/Aditi.jpg"
-                  alt="aditi"
-                  loading="lazy"
-                  width="640"
-                  height="805"
-                />
-              </div>
-              <div class="absolute bottom-0 inset-x-0 h-max mt-auto px-8 py-6 backdrop-blur bg-white/50">
-                <div>
-                  <h4 class="text-xl text-center font-bold dark:text-white">Aditi Solanki</h4>
-                  <span class="block text-center text-sm font-semibold text-black">Social Media Head
-                  </span>
-                </div>
-              </div>
-            </div>
+
+
             <div class="group relative rounded-3xl  space-y-5 overflow-hidden border-solid border-2">
               <div class="h-[24rem]">
                 <Image
@@ -108,44 +91,26 @@ const SocialMedia = () => {
                 </div>
               </div>
             </div>
-            <div class="group relative rounded-3xl  space-y-4 overflow-hidden border-solid border-2">
+            <div class="group relative rounded-3xl  space-y-5 overflow-hidden border-solid border-2">
               <div class="h-[24rem]">
                 <Image
                   className="mx-auto h-[18rem] w-full object-cover"
-                  src="/team/Lakshay.jpg"
-                  alt="lakshay"
+                  src="/team/Vidushi.jpg"
+                  alt="shreyan"
                   loading="lazy"
                   width="640"
-                  height="805"
+                  height="700"
                 />
               </div>
               <div class="absolute bottom-0 inset-x-0 h-max mt-auto px-8 py-6 backdrop-blur bg-white/50">
                 <div>
-                  <h4 class="text-xl text-center font-bold dark:text-white">Lakshay Kalra</h4>
+                  <h4 class="text-xl text-center font-bold dark:text-white">Vidushi Bansal</h4>
                   <span class="block text-center text-sm font-semibold text-black">Social Media Head
                   </span>
                 </div>
               </div>
             </div>
-            <div class="group relative rounded-3xl  space-y-4 overflow-hidden border-solid border-2">
-              <div class="h-[24rem]">
-                <Image
-                  className="mx-auto h-[18rem] w-full object-cover"
-                  src="/team/Utkarsh.jpeg"
-                  alt="utkarsh"
-                  loading="lazy"
-                  width="640"
-                  height="805"
-                />
-              </div>
-              <div class="absolute bottom-0 inset-x-0 h-max mt-auto px-8 py-6 backdrop-blur bg-white/50">
-                <div>
-                  <h4 class="text-xl text-center font-bold dark:text-white">Utkarsh Raj</h4>
-                  <span class="block text-center text-sm font-semibold text-black">Social Media Head</span>
-                </div>
-              </div>
-            </div>
-
+            
           </div>
         </div>
       </div>

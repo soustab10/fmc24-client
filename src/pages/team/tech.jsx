@@ -17,7 +17,7 @@ const Tech = () => {
               <div class="h-[24rem]">
                 <Image
                   className="mx-auto h-[18rem] w-full object-cover"
-                  src="https://res.cloudinary.com/dnmu26tku/image/upload/v1697367001/q58qcrshhx3ktsdu7zja.jpg"
+                  src="/team/Soustab.jpg"
                   alt="soustab"
                   loading="lazy"
                   width="640"
@@ -26,7 +26,7 @@ const Tech = () => {
               </div>
               <div class="absolute bottom-0 inset-x-0 h-max mt-auto px-8 py-6 backdrop-blur bg-white/50">
                 <div>
-                  <h4 class="text-xl text-center font-bold dark:text-white">Soustab Halder</h4>
+                  <h4 class="text-xl text-center font-bold dark:text-white">Soustab Haldar</h4>
                   <span class="block text-center text-sm font-semibold text-black">Tech Head</span>
                 </div>
               </div>
@@ -35,7 +35,7 @@ const Tech = () => {
               <div class="h-[24rem]">
                 <Image
                   className="mx-auto h-[18rem] w-full object-cover"
-                  src="https://res.cloudinary.com/dnmu26tku/image/upload/v1697367398/ins2omefttkflcaxhuos.jpg"
+                  src="https://res.cloudinary.com/shubhamiitbhu/image/upload/v1697367398/ins2omefttkflcaxhuos.jpg"
                   alt="shubham"
                   loading="lazy"
                   width="640"
