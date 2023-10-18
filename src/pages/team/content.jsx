@@ -17,7 +17,7 @@ const Content = () => {
             <div class="h-[24rem]">
             <Image
                 className="mx-auto h-[18rem] w-full object-cover"
-                src="/team/Lakshay.jpg"
+                src="/team/Kartikeya.jpg"
                 alt="lakshay"
                 loading="lazy"
                 width="640"
