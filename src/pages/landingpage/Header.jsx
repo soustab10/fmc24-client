@@ -19,6 +19,7 @@ const Header = () => {
   const [menuState, setMenuState] = useState(false);
   const handleMenu = () => {
     setMenuState(!menuState);
+    
   };
   useEffect(() => {
     try {
@@ -104,7 +105,7 @@ const Header = () => {
             </>
           )}
 
-          <Link
+          <div
             href="/"
             className=" links-header w-auto pr-4 place-self-center"
           >
@@ -157,7 +158,7 @@ const Header = () => {
                 </div>
               </div>
             ) : null}
-          </Link>
+          </div>
           {menuState ? (
             <button onClick={handleMenu}>
               <Image
