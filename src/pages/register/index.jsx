@@ -13,6 +13,7 @@ const Register = () => {
   const [name, setName] = useState('');
   const [onDashboard, setOnDashboard] = useState(false);
   const [college, setCollege] = useState('');
+  const [ft, setFt] = useState(true);
 
   useEffect(() => {
     const token = sessionStorage.getItem('token');
@@ -29,31 +30,40 @@ const Register = () => {
   }, []);
 
   const text = `Let's get to know you a bit. We are a step closer to the world of FMC Weekend.`;
-// const getCollege=async(email)=>{
-//   const res = await fetch('/api/college', {
-//     method: 'POST',
-//     body: JSON.stringify(email),
-//     headers: {
-//       'Content-Type': 'application/json'
-//     }
-//   });
-//   const data = await res.json();
-//   console.log(data);
-// }
-// getCollege("shubham@gmail.com")
-// useEffect(() => {
-//   console.log("Email:", email);
-//   getCollege(email);
-//   console.log(college)
-// }, [email]);
+  // const getCollege=async(email)=>{
+  //   const res = await fetch('/api/college', {
+  //     method: 'POST',
+  //     body: JSON.stringify(email),
+  //     headers: {
+  //       'Content-Type': 'application/json'
+  //     }
+  //   });
+  //   const data = await res.json();
+  //   console.log(data);
+  // }
+  // getCollege("shubham@gmail.com")
+  // useEffect(() => {
+  //   console.log("Email:", email);
+  //   getCollege(email);
+  //   console.log(college)
+  // }, [email]);
 
-  
-  
+
+
 
   const handleSubmit = async (e) => {
+
+    console.log("clicked")
     e.preventDefault();
-    document.getElementById("submitButton").disabled=true;
-   
+    // if(ft){
+    //   setInterval(() => {
+    sessionStorage.removeItem("userData")
+    Router.push('/dashboard');
+    //     setFt(false);
+    //   }, 3000);
+    // }
+    // document.getElementById("submitButton").disabled=true;
+
     // console.log("e : ",e);
     let obj = {
       name: e.target[0].value,
@@ -65,29 +75,29 @@ const Register = () => {
       instaHandle: e.target[5].value,
       userType: e.target[6].value //insti user usertype 0
     };
- 
-  
+
+
     if (e.target[1].value.endsWith('@itbhu.ac.in') || e.target[1].value.endsWith('@iitbhu.ac.in')) {
       obj.year = e.target[4].value;
       obj.redeem = e.target[5].value;
       obj.instaHandle = e.target[6].value;
       obj.userType = e.target[7].value;
     }
-    try{
-      //https://docs.google.com/forms/d/e/1FAIpQLSfVEviulggrpo7FbbTcmj9JOTg5lGeKOhrN7IHa7jPNbkKPzw/viewform?usp=pp_url&entry.1822912978=Shubham&entry.1694255526=gvyeuwhdbcjn&entry.2129627621=hberijncwdkm&entry.1897881966=veubicnowdm
-      const name=JSON.stringify(obj.name);
-      const email=JSON.stringify(obj.email);
-      const number=JSON.stringify(obj.number);
-      const college=JSON.stringify(obj.college);
-      console.log(name,email,number,college)
-      // https://docs.google.com/forms/d/e/1FAIpQLSfVEviulggrpo7FbbTcmj9JOTg5lGeKOhrN7IHa7jPNbkKPzw/viewform?usp=pp_url&entry.1822912978=Shubham&entry.1694255526=gvyeuwhdbcjn&entry.2129627621=hberijncwdkm&entry.1897881966=veubicnowdm
-     let x=await fetch(`https://docs.google.com/forms/d/e/1FAIpQLSfVEviulggrpo7FbbTcmj9JOTg5lGeKOhrN7IHa7jPNbkKPzw/viewform?usp=pp_url&entry.1822912978=${name}&entry.1694255526=${email}&entry.2129627621=${number}&entry.1897881966=${college}`,{
-        method:"POST",
-      });
+    // try{
+    //   //https://docs.google.com/forms/d/e/1FAIpQLSfVEviulggrpo7FbbTcmj9JOTg5lGeKOhrN7IHa7jPNbkKPzw/viewform?usp=pp_url&entry.1822912978=Shubham&entry.1694255526=gvyeuwhdbcjn&entry.2129627621=hberijncwdkm&entry.1897881966=veubicnowdm
+    //   const name=JSON.stringify(obj.name);
+    //   const email=JSON.stringify(obj.email);
+    //   const number=JSON.stringify(obj.number);
+    //   const college=JSON.stringify(obj.college);
+    //   console.log(name,email,number,college)
+    //   // https://docs.google.com/forms/d/e/1FAIpQLSfVEviulggrpo7FbbTcmj9JOTg5lGeKOhrN7IHa7jPNbkKPzw/viewform?usp=pp_url&entry.1822912978=Shubham&entry.1694255526=gvyeuwhdbcjn&entry.2129627621=hberijncwdkm&entry.1897881966=veubicnowdm
+    //  let x=await fetch(`https://docs.google.com/forms/d/e/1FAIpQLSfVEviulggrpo7FbbTcmj9JOTg5lGeKOhrN7IHa7jPNbkKPzw/viewform?usp=pp_url&entry.1822912978=${name}&entry.1694255526=${email}&entry.2129627621=${number}&entry.1897881966=${college}`,{
+    //     method:"POST",
+    //   });
 
-    }catch(e){
-      console.log(e);
-    }
+    // }catch(e){
+    //   console.log(e);
+    // }
     // catch(e){
     //   console.log("submitted");
     // }
@@ -104,20 +114,20 @@ const Register = () => {
       const data = await res.json();
       console.log(data);
       //we are seeing users are facing difficulty in login after register so we are redirecting them to dashboard after register
-      setInterval(() => {
-        Router.push('/dashboard');
-      }, 3000);
-      if (data.message === 'success') {
-        setOnDashboard(true);
-        sessionStorage.removeItem('isNewUser');
-        sessionStorage.setItem('isNewUser', false);
-        sessionStorage.removeItem("userData")
-        Router.push('/dashboard');
-      } else {
-        // alert('login failed, please try later');
-        alert(data.message);
-        // window.location.href = "/register";
-      }
+
+
+
+      // if (data.message === 'success') {
+      //   setOnDashboard(true);
+      //   sessionStorage.removeItem('isNewUser');
+      //   sessionStorage.setItem('isNewUser', false);
+      //   sessionStorage.removeItem("userData")
+      //   Router.push('/dashboard');
+      // } else {
+      //   // alert('login failed, please try later');
+      //   alert(data.message);
+      //   // window.location.href = "/register";
+      // }
 
     } catch (error) {
       console.log(error);

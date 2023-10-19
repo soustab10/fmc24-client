@@ -1,3 +1,4 @@
+import Image from "next/image";
 const WorkshopCard = ({ title, imageSrc }) => {
     return (
         <div className="w-[340px] h-[250px] justify-center my-6 border  shadow-amber-100/20 mx-2 border-white bg-gradient-to-t from-white/10 to-white/30 text-white rounded-[14px] bg-opacity-10 backdrop-blur-lg shadow-xl drop-shadow-xl bg-blend-normal z-10">
@@ -5,7 +6,7 @@ const WorkshopCard = ({ title, imageSrc }) => {
           <div className="flex flex-rows justify-around font-bold text-2xl text-black mb-2 my-3.5">
             <div className="mr-4">Workshop</div>
             <div>
-              <img className="-mt-6" src={imageSrc} width={100} height={100} alt="icon" />
+              <Image className="-mt-6" src={imageSrc} width={100} height={100} alt="icon" />
             </div>
           </div>
           <p className="my-3.5 h-[180px] text-3xl font-semibold text-center">
