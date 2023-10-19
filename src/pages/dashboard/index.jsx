@@ -14,6 +14,7 @@ import WorkshopCard from './workshopCard/WorkshopCard';
 import Link from 'next/link';
 import { useAuth } from '../../context/auth';
 import jsonData from './combined_data.json';
+import { Usable } from 'react';
 const DashBoard = () => {
     const {state} = useAuth();
     const { isAuthenticated, user } = state;
