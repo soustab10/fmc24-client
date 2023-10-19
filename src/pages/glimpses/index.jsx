@@ -4,6 +4,7 @@ import Footer from "../landingpage/Footer";
 import Classes from "./aboutus.module.css";
 import Image from "next/image";
 import Link from "next/link";
+import { CldVideoPlayer } from "next-cloudinary";
 
 // const textStyleBold = {
 //   backdropFilter: "blur(9px) saturate(100%)",
@@ -20,6 +21,18 @@ import Link from "next/link";
 // };
 
 const About = () => {
+  //we want to identify laptop or mobile for header responsiveness
+  // const [isMobile, setIsMobile] = useState(false);
+  // useEffect(() => {
+  //   const checkIsMobile = () => {
+  //     setIsMobile(window.innerWidth < 768);
+  //   };
+  //   window.addEventListener("resize", checkIsMobile);
+  //   checkIsMobile();
+  //   return () => {
+  //     window.removeEventListener("resize", checkIsMobile);
+  //   };
+  // }, []);
   return (
     <>
       <Header />
@@ -27,9 +40,30 @@ const About = () => {
         {/* <Image className={Classes.img1} alt="" src='/1.jpg'  height={720} width={480}/> */}
         
       </div>
-      <video src="https://scontent.cdninstagram.com/o1/v/t16/f1/m82/9F4638772D7997139531B4C4C0F98289_video_dashinit.mp4?efg=eyJxZV9ncm91cHMiOiJbXCJpZ193ZWJfZGVsaXZlcnlfdnRzX290ZlwiXSIsInZlbmNvZGVfdGFnIjoidnRzX3ZvZF91cmxnZW4uY2xpcHMuYzIuMTA4MC5iYXNlbGluZSJ9&_nc_ht=scontent.cdninstagram.com&_nc_cat=102&vs=903954610945567_3854666974&_nc_vs=HBksFQIYT2lnX3hwdl9yZWVsc19wZXJtYW5lbnRfcHJvZC85RjQ2Mzg3NzJENzk5NzEzOTUzMUI0QzRDMEY5ODI4OV92aWRlb19kYXNoaW5pdC5tcDQVAALIAQAVABgkR0FCbnd4TjZheE1Eb1FFRkFLd1AtRjh0WDk5SmJxX0VBQUFGFQICyAEAKAAYABsAFQAAJtDZoaj4%2FO4%2FFQIoAkMzLBdAYozMzMzMzRgSZGFzaF9iYXNlbGluZV8xX3YxEQB1%2FgcA&_nc_rid=16aaf98e63&ccb=9-4&oh=00_AfCNqnjQBRnqD0Vf0i1JHBofIAP37GUkyt6nro7i11h1QQ&oe=65321D26&_nc_sid=10d13b&dl=1" autoPlay loop  style={{width:"100%"}}/>
+      {/* BACKUP Video Link https://res.cloudinary.com/shubhamiitbhu/video/upload/v1697696533/fmc/fvfsisuaazyrsor6ebab.mp4 */}
+      {/* <video src="https://scontent.cdninstagram.com/o1/v/t16/f1/m82/9F4638772D7997139531B4C4C0F98289_video_dashinit.mp4?efg=eyJxZV9ncm91cHMiOiJbXCJpZ193ZWJfZGVsaXZlcnlfdnRzX290ZlwiXSIsInZlbmNvZGVfdGFnIjoidnRzX3ZvZF91cmxnZW4uY2xpcHMuYzIuMTA4MC5iYXNlbGluZSJ9&_nc_ht=scontent.cdninstagram.com&_nc_cat=102&vs=903954610945567_3854666974&_nc_vs=HBksFQIYT2lnX3hwdl9yZWVsc19wZXJtYW5lbnRfcHJvZC85RjQ2Mzg3NzJENzk5NzEzOTUzMUI0QzRDMEY5ODI4OV92aWRlb19kYXNoaW5pdC5tcDQVAALIAQAVABgkR0FCbnd4TjZheE1Eb1FFRkFLd1AtRjh0WDk5SmJxX0VBQUFGFQICyAEAKAAYABsAFQAAJtDZoaj4%2FO4%2FFQIoAkMzLBdAYozMzMzMzRgSZGFzaF9iYXNlbGluZV8xX3YxEQB1%2FgcA&_nc_rid=16aaf98e63&ccb=9-4&oh=00_AfCNqnjQBRnqD0Vf0i1JHBofIAP37GUkyt6nro7i11h1QQ&oe=65321D26&_nc_sid=10d13b&dl=1" autoPlay loop  style={{width:"100%"}}/> */}
 
       <div className={Classes.div1}>
+      {/* <center> */}
+    
+      <CldVideoPlayer
+        id="sea-turtle"
+        width={1920}
+        height={1080}
+        src="https://scontent.cdninstagram.com/o1/v/t16/f1/m82/9F4638772D7997139531B4C4C0F98289_video_dashinit.mp4?efg=eyJxZV9ncm91cHMiOiJbXCJpZ193ZWJfZGVsaXZlcnlfdnRzX290ZlwiXSIsInZlbmNvZGVfdGFnIjoidnRzX3ZvZF91cmxnZW4uY2xpcHMuYzIuMTA4MC5iYXNlbGluZSJ9&_nc_ht=scontent.cdninstagram.com&_nc_cat=102&vs=903954610945567_3854666974&_nc_vs=HBksFQIYT2lnX3hwdl9yZWVsc19wZXJtYW5lbnRfcHJvZC85RjQ2Mzg3NzJENzk5NzEzOTUzMUI0QzRDMEY5ODI4OV92aWRlb19kYXNoaW5pdC5tcDQVAALIAQAVABgkR0FCbnd4TjZheE1Eb1FFRkFLd1AtRjh0WDk5SmJxX0VBQUFGFQICyAEAKAAYABsAFQAAJtDZoaj4%2FO4%2FFQIoAkMzLBdAYozMzMzMzRgSZGFzaF9iYXNlbGluZV8xX3YxEQB1%2FgcA&_nc_rid=16aaf98e63&ccb=9-4&oh=00_AfCNqnjQBRnqD0Vf0i1JHBofIAP37GUkyt6nro7i11h1QQ&oe=65321D26&_nc_sid=10d13b&dl=1"
+        
+        />
+      
+      <CldVideoPlayer
+        id="sea-turtle"
+        width={1920}
+        height={1080}
+        // src="https://scontent.cdninstagram.com/o1/v/t16/f1/m82/9F4638772D7997139531B4C4C0F98289_video_dashinit.mp4?efg=eyJxZV9ncm91cHMiOiJbXCJpZ193ZWJfZGVsaXZlcnlfdnRzX290ZlwiXSIsInZlbmNvZGVfdGFnIjoidnRzX3ZvZF91cmxnZW4uY2xpcHMuYzIuMTA4MC5iYXNlbGluZSJ9&_nc_ht=scontent.cdninstagram.com&_nc_cat=102&vs=903954610945567_3854666974&_nc_vs=HBksFQIYT2lnX3hwdl9yZWVsc19wZXJtYW5lbnRfcHJvZC85RjQ2Mzg3NzJENzk5NzEzOTUzMUI0QzRDMEY5ODI4OV92aWRlb19kYXNoaW5pdC5tcDQVAALIAQAVABgkR0FCbnd4TjZheE1Eb1FFRkFLd1AtRjh0WDk5SmJxX0VBQUFGFQICyAEAKAAYABsAFQAAJtDZoaj4%2FO4%2FFQIoAkMzLBdAYozMzMzMzRgSZGFzaF9iYXNlbGluZV8xX3YxEQB1%2FgcA&_nc_rid=16aaf98e63&ccb=9-4&oh=00_AfCNqnjQBRnqD0Vf0i1JHBofIAP37GUkyt6nro7i11h1QQ&oe=65321D26&_nc_sid=10d13b&dl=1"
+        src=""
+        />
+      {/* </center> */}
+      
+     
     
         <Image
           className={Classes.img}
@@ -38,7 +72,9 @@ const About = () => {
           height={1148.83}
           width={667.22}
         />
+        
         <div className={Classes.div1in}>
+        
           <div className={Classes.imgdiv1}>
             <Image
               className={Classes.img1}
