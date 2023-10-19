@@ -86,7 +86,7 @@
 .div2{
     /* position: absolute; */
     /* top:70vw; */
-    height:1000px;
+    height:1200px;
     width:100vw;
     display:flex;
 }
@@ -302,9 +302,6 @@
     .img2{
         z-index:0;
     }
-
-
-
     .div3in img{
         height:50vh;
         width:59.4vw;
@@ -382,10 +379,11 @@
     .div2in img{
         height:50vh;
         width:79.4vw;
+        margin-top: 10vh;
 
     }
     .div2in{
-        margin-top: 100px;
+        margin-top:16vh;
         right:-7vw;
         width:80vw;
        
@@ -393,9 +391,11 @@
     .imgdiv2{
         height:50.6vh;
         width:80vw;
+        
     }
     .div2in h1{
         font-size: 1.4rem;
+        margin-top: 5vh;
     }
     .div2{
         height:950px;
@@ -409,7 +409,7 @@
 
     }
     .div3in{
-        margin-top: 200px;
+        margin-top: 30vh;
         left:-40vw;
         width:80vw;
        
