@@ -3,6 +3,9 @@ import Header from "../landingpage/Header";
 import Footer from "../landingpage/Footer";
 import Classes from "./aboutus.module.css";
 import Image from "next/image";
+// Base styles for media player and provider (~400B).
+import '@vidstack/react/player/styles/base.css';
+import { MediaPlayer, MediaProvider } from '@vidstack/react';
 import Link from "next/link";
 
 // const textStyleBold = {
@@ -24,11 +27,19 @@ const About = () => {
     <>
       <Header />
       <div className={Classes.headerimg}>
-        <Image className={Classes.img1} alt="" src='/1.jpg'  height={720} width={480}/>
+        {/* <Image className={Classes.img1} alt="" src='/1.jpg'  height={720} width={480}/> */}
         
       </div>
-
+      {/* <video src="https://scontent.cdninstagram.com/o1/v/t16/f1/m82/9F4638772D7997139531B4C4C0F98289_video_dashinit.mp4?efg=eyJxZV9ncm91cHMiOiJbXCJpZ193ZWJfZGVsaXZlcnlfdnRzX290ZlwiXSIsInZlbmNvZGVfdGFnIjoidnRzX3ZvZF91cmxnZW4uY2xpcHMuYzIuMTA4MC5iYXNlbGluZSJ9&_nc_ht=scontent.cdninstagram.com&_nc_cat=102&vs=903954610945567_3854666974&_nc_vs=HBksFQIYT2lnX3hwdl9yZWVsc19wZXJtYW5lbnRfcHJvZC85RjQ2Mzg3NzJENzk5NzEzOTUzMUI0QzRDMEY5ODI4OV92aWRlb19kYXNoaW5pdC5tcDQVAALIAQAVABgkR0FCbnd4TjZheE1Eb1FFRkFLd1AtRjh0WDk5SmJxX0VBQUFGFQICyAEAKAAYABsAFQAAJtDZoaj4%2FO4%2FFQIoAkMzLBdAYozMzMzMzRgSZGFzaF9iYXNlbGluZV8xX3YxEQB1%2FgcA&_nc_rid=16aaf98e63&ccb=9-4&oh=00_AfCNqnjQBRnqD0Vf0i1JHBofIAP37GUkyt6nro7i11h1QQ&oe=65321D26&_nc_sid=10d13b&dl=1" autoPlay loop  className=" mt-16 md:mt-5 w-full"/> */}
+      {/* <ReactPlayer url='https://scontent.cdninstagram.com/o1/v/t16/f1/m82/9F4638772D7997139531B4C4C0F98289_video_dashinit.mp4?efg=eyJxZV9ncm91cHMiOiJbXCJpZ193ZWJfZGVsaXZlcnlfdnRzX290ZlwiXSIsInZlbmNvZGVfdGFnIjoidnRzX3ZvZF91cmxnZW4uY2xpcHMuYzIuMTA4MC5iYXNlbGluZSJ9&_nc_ht=scontent.cdninstagram.com&_nc_cat=102&vs=903954610945567_3854666974&_nc_vs=HBksFQIYT2lnX3hwdl9yZWVsc19wZXJtYW5lbnRfcHJvZC85RjQ2Mzg3NzJENzk5NzEzOTUzMUI0QzRDMEY5ODI4OV92aWRlb19kYXNoaW5pdC5tcDQVAALIAQAVABgkR0FCbnd4TjZheE1Eb1FFRkFLd1AtRjh0WDk5SmJxX0VBQUFGFQICyAEAKAAYABsAFQAAJtDZoaj4%2FO4%2FFQIoAkMzLBdAYozMzMzMzRgSZGFzaF9iYXNlbGluZV8xX3YxEQB1%2FgcA&_nc_rid=16aaf98e63&ccb=9-4&oh=00_AfCNqnjQBRnqD0Vf0i1JHBofIAP37GUkyt6nro7i11h1QQ&oe=65321D26&_nc_sid=10d13b&dl=1' loop={true}  playing={true}  width={"100%"} height={"100%"} /> */}
+    
+      <MediaPlayer title="Sprite Fight" autoplay={true} controls={true} loop={true} className=" mt-16 md:mt-5 w-full" src="https://scontent.cdninstagram.com/o1/v/t16/f1/m82/9F4638772D7997139531B4C4C0F98289_video_dashinit.mp4?efg=eyJxZV9ncm91cHMiOiJbXCJpZ193ZWJfZGVsaXZlcnlfdnRzX290ZlwiXSIsInZlbmNvZGVfdGFnIjoidnRzX3ZvZF91cmxnZW4uY2xpcHMuYzIuMTA4MC5iYXNlbGluZSJ9&_nc_ht=scontent.cdninstagram.com&_nc_cat=102&vs=903954610945567_3854666974&_nc_vs=HBksFQIYT2lnX3hwdl9yZWVsc19wZXJtYW5lbnRfcHJvZC85RjQ2Mzg3NzJENzk5NzEzOTUzMUI0QzRDMEY5ODI4OV92aWRlb19kYXNoaW5pdC5tcDQVAALIAQAVABgkR0FCbnd4TjZheE1Eb1FFRkFLd1AtRjh0WDk5SmJxX0VBQUFGFQICyAEAKAAYABsAFQAAJtDZoaj4%2FO4%2FFQIoAkMzLBdAYozMzMzMzRgSZGFzaF9iYXNlbGluZV8xX3YxEQB1%2FgcA&_nc_rid=16aaf98e63&ccb=9-4&oh=00_AfCNqnjQBRnqD0Vf0i1JHBofIAP37GUkyt6nro7i11h1QQ&oe=65321D26&_nc_sid=10d13b&dl=1">
+      
+<MediaProvider />
+      
+</MediaPlayer>
       <div className={Classes.div1}>
+    
         <Image
           className={Classes.img}
           alt=""
@@ -70,11 +81,11 @@ const About = () => {
               className={Classes.img1}
               alt=""
               src="/3.jpg"
-              height={720}
-              width={447}
+              height={1148.83}
+          width={667.22}
             />
           </div>
-          <h1>Inception of Film and Media Council</h1>
+          <h1 className="">Inception of Film and Media Council</h1>
           <p>
             Established in 2012, FMC has always been the birthplace of fantastic
             ideas. A group of visionary individuals and stalwarts comprising KT
