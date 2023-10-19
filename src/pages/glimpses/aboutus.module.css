@@ -19,10 +19,16 @@
     z-index:0;
    
 }
-
+.laptop{
+    position: relative;
+    top:15vw; 
+    height:1000px;
+    width:100vw;
+    display:flex;
+}
 .div1{
-    /* position: absolute; */
-    /* top:70vw; */
+    position: relative;
+    top:15vw; 
     height:1000px;
     width:100vw;
     display:flex;
