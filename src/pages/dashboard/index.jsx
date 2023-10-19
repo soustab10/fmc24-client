@@ -305,9 +305,6 @@ const DashBoard = () => {
                                         />
                                     ))
                                 }
-{/* 
-
-                                <ContestCard title={'Contest name'} imageSrc={'/icon_photo.png'} /> */}
                                 <div class="w-[340px] h-[250px] justify-center my-6   hover:shadow-amber-100/20  transition-all border mx-2 border-white bg-gradient-to-t from-white/10 to-white/30 text-white rounded-[14px] bg-opacity-10 backdrop-blur-lg  shadow-xl drop-shadow-xl bg-blend-normal z-10 ">
                                     <div class="flex flex-col text-center justify-center align-middle px-6 py-4">
                                     <Link href="/cart"> 

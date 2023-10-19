@@ -1,8 +1,9 @@
 import Image from "next/image";
 import React from "react";
+import { useState } from "react";
 
 const ContestCard = ({ title, imageSrc }) => {
-  const [isVer,setIsVer]=React.useState(false);
+  const [isVer,setIsVer]=useState(false);
     return (
       <div className="w-[340px] h-[250px] justify-center my-6 shadow-amber-100/20 border mx-2 border-white bg-gradient-to-t from-white/10 to-white/30 text-white rounded-[14px] bg-opacity-10 backdrop-blur-lg shadow-xl drop-shadow-xl bg-blend-normal z-10">
         <div className="flex flex-col text-center justify-center px-6 py-4">
