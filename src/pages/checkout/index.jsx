@@ -149,6 +149,15 @@ const Checkout = () => {
         });
         const data2 = await resp.json();
         console.log(data2);
+        const resp4=await fetch(backendURL+"/api/events/unverify",{
+          method:"POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body:JSON.stringify({
+            email:useremail
+          })
+        })
         Router.push('/dashboard');
     }
 
