@@ -46,6 +46,9 @@ const Mktg = () => {
                   height="805"
                 />
               </div>
+
+
+              
               <div class="absolute bottom-0 inset-x-0 h-max mt-auto px-8 py-6 backdrop-blur bg-white/50">
                 <div>
                   <h4 class="text-xl text-center font-bold dark:text-white">
@@ -72,6 +75,28 @@ const Mktg = () => {
                 <div>
                   <h4 class="text-xl text-center font-bold dark:text-white">
                     Kartik Sonkar
+                  </h4>
+                  <span class="block text-center text-sm font-semibold text-black">
+                    Marketing Head
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="group relative rounded-3xl  space-y-5 overflow-hidden border-solid border-2">
+              <div class="h-[24rem]">
+                <Image
+                  className="mx-auto h-[18rem] w-full object-cover"
+                  src="https://drive.google.com/uc?export=view&id=12ClIitAcd8FTyDL3Nu2FGNhziTP9XBij"
+                  alt="kartik"
+                  loading="lazy"
+                  width="640"
+                  height="700"
+                />
+              </div>
+              <div class="absolute bottom-0 inset-x-0 h-max mt-auto px-8 py-6 backdrop-blur bg-white/50">
+                <div>
+                  <h4 class="text-xl text-center font-bold dark:text-white">
+                   Subhash Kumar
                   </h4>
                   <span class="block text-center text-sm font-semibold text-black">
                     Marketing Head
