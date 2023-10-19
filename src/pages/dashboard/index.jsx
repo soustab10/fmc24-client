@@ -26,35 +26,40 @@ const DashBoard = () => {
     const [contests, setContests] = useState([]);
     const [workshops, setWorkshops] = useState([]);
     const [loaded,setLoaded]= useState(false);
-    // useEffect(()=>{
-    //     if(!loaded){
-    //     const getEvents= async ()=>{
-    //             const useremail=sessionStorage.getItem('email')
-    //             const response2=await fetch(backendURL+"/api/events",{
-    //                 method:"POST",
-    //                 headers: { 
-    //                     'Content-Type':  
-    //                     'application/json;charset=utf-8'
-    //                 },
-    //                 body:JSON.stringify({
-    //                     email:useremail
-    //                 })
-    //             })
-    //             const data2=await response2.json();
-    //             let events=data2.registeredEvents;
-    //             console.log(jsonData)
-    //             for(let x in jsonData){
-    //                 if(jsonData[x].id in events){
-    //                     console.log(jsonData[x].title)
-    //                 }
-    //             }
+    const [eventsList,setEventsList]=useState([]);
+    useEffect(()=>{
+        if(!loaded){
+        const getEvents= async ()=>{
+                const useremail=sessionStorage.getItem('email')
+                const response2=await fetch(backendURL+"/api/events",{
+                    method:"POST",
+                    headers: { 
+                        'Content-Type':  
+                        'application/json;charset=utf-8'
+                    },
+                    body:JSON.stringify({
+                        email:useremail
+                    })
+                })
+                const data2=await response2.json();
+                let [events]=Array(data2.registeredEvents);
+                console.log(events)
+                console.log(jsonData)
+                let eventsArray=[];
+                for(let x in jsonData){
+                    if(events.includes(jsonData[x].id)){
+                        eventsArray.push(jsonData[x].Title)
+                    }
+                }
+                console.log(eventsArray)
+                setEventsList(eventsArray)
                 
                 
-    //         }
-    //             getEvents();
-    //             setLoaded(true);
-    //         }
-    // },[])
+            }
+                getEvents();
+                setLoaded(true);
+            }
+    },[])
     const [userData, setUserData] = useState({
         name: 'John Doe',
         email: 'foo@foo.com',
