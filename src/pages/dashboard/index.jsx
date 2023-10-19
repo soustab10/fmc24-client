@@ -27,6 +27,7 @@ const DashBoard = () => {
     const [workshops, setWorkshops] = useState([]);
     const [loaded,setLoaded]= useState(false);
     const [eventsList,setEventsList]=useState([]);
+    const [verified,setVerified]=useState(false);
     useEffect(()=>{
         if(!loaded){
         const getEvents= async ()=>{
@@ -52,6 +53,7 @@ const DashBoard = () => {
                     }
                 }
                 console.log(eventsArray)
+                setVerified(data2.verified)
                 setEventsList(eventsArray)
                 
                 
