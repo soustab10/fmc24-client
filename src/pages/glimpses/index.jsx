@@ -81,11 +81,11 @@ const About = () => {
               className={Classes.img1}
               alt=""
               src="/3.jpg"
-              height={720}
-              width={447}
+              height={1148.83}
+          width={667.22}
             />
           </div>
-          <h1>Inception of Film and Media Council</h1>
+          <h1 className="">Inception of Film and Media Council</h1>
           <p>
             Established in 2012, FMC has always been the birthplace of fantastic
             ideas. A group of visionary individuals and stalwarts comprising KT
