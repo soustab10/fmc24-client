@@ -15,7 +15,7 @@ import Link from 'next/link';
 import { useAuth } from '../../context/auth';
 import jsonData from './combined_data.json';
 const DashBoard = () => {
-    const {state} = useAuth();
+    const { state } = useAuth();
     const { isAuthenticated, user } = state;
     const { publicRuntimeConfig } = getConfig();
     const [profileImage, setProfileImage] = useState('');
@@ -25,43 +25,43 @@ const DashBoard = () => {
     const [isLoading, setIsLoading] = useState(false);
     const [contests, setContests] = useState([]);
     const [workshops, setWorkshops] = useState([]);
-    const [loaded,setLoaded]= useState(false);
-    const [eventsList,setEventsList]=useState([]);
-    const [verified,setVerified]=useState(false);
-    useEffect(()=>{
-        if(!loaded){
-        const getEvents= async ()=>{
-                const useremail=sessionStorage.getItem('email')
-                const response2=await fetch(backendURL+"/api/events",{
-                    method:"POST",
-                    headers: { 
-                        'Content-Type':  
-                        'application/json;charset=utf-8'
+    const [loaded, setLoaded] = useState(false);
+    const [eventsList, setEventsList] = useState([]);
+    const [verified, setVerified] = useState(false);
+    useEffect(() => {
+        if (!loaded) {
+            const getEvents = async () => {
+                const useremail = sessionStorage.getItem('email')
+                const response2 = await fetch(backendURL + "/api/events", {
+                    method: "POST",
+                    headers: {
+                        'Content-Type':
+                            'application/json;charset=utf-8'
                     },
-                    body:JSON.stringify({
-                        email:useremail
+                    body: JSON.stringify({
+                        email: useremail
                     })
                 })
-                const data2=await response2.json();
-                let [events]=Array(data2.registeredEvents);
+                const data2 = await response2.json();
+                let [events] = Array(data2.registeredEvents);
                 console.log(events)
                 console.log(jsonData)
-                let eventsArray=[];
-                for(let x in jsonData){
-                    if(events.includes(jsonData[x].id)){
+                let eventsArray = [];
+                for (let x in jsonData) {
+                    if (events.includes(jsonData[x].id)) {
                         eventsArray.push(jsonData[x].Title)
                     }
                 }
                 console.log(eventsArray)
                 setVerified(data2.verified)
                 setEventsList(eventsArray)
-                
-                
+
+
             }
-                getEvents();
-                setLoaded(true);
-            }
-    },[])
+            getEvents();
+            setLoaded(true);
+        }
+    }, [])
     const [userData, setUserData] = useState({
         name: 'John Doe',
         email: 'foo@foo.com',
@@ -92,7 +92,7 @@ const DashBoard = () => {
             const storedUserData = sessionStorage.getItem('userData');
             if (storedUserData) {
                 const parsedUserData = JSON.parse(storedUserData);
-                const user = parsedUserData.user.userID || parsedUserData.user; 
+                const user = parsedUserData.user.userID || parsedUserData.user;
 
                 setUserData({
                     name: user.name,
@@ -128,10 +128,10 @@ const DashBoard = () => {
                     data.user && typeof data.user === 'object' &&
                     data.user.userID && typeof data.user.userID === 'object' &&
                     data.user.userID.userCart !== null) {
-                    let cartItems=[];
-                    try{
+                    let cartItems = [];
+                    try {
                         cartItems = data.user.userID.userCart.cartItems;
-                    }catch(error){
+                    } catch (error) {
                         console.log("no cart items");
                     }
                     const contestItems = new Set();
@@ -300,57 +300,26 @@ const DashBoard = () => {
 
 
                                 {
-                                    contests.map((contest) => (
-                                        <ContestCard
-                                            title={contest.title}
-                                            imageSrc={'/icon_photo.png'}
-                                            key={contest.id}
-                                        />
+                                    eventsList.map((events, index) => (
+
+
+                                        <ContestCard title={events} key={index} />
                                     ))
                                 }
-{/* 
-
-                                <ContestCard title={'Contest name'} imageSrc={'/icon_photo.png'} /> */}
                                 <div class="w-[340px] h-[250px] justify-center my-6   hover:shadow-amber-100/20  transition-all border mx-2 border-white bg-gradient-to-t from-white/10 to-white/30 text-white rounded-[14px] bg-opacity-10 backdrop-blur-lg  shadow-xl drop-shadow-xl bg-blend-normal z-10 ">
                                     <div class="flex flex-col text-center justify-center align-middle px-6 py-4">
-                                    <Link href="/cart"> 
-                                        <div class=" flex flex-rows justify-around font-bold text-7xl text-black mb-2 my-5"><div>+</div></div>
-                                       
-                                        <p class=" my-3.5 h-[180px] text-2xl text-center">
-                                            Add more contests
-                                        </p>
+                                        <Link href="/cart">
+                                            <div class=" flex flex-rows justify-around font-bold text-7xl text-black mb-2 my-5"><div>+</div></div>
+
+                                            <p class=" my-3.5 h-[180px] text-2xl text-center">
+                                                Add more events
+                                            </p>
                                         </Link>
 
                                     </div>
                                 </div>
                             </div>
-                            <div className=' text-3xl text-white font-bold  font-mono'>Registered Workshops</div>
-                            <div className="flex flex-col flex-wrap md:flex-row justify-between p-10  text-[14px]">
-                                {
-                                    workshops.map((workshop) => (
-                                        <WorkshopCard
-                                            title={workshop.title}
-                                            imageSrc={'/workshop.png'}
-                                            key={workshop.id}
-                                        />
-                                    ))
 
-                                }
-{/* 
-                                <WorkshopCard title={'Workshop name'} imageSrc={'/workshop.png'} /> */}
-
-                                <div class="w-[340px] h-[250px] justify-center hover:shadow-amber-100/20 transition-all my-6 border mx-2 border-white bg-gradient-to-t from-white/10 to-white/30 text-white rounded-[14px] bg-opacity-10 backdrop-blur-lg  shadow-xl drop-shadow-xl bg-blend-normal z-10 ">
-                                    <div class="flex flex-col text-center justify-center align-middle px-6 py-4">
-                                    <Link href="/cart">
-                                        <div class=" flex flex-rows justify-around font-bold text-7xl text-black mb-2 my-5"><div>+</div></div>
-                                       
-                                        <p class=" my-3.5 h-[180px] text-2xl text-center">
-                                            Add more workshops
-                                        </p>
-                                        </Link>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                         <Footer />
                     </div>
@@ -363,4 +332,3 @@ const DashBoard = () => {
 }
 
 export default DashBoard;
-
