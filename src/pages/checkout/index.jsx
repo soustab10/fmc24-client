@@ -33,31 +33,26 @@ const Checkout = () => {
     setFile(event.target.files[0]);
     console.log(file)
     setFilename(event.target.files[0].name);
-
-
-    // }
-
-
-    // const res=await fetch("/api/upload",{
-    //   method:"POST",
-    //   body:{
-    //     file:event.target.files[0],
-    //   }
-    // })
-    // const data=await res.json();
-    // console.log(data)
   };
-
-
-
-
-
-
-
-
-  const link = "https://docs.google.com/forms/d/e/1FAIpQLSdkNcyta0lRVHc7M4QvVqHnTXuI5G8yP_pK1wZv0EXqwjgA8g/viewform?usp=pp_url&entry.997687481=Shubham&entry.1447534415=6201060889&entry.1224001380=HUBHDEWQSN&entry.1589365680=HEBJWDNKQ&entry.2107420521=HBFJEWDKLQ&entry.248033448=+HCEJNWQ";
+const notificationMail=async(name,email,total,items)=>{
+  const response=await fetch("/api/payment",{
+    method:"POST",
+    headers: { 
+      'Content-Type':  
+          'application/json;charset=utf-8'
+  },
+    body:JSON.stringify({
+      "name":name,
+      "email":email,
+      "total":total,
+      "items":items
+    })
+  })
+  const data=await response.json();
+  console.log(data);
+}
+const link = "https://docs.google.com/forms/d/e/1FAIpQLSdkNcyta0lRVHc7M4QvVqHnTXuI5G8yP_pK1wZv0EXqwjgA8g/viewform?usp=pp_url&entry.997687481=Shubham&entry.1447534415=6201060889&entry.1224001380=HUBHDEWQSN&entry.1589365680=HEBJWDNKQ&entry.2107420521=HBFJEWDKLQ&entry.248033448=+HCEJNWQ";
   // const link="https://docs.google.com/forms/d/e/1FAIpQLSdkNcyta0lRVHc7M4QvVqHnTXuI5G8yP_pK1wZv0EXqwjgA8g/viewform?usp=pp_url&entry.997687481=Shubham&entry.1447534415=6201060889&entry.1224001380=HUBHDEWQSN&entry.1589365680=HEBJWDNKQ&entry.2107420521=HBFJEWDKLQ&entry.248033448=+HCEJNWQ"
-
   const formUrl = 'https://docs.google.com/forms/d/e/1FAIpQLSfmxwNrwZhBfLMMnaCpydwBV9Juozd6Uty0zwAgMRZNRDdMgg/formResponse';
   const handleSubmit = async (e) => {
 
@@ -100,6 +95,7 @@ const Checkout = () => {
       console.log(val)
 
       console.log(prices)
+      notificationMail(name,email,prices,val);
 
       //dev gupta:(God)
       // let response = await fetch(`https://docs.google.com/forms/d/e/1FAIpQLSfmxwNrwZhBfLMMnaCpydwBV9Juozd6Uty0zwAgMRZNRDdMgg/formResponse?&submit=Submit?usp=pp_url&entry.2058644330=${name}&entry.666527389=${phone}&entry.352462634=${email}&entry.161165018=${insti}&entry.169406111=${transcid}&entry.1113568387=${JSON.stringify(selectedItems)}`, { 

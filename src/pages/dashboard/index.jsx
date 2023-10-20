@@ -73,8 +73,15 @@ const DashBoard = () => {
                 const data3=await res3.json();
                 console.log(data3.verifiedEvents)
                 let [e] = Array(data3.verifiedEvents);
+                let eventsArray = [];
+                for (let x in jsonData) {
+                    if (e.includes(jsonData[x].id)) {
+                        eventsArray.push(jsonData[x].Title)
+                    }
+                }
+
                 console.log(e)
-                setVer(e)
+                setVer(eventsArray)
 
                 // console.log(typeof(data3.verifiedEvents))
                 
