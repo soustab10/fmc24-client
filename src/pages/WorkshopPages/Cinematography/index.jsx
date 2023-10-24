@@ -38,18 +38,18 @@ const Index = () => {
              <div className="w-[275px]  h-[125px] flex justify-center items-center glow-effect-blue"> 
              <Link href="../WorkshopPages/Photography" className="text-[20px] hover:text-[36px] hover:font-semibold transition-all duration-5000 ease-in-out">Photography</Link>
              </div>
-             {/* <div className="w-[275px]  h-[125px] flex justify-center items-center glow-effect-green">
+             <div className="w-[275px]  h-[125px] flex justify-center items-center glow-effect-green">
              <Link href="../WorkshopPages/Design" className="text-[20px] hover:text-[36px] hover:font-semibold transition-all duration-5000 ease-in-out">Design</Link>
-             </div> */}
+             </div>
              <div className="w-[275px]  h-[125px] flex justify-center items-center glow-effect-red">
              <Link href="../WorkshopPages/Animation" className="text-[20px] hover:text-[36px] hover:font-semibold transition-all duration-5000 ease-in-out">Animation</Link>
              </div>
              <div className="w-[275px]  h-[125px] flex justify-center items-center glow-effect-yellow">
              <Link href="../WorkshopPages/Cinematography" className="text-[20px] hover:text-[36px] hover:font-semibold transition-all duration-5000 ease-in-out">Cinematography</Link>
              </div>
-             {/* <div className="w-[275px]  h-[125px] flex justify-center items-center glow-effect-orange">
+             <div className="w-[275px]  h-[125px] flex justify-center items-center glow-effect-orange">
              <Link href="../WorkshopPages/Media" className="text-[20px] hover:text-[36px] hover:font-semibold transition-all duration-5000 ease-in-out">Media</Link>
-             </div> */}
+             </div>
              {/* <div className="w-[275px]  h-[125px] flex justify-center items-center glow-effect-purple">
              <Link href="../WorkshopPages/Outreach" className="text-[20px] hover:text-[36px] hover:font-semibold transition-all duration-5000 ease-in-out">Outreach</Link> 
              </div> */}
