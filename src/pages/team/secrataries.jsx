@@ -9,7 +9,7 @@ const Secrataries = () => {
         <div class="xl:container mx-auto px-4 md:px-10">
           <div class="ml-20 mb-16 md:w-2/3 lg:w-1/2">
             <h2 class="md:ml-20 lg:ml-20 mb-4 text-2xl font-bold text-gray-800 dark:text-white md:text-4xl">
-              Secrataries
+              Secretaries
             </h2>
           </div>
           <div class="md:ml-20 lg:ml-20 grid gap-12 px-4 sm:px-20 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
