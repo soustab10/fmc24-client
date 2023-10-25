@@ -77,16 +77,16 @@ const Index = () => {
                   Media
                 </Link>
               </div>
-              {/* <div className="w-[275px]  h-[125px] flex justify-center items-center glow-effect-purple">
+              <div className="w-[275px]  h-[125px] flex justify-center items-center glow-effect-purple">
              <Link href="../WorkshopPages/Outreach" className="text-[20px] hover:text-[36px] hover:font-semibold transition-all duration-5000 ease-in-out">Outreach</Link> 
-             </div> */}
+             </div>
             </div>
           </div>
           <div className={Classes.MajorBod}>
             <div className={Classes.CardDe}>
               <div class="flex flex-col text-center justify-center items-center">
                 <Image
-                  src={"/Ankur.jpg"}
+                  src={"/Ankur2.jpg"}
                   width={387}
                   height={350}
                   className="rounded-tr-[25px] rounded-tl-[25px]"
@@ -104,8 +104,7 @@ const Index = () => {
                   -by Ankur Debnath{" "}
                 </a>
                 <p class="text-justify mt-4 mx-2  w-[290px]">
-                  Ankur Debnath, a doodle artist, specializes in crafting
-                  endearing human doodles that infuse joy into every creation.
+                Ankur Debnath, a.k.a. Doodlenath, is a versatile Kolkata-based Illustrator and Doodle Artist. His creative prowess spans Doodle art, Caricature Illustrations, and Concept Art. With a quest for self-improvement and an innate ability to experiment, Ankur forges a path toward his imaginative dreams through art.
                 </p>
 
                 <div className="my-8 align-middle justify-evenly">
