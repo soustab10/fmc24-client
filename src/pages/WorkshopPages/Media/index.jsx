@@ -103,7 +103,7 @@ const Index = () => {
                   </div>
                 </div>
                 <a
-                  href="https://instagram.com/saurabhshuklajourno?igshid=MzRlODBiNWFlZA=="
+                  href="https://x.com/Saurabh_Unmute?t=Naz8i0rA7bQgWo-qg0VBYw&s=09"
                   className="text-black mt-5 italic hover:underline text-[20px]  px-10 p-1 "
                 >
                   -by Saurabh Shukla
