@@ -51,9 +51,9 @@ const Design = () => {
 
 <div className={Classes.CardDe}>
   <div class="flex flex-col text-center justify-center align-middle px-6 py-4">
-  <div class=" flex flex-rows h-[40px] justify-center font-bold text-3xl mb-2 my-3.5"><div><Image className="icon" src={"/icon_design.png"} width={40} height={10} alt="cameras"/></div><div className="ml-4">ReInevent</div></div>
+  <div class=" flex flex-rows h-[40px] justify-center font-bold text-3xl mb-2 my-3.5"><div><Image className="icon" src={"/icon_design.png"} width={40} height={10} alt="cameras"/></div><div className="ml-4">ReInvent</div></div>
     <p class="text-justify my-3.5 h-[180px]">
-    Logos have always been an integral part of a brand&apos;s identity. The perfect blend of a minimal versatile and memorable design creates a great logo. The FMC Weckend brings you the opportunity to redesign a logo and create a fresh impression for a brand. The most original and creative design amongst all will be rewarded!
+    Logos have always been an integral part of a brand&apos;s identity. The perfect blend of a minimal versatile and memorable design creates a great logo. The FMC Weekend brings you the opportunity to redesign a logo and create a fresh impression for a brand. The most original and creative design amongst all will be rewarded!
     </p>
     <a href="https://drive.google.com/file/d/1W3By7kVROQn54LgVeubcEUk7q8Xub4r2/view?usp=drive_link" className="text-white-800 my-3.5 italic hover:underline">View Problem Statement</a>
      <Definer/>

@@ -67,9 +67,9 @@ const Index = () => {
               <div className="w-[275px]  h-[125px] flex justify-center items-center glow-effect-orange">
              <Link href="../WorkshopPages/Media" className="text-[20px] hover:text-[36px] hover:font-semibold transition-all duration-5000 ease-in-out">Media</Link>
              </div>
-              {/* <div className="w-[275px]  h-[125px] flex justify-center items-center glow-effect-purple">
+              <div className="w-[275px]  h-[125px] flex justify-center items-center glow-effect-purple">
              <Link href="../WorkshopPages/Outreach" className="text-[20px] hover:text-[36px] hover:font-semibold transition-all duration-5000 ease-in-out">Outreach</Link> 
-             </div> */}
+             </div>
             </div>
           </div>
           <div className={Classes.MajorBod}>
@@ -120,57 +120,11 @@ const Index = () => {
                 </div>
               </div>
             </div>
+            
             <div className={Classes.CardPh}>
               <div class="flex flex-col text-center justify-center items-center  ">
                 <Image
-                  src={"/Bhalovashi.png"}
-                  width={387}
-                  height={300}
-                  className="rounded-tr-[25px] rounded-tl-[25px]"
-                  alt="null"
-                ></Image>
-                <div class=" flex flex-rows h-[30px] justify-center font-bold text-3xl">
-                  <div className="ml-4 mt-4 font-bold text-[30px] p-[10px]">
-                    Travel & Lifestyle Photography
-                  </div>
-                </div>
-                <a
-                  href="https://www.instagram.com/bhalovashi/"
-                  className="text-black mt-20 italic hover:underline text-[20px]  px-10 p-1 "
-                >
-                  -by Bhalovashi
-                </a>
-                <p class="text-justify mx-2 w-[290px] mt-3">
-                  She is involved in filmmaking, product promotions, drone
-                  photography, and creative direction. Her work spans across
-                  various landscapes capturing emotions and unique perspectives.
-                </p>
-
-                <div className="my-6 align-middle justify-evenly ">
-                  {isLoggedin ? (
-                    <a>
-                      <Link href="../cart">
-                        <button className="border mb-10 px-6 py-2 border-black rounded-[20px] hover:text-[15px] hover:font-semibold transition-all duration-5000 ease-in-out text-black">
-                          Go to Cart
-                        </button>
-                      </Link>
-                    </a>
-                  ) : (
-                    <a>
-                      <Link href="../login">
-                        <button className="border mb-10 px-6 py-2 border-black rounded-[20px] hover:text-[15px] hover:font-semibold transition-all duration-5000 ease-in-out text-black">
-                          Login
-                        </button>
-                      </Link>
-                    </a>
-                  )}
-                </div>
-              </div>
-            </div>
-            <div className={Classes.CardPh}>
-              <div class="flex flex-col text-center justify-center items-center  ">
-                <Image
-                  src={"/Satyam.png"}
+                  src={"/Satyam.jpg"}
                   width={387}
                   height={300}
                   className="rounded-tr-[25px] rounded-tl-[25px]"
