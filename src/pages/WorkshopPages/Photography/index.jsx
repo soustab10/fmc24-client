@@ -132,7 +132,7 @@ const Index = () => {
                 ></Image>
                 <div class=" flex flex-rows h-[30px] justify-center font-bold text-3xl">
                   <div className="ml-4 mt-4 font-bold text-[30px] p-[10px]">
-                    Travel & Lifestyle Photography
+                  Instameet - Photowalk at Assi Ghat
                   </div>
                 </div>
                 <a
