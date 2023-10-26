@@ -93,7 +93,7 @@ const Admin = () => {
     // if(pass!=="shubhamiitbhu") return <h1>Wrong Password</h1>
     return (
         <>
-            {email === "shubham.kumar.min21@itbhu.ac.in" || email === "fmcweekendtech@gmail.com" || email === "asundeep.chowdary.mat21@itbhu.ac.in" || email === "a.bhattacharya.cd.eee21@itbhu.ac.in" ? (<table>
+            {email === "shubham.kumar.min21@itbhu.ac.in" || email === "fmcweekendtech@gmail.com" || email === "asundeep.chowdary.mat21@itbhu.ac.in" || email === "a.bhattacharya.cd.eee21@itbhu.ac.in" || email==="mahi.bansal.eee21@itbhu.ac.in"? (<table>
                 <thead>
                     <tr>
                         <th>name</th>

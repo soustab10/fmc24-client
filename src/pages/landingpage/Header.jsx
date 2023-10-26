@@ -92,7 +92,7 @@ const Header = () => {
               >
                 dashboard
               </Link>
-              {email === "shubham.kumar.min21@itbhu.ac.in" || email==="asundeep.chowdary.mat21@itbhu.ac.in" || email==="a.bhattacharya.cd.eee21@itbhu.ac.in"? (<><Link
+              {email === "shubham.kumar.min21@itbhu.ac.in" || email === "asundeep.chowdary.mat21@itbhu.ac.in" || email === "a.bhattacharya.cd.eee21@itbhu.ac.in" || email === "mahi.bansal.eee21@itbhu.ac.in" ? (<><Link
                 href="/admin"
                 className="nav-menu links-header mr-8  place-self-center"
               >
@@ -134,7 +134,7 @@ const Header = () => {
                 <Link href="/">
                   <div className="fmcw-logo-header basis-1/6 place-self-center z-100"></div>
                 </Link>
-                
+
                 <div className="list">
                   <Link href="/events" className="menu-list">
                     events
@@ -157,7 +157,7 @@ const Header = () => {
                       <Link href="/logout" className="menu-list">
                         logout
                       </Link>
-                      
+
                     </>
                   ) : (
                     <>
