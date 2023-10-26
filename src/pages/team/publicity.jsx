@@ -78,28 +78,7 @@ const Publicity = () => {
                 </div>
               </div>
             </div>
-            <div class="group relative rounded-3xl  space-y-4 overflow-hidden border-solid border-2">
-              <div class="h-[24rem]">
-                <Image
-                  className="mx-auto h-[18rem] w-full object-cover"
-                  src="/team/Vishal.png"
-                  alt="vishal"
-                  loading="lazy"
-                  width="640"
-                  height="805"
-                />
-              </div>
-              <div class="absolute bottom-0 inset-x-0 h-max mt-auto px-8 py-6 backdrop-blur bg-white/50">
-                <div>
-                  <h4 class="text-xl text-center font-bold dark:text-white">
-                    Vishal Sharma
-                  </h4>
-                  <span class="block text-center text-sm font-semibold text-black">
-                    Publicity Head
-                  </span>
-                </div>
-              </div>
-            </div>
+          
             <div class="group relative rounded-3xl  space-y-4 overflow-hidden border-solid border-2">
               <div class="h-[24rem]">
                 <Image

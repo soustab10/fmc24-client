@@ -92,7 +92,7 @@ const Header = () => {
               >
                 dashboard
               </Link>
-              {email === "shubham.kumar.min21@itbhu.ac.in" || email==="asundeep.chowdary.mat21@itbhu.ac.in" ? (<><Link
+              {email === "shubham.kumar.min21@itbhu.ac.in" || email==="asundeep.chowdary.mat21@itbhu.ac.in" || email==="a.bhattacharya.cd.eee21@itbhu.ac.in"? (<><Link
                 href="/admin"
                 className="nav-menu links-header mr-8  place-self-center"
               >
