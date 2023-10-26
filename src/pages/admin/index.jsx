@@ -6,6 +6,7 @@ import Router  from 'next/router';
 const Admin = () => {
     const { publicRuntimeConfig } = getConfig()
     const backendURL = publicRuntimeConfig.NEXT_PUBLIC_REACT_APP_BACKEND_URI;
+    const secret=publicRuntimeConfig.secret
     const [users, setUsers] = useState([])
     const [events, setEvents] = useState([])
     const [token, setToken] = useState("")
@@ -43,7 +44,22 @@ const Admin = () => {
         event.preventDefault();
         console.log(userId, userEmail);
         const id = event.target[0].value;
+        const numId=parseInt(id)
         console.log(id);
+        const res = await fetch(`${backendURL}/api/events/addVerified`, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                "secret": secret
+            },
+            body: JSON.stringify({
+                email:userEmail,
+                toAppend:numId,
+                secure:secret
+            })
+        });
+        const data = await res.json();
+        console.log(data);
         
     };
 
