@@ -10,6 +10,7 @@ const nextConfig = {
     CLOUD_NAME: process.env.CLOUD_NAME,
     CLOUDINARY_API_KEY: process.env.CLOUDINARY_API_KEY,
     CLOUDINARY_API_SECRET: process.env.CLOUDINARY_API_SECRET,
+    secret: process.env.secret,
   },
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production',
