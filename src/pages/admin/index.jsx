@@ -1,12 +1,15 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, use } from 'react'
 import getConfig from 'next/config'
 import Index from './[id]'
 import jsonData from './combined_data.json';
+import Router  from 'next/router';
 const Admin = () => {
     const { publicRuntimeConfig } = getConfig()
     const backendURL = publicRuntimeConfig.NEXT_PUBLIC_REACT_APP_BACKEND_URI;
     const [users, setUsers] = useState([])
     const [events, setEvents] = useState([])
+    const [token, setToken] = useState("")
+    const [email, setEmail] = useState("")
 
 
     useEffect(() => {
@@ -16,16 +19,34 @@ const Admin = () => {
     }, [])
     console.log(users)
     useEffect(() => {
-    const pass=prompt("Enter the password to view the details")
-    if(pass!=="shubhamiitbhu") return <h1>Wrong Password</h1>
+        const token1 = sessionStorage.getItem("token")
+        console.log(token1)
+        setToken(token1)
     }, [])
-    const verify=(id)=>{
-       // ask for password and then verify
-         const pass=prompt("Enter the password to verify the user")
-            if(pass!=="shubhamiitbhu") return alert("Wrong Password")
-       
-
+    const getDetails = async () => {
+        const info = await fetch("https://www.googleapis.com/oauth2/v3/tokeninfo?id_token=" + token)
+        console.log("info", info)
+        const data = await info.json();
+        console.log(data)
+        const email1 = await data.email
+        setEmail(email1)
+        console.log(email)
+        if (email !== "shubham.kumar.min21@itbhu.ac.in")
+            return <h1>Not Authorized</h1>
     }
+    getDetails()
+
+    const verify = (id,email) => {
+       
+    }
+    const handleVerify = async (event, userId, userEmail) => {
+        event.preventDefault();
+        console.log(userId, userEmail);
+        const id = event.target[0].value;
+        console.log(id);
+        
+    };
+
     const getEventName = (id) => {
         for (let x in jsonData) {
             // console.log(x)
@@ -41,7 +62,7 @@ const Admin = () => {
     // if(pass!=="shubhamiitbhu") return <h1>Wrong Password</h1>
     return (
         <>
-            <table>
+            {email === "shubham.kumar.min21@itbhu.ac.in" || email === "fmcweekendtech@gmail.com" ?( <table>
                 <thead>
                     <tr>
                         <th>name</th>
@@ -49,42 +70,56 @@ const Admin = () => {
                         <th>phone</th>
                         <th>College</th>
                         <th>unverified</th>
+                        <th>Verify</th>
                         <th>verified</th>
                     </tr>
                 </thead>
                 <tbody>
                     {users.map((user, index) => (
                         <tr key={index}>
+                        {user.userRegisteredEvents.registeredEvents.length>0? 
+                        <>
                             <td style={{ backgroundColor: "yellow" }}>
                                 {user.name.substr(0, 15).toLowerCase()}
                             </td>
                             <td style={{ backgroundColor: "green" }}>{user.email}</td>
                             <td style={{ backgroundColor: "red" }}>{user.number}</td>
                             <td style={{ backgroundColor: "blueviolet" }}>{user.college}</td>
-                         <td>
-                            <select >
-                            <option value="0">Select</option>
-                                {user.userRegisteredEvents.registeredEvents.map((e, i) => (
-                                    <option key={i} value={e} style={{ backgroundColor: "red" }} >
-                                        {getEventName(e)}
-                                    </option>
-                                ))}
-                            </select>
+                            <td>
+                                <select >
+                                    <option value="0">Select</option>
+                                    {user.userRegisteredEvents.registeredEvents.map((e, i) => (
+                                        <option key={i} value={e} style={{ backgroundColor: "red" }} >
+                                        {e}:{getEventName(e)}
+                                        </option>
+                                    ))}
+                                </select>
+                            </td>
+                            <td style={{backgroundColor:"orange"}}>
+                                <form style={{display:"flex",margin:"2px"}} onSubmit={(event) => {
+                                                    handleVerify(event, index, user.email);
+                                                }}
+                                >
+                                    <input type='text' placeholder='Enter Id to verify' />
+                                    <button type='submit' style={{backgroundColor:"red",borderRadius:"5px"}}>Verify</button>
+                                </form>
                             </td>
                             <td>
-                            <select>
-                            <option value="0">Select</option>
-                                {user.userRegisteredEvents.ver.map((e, i) => (
-                                    <option key={i} value={e} style={{ backgroundColor: "green" }}>
-                                        {getEventName(e)}
-                                    </option>
-                                ))}
-                            </select>
-                            </td>
+                                <select>
+                                    <option value="0">Select</option>
+                                    {user.userRegisteredEvents.ver.map((e, i) => (
+                                        <option key={i} value={e} style={{ backgroundColor: "green" }}>
+                                            {e}:{getEventName(e)}
+                                        </option>
+                                    ))}
+                                </select>
+                            </td></>
+                            :null}
                         </tr>
                     ))}
                 </tbody>
-            </table>
+            </table> ): (<button style={{margin:"auto"}} onClick={() => Router.push("/login")}>UnAuthorised Access</button>)}
+
         </>
     );
 

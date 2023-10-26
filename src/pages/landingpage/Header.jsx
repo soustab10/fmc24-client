@@ -15,12 +15,17 @@ const logoLeftPadding = {
 };
 const Header = () => {
   const [isLoggedin, setIsLoggedin] = useState(false);
+  const [email, setEmail] = useState("");
 
   const [menuState, setMenuState] = useState(false);
   const handleMenu = () => {
     setMenuState(!menuState);
-    
+
   };
+  useEffect(() => {
+    const em = sessionStorage.getItem("email")
+    setEmail(em)
+  }, [email])
   useEffect(() => {
     try {
       const x = sessionStorage.getItem("isLoggedIn");
@@ -87,6 +92,12 @@ const Header = () => {
               >
                 dashboard
               </Link>
+              {email === "shubham.kumar.min21@itbhu.ac.in" ? (<><Link
+                href="/admin"
+                className="nav-menu links-header mr-8  place-self-center"
+              >
+                Admin Dashboard
+              </Link></>) : (<></>)}
               <Link
                 href="/logout"
                 className="nav-menu links-header mr-8  place-self-center"
@@ -118,12 +129,12 @@ const Header = () => {
                 </div>
               )}
             </button>
-
             {menuState ? (
               <div className="menu-design">
                 <Link href="/">
                   <div className="fmcw-logo-header basis-1/6 place-self-center z-100"></div>
                 </Link>
+                
                 <div className="list">
                   <Link href="/events" className="menu-list">
                     events
@@ -146,6 +157,7 @@ const Header = () => {
                       <Link href="/logout" className="menu-list">
                         logout
                       </Link>
+                      
                     </>
                   ) : (
                     <>
