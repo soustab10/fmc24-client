@@ -13,8 +13,8 @@ export default function handler(req, res) {
         }
     });
     const mailOptions={
-        from:process.env.EMAIL1,
-        to:email,
+        from:"FMC WEEKEND",
+        to:`${email}`,
         subject:'Confirmation of your Participation in FMC Weekend 10th Edition ',
         html:`<!DOCTYPE html>
         <html>
