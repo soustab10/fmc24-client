@@ -332,7 +332,7 @@ const Index = () => {
               {selectedOption === "D" && (
                 <div>
                   <Image
-                    src="/passesnew.png" // Replace with the actual Unsplash image URL
+                    src="https://res.cloudinary.com/shubhamiitbhu/image/upload/v1698388928/hqupjnw4iurx5ydngbfh.png" // Replace with the actual Unsplash image URL
                     alt="Image"
                     className="w-[60vw]"
                     unoptimized
