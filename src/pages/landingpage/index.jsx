@@ -16,7 +16,7 @@ import Footer from "./Footer"
 import AboutUs from "./AboutUs"
 import Hero from "./Hero"
 import { motion, useScroll } from "framer-motion"
-// import OAT from "./OAT"
+import OAT from "./OAT"
 // import Testimonials from "./Testimonials"
 import Competitions from "./Competitions"
 import Sponsors from "./Sponsors"
@@ -95,7 +95,7 @@ const IndexLanding = () => {
       <Guests />
       {/* <Demo/> */}
       {/* <Competitions/> */}
-      {/* <OAT /> */}
+      <OAT />
       {/* <Testimonials/> */}
       <Sponsors />
     

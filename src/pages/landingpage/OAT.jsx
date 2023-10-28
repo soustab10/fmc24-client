@@ -40,24 +40,14 @@ const OAT = () => {
       {isMobile ? (
         <>
           <center>
-            <div className={Classes.container_row}>
-              <div className={Classes.layer1}>
-                <h2 className={Classes.css1m}>OPEN AIR</h2>
-                <h2 className={Classes.css2m}>THEATRE</h2>
-              </div>
-              <div className={Classes.layer2}>
-                <h2 className={Classes.css3m}>OPEN AIR</h2>
-                <h2 className={Classes.css4m}>THEATRE</h2>
-              </div>
-              <div className={Classes.layer3}>
-                <Image
-                  src="/oatart.png"
-                  width={128}
-                  height={190}
-                  className={Classes.cssim}
-                  alt="OAT"
+            <div className={Classes.container_row_mob}>
+              <Image
+                src="/oatpostermobi.png"
+                width={4000}
+                height={5000}
+                unoptimized={true}
+                alt="OAT"
                 />
-              </div>
             </div>
             <div className="flex flex-row justify-center pt-16">
               <svg
@@ -108,23 +98,15 @@ const OAT = () => {
         <>
           <center>
             <div className={Classes.container_row}>
-              <div className={Classes.layer1}>
-                <h2 className={Classes.css1}>OPEN AIR</h2>
-                <h2 className={Classes.css2}>THEATRE</h2>
-              </div>
-              <div className={Classes.layer2}>
-                <h2 className={Classes.css3}>OPEN AIR</h2>
-                <h2 className={Classes.css4}>THEATRE</h2>
-              </div>
-              <div className={Classes.layer3}>
-                <Image
-                  src="/oatart.png"
-                  width={1000}
-                  height={5000}
-                  className={Classes.cssi}
-                  alt="OAT"
+            <div className={Classes.container_row}>
+              <Image
+                src="/oatposter.png"
+                width={5000}
+                height={4000}
+                unoptimized={true}
+                alt="OAT"
                 />
-              </div>
+            </div>
             </div>
             <br/>
             <br/>

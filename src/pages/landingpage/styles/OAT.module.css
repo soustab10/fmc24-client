@@ -114,8 +114,13 @@
 
 .container_row {
   display: grid;
-  padding-left: 57.5px;
-  padding-right: 57.5px;
+  padding-left: 75px;
+  padding-right: 75px;
+}
+.container_row_mob {
+  display: grid;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 .layer1,
